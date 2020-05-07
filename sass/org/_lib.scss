@@ -1,0 +1,246 @@
+
+/*--------------------------------------------------------------
+## Color
+--------------------------------------------------------------*/
+/*yellow*/
+$c-main-ligh: #ffffdd;
+$c-main-dark : #99993d;
+$c-main-tran : rgba(163,136,16,0.8);
+
+/*blue*/
+$c-base-ligh : #ccf0ff;
+$c-base-dark : #0a64ac;
+$c-base-tran : rgba(10,100,172,0.8);
+$c-base-tran2 : rgba(10,100,172,0.6);
+
+/*white*/
+$c-acsW-ligh : #f4f4f4;
+$c-acsW-midd : #eeeeee;
+$c-acsW-dark : #8a8a8a;
+
+/*orange*/
+$c-acsO-week : #fcd59f;
+$c-acsO-ligh : #fb9100;
+$c-acsO-dark : #8f5300;
+
+/*--------------------------------------------------------------
+## MediaQuery
+--------------------------------------------------------------*/
+$breakpoints: (
+	'sm': 'screen and (max-width: 374px)',
+	'md': 'screen and (max-width: 580px)',
+	'lg': 'screen and (max-width: 1000px)',
+	'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+/*--------------------------------------------------------------
+## margin
+--------------------------------------------------------------*/
+$p-margin-lr1  : calc(100%/16);
+$p-margin-lr14 : calc(14/16*100%);
+
+$s-padding-side  : calc(100vw/64);
+$s-image-small  : calc(100vw/64);
+
+@mixin ajssize($size: small) {
+	@include mq(sm) {
+			@if $size == small {
+				width:calc(25*100vw/64);
+				height:calc(25*100vw/64);
+			}@else if $size == large {
+				width:calc(53.5*100vw/64);
+				height:calc(53.5*100vw/64);
+			}
+	}
+	@include mq(md) {
+			@if $size == small {
+				width:calc(25*100vw/64);
+				height:calc(25*100vw/64);
+			}@else if $size == large {
+				width:calc(53.5*100vw/64);
+				height:calc(53.5*100vw/64);
+			}
+	}
+}
+/*--------------------------------------------------------------
+## Vender Prefix
+--------------------------------------------------------------*/
+@mixin gradient($direction, $list) { 
+	background: -webkit-linear-gradient($direction, $list);
+	background: -moz-linear-gradient($direction, $list);
+	background: -o-linear-gradient($direction, $list);
+	background: linear-gradient($direction, $list);	
+}
+/*--------------------------------------------------------------
+## Everything
+--------------------------------------------------------------*/
+*{
+	transition: 1s;
+}
+/*--------------------------------------------------------------
+## Back ground
+--------------------------------------------------------------*/
+$list-back-grad: 
+	$c-base-dark 0%,
+	$c-base-ligh 50%,
+	$c-base-dark 100%;
+
+html,body{
+	width:100%;
+	height:auto;
+}
+
+.back-gradient{
+	width:100%;
+	height:auto;
+	@include gradient(-45deg, $list-back-grad);
+}
+
+.cloud-gradient{
+	background: 
+	linear-gradient(135deg, $c-acsW-midd 25%, transparent 25%) -50px 0,
+	linear-gradient(225deg, $c-acsW-midd 25%, transparent 25%) -50px 0,
+	linear-gradient(315deg, $c-acsW-midd 25%, transparent 25%),
+	linear-gradient(45deg, $c-acsW-midd 25%, transparent 25%);	 
+	background-size: 2em 2em;
+	background-color: $c-acsW-ligh;
+}
+.wave-gradient{
+	background: 
+	linear-gradient(135deg, $c-base-tran2 25%, transparent 25%) -50px 0,
+	linear-gradient(225deg, $c-base-tran2 25%, transparent 25%) -50px 0,
+	linear-gradient(315deg, $c-base-tran2 25%, transparent 25%),
+	linear-gradient(45deg, $c-base-tran2 25%, transparent 25%);	 
+	background-size: 2em 2em;
+	background-color: $c-base-tran;
+}
+.silver-gradient{
+	background: 
+	linear-gradient(to right, 
+		$c-acsW-dark 0%,
+		$c-acsW-ligh 25%,
+		$c-acsW-dark 100%); 
+}
+.orange-gradient{
+	background: 
+	linear-gradient(to right, 
+		$c-acsO-ligh 0%,
+		$c-acsO-week 25%,
+		$c-acsO-ligh 100%); 
+}
+/*--------------------------------------------------------------
+## H1234
+--------------------------------------------------------------*/
+.mkr-w {
+	background: linear-gradient(transparent 60%, $c-acsW-ligh 0%);
+}
+.textgrad-o {
+	background: linear-gradient( 
+		-2deg,
+		$c-acsO-dark 5%,
+		$c-acsO-ligh 50%, 
+		$c-acsO-week 65%, 
+		$c-acsO-ligh 75%,
+		$c-acsO-ligh 100%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+.textgrad-s {
+	background: linear-gradient( 
+		-2deg,
+		#000000 5%,
+		$c-acsW-midd 60%, 
+		$c-acsW-ligh 65%, 
+		$c-acsW-dark 75%,
+		#000000 100%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+/*--------------------------------------------------------------
+## Fonts
+--------------------------------------------------------------*/
+@font-face {
+	font-family: 'setosp';
+	src: url(font/setosp.ttf);
+}
+
+/*--------------------------------------------------------------
+## Bar
+--------------------------------------------------------------*/
+.bar-l{
+	display:block;
+	height:0.2em;
+	width:100%;
+	margin:0.2em 0;
+}
+.bar-s{
+	display:block;
+	height:0.1em;
+	width:10%;
+	margin:0.1em 0;
+}
+/*--------------------------------------------------------------
+## Shadow
+--------------------------------------------------------------*/
+.sdw4{
+	filter: drop-shadow(2px 2px 1.5px rgba(10, 10, 10, 0.8));
+}
+.sdw3{
+	filter: drop-shadow(1.5px 1.5px 1px rgba(10, 10, 10, 0.85));
+}
+.sdw2{
+	filter: drop-shadow(1px 1px 0.5px rgba(10, 10, 10, 0.9));
+}
+.sdw1{
+	filter: drop-shadow(0.5px 0.5px 0px rgba(10, 10, 10, 0.95));
+}
+/*--------------------------------------------------------------
+## TextOutline
+--------------------------------------------------------------*/
+.cloud-out{
+	text-shadow:
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh,
+		0 0 5px $c-acsW-ligh;
+}
+
+/*--------------------------------------------------------------
+## BOX
+--------------------------------------------------------------*/
+.bxrad{
+	border-radius: 3px;
+}
+/*--------------------------------------------------------------
+## Anime
+--------------------------------------------------------------*/
+@keyframes bound {
+	0%,100% {top: 0;transform: scale(1);}
+	40%,60% {top: 0;transform: scale(1);}
+	50% {transform: scale(1.3);}
+}
