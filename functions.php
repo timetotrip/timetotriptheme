@@ -8,9 +8,38 @@
 /* * * * * * * * * * * * * * * * * *
  * ORIGINAL
  * * * * * * * * * * * * * * * * * */
- require_once("countrylist.php");
- 
- 
+require_once("countrylist.php");
+
+function getImagePath($filename){
+
+	$path = get_template_directory_uri();
+	$path .= "/media/";
+	
+	if( ua_smartphone() ){
+		$path .= "sp/";
+	}
+	else{
+		$path .= "pc/";
+	}
+	
+	$path .= $filename;
+	
+	return $path;
+}
+function ua_smartphone(){
+	//ユーザーエージェントを取得
+	$ua = $_SERVER['HTTP_USER_AGENT'];
+	//スマホと判定する文字リスト
+	$ua_list = array('iPhone','Android');
+	 foreach ($ua_list as $ua_smt) {
+	//ユーザーエージェントに文字リストの単語を含む場合はTRUE、それ以外はFALSE
+		if (strpos($ua, $ua_smt) !== false) {
+		 return true;
+		}
+	 } return false;
+}
+
+
 /* * * * * * * * * * * * * * * * * *
  * Theme Default
  * * * * * * * * * * * * * * * * * */

@@ -23,14 +23,23 @@ $c-acsO-week : #fcd59f;
 $c-acsO-ligh : #fb9100;
 $c-acsO-dark : #8f5300;
 
+
+/*base color = white*/
+$clb-r10:rgba(253, 235, 235,1.0);
+$clb-r03:rgba(253, 235, 235,0.3);
+$clb-g10:rgba(253, 255, 253,1.0);
+$clb-g03:rgba(253, 255, 253,0.3);
+
+$clm-a:#2b0300;
+
 /*--------------------------------------------------------------
 ## MediaQuery
 --------------------------------------------------------------*/
 $breakpoints: (
 	'sm': 'screen and (max-width: 374px)',
 	'md': 'screen and (max-width: 580px)',
-	'lg': 'screen and (max-width: 1000px)',
-	'xl': 'screen and (max-width: 1200px)',
+	'lg': 'screen and (max-width: 1200px)',
+	'xl': 'screen and (max-width: 2400px)',
 ) !default;
 
 @mixin mq($breakpoint: md) {
@@ -81,19 +90,56 @@ $s-image-small  : calc(100vw/64);
 --------------------------------------------------------------*/
 *{
 	transition: 1s;
+	margin:0;
+	padding:0;
 }
 /*--------------------------------------------------------------
 ## Back ground
 --------------------------------------------------------------*/
-$list-back-grad: 
-	$c-base-dark 0%,
-	$c-base-ligh 50%,
-	$c-base-dark 100%;
 
 html,body{
 	width:100%;
 	height:auto;
 }
+
+	
+.grd-back{ 
+	$list-back-grad: 
+		#F0F0F0 0%,
+		#FFFFFF 70%,
+		#F0F0F0 100%;
+
+	width:100%;
+	height:auto;
+	@include gradient(15deg, $list-back-grad);
+
+/*
+
+	$cll-back:rgba(252, 255, 250,1.0);
+	$clm-back:rgba(248, 250, 242,1.0);
+	$cld-back:rgba(244, 247, 234,1.0);
+	
+	background-color:$clm-back;
+	background-image: linear-gradient(30deg, $cll-back 12%, transparent 12.5%, transparent 87%, $cll-back 87.5%, $cll-back),
+	linear-gradient(150deg, $cll-back 12%, transparent 12.5%, transparent 87%, $cll-back 87.5%, $cll-back),
+	linear-gradient(30deg, $cll-back 12%, transparent 12.5%, transparent 87%, $cll-back 87.5%, $cll-back),
+	linear-gradient(150deg, $cll-back 12%, transparent 12.5%, transparent 87%, $cll-back 87.5%, $cll-back),
+	linear-gradient(60deg, $cld-back 25%, transparent 25.5%, transparent 75%, $cld-back 75%, $cld-back),
+	linear-gradient(60deg, $cld-back 25%, transparent 25.5%, transparent 75%, $cld-back 75%, $cld-back);
+	background-size:4px 7px;
+	background-position: 0 0, 0 0, 2px 3.5px, 2px 3.5px, 0 0, 2px 3.5px;
+	
+*/
+}
+
+
+
+/*--------*/
+/*
+$list-back-grad: 
+	$c-base-dark 0%,
+	$c-base-ligh 50%,
+	$c-base-dark 100%;
 
 .back-gradient{
 	width:100%;
@@ -133,9 +179,15 @@ html,body{
 		$c-acsO-week 25%,
 		$c-acsO-ligh 100%); 
 }
+*/
 /*--------------------------------------------------------------
 ## H1234
 --------------------------------------------------------------*/
+h1{
+	margin:0;
+}
+
+/*
 .mkr-w {
 	background: linear-gradient(transparent 60%, $c-acsW-ligh 0%);
 }
@@ -165,14 +217,16 @@ html,body{
 	background-clip: text;
 	color: transparent;
 }
+*/
 /*--------------------------------------------------------------
 ## Fonts
 --------------------------------------------------------------*/
+/*
 @font-face {
 	font-family: 'setosp';
 	src: url(font/setosp.ttf);
 }
-
+*/
 /*--------------------------------------------------------------
 ## Bar
 --------------------------------------------------------------*/
@@ -206,6 +260,7 @@ html,body{
 /*--------------------------------------------------------------
 ## TextOutline
 --------------------------------------------------------------*/
+/*
 .cloud-out{
 	text-shadow:
 		0 0 5px $c-acsW-ligh,
@@ -229,7 +284,7 @@ html,body{
 		0 0 5px $c-acsW-ligh,
 		0 0 5px $c-acsW-ligh;
 }
-
+*/
 /*--------------------------------------------------------------
 ## BOX
 --------------------------------------------------------------*/
