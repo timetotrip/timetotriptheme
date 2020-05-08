@@ -14,7 +14,8 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 	
-	
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/faf0d19c44.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
 	
@@ -26,12 +27,22 @@
 <div id="page" class="site grd-back">
 
 	<header id="masthead" class="site-header">
-		
-		<div class="h-area" style="background-image:url(<?php echo getImagePath("header.jpg"); ?>);">
-		</div>
-		
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<img src=""></img>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<div class="h-area" style="background-image:url(<?php echo getImagePath("header.jpg"); ?>);">
+				<div class="h-base">
+					<div class="h-desc">
+						<p>4:20</p>
+						<p>時間だ、</p>
+						<p>旅にでよう。</p>
+					</div>
+					<div class="h-name">
+						<h1>Time To Trip</h1>
+					</div>
+					<div class="h-addr">
+						<p>420.jpn.com</p>
+					</div>
+				</div>
+			</div>		
 		</a>
 		
 	</header>
