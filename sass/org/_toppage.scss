@@ -229,6 +229,7 @@
 			
 			background-size:cover;
 			background-position: center;
+			position:relative;
 			
 			display: flex;
 			flex-direction: row;
@@ -237,7 +238,7 @@
 			align-items: flex-end;
 			align-content: flex-end;
 			
-			filter:grayscale(80%) contrast(120%) brightness(120%);
+			/*filter:grayscale(80%) contrast(120%) brightness(120%);*/
 			
 			.tpfaa-categ,.tpfaa-title{
 				filter:none;
@@ -257,7 +258,9 @@
 				text-align: center;
 			}
 		}
-		
+		.tpf-atfirst::befor{
+			/*filter:grayscale(80%) contrast(120%) brightness(120%);*/
+		}
 	}
 	@include mq(sm) {
 		h2{
