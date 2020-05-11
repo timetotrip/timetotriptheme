@@ -10,6 +10,18 @@
  * * * * * * * * * * * * * * * * * */
 require_once("countrylist.php");
 
+function getThumbnailById($image_id){
+	$image = wp_get_attachment_image_src( $image_id );
+	$image_src = $image[0];
+	
+	//Smartphone用の処理を入れる
+	if( ua_smartphone() ){
+		$image_src = substr_replace(
+			$image_src, "-sp", strrpos($image_src,"."),0 );
+	}
+	return $image_src;
+	
+}
 function getImagePath($filename){
 
 	$path = get_template_directory_uri();

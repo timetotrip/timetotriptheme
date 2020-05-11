@@ -30,7 +30,15 @@ $clb-r03:rgba(253, 235, 235,0.3);
 $clb-g10:rgba(253, 255, 253,1.0);
 $clb-g03:rgba(253, 255, 253,0.3);
 
-$clm-a:#2b0300;
+/*アクセント color = 赤茶*/
+$cla-d10:rgba(43, 24, 0,1.0);
+$cla-d08:rgba(43, 24, 0,0.8);
+$cla-d06:rgba(43, 24, 0,0.6);
+$cla-d03:rgba(43, 24, 0,0.3);
+
+$cla-l10:rgba(255, 55, 0,1.0);
+$cla-l08:rgba(255, 55, 0,0.8);
+
 
 /*--------------------------------------------------------------
 ## MediaQuery
@@ -50,32 +58,7 @@ $breakpoints: (
 /*--------------------------------------------------------------
 ## margin
 --------------------------------------------------------------*/
-$p-margin-lr1  : calc(100%/16);
-$p-margin-lr14 : calc(14/16*100%);
 
-$s-padding-side  : calc(100vw/64);
-$s-image-small  : calc(100vw/64);
-
-@mixin ajssize($size: small) {
-	@include mq(sm) {
-			@if $size == small {
-				width:calc(25*100vw/64);
-				height:calc(25*100vw/64);
-			}@else if $size == large {
-				width:calc(53.5*100vw/64);
-				height:calc(53.5*100vw/64);
-			}
-	}
-	@include mq(md) {
-			@if $size == small {
-				width:calc(25*100vw/64);
-				height:calc(25*100vw/64);
-			}@else if $size == large {
-				width:calc(53.5*100vw/64);
-				height:calc(53.5*100vw/64);
-			}
-	}
-}
 /*--------------------------------------------------------------
 ## Vender Prefix
 --------------------------------------------------------------*/
@@ -92,6 +75,7 @@ $s-image-small  : calc(100vw/64);
 	transition: 1s;
 	margin:0;
 	padding:0;
+	font-family: "M PLUS Rounded 1c",'Source Sans Pro';
 }
 /*--------------------------------------------------------------
 ## Back ground
@@ -113,23 +97,6 @@ html,body{
 	height:auto;
 	@include gradient(15deg, $list-back-grad);
 
-/*
-
-	$cll-back:rgba(252, 255, 250,1.0);
-	$clm-back:rgba(248, 250, 242,1.0);
-	$cld-back:rgba(244, 247, 234,1.0);
-	
-	background-color:$clm-back;
-	background-image: linear-gradient(30deg, $cll-back 12%, transparent 12.5%, transparent 87%, $cll-back 87.5%, $cll-back),
-	linear-gradient(150deg, $cll-back 12%, transparent 12.5%, transparent 87%, $cll-back 87.5%, $cll-back),
-	linear-gradient(30deg, $cll-back 12%, transparent 12.5%, transparent 87%, $cll-back 87.5%, $cll-back),
-	linear-gradient(150deg, $cll-back 12%, transparent 12.5%, transparent 87%, $cll-back 87.5%, $cll-back),
-	linear-gradient(60deg, $cld-back 25%, transparent 25.5%, transparent 75%, $cld-back 75%, $cld-back),
-	linear-gradient(60deg, $cld-back 25%, transparent 25.5%, transparent 75%, $cld-back 75%, $cld-back);
-	background-size:4px 7px;
-	background-position: 0 0, 0 0, 2px 3.5px, 2px 3.5px, 0 0, 2px 3.5px;
-	
-*/
 }
 
 
@@ -221,12 +188,7 @@ h1{
 /*--------------------------------------------------------------
 ## Fonts
 --------------------------------------------------------------*/
-/*
-@font-face {
-	font-family: 'setosp';
-	src: url(font/setosp.ttf);
-}
-*/
+
 /*--------------------------------------------------------------
 ## Bar
 --------------------------------------------------------------*/
