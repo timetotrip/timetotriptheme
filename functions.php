@@ -6,7 +6,7 @@
  */
  
 /* * * * * * * * * * * * * * * * * *
- * ORIGINAL
+ * LIB
  * * * * * * * * * * * * * * * * * */
 require_once("countrylist.php");
 
@@ -50,8 +50,44 @@ function ua_smartphone(){
 		}
 	 } return false;
 }
+/* * * * * * * * * * * * * * * * * *
+ * TOPPage
+ * * * * * * * * * * * * * * * * * */
+function putTopPageView( $cate, $not_in, $num ){
+$wpq = new WP_Query(array(
+		'category_name' => $cate, 
+		'orderby' => 'date',
+		'category__not_in' => $not_in,
+		'posts_per_page' => $num
+	));
 
-
+	if ( $wpq->have_posts() ) :
+		while ( $wpq->have_posts() ): $wpq->the_post();
+			//echo $post->post_title;
+			if ( has_post_thumbnail() ) : 
+				echo "<a href=\""
+							. get_permalink()
+							."\" >"
+							. "<div style=\"background-image:url("
+							. getThumbnailById(get_post_thumbnail_id())
+							. ")\" class=\"tpv-area\">";
+						foreach(get_the_category() as $cate):
+							echo "<p class=\"tpva-categ\">"
+										.$cate->cat_name 
+										."</p>";
+						endforeach;
+						
+						echo "<h2 class=\"tpva-title\">"
+									. get_the_title()
+								."</h2>";
+						
+				echo "</div></a>";
+			endif;
+		endwhile;
+	endif;
+	
+	
+}
 /* * * * * * * * * * * * * * * * * *
  * Theme Default
  * * * * * * * * * * * * * * * * * */
