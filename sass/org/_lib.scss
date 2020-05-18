@@ -56,8 +56,11 @@ $breakpoints: (
 	}
 }
 /*--------------------------------------------------------------
-## margin
+## Shadow 
 --------------------------------------------------------------*/
+.sdw_card{
+	filter: drop-shadow(0.390625vw 0.390625vw 0.390625vw rgba(5, 5, 5, 0.9));
+}
 
 /*--------------------------------------------------------------
 ## Vender Prefix
@@ -105,52 +108,6 @@ html,body{
 
 
 
-/*--------*/
-/*
-$list-back-grad: 
-	$c-base-dark 0%,
-	$c-base-ligh 50%,
-	$c-base-dark 100%;
-
-.back-gradient{
-	width:100%;
-	height:auto;
-	@include gradient(-45deg, $list-back-grad);
-}
-
-.cloud-gradient{
-	background: 
-	linear-gradient(135deg, $c-acsW-midd 25%, transparent 25%) -50px 0,
-	linear-gradient(225deg, $c-acsW-midd 25%, transparent 25%) -50px 0,
-	linear-gradient(315deg, $c-acsW-midd 25%, transparent 25%),
-	linear-gradient(45deg, $c-acsW-midd 25%, transparent 25%);	 
-	background-size: 2em 2em;
-	background-color: $c-acsW-ligh;
-}
-.wave-gradient{
-	background: 
-	linear-gradient(135deg, $c-base-tran2 25%, transparent 25%) -50px 0,
-	linear-gradient(225deg, $c-base-tran2 25%, transparent 25%) -50px 0,
-	linear-gradient(315deg, $c-base-tran2 25%, transparent 25%),
-	linear-gradient(45deg, $c-base-tran2 25%, transparent 25%);	 
-	background-size: 2em 2em;
-	background-color: $c-base-tran;
-}
-.silver-gradient{
-	background: 
-	linear-gradient(to right, 
-		$c-acsW-dark 0%,
-		$c-acsW-ligh 25%,
-		$c-acsW-dark 100%); 
-}
-.orange-gradient{
-	background: 
-	linear-gradient(to right, 
-		$c-acsO-ligh 0%,
-		$c-acsO-week 25%,
-		$c-acsO-ligh 100%); 
-}
-*/
 /*--------------------------------------------------------------
 ## H1234
 --------------------------------------------------------------*/

@@ -8,7 +8,6 @@
 /* * * * * * * * * * * * * * * * * *
  * LIB
  * * * * * * * * * * * * * * * * * */
-require_once("countrylist.php");
 
 function getThumbnailById($image_id){
 	$image = wp_get_attachment_image_src( $image_id );
@@ -53,10 +52,10 @@ function ua_smartphone(){
 /* * * * * * * * * * * * * * * * * *
  * TOPPage
  * * * * * * * * * * * * * * * * * */
-function putTopPageView( $cate, $not_in, $num ){
+function putTopPageView( $cate, $not_in, $num, $order ){
 $wpq = new WP_Query(array(
 		'category_name' => $cate, 
-		'orderby' => 'date',
+		'orderby' => $order,
 		'category__not_in' => $not_in,
 		'posts_per_page' => $num
 	));
@@ -65,22 +64,24 @@ $wpq = new WP_Query(array(
 		while ( $wpq->have_posts() ): $wpq->the_post();
 			//echo $post->post_title;
 			if ( has_post_thumbnail() ) : 
-				echo "<a href=\""
-							. get_permalink()
-							."\" >"
-							. "<div style=\"background-image:url("
-							. getThumbnailById(get_post_thumbnail_id())
-							. ")\" class=\"tpv-area\">";
-						foreach(get_the_category() as $cate):
-							echo "<p class=\"tpva-categ\">"
-										.$cate->cat_name 
-										."</p>";
-						endforeach;
-						
-						echo "<h2 class=\"tpva-title\">"
-									. get_the_title()
-								."</h2>";
-						
+				echo "<a class=\"tpv\" href=\""
+					. get_permalink()
+					."\" >"
+					. "<div style=\"background-image:url("
+					. getThumbnailById(get_post_thumbnail_id())
+					. ")\" class=\"tpv-bg\">"
+					. "</div>"
+					. "<div class=\"tpv-area\">";
+				foreach(get_the_category() as $cate):
+					echo "<p class=\"tpva-categ\">"
+								.$cate->cat_name 
+								."</p>";
+				endforeach;
+				
+				echo "<h2 class=\"tpva-title\">"
+							. get_the_title()
+						."</h2>";
+				
 				echo "</div></a>";
 			endif;
 		endwhile;
@@ -88,6 +89,12 @@ $wpq = new WP_Query(array(
 	
 	
 }
+/* * * * * * * * * * * * * * * * * *
+ * Talk
+ * * * * * * * * * * * * * * * * * */
+ 
+require_once("func-talk.php");
+ 
 /* * * * * * * * * * * * * * * * * *
  * Theme Default
  * * * * * * * * * * * * * * * * * */

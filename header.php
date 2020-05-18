@@ -29,7 +29,7 @@
 
 	<header id="masthead" class="site-header">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<div class="h-area" style="background-image:url(<?php echo getImagePath("header.jpg"); ?>);">
+			<div class="h-area sdw_card" style="background-image:url(<?php echo getImagePath("header.jpg"); ?>);">
 				<div class="h-base">
 					<div class="h-desc">
 						<p>4:20</p>
