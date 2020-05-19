@@ -67,10 +67,10 @@ $wpq = new WP_Query(array(
 				echo "<a class=\"tpv\" href=\""
 					. get_permalink()
 					."\" >"
-					. "<div style=\"background-image:url("
+					. "<img src=\""
 					. getThumbnailById(get_post_thumbnail_id())
-					. ")\" class=\"tpv-bg\">"
-					. "</div>"
+					. "\" class=\"tpv-bg\" loading=\"lazy\">"
+					. "</img>"
 					. "<div class=\"tpv-area\">";
 				foreach(get_the_category() as $cate):
 					echo "<p class=\"tpva-categ\">"

@@ -36,7 +36,15 @@ get_header();
 		<div class="tp-intro">
 			<div class="tpi-taco">
 				<?php 
-					echo putTalk( array("taco","l"),"Hello world");
+					echo putTalk( array('who'=>'taco','where'=>'l'),
+						"海外情報サイト Time to tripにようこそ！
+						タコとイカが海外のルールや常識を伝えるサイトだ
+						日本の外に興味をもって、どんどん旅行してほしい"
+					);
+					echo putTalk( array('who'=>'ika','where'=>'r'),
+						"タコちゃんのインスタもフォローしてあげて！
+						<a href=\"https://www.instagram.com/tacoskyhigh/\"><i class=\"fab fa-instagram\"></i>@tacoskyhigh</a>"
+					);
 				?>
 			</div>
 			<div class="tpi-atfirst sdw_card">

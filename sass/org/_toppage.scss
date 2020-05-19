@@ -438,20 +438,37 @@
 		flex-direction: column;
 		.tpi-taco,.tpi-atfirst{
 			width:100%;
+		}
+		.tpi-atfirst{
 			height:48.4375vw;
+		}
+		.tpi-taco{
+			height:auto;
 		}
 	}
 	@include mq(sm) {
 		flex-direction: column;
 		.tpi-taco,.tpi-atfirst{
 			width:100%;
+		}
+		.tpi-atfirst{
 			height:48.4375vw;
+		}
+		.tpi-taco{
+			height:auto;
 		}
 	}
 	
 	.tpi-taco{
 		margin-bottom:3.125vw;
-		background-color:red;
+		a,i{
+			color:$cla-l10;
+			font-weight: bold;
+		}
+		i{
+			margin-right:5px;
+			font-size:1.6rem;
+		}
 	}
 	.tpi-atfirst{
 		a{
