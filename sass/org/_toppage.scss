@@ -14,8 +14,12 @@
 		width:100%;
 		height:100%;
 		
+		/*
 		background-size:cover;
 		background-position: center;
+		*/
+		object-fit:cover;
+		object-position: center;
 	}
 	
 	.tpv-area{
@@ -237,7 +241,7 @@
 	grid-gap:1.5625vw 2%;
 	
 	@include mq(xl) {
-		grid-template-columns: 62.5% 37.5%;
+		grid-template-columns: 61.5% 36.5%;
 		grid-template-rows: 36.328125vw 12.109375vw 12.109375vw;
 		
 		.tpf-carousel{
@@ -342,7 +346,8 @@
 
 	.tpf-newest1,.tpf-newest2,.tpf-newest3{
 		.tpv-bg{
-			filter:grayscale(85%) contrast(180%) brightness(140%);
+			/*filter:grayscale(85%) contrast(180%) brightness(140%);*/
+			filter:sepia(100%)  hue-rotate(-16deg) contrast(99%) brightness(80%);
 		}
 		.tpv-bg:hover{
 			filter:none;
@@ -403,9 +408,76 @@
 .tp-intro{
 	margin :3.125vw 1.5625vw;
 	
-	display: flex;
+	display: grid;
+	grid-gap:1.5625vw 2%;
 	
+	@include mq(xl) {
+		grid-template-columns: 61.5% 36.5%;
+		grid-template-rows: auto auto;
+		.tpi-atfirst{
+			grid-column: 2 / 3;
+			grid-row: 1 / 3;
+		}
+		.tpi-taco{
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+		.tpi-ika{
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+	}
+	@include mq(lg) {
+		grid-template-columns: 61.5% 36.5%;
+		grid-template-rows: auto auto;
+		.tpi-atfirst{
+			grid-column: 2 / 3;
+			grid-row: 1 / 3;
+		}
+		.tpi-taco{
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+		.tpi-ika{
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+	}
 	
+	@include mq(md) {
+		grid-template-columns: 98%;
+		grid-template-rows: 24.21875vw auto auto;
+		.tpi-atfirst{
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+		.tpi-taco{
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+		.tpi-ika{
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+	}
+	
+	@include mq(sm) {
+		grid-template-columns: 98%;
+		grid-template-rows: 24.21875vw auto auto;
+		.tpi-atfirst{
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+		.tpi-taco{
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+		.tpi-ika{
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+	}
+	/*
 	@include mq(xl) {
 		flex-direction: row;
 		justify-content: space-between;
@@ -458,9 +530,9 @@
 			height:auto;
 		}
 	}
+	*/
 	
-	.tpi-taco{
-		margin-bottom:3.125vw;
+	.tpi-taco,.tpi-ika{
 		a,i{
 			color:$cla-l10;
 			font-weight: bold;

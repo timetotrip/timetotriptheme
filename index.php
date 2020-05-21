@@ -19,7 +19,7 @@ get_header();
 			</div>
 			<div class="tpf-newest1">
 			<?php 
-				putTopPageView('atfirst', array(),1,'date');
+				putTopPageView('cannabisculture',array(5,39),1,'date');
 			?>
 			</div>
 			<div class="tpf-newest2">
@@ -34,6 +34,11 @@ get_header();
 			</div>
 		</div>
 		<div class="tp-intro">
+			<div class="tpi-atfirst sdw_card">
+				<?php 
+					putTopPageView('atfirst', array(),1,'date');
+				?>
+			</div>
 			<div class="tpi-taco">
 				<?php 
 					echo putTalk( array('who'=>'taco','where'=>'l'),
@@ -41,17 +46,42 @@ get_header();
 						タコとイカが海外のルールや常識を伝えるサイトだ
 						日本の外に興味をもって、どんどん旅行してほしい"
 					);
+				?>
+			</div>
+			<div class="tpi-ika">
+				<?php 
 					echo putTalk( array('who'=>'ika','where'=>'r'),
 						"タコちゃんのインスタもフォローしてあげて！
 						<a href=\"https://www.instagram.com/tacoskyhigh/\"><i class=\"fab fa-instagram\"></i>@tacoskyhigh</a>"
 					);
 				?>
 			</div>
-			<div class="tpi-atfirst sdw_card">
-				<?php 
-					putTopPageView('atfirst', array(),1,'date');
-				?>
-			</div>
+
+		</div>
+		
+		<div class="tp-cate tpc-1">
+			<h1>大麻文化</h1>
+			<?php 
+				putTopPageView('cannabisculture',array(5,39),10,'date');
+			?>
+		</div>
+		<div class="tp-cate">
+			<h1>ドラッグ</h1>
+			<?php 
+				putTopPageView('drugculture',array(5,39),10,'date');
+			?>
+		</div>
+		<div class="tp-cate">
+			categoly 1
+		</div>
+		<div class="tp-cate">
+			categoly 2
+		</div>
+		<div class="tp-cate">
+			categoly 1
+		</div>
+		<div class="tp-cate">
+			categoly 2
 		</div>
 		<div class="tp-cate">
 			categoly 1
