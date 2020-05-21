@@ -850,15 +850,6 @@ h1 {
     flex-direction: row; }
   .talk-base.tkdr-rl {
     flex-direction: row-reverse; }
-  .talk-base .tk-triangle {
-    display: block;
-    width: 0;
-    height: 0;
-    border: 2vw solid transparent; }
-    .talk-base .tk-triangle.tkdr-lr {
-      border-right: 8vw solid #FFFFFF; }
-    .talk-base .tk-triangle.tkdr-rl {
-      border-left: 8vw solid #FFFFFF; }
   .talk-base .tk-charactor {
     width: 20%;
     min-width: 20%;
@@ -872,60 +863,106 @@ h1 {
     .talk-base .tk-charactor p {
       display: inline-block;
       font-size: 0.7em; }
-  .talk-base .tk-content {
-    max-width: 60%;
-    background-color: #FFFFFF;
-    border-radius: 34% 33% 31% 32% / 21% 22% 23% 20%;
-    padding: 5% 3% 5% 7%;
-    position: relative;
-    z-index: auto;
-    height: auto; }
-    .talk-base .tk-content.tkdr-lr {
-      margin: 5% 7% 5% 0; }
-    .talk-base .tk-content.tkdr-rl {
-      margin: 5% 0 5% 7%; }
-    .talk-base .tk-content::before, .talk-base .tk-content::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1; }
-    .talk-base .tk-content::before {
+  .talk-base .tk-puff {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    transform: scale(0, 0); }
+    .talk-base .tk-puff.tkdr-lr {
+      flex-direction: row; }
+    .talk-base .tk-puff.tkdr-rl {
+      flex-direction: row-reverse; }
+    .talk-base .tk-puff .tk-triangle {
+      display: block;
+      width: 0;
+      height: 0;
+      border: 2vw solid transparent; }
+      .talk-base .tk-puff .tk-triangle.tkdr-lr {
+        border-right: 8vw solid #FFFFFF; }
+      .talk-base .tk-puff .tk-triangle.tkdr-rl {
+        border-left: 8vw solid #FFFFFF; }
+    .talk-base .tk-puff .tk-content {
+      width: auto;
+      height: auto;
+      max-width: 80%;
       background-color: #FFFFFF;
-      transform: rotate(6deg);
-      border-radius: 45% 49% 40% 38% / 22% 32% 28% 33%; }
-    .talk-base .tk-content::after {
-      background-color: #FFFFFF;
-      transform: rotate(-8deg);
-      border-radius: 38% 45% 44% 35% / 36% 27% 32% 27%; }
-    .talk-base .tk-content p {
-      word-wrap: break-word; }
-    @media screen and (max-width: 2400px) {
-      .talk-base .tk-content p {
-        font-size: 1.6em;
-        line-height: 1.4em;
-        letter-spacing: 0.1em;
-        margin-bottom: 1em; } }
-    @media screen and (max-width: 1200px) {
-      .talk-base .tk-content p {
-        font-size: 1.4em;
-        line-height: 1.4em;
-        letter-spacing: 0.1em;
-        margin-bottom: 1em; } }
-    @media screen and (max-width: 580px) {
-      .talk-base .tk-content p {
-        font-size: 1.2em;
-        line-height: 1.2em;
-        letter-spacing: 0.1em;
-        margin-bottom: 1em; } }
-    @media screen and (max-width: 374px) {
-      .talk-base .tk-content p {
-        font-size: 1em;
-        line-height: 1.2em;
-        letter-spacing: 0.1em;
-        margin-bottom: 1em; } }
+      border-radius: 34% 33% 31% 32% / 21% 22% 23% 20%;
+      padding: 5% 3% 5% 7%;
+      position: relative;
+      z-index: auto; }
+      .talk-base .tk-puff .tk-content.tkdr-lr {
+        margin: 5% 7% 5% 0; }
+      .talk-base .tk-puff .tk-content.tkdr-rl {
+        margin: 5% 0 5% 7%; }
+      .talk-base .tk-puff .tk-content::before, .talk-base .tk-puff .tk-content::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1; }
+      .talk-base .tk-puff .tk-content::before {
+        background-color: #FFFFFF;
+        transform: rotate(6deg);
+        border-radius: 45% 49% 40% 38% / 22% 32% 28% 33%; }
+      .talk-base .tk-puff .tk-content::after {
+        background-color: #FFFFFF;
+        transform: rotate(-8deg);
+        border-radius: 38% 45% 44% 35% / 36% 27% 32% 27%; }
+      .talk-base .tk-puff .tk-content p {
+        word-wrap: break-word; }
+      @media screen and (max-width: 2400px) {
+        .talk-base .tk-puff .tk-content p {
+          font-size: 1.6em;
+          line-height: 1.4em;
+          letter-spacing: 0.1em;
+          margin-bottom: 1em; } }
+      @media screen and (max-width: 1200px) {
+        .talk-base .tk-puff .tk-content p {
+          font-size: 1.4em;
+          line-height: 1.4em;
+          letter-spacing: 0.1em;
+          margin-bottom: 1em; } }
+      @media screen and (max-width: 580px) {
+        .talk-base .tk-puff .tk-content p {
+          font-size: 1.2em;
+          line-height: 1.2em;
+          letter-spacing: 0.1em;
+          margin-bottom: 1em; } }
+      @media screen and (max-width: 374px) {
+        .talk-base .tk-puff .tk-content p {
+          font-size: 1em;
+          line-height: 1.2em;
+          letter-spacing: 0.1em;
+          margin-bottom: 1em; } }
+  .talk-base.tk-appeared .tk-puff.tkdr-lr {
+    animation: PuffInL 0.7s linear 0s 1 normal both; }
+  .talk-base.tk-appeared .tk-puff.tkdr-rl {
+    animation: PuffInR 0.7s linear 0s 1 normal both; }
+
+@keyframes PuffInL {
+  0% {
+    transform: scale(0, 0);
+    margin-left: -50%; }
+  50% {
+    transform: scale(0.3, 0.3);
+    margin-left: -30%; }
+  100% {
+    transform: scale(1, 1);
+    margin-left: 0; } }
+
+@keyframes PuffInR {
+  0% {
+    transform: scale(0, 0);
+    margin-right: -50%; }
+  50% {
+    transform: scale(0.3, 0.3);
+    margin-right: -30%; }
+  100% {
+    transform: scale(1, 1);
+    margin-right: 0; } }
 
 /*--------------------------------------------------------------
 ## Top page Block

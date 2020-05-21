@@ -19,19 +19,6 @@
 		flex-direction: row-reverse;
 	}
 	
-	.tk-triangle{
-		display: block;
-		width: 0;
-		height: 0;
-		border: 2vw solid transparent;
-		
-		&.tkdr-lr{
-			border-right: 8vw solid #FFFFFF;
-		}
-		&.tkdr-rl{
-			border-left: 8vw solid #FFFFFF;
-		}
-	}
 	
 	.tk-charactor{
 		width:20%;
@@ -51,79 +38,150 @@
 		}
 	}
 	
-	.tk-content{
+	.tk-puff{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width:80%;
+		transform:scale(0, 0);
+		
 		&.tkdr-lr{
-			margin:5% 7% 5% 0;
+			flex-direction: row;
 		}
 		&.tkdr-rl{
-			margin:5% 0 5% 7%;
+			flex-direction: row-reverse;
 		}
 		
-		max-width:60%;
-		background-color:#FFFFFF;
-		border-radius:34% 33% 31% 32% / 21% 22% 23% 20%;
-		padding:5% 3% 5% 7%;
-		
-		position:relative;
-		z-index:auto;
-		height:auto;
-		
-		&::before,&::after{
-			content:'';
-			position:absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			z-index: -1;
+		.tk-triangle{
+			display: block;
+			width: 0;
+			height: 0;
+			border: 2vw solid transparent;
+			
+			&.tkdr-lr{
+				border-right: 8vw solid #FFFFFF;
+			}
+			&.tkdr-rl{
+				border-left: 8vw solid #FFFFFF;
+			}
 		}
-		&::before{
+		.tk-content{
+			&.tkdr-lr{
+				margin:5% 7% 5% 0;
+			}
+			&.tkdr-rl{
+				margin:5% 0 5% 7%;
+			}
+			
+			width:auto;
+			height:auto;
+			max-width:80%;
+			
 			background-color:#FFFFFF;
-			transform: rotate(6deg);
-			border-radius:45% 49% 40% 38% / 22% 32% 28% 33%;
-		}
-		&::after{
-			background-color:#FFFFFF;
-			transform: rotate(-8deg);
-			border-radius:38% 45% 44% 35% / 36% 27% 32% 27%;
-		}
-		
-		p{
-			word-wrap:break-word;
-		}
-		
-		@include mq(xl) {
-			p{
-				font-size:1.6em;
-				line-height:1.4em;
-				letter-spacing:0.1em;
-				margin-bottom:1em;
+			border-radius:34% 33% 31% 32% / 21% 22% 23% 20%;
+			padding:5% 3% 5% 7%;
+			
+			position:relative;
+			z-index:auto;
+			
+			&::before,&::after{
+				content:'';
+				position:absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: -1;
 			}
-		}
-		@include mq(lg) {
-			p{
-				font-size:1.4em;
-				line-height:1.4em;
-				letter-spacing:0.1em;
-				margin-bottom:1em;
+			&::before{
+				background-color:#FFFFFF;
+				transform: rotate(6deg);
+				border-radius:45% 49% 40% 38% / 22% 32% 28% 33%;
 			}
-		}
-		@include mq(md) {
-			p{
-				font-size:1.2em;
-				line-height:1.2em;
-				letter-spacing:0.1em;
-				margin-bottom:1em;
+			&::after{
+				background-color:#FFFFFF;
+				transform: rotate(-8deg);
+				border-radius:38% 45% 44% 35% / 36% 27% 32% 27%;
 			}
-		}
-		@include mq(sm) {
+			
 			p{
-				font-size:1em;
-				line-height:1.2em;
-				letter-spacing:0.1em;
-				margin-bottom:1em;
+				word-wrap:break-word;
+			}
+			
+			@include mq(xl) {
+				p{
+					font-size:1.6em;
+					line-height:1.4em;
+					letter-spacing:0.1em;
+					margin-bottom:1em;
+				}
+			}
+			@include mq(lg) {
+				p{
+					font-size:1.4em;
+					line-height:1.4em;
+					letter-spacing:0.1em;
+					margin-bottom:1em;
+				}
+			}
+			@include mq(md) {
+				p{
+					font-size:1.2em;
+					line-height:1.2em;
+					letter-spacing:0.1em;
+					margin-bottom:1em;
+				}
+			}
+			@include mq(sm) {
+				p{
+					font-size:1em;
+					line-height:1.2em;
+					letter-spacing:0.1em;
+					margin-bottom:1em;
+				}
 			}
 		}
 	}
+	
+	
+	&.tk-appeared{
+		.tk-puff{
+			&.tkdr-lr{
+				animation: PuffInL 0.7s linear 0s 1 normal both;
+			}
+			&.tkdr-rl{
+				animation: PuffInR 0.7s linear 0s 1 normal both;
+			}
+			
+		}
+	}
+	
 }
-
+@keyframes PuffInL {
+	0% {
+		transform:scale(0, 0);
+		margin-left:-50%;
+	}
+	50% {
+		transform:scale(0.3, 0.3);
+		margin-left:-30%;
+	}
+	100% {
+		transform:scale(1, 1);
+		margin-left:0;
+	}
+}
+@keyframes PuffInR {
+	0% {
+		transform:scale(0, 0);
+		margin-right:-50%;
+	}
+	50% {
+		transform:scale(0.3, 0.3);
+		margin-right:-30%;
+	}
+	100% {
+		transform:scale(1, 1);
+		margin-right:0;
+	}
+}

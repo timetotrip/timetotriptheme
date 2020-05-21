@@ -32,11 +32,11 @@
 								. "var imgPosBot = imgPosTop + $(this).height();"
 								. "var scroll = $(window).scrollTop();"
 								. "var windowHeight = $(window).height();"
-								. "if ((scroll > imgPosTop - windowHeight + windowHeight/5)&&(scroll < imgPosBot - windowHeight + (windowHeight/10)*8)){"
-									. "$(this).addClass(\"appeared\");"
+								. "if ((scroll > imgPosTop - windowHeight + (windowHeight/10)*2)&&(scroll < imgPosBot - windowHeight + (windowHeight/10)*8)){"
+									. "$(this).addClass(\"tk-appeared\");"
 								. "}"
 								. "else{"
-									. "$(this).removeClass(\"appeared\");"
+									. "$(this).removeClass(\"tk-appeared\");"
 								. "}"
 							. "})"
 						. ";});"
@@ -73,13 +73,14 @@
 		$div = "";
 		
 		//$div .= '<div class="talk-area">';
-			$div .= '<div class="talk-base '. $direct .'">';
-				$div .= '<div class="tk-charactor">';
-					$div .= '<img src="' 
-								. getImagePath($characterlist[$atts['who']]->getPict()) 
-								. '" loading="lazy"></img>';
-					$div .= '<p>' . $characterlist[$atts['who']]->getName() . '</p>';
-				$div .= '</div>';
+		$div .= '<div class="talk-base '. $direct .'">';
+			$div .= '<div class="tk-charactor">';
+				$div .= '<img src="' 
+							. getImagePath($characterlist[$atts['who']]->getPict()) 
+							. '" loading="lazy"></img>';
+				$div .= '<p>' . $characterlist[$atts['who']]->getName() . '</p>';
+			$div .= '</div>';
+			$div .= '<div class="tk-puff'. $direct	. '">';
 				$div .= '<span class="tk-triangle'. $direct	.'"></span>';
 				$div .= '<div class="tk-content'. $direct	. '">';
 					foreach($clist as $c):
@@ -102,7 +103,8 @@
 						endswitch;
 					endforeach;
 				$div .=  '</div>';
-			$div .= '</div>';
+			$div .=  '</div>';
+		$div .= '</div>';
 		//$div .= '</div>';
 		return $div;
 	}
