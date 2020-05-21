@@ -16,12 +16,18 @@
 	
 	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
 	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/faf0d19c44.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-	
 	<link rel='stylesheet' id='_s-style-css'  href='<?php echo  get_template_directory_uri(); ?>/style.css?date=<?php echo date("His"); ?>' media='all' />
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://kit.fontawesome.com/faf0d19c44.js" crossorigin="anonymous"></script>
+	
+	<?php echo putTalkScript(); ?>
+	
 </head>
+
+
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
