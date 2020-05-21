@@ -59,35 +59,23 @@ get_header();
 
 		</div>
 		
-		<div class="tp-cate tpc-1">
-			<h1>大麻文化</h1>
-			<?php 
-				putTopPageView('cannabisculture',array(5,39),10,'date');
-			?>
-		</div>
 		<div class="tp-cate">
-			<h1>ドラッグ</h1>
-			<?php 
-				putTopPageView('drugculture',array(5,39),10,'date');
-			?>
-		</div>
-		<div class="tp-cate">
-			categoly 1
-		</div>
-		<div class="tp-cate">
-			categoly 2
-		</div>
-		<div class="tp-cate">
-			categoly 1
-		</div>
-		<div class="tp-cate">
-			categoly 2
-		</div>
-		<div class="tp-cate">
-			categoly 1
-		</div>
-		<div class="tp-cate">
-			categoly 2
+			<div class="tpc-1">
+				<h1>大麻文化</h1>
+				<div class="tpc-index">
+					<?php 
+						putTopPageView('cannabisculture',array(5,39),10,'date');
+					?>
+				</div>
+			</div>
+			<div class="tpc-2">
+				<h1>ドラッグ</h1>
+				<div class="tpc-index">
+					<?php 
+						putTopPageView('drugculture',array(5,39),10,'date');
+					?>
+				</div>
+			</div>
 		</div>
 	
 	</main><!-- #main -->
