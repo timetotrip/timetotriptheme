@@ -355,19 +355,32 @@
 	.tp-intro,.tpc-1,.tpc-2,.tpc-3{
 		.tpc-title{
 			width:100%;
-			display:flex;
-			justify-content: center;
-			align-items: center;
-			h1{
-				font-size:1.8em;
-				text-align:center;
-				color:$clb-g10;
-				text-shadow: 2px 2px 4px $cla-d08;
+			position:relative;
+			
+			.tpct-back{
+				width:100%;
+				position:absolute;
+				bottom:0;
 			}
-			i{
-				font-size: 1.8rem;
-				animation: bound 5s ease 0s infinite normal;
-				margin: 0 0.5rem;
+			
+			.tpct-name{
+				position:absolute;
+				top:0;
+			
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				h1{
+					font-size:1.8em;
+					text-align:center;
+					color:$clb-g10;
+					text-shadow: 2px 2px 4px $cla-d08;
+				}
+				i{
+					font-size: 1.8rem;
+					animation: bound 5s ease 0s infinite normal;
+					margin: 0 0.5rem;
+				}
 			}
 		}
 		.tpc-index{

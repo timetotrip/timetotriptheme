@@ -69,8 +69,8 @@ get_header();
 			</div>
 		
 		
-			<div class="tpc-1 sdw_card">
-				<div class="tpc-title ptn-str-brown">
+			<div class="tpc-1">
+				<div class="tpc-title ptn-str-brown sdw_card">
 					<i class="fab fa-gripfire ptn-txgrad-fire"></i>
 					<h1 >大麻文化</h1>
 					<i class="fab fa-gripfire ptn-txgrad-fire"></i>
@@ -83,10 +83,13 @@ get_header();
 			</div>
 			
 			<div class="tpc-2 sdw_card">
-				<div class="tpc-title ptn-str-brown">
-					<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-					<h1 >旅紀行</h1> 
-					<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+				<div class="tpc-title">
+					<div class="tpct-back ptn-str-brown"></div>
+					<div class="tpct-name">
+						<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+						<h1 >旅紀行</h1> 
+						<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+					</div>
 				</div>
 				<div class="tpc-index">
 					<?php 
