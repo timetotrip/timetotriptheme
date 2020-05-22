@@ -38,14 +38,17 @@ get_header();
 		<div class="tp-cate">
 		
 			<div class="tp-intro">
-				<div class="tpc-title ptn-str-brown">
-					<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-					<h1 >はじめに</h1>
-					<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+				<div class="tpc-title sdw_card">
+					<div class="tpct-back ptn-str-brown"></div>
+					<div class="tpct-name">
+						<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+						<h1 >はじめに</h1> 
+						<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+					</div>
 				</div>
 				<div class="tpc-index sdw_card">
 					<?php 
-						putTopPageView('atfirst', array(),1,'date');
+						putTopPageView('atfirst', array(),1,'date', true);
 					?>
 				</div>
 				<div class="tpi-taco">
@@ -69,15 +72,18 @@ get_header();
 			</div>
 		
 		
-			<div class="tpc-1">
-				<div class="tpc-title ptn-str-brown sdw_card">
-					<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-					<h1 >大麻文化</h1>
-					<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+			<div class="tpc-1 sdw_card">
+				<div class="tpc-title">
+					<div class="tpct-back ptn-str-brown"></div>
+					<div class="tpct-name">
+						<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+						<h1 >大麻文化</h1> 
+						<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+					</div>
 				</div>
 				<div class="tpc-index">
 					<?php 
-						putTopPageView('cannabisculture',array(5,39),10,'date');
+						putTopPageView('cannabisculture',array(5,39),10,'date', true);
 					?>
 				</div>
 			</div>
@@ -93,20 +99,23 @@ get_header();
 				</div>
 				<div class="tpc-index">
 					<?php 
-						putTopPageView('drugculture',array(5,39),10,'date');
+						putTopPageView('drugculture',array(5,39),10,'date', true);
 					?>
 				</div>
 			</div>
 			
 			<div class="tpc-3 sdw_card">
-				<div class="tpc-title ptn-str-brown">
-					<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-					<h1 >ドラッグ</h1> 
-					<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+				<div class="tpc-title">
+					<div class="tpct-back ptn-str-brown"></div>
+					<div class="tpct-name">
+						<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+						<h1 >ドラッグ</h1> 
+						<i class="fab fa-gripfire ptn-txgrad-fire"></i>
+					</div>
 				</div>
 				<div class="tpc-index">
 					<?php 
-						putTopPageView('drugculture',array(5,39),10,'date');
+						putTopPageView('drugculture',array(5,39),10,'date', true);
 					?>
 				</div>
 			</div>

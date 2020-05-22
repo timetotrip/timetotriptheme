@@ -16,6 +16,7 @@
 		
 		object-fit:cover;
 		object-position: center;
+		pointer-events: none;
 	}
 	
 	.tpv-area{
@@ -41,16 +42,22 @@
 		
 		.tpva-categ{
 			background-color:$cla-l08;
-			margin-right:1.5625vw;
+			margin:0 1.5625vw 0.5vw ;
 			padding: 0 1.5625vw;
 		}
 		.tpva-title{
 			background-color:$cla-d08;
-			margin:0.5vw 1.5625vw 1.5625vw 10%;
+			margin:0 1.5625vw 0.5vw 10%;
 			padding:0.5vw 1.5625vw ;
-			text-align: center;
+			text-align: right;
 		}
-		
+		.tpva-dect{
+			background-color:$clb-g08;
+			color:$cla-d10;
+			margin:0 1.5625vw 0.5vw 10%;
+			padding:0.5vw 1.5625vw ;
+			text-align: right;
+		}
 		
 		@include mq(xl) {
 			h2{
@@ -58,42 +65,63 @@
 				line-height:1.1em;
 				letter-spacing:0.2em;
 			}
-			p{
+			.tpva-categ{
 				font-size:1.2em;
 				line-height:1.4em;
 				letter-spacing:0.2em;
 			}
-		}
-		@include mq(lg) {
-			h2{
-				font-size:1.2em;
-				line-height:1.4em;
-				letter-spacing:0.2em;
-			}
-			p{
-				font-size:0.9em;
-				line-height:1.4em;
-				letter-spacing:0.2em;
+			.tpva-dect{
+				p{
+					font-size:1em;
+				}
 			}
 		}
-		@include mq(sm) {
+		@include mq(md) {
 			h2{
 				font-size:1em;
 				line-height:1.1em;
 				letter-spacing:0.2em;
 			}
-			p{
+			.tpva-categ{
 				font-size:0.8em;
 				line-height:1.5em;
 				letter-spacing:0.2em;
 			}
+			.tpva-dect{
+				p{
+					font-size:0.7em;
+				}
+			}
 		}
 	}
-	.tpv-area:hover{
-		.tpva-title{
-			margin-left:5%;
+	&:hover{
+		.tpv-area{
+			.tpva-title,.tpva-dect{
+				margin-left:5%;
+			}
 		}
-		
+	}
+}
+
+.tpf-newest1,.tpf-newest2,.tpf-newest3,.tpc-1,.tpc-2,.tpc-3{
+	.tpv{
+		.tpv-bg{
+			filter:sepia(40%)  hue-rotate(-16deg) contrast(80%) brightness(80%);
+		}
+		&:hover{
+			.tpv-bg{
+				filter:none;
+			}
+		}
+	}
+}
+.tpf-newest1,.tpf-newest2,.tpf-newest3{
+	.tpv{
+		&:hover{
+			.tpv-bg{
+				animation:buruburu 0.3s 1 linear alternate;
+			}
+		}
 	}
 }
 /*--------------------------------------------------------------
@@ -214,7 +242,6 @@
 		}
 	}
 }
-
 /*--------------------------------------------------------------
 ## Top page First View
 --------------------------------------------------------------*/
@@ -286,16 +313,7 @@
 	}
 	
 
-	.tpf-newest1,.tpf-newest2,.tpf-newest3{
-		.tpv-bg{
-			/*filter:grayscale(85%) contrast(180%) brightness(140%);*/
-			filter:sepia(100%)  hue-rotate(-16deg) contrast(99%) brightness(80%);
-		}
-		.tpv-bg:hover{
-			filter:none;
-			animation:buruburu 0.3s 1 linear alternate;
-		}
-	}
+
 	.tpf-newest2,.tpf-newest3{
 		.tpv-area{
 			.tpva-title{
@@ -354,6 +372,7 @@
 	
 	.tp-intro,.tpc-1,.tpc-2,.tpc-3{
 		.tpc-title{
+			margin-top:1rem;
 			width:100%;
 			position:relative;
 			
@@ -361,27 +380,54 @@
 				width:100%;
 				position:absolute;
 				bottom:0;
+				height:40%;
 			}
 			
 			.tpct-name{
 				position:absolute;
 				top:0;
+				margin: 0 auto;
+				filter: drop-shadow(1px 1px 1px rgba(5, 5, 5, 0.9));
 			
 				display:flex;
 				justify-content: center;
 				align-items: center;
 				h1{
-					font-size:1.8em;
 					text-align:center;
 					color:$clb-g10;
 					text-shadow: 2px 2px 4px $cla-d08;
 				}
 				i{
-					font-size: 1.8rem;
 					animation: bound 5s ease 0s infinite normal;
 					margin: 0 0.5rem;
 				}
+			
 			}
+			@include mq(xl) {
+				height:3.5em;
+				.tpct-name{
+					h1{
+						font-size:2.8em;
+					}
+					i{
+						font-size: 2.8rem;
+					}
+				}
+			}
+			@include mq(md) {
+				height:2.5em;
+				.tpct-name{
+					h1{
+						font-size:1.8em;
+					}
+					i{
+						font-size: 1.8rem;
+					}
+				}
+			}
+			
+			
+			
 		}
 		.tpc-index{
 			height:auto;
@@ -389,6 +435,21 @@
 				text-decoration:none;
 				height:48.4375vw;
 				margin: 1.5625vw 0;
+				
+				&:hover{
+					position:static;
+					height:90vw;
+					.tpv-bg{
+						position:static;
+						height:70%;
+					}
+					.tpv-area{
+						position:static;
+						height:30%;
+					}
+					
+				}
+				
 			}
 			display:flex;
 			flex-direction: column;

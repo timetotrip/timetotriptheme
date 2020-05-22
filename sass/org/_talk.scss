@@ -10,7 +10,6 @@
 	position:relative;
 	z-index:1;
 	
-	filter: drop-shadow(0.390625vw 0.390625vw 0.390625vw rgba(5, 5, 5, 0.9));
 	
 	&.tkdr-lr{
 		flex-direction: row;
@@ -27,10 +26,11 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		
+	
 		img{
 			width:100%;
 			height:auto;
+			filter: drop-shadow(1px 1px 1px rgba(5, 5, 5, 0.9));
 		}
 		p{
 			display:inline-block;
@@ -44,6 +44,7 @@
 		align-items: center;
 		width:80%;
 		transform:scale(0, 0);
+		filter: drop-shadow(3px 3px 3px rgba(5, 5, 5, 0.8));
 		
 		&.tkdr-lr{
 			flex-direction: row;

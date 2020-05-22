@@ -52,7 +52,7 @@ function ua_smartphone(){
 /* * * * * * * * * * * * * * * * * *
  * TOPPage
  * * * * * * * * * * * * * * * * * */
-function putTopPageView( $cate, $not_in, $num, $order ){
+function putTopPageView( $cate, $not_in, $num, $order, $dect=false ){
 $wpq = new WP_Query(array(
 		'category_name' => $cate, 
 		'orderby' => $order,
@@ -82,6 +82,11 @@ $wpq = new WP_Query(array(
 							. get_the_title()
 						."</h2>";
 				
+				if ($dect):
+						echo "<div class=\"tpva-dect\">";
+							the_excerpt();
+						echo "</div>";
+				endif;
 				echo "</div></a>";
 			endif;
 		endwhile;
