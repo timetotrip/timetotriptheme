@@ -2,28 +2,6 @@
 /*--------------------------------------------------------------
 ## Color
 --------------------------------------------------------------*/
-/*yellow*/
-$c-main-ligh: #ffffdd;
-$c-main-dark : #99993d;
-$c-main-tran : rgba(163,136,16,0.8);
-
-/*blue*/
-$c-base-ligh : #ccf0ff;
-$c-base-dark : #0a64ac;
-$c-base-tran : rgba(10,100,172,0.8);
-$c-base-tran2 : rgba(10,100,172,0.6);
-
-/*white*/
-$c-acsW-ligh : #f4f4f4;
-$c-acsW-midd : #eeeeee;
-$c-acsW-dark : #8a8a8a;
-
-/*orange*/
-$c-acsO-week : #fcd59f;
-$c-acsO-ligh : #fb9100;
-$c-acsO-dark : #8f5300;
-
-
 /*base color = white*/
 $clb-r10:rgba(253, 235, 235,1.0);
 $clb-r03:rgba(253, 235, 235,0.3);
@@ -46,6 +24,7 @@ $cla-l08:rgba(255, 55, 0,0.8);
 $breakpoints: (
 	'sm': 'screen and (max-width: 374px)',
 	'md': 'screen and (max-width: 580px)',
+	'tb': 'screen and (max-width: 800px)',
 	'lg': 'screen and (max-width: 1200px)',
 	'xl': 'screen and (max-width: 2400px)',
 ) !default;
@@ -115,37 +94,6 @@ h1{
 	margin:0;
 }
 
-/*
-.mkr-w {
-	background: linear-gradient(transparent 60%, $c-acsW-ligh 0%);
-}
-.textgrad-o {
-	background: linear-gradient( 
-		-2deg,
-		$c-acsO-dark 5%,
-		$c-acsO-ligh 50%, 
-		$c-acsO-week 65%, 
-		$c-acsO-ligh 75%,
-		$c-acsO-ligh 100%
-	);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-}
-.textgrad-s {
-	background: linear-gradient( 
-		-2deg,
-		#000000 5%,
-		$c-acsW-midd 60%, 
-		$c-acsW-ligh 65%, 
-		$c-acsW-dark 75%,
-		#000000 100%
-	);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-}
-*/
 /*--------------------------------------------------------------
 ## Fonts
 --------------------------------------------------------------*/
@@ -181,33 +129,61 @@ h1{
 	filter: drop-shadow(0.5px 0.5px 0px rgba(10, 10, 10, 0.95));
 }
 /*--------------------------------------------------------------
-## TextOutline
+## CardPatterns
 --------------------------------------------------------------*/
-/*
-.cloud-out{
-	text-shadow:
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh,
-		0 0 5px $c-acsW-ligh;
+.ptn-str-brown {
+	--rlist: var(--c) 0 1px, transparent 0 3px;
+	overflow: hidden;
+	position: relative;
+	height: var(--h);
+	background: 
+			repeating-linear-gradient(var(--ang-0, -45deg), 
+					var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
+			/*repeating-linear-gradient(var(--ang-1, 45deg), 
+					var(--rlist)) var(--pos-1, 0 100%)/ var(--dim),*/ 
+			linear-gradient(var(--ang), var(--nlist));
+			
+	--dim: 100% no-repeat;
+	--ang: 0deg;
+	--pos-1: 100%;
+	--ang-0: -60deg;
+	--ang-1: 60deg;
+	--c: rgba(43, 24, 0,1.0);
+	--nlist: rgba(43, 24, 0,1.0), rgba(183, 82, 10,1.0);
+	
 }
-*/
+.ptn-str-brown-trans {
+	--rlist: var(--c) 0 1px, transparent 0 3px;
+	overflow: hidden;
+	position: relative;
+	height: var(--h);
+	background: 
+			repeating-linear-gradient(var(--ang-0, -45deg), 
+					var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
+			/*repeating-linear-gradient(var(--ang-1, 45deg), 
+					var(--rlist)) var(--pos-1, 0 100%)/ var(--dim),*/ 
+			linear-gradient(var(--ang), var(--nlist));
+			
+	--dim: 100% no-repeat;
+	--ang: 0deg;
+	--pos-1: 100%;
+	--ang-0: -60deg;
+	--ang-1: 60deg;
+	--c: rgba(43, 24, 0,0.6);
+	--nlist: rgba(43, 24, 0,0.4), rgba(183, 82, 10, 0.4);
+	
+}
+/*--------------------------------------------------------------
+## Fire Text
+--------------------------------------------------------------*/
+.ptn-txgrad-fire{
+	background-color: #ff0000;
+	background-image: linear-gradient(-10deg, #ff0000 0%, #ffed00 65%, #FFFFFF 75%, #ffed00 90%);
+	background-clip:text;
+	text-fill-color:transparent;
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+}
 /*--------------------------------------------------------------
 ## BOX
 --------------------------------------------------------------*/

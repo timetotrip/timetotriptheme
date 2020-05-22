@@ -78,7 +78,7 @@ $wpq = new WP_Query(array(
 								."</p>";
 				endforeach;
 				
-				echo "<h2 class=\"tpva-title\">"
+				echo "<h2 class=\"tpva-title ptn-str-brown-trans\">"
 							. get_the_title()
 						."</h2>";
 				
