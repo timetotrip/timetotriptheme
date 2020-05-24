@@ -62,17 +62,54 @@ $breakpoints: (
 	font-family: "M PLUS Rounded 1c",'Source Sans Pro';
 }
 /*--------------------------------------------------------------
-## Back ground
+## Rayout
 --------------------------------------------------------------*/
 
 html,body{
 	width:100%;
 	height:auto;
+
+}
+
+#primary,#secondary{
+	margin :0 1.5625vw;
+}
+
+
+
+@include mq(xl) {
+	#container{
+		display:flex;
+	}
+	#primary{
+		width:60%;
+	}
+	#secondary{
+		width:37%;
+		margin-left:0;
+		flex:1;
+	}
+}
+@include mq(md) {
+	#container{
+		display:flex;
+		flex-direction: column;
+	}
+	#primary,#secondary{
+		width:100%;
+	}
 }
 
 #page{
 	max-width:1600px;
-	margin:auto;
+	margin-bottom: -40px;
+	padding-bottom: 40px;
+}
+
+
+#foot{
+	height:40px;
+	margin :0 0;
 }
 	
 .grd-back{ 

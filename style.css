@@ -673,15 +673,39 @@ object {
   font-family: "M PLUS Rounded 1c",'Source Sans Pro'; }
 
 /*--------------------------------------------------------------
-## Back ground
+## Rayout
 --------------------------------------------------------------*/
 html, body {
   width: 100%;
   height: auto; }
 
+#primary, #secondary {
+  margin: 0 1.5625vw; }
+
+@media screen and (max-width: 2400px) {
+  #container {
+    display: flex; }
+  #primary {
+    width: 60%; }
+  #secondary {
+    width: 37%;
+    flex: 1; } }
+
+@media screen and (max-width: 580px) {
+  #container {
+    display: flex;
+    flex-direction: column; }
+  #primary, #secondary {
+    width: 100%; } }
+
 #page {
   max-width: 1600px;
-  margin: auto; }
+  margin-bottom: -40px;
+  padding-bottom: 40px; }
+
+#foot {
+  height: 40px;
+  margin: 0 0; }
 
 .grd-back {
   width: 100%;
@@ -1003,7 +1027,8 @@ h1 {
         line-height: 1.4em;
         letter-spacing: 0.2em; }
       .tpv .tpv-area .tpva-dect p {
-        font-size: 1em; } }
+        font-size: 1em;
+        line-height: 1.4; } }
     @media screen and (max-width: 580px) {
       .tpv .tpv-area h2 {
         font-size: 1em;
@@ -1012,7 +1037,8 @@ h1 {
       .tpv .tpv-area .tpva-categ {
         font-size: 0.8em;
         line-height: 1.5em;
-        letter-spacing: 0.2em; }
+        letter-spacing: 0.2em;
+        line-height: 1.2; }
       .tpv .tpv-area .tpva-dect p {
         font-size: 0.7em; } }
   .tpv:hover .tpv-area .tpva-title, .tpv:hover .tpv-area .tpva-dect {
@@ -1192,11 +1218,9 @@ h1 {
 ## Category
 --------------------------------------------------------------*/
 .tp-cate {
-  margin: 3.125vw 1.5625vw;
   display: grid;
   grid-gap: 1.5625vw 2%; }
   .tp-cate .tp-intro .tpc-title, .tp-cate .tpc-1 .tpc-title, .tp-cate .tpc-2 .tpc-title, .tp-cate .tpc-3 .tpc-title {
-    margin-top: 1rem;
     width: 100%;
     position: relative; }
     .tp-cate .tp-intro .tpc-title .tpct-back, .tp-cate .tpc-1 .tpc-title .tpct-back, .tp-cate .tpc-2 .tpc-title .tpct-back, .tp-cate .tpc-3 .tpc-title .tpct-back {
@@ -1241,15 +1265,16 @@ h1 {
       text-decoration: none;
       height: 48.4375vw;
       margin: 1.5625vw 0; }
-      .tp-cate .tp-intro .tpc-index a:hover, .tp-cate .tpc-1 .tpc-index a:hover, .tp-cate .tpc-2 .tpc-index a:hover, .tp-cate .tpc-3 .tpc-index a:hover {
-        position: static;
-        height: 90vw; }
-        .tp-cate .tp-intro .tpc-index a:hover .tpv-bg, .tp-cate .tpc-1 .tpc-index a:hover .tpv-bg, .tp-cate .tpc-2 .tpc-index a:hover .tpv-bg, .tp-cate .tpc-3 .tpc-index a:hover .tpv-bg {
+      @media screen and (max-width: 800px) {
+        .tp-cate .tp-intro .tpc-index a:hover, .tp-cate .tpc-1 .tpc-index a:hover, .tp-cate .tpc-2 .tpc-index a:hover, .tp-cate .tpc-3 .tpc-index a:hover {
           position: static;
-          height: 70%; }
-        .tp-cate .tp-intro .tpc-index a:hover .tpv-area, .tp-cate .tpc-1 .tpc-index a:hover .tpv-area, .tp-cate .tpc-2 .tpc-index a:hover .tpv-area, .tp-cate .tpc-3 .tpc-index a:hover .tpv-area {
-          position: static;
-          height: 30%; }
+          height: 90vw; }
+          .tp-cate .tp-intro .tpc-index a:hover .tpv-bg, .tp-cate .tpc-1 .tpc-index a:hover .tpv-bg, .tp-cate .tpc-2 .tpc-index a:hover .tpv-bg, .tp-cate .tpc-3 .tpc-index a:hover .tpv-bg {
+            position: static;
+            height: 70%; }
+          .tp-cate .tp-intro .tpc-index a:hover .tpv-area, .tp-cate .tpc-1 .tpc-index a:hover .tpv-area, .tp-cate .tpc-2 .tpc-index a:hover .tpv-area, .tp-cate .tpc-3 .tpc-index a:hover .tpv-area {
+            position: static;
+            height: 30%; } }
   .tp-cate .tp-intro .tpi-taco a, .tp-cate .tp-intro .tpi-taco i, .tp-cate .tp-intro .tpi-ika a, .tp-cate .tp-intro .tpi-ika i {
     color: #ff3700;
     font-weight: bold; }
@@ -1288,3 +1313,12 @@ h1 {
       .tp-cate .tpc-3 {
         grid-column: 1 / 2;
         grid-row: 4 / 5; } }
+
+#sidebar {
+  background-color: blue; }
+
+#foot {
+  background-color: rgba(43, 24, 0, 0.8);
+  text-align: right;
+  color: #fdfffd;
+  padding: 1.5625vw; }

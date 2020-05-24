@@ -34,7 +34,7 @@ get_header();
 		?>
 
 	</main><!-- #main -->
-
+ここから
 <?php
 get_sidebar();
 get_footer();

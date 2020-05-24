@@ -6,8 +6,11 @@
  */
 ?>
 
-</div><!-- #page -->
+</div><!-- #page --> 
 
+<div id="foot" class="ptn-str-brown-trans">
+	<p>© 2020 Time to Trip</p>
+</div>
 <?php wp_footer(); ?>
 
 </body>

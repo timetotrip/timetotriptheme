@@ -77,7 +77,7 @@
 			$div .= '<div class="tk-charactor">';
 				$div .= '<img src="' 
 							. getImagePath($characterlist[$atts['who']]->getPict()) 
-							. '" loading="lazy"></img>';
+							. '" loading="lazy" alt="">';
 				$div .= '<p>' . $characterlist[$atts['who']]->getName() . '</p>';
 			$div .= '</div>';
 			$div .= '<div class="tk-puff'. $direct	. '">';
