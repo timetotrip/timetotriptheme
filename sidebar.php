@@ -10,7 +10,6 @@
 	<aside id="secondary" class="sidebar">
 		
 		<?php putPostViewsList(); ?>
-		さいどば
 	</aside><!-- #secondary -->
 	
 </div><!--containoer-->

@@ -120,16 +120,13 @@ function setPostViews($postID) {
 			update_post_meta($postID, $count_key, $count);
 	}
 	
-	echo $count;
 }
 
 function putPostViewsList() {
 	
 	if ( !is_home() && !is_front_page() ) :	
 		setPostViews(get_the_ID());
-		echo "set";
 	endif;
-	echo "after";
 	
 	$args = array(
 		'meta_key' => 'post_views_count',
@@ -154,6 +151,7 @@ function putPostViewsList() {
 					the_title();
 				echo '</p>';
 				echo getPostViews(get_the_ID());
+				echo '</a>';
 			echo '</div>';
 		endwhile;
 	endif;
