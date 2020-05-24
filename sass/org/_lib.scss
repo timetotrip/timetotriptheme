@@ -82,10 +82,10 @@ html,body{
 		display:flex;
 	}
 	#primary{
-		width:60%;
+		width:calc(62% - 1.5625vw);
 	}
 	#secondary{
-		width:37%;
+		width:calc(38% - 1.5625vw);
 		margin-left:0;
 		flex:1;
 	}
@@ -96,7 +96,7 @@ html,body{
 		flex-direction: column;
 	}
 	#primary,#secondary{
-		width:100%;
+		width:calc(100% - 3.125vw );
 	}
 }
 

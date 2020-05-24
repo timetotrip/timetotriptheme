@@ -57,56 +57,6 @@
 				color:#F9F9F9;
 			}
 			
-			@include mq(xl) {
-				p{
-					font-size:1.2em;
-					line-height:1.6em;
-					letter-spacing:0.3em;
-				}
-				h1{
-					font-size:1.8em;
-					line-height:1.2em;
-					letter-spacing:0.4em;
-					max-width:120px;
-				}
-			}
-			@include mq(lg) {
-				p{
-					font-size:1.2em;
-					line-height:1.6em;
-					letter-spacing:0.3em;
-				}
-				h1{
-					font-size:1.8em;
-					line-height:1.2em;
-					letter-spacing:0.4em;
-					max-width:120px;
-				}
-			}
-			@include mq(md) {
-				p{
-					font-size:0.8em;
-					line-height:1.4em;
-					letter-spacing:0.2em;
-				}
-				h1{
-					font-size:1.2em;
-					line-height:1.3em;
-					letter-spacing:0.3em;
-				}
-			}
-			@include mq(sm) {
-				p{
-					font-size:0.6em;
-					line-height:1.4em;
-					letter-spacing:0.1em;
-				}
-				h1{
-					font-size:1em;
-					line-height:1.2em;
-					letter-spacing:0.2em;
-				}
-			}
 		}
 	}
 	
@@ -184,11 +134,7 @@
 				scroll-snap-align: start;
 			}
 		}
-		
 	}
-	
-
-
 	.tpf-newest2,.tpf-newest3{
 		.tpv-area{
 			.tpva-title{
@@ -199,42 +145,6 @@
 		}
 	}
 	
-	@include mq(xl) {
-		.tpf-newest2,.tpf-newest3{
-			h2{
-				font-size:1.2em;
-				line-height:1.2em;
-				letter-spacing:0.1em;
-			}
-		}
-	}
-	@include mq(lg) {
-		.tpf-newest2,.tpf-newest3{
-			h2{
-				font-size:1em;
-				line-height:1.2em;
-				letter-spacing:0.1em;
-			}
-		}
-	}
-	@include mq(md) {
-		.tpf-newest2,.tpf-newest3{
-			h2{
-				font-size:1em;
-				line-height:1.1em;
-				letter-spacing:0.1em;
-			}
-		}
-	}
-	@include mq(sm) {
-		.tpf-newest2,.tpf-newest3{
-			h2{
-				font-size:0.8em;
-				line-height:1.1em;
-				letter-spacing:0.1em;
-			}
-		}
-	}
 }
 
 /*--------------------------------------------------------------
@@ -274,41 +184,29 @@
 					animation: bound 5s ease 0s infinite normal;
 					margin: 0 0.5rem;
 				}
-			
 			}
 			@include mq(xl) {
 				height:3.5em;
-				.tpct-name{
-					h1{
-						font-size:2.8em;
-					}
-					i{
-						font-size: 2.8rem;
-					}
-				}
 			}
 			@include mq(md) {
 				height:2.5em;
-				.tpct-name{
-					h1{
-						font-size:1.8em;
-					}
-					i{
-						font-size: 1.8rem;
-					}
-				}
 			}
-			
-			
-			
 		}
 		.tpc-index{
 			height:auto;
 			a{
 				text-decoration:none;
-				height:48.4375vw;
 				margin: 1.5625vw 0;
 				
+				@include mq(xl) {
+					height:48.4375vw;
+				}
+				@include mq(tb) {
+					height:48.4375vw;
+				}
+				@include mq(md) {
+					height:58.4375vw;
+				}
 				&:hover{
 				
 					@include mq(tb) {
@@ -316,16 +214,22 @@
 						height:90vw;
 						.tpv-bg{
 							position:static;
-							height:70%;
+							height:80%;
 						}
 						.tpv-area{
 							position:static;
+							height:20%;
+						}
+					}
+					@include mq(md) {
+						.tpv-bg{
+							height:70%;
+						}
+						.tpv-area{
 							height:30%;
 						}
 					}
-					
 				}
-				
 			}
 			display:flex;
 			flex-direction: column;
@@ -346,52 +250,8 @@
 	}
 	
 	
-	
-	display: grid;
-	grid-gap:1.5625vw 2%;
-
-	@include mq(xl) {
-		grid-template-columns: 61.5% 36.5%;
-		grid-template-rows: auto auto auto;
-		
-		.tp-intro{
-			grid-column: 1 / 2;
-			grid-row: 1 / 2;
-		}
-		.tpc-1{
-			grid-column: 2 / 3;
-			grid-row: 1 / 4;
-		}
-		.tpc-2{
-			grid-column: 1 / 2;
-			grid-row: 2 / 3;
-		}
-		.tpc-3{
-			grid-column: 1 / 2;
-			grid-row: 3 / 4;
-		}
-	}
-	@include mq(tb) {
-		grid-template-columns: 100%;
-		grid-template-rows: auto auto auto auto;
-		
-		.tp-intro{
-			grid-column: 1 / 2;
-			grid-row: 1 / 2;
-		}
-		.tpc-1{
-			grid-column: 1 / 2;
-			grid-row: 2 / 3;
-		}
-		.tpc-2{
-			grid-column: 1 / 2;
-			grid-row: 3 / 4;
-		}
-		.tpc-3{
-			grid-column: 1 / 2;
-			grid-row: 4 / 5;
-		}
-	}
+	display:flex;
+	flex-direction: column;
 }
 
 

@@ -59,42 +59,7 @@
 			text-align: right;
 		}
 		
-		@include mq(xl) {
-			h2{
-				font-size:1.6em;
-				line-height:1.1em;
-				letter-spacing:0.2em;
-			}
-			.tpva-categ{
-				font-size:1.2em;
-				line-height:1.4em;
-				letter-spacing:0.2em;
-			}
-			.tpva-dect{
-				p{
-					font-size:1em;
-					line-height: 1.4;
-				}
-			}
-		}
-		@include mq(md) {
-			h2{
-				font-size:1em;
-				line-height:1.1em;
-				letter-spacing:0.2em;
-			}
-			.tpva-categ{
-				font-size:0.8em;
-				line-height:1.5em;
-				letter-spacing:0.2em;
-				line-height: 1.2;
-			}
-			.tpva-dect{
-				p{
-					font-size:0.7em;
-				}
-			}
-		}
+
 	}
 	&:hover{
 		.tpv-area{

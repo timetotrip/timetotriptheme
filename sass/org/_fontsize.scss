@@ -1,2 +1,165 @@
-..p{
+/*--------------------------------------------------------------
+## Top page Block
+--------------------------------------------------------------*/
+
+.tpv{
+	.tpv-area{
+		@include mq(xl) {
+			h2{
+				font-size:1.6em;
+				line-height:1.1em;
+				letter-spacing:0.2em;
+			}
+			.tpva-categ{
+				font-size:1.2em;
+				line-height:1.4em;
+				letter-spacing:0.2em;
+			}
+			.tpva-dect{
+				p{
+					font-size:1em;
+					line-height: 1.4;
+				}
+			}
+		}
+		@include mq(md) {
+			h2{
+				font-size:1em;
+				line-height:1.1em;
+				letter-spacing:0.2em;
+			}
+			.tpva-categ{
+				font-size:0.8em;
+				line-height:1.5em;
+				letter-spacing:0.2em;
+				line-height: 1.2;
+			}
+			.tpva-dect{
+				p{
+					font-size:0.7em;
+				}
+			}
+		}
+	}
+}
+/*--------------------------------------------------------------
+## MainView
+--------------------------------------------------------------*/
+.site-header{
+	.h-area{
+		.h-base{
+			@include mq(xl) {
+				p{
+					font-size:1.2em;
+					line-height:1.6em;
+					letter-spacing:0.3em;
+				}
+				h1{
+					font-size:1.8em;
+					line-height:1.2em;
+					letter-spacing:0.4em;
+					max-width:120px;
+				}
+			}
+			@include mq(md) {
+				p{
+					font-size:0.8em;
+					line-height:1.4em;
+					letter-spacing:0.2em;
+				}
+				h1{
+					font-size:1.2em;
+					line-height:1.3em;
+					letter-spacing:0.3em;
+				}
+			}
+			@include mq(sm) {
+				p{
+					font-size:0.6em;
+					line-height:1.4em;
+					letter-spacing:0.1em;
+				}
+				h1{
+					font-size:1em;
+					line-height:1.2em;
+					letter-spacing:0.2em;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Top page First View
+--------------------------------------------------------------*/
+
+.tp-first{
+	@include mq(xl) {
+		.tpf-newest2,.tpf-newest3{
+			h2{
+				font-size:1.2em;
+				line-height:1.2em;
+				letter-spacing:0.1em;
+			}
+		}
+	}
+	@include mq(lg) {
+		.tpf-newest2,.tpf-newest3{
+			h2{
+				font-size:1em;
+				line-height:1.2em;
+				letter-spacing:0.1em;
+			}
+		}
+	}
+	@include mq(md) {
+		.tpf-newest2,.tpf-newest3{
+			h2{
+				font-size:1em;
+				line-height:1.1em;
+				letter-spacing:0.1em;
+			}
+		}
+	}
+	@include mq(sm) {
+		.tpf-newest2,.tpf-newest3{
+			h2{
+				font-size:0.8em;
+				line-height:1.1em;
+				letter-spacing:0.1em;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Category
+--------------------------------------------------------------*/
+.tp-cate{
+	.tp-intro,.tpc-1,.tpc-2,.tpc-3{
+		.tpc-title{
+			@include mq(xl) {
+				height:3.5em;
+				.tpct-name{
+					h1{
+						font-size:2.8em;
+					}
+					i{
+						font-size: 2.8rem;
+					}
+				}
+			}
+			@include mq(md) {
+				height:2.5em;
+				.tpct-name{
+					h1{
+						font-size:1.8em;
+					}
+					i{
+						font-size: 1.8rem;
+					}
+				}
+			}
+		}
+	}
 }

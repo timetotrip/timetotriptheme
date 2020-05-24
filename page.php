@@ -17,7 +17,7 @@ get_header();
 
 	<div id="container">
 		<main id="primary" class="subpage">
-
+			ぽぽおぽ
 			<?php
 			while ( have_posts() ) :
 				the_post();
