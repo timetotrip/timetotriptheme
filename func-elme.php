@@ -45,6 +45,9 @@ function ua_smartphone(){
 		}
 	 } return false;
 }
+
+
+
 /* * * * * * * * * * * * * * * * * *
  * TOPPage
  * * * * * * * * * * * * * * * * * */
@@ -87,6 +90,25 @@ $wpq = new WP_Query(array(
 			endif;
 		endwhile;
 	endif;
+	
+}
+/* * * * * * * * * * * * * * * * * *
+ * Elements
+ * * * * * * * * * * * * * * * * * */
+
+function putH1Index($title){
+	$div = "";
+	
+	$div .= '<div class="h1-title">'
+						.'<div class="h1t-back ptn-str-brown"></div>'
+						.'<div class="h1t-name">'
+							.'<i class="fab fa-gripfire ptn-txgrad-fire"></i>'
+							.'<h1 >'. $title .'</h1> '
+							.'<i class="fab fa-gripfire ptn-txgrad-fire"></i>'
+						.'</div>'
+					.'</div>';
+	
+	return $div;
 	
 }
 /* * * * * * * * * * * * * * * * * *

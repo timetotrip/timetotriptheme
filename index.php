@@ -43,14 +43,7 @@ get_header();
 			<div class="tp-cate">
 			
 				<div class="tp-intro">
-					<div class="tpc-title sdw_card">
-						<div class="tpct-back ptn-str-brown"></div>
-						<div class="tpct-name">
-							<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-							<h1 >はじめに</h1> 
-							<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-						</div>
-					</div>
+					<?php echo putH1Index('はじめに'); ?>
 					<div class="tpc-index sdw_card">
 						<?php 
 							putTopPageView('atfirst', array(),1,'date', true);
@@ -78,14 +71,7 @@ get_header();
 			
 			
 				<div class="tpc-1 sdw_card">
-					<div class="tpc-title">
-						<div class="tpct-back ptn-str-brown"></div>
-						<div class="tpct-name">
-							<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-							<h1 >大麻文化</h1> 
-							<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-						</div>
-					</div>
+					<?php echo putH1Index('大麻文化'); ?>
 					<div class="tpc-index">
 						<?php 
 							putTopPageView('cannabisculture',array(5,39),10,'date', true);
@@ -94,14 +80,7 @@ get_header();
 				</div>
 				
 				<div class="tpc-2 sdw_card">
-					<div class="tpc-title">
-						<div class="tpct-back ptn-str-brown"></div>
-						<div class="tpct-name">
-							<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-							<h1 >旅紀行</h1> 
-							<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-						</div>
-					</div>
+					<?php echo putH1Index('旅行記'); ?>
 					<div class="tpc-index">
 						<?php
 							putTopPageView('tripnotes',array(5),10,'date', true);
@@ -110,14 +89,7 @@ get_header();
 				</div>
 				
 				<div class="tpc-3 sdw_card">
-					<div class="tpc-title">
-						<div class="tpct-back ptn-str-brown"></div>
-						<div class="tpct-name">
-							<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-							<h1 >ドラッグ</h1> 
-							<i class="fab fa-gripfire ptn-txgrad-fire"></i>
-						</div>
-					</div>
+					<?php echo putH1Index('ドラッグ'); ?>
 					<div class="tpc-index">
 						<?php 
 							putTopPageView('drugculture',array(5,39),10,'date', true);
