@@ -166,11 +166,11 @@ function putPostViewsList() {
 			$query->the_post();
 
 ;
-			echo '<a href="'; the_permalink(); echo '" class="vrn vrn-'. $num . '">';
+			echo '<a href="'; the_permalink(); echo '" class="vrn vrn-'. $num . ' ptn-str-brown-slant">';
 				/*if ( has_post_thumbnail() ): the_post_thumbnail( 'post-thumbnail'); endif; */
 				echo '<div class="vrn-text">';
 					echo '<p class="vrnt-num">' . $num . '</num>';
-					echo '<div class="vrn-title">';
+					echo '<div class="vrnt-title">';
 						echo '<p class="vrnt-views">'. getPostViews(get_the_ID()).'</p>';
 						echo '<h2>';
 							the_title();

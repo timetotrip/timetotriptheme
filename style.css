@@ -787,6 +787,20 @@ h1 {
   --c: rgba(43, 24, 0,0.6);
   --nlist: rgba(43, 24, 0,0.4), rgba(183, 82, 10, 0.4); }
 
+.ptn-str-brown-slant {
+  --rlist: var(--c) 0 1px, transparent 0 3px;
+  overflow: hidden;
+  position: relative;
+  height: var(--h);
+  background: repeating-linear-gradient(var(--ang-0, -45deg), var(--rlist)) var(--pos-0, 0 0)/var(--dim), linear-gradient(var(--ang), var(--nlist));
+  --dim: 100% no-repeat;
+  --ang: 10deg;
+  --pos-1: 100%;
+  --ang-0: -60deg;
+  --ang-1: 60deg;
+  --c: rgba(43, 24, 0,0.2);
+  --nlist: rgba(183, 82, 10, 0.6), rgba(183, 82, 10, 0); }
+
 /*--------------------------------------------------------------
 ## Fire Text
 --------------------------------------------------------------*/
@@ -943,10 +957,36 @@ h1 {
   margin: 1.5625vw 0;
   display: block; }
   .vrn .vrn-text {
-    display: flex; }
-    .vrn .vrn-text .vrn-title {
+    display: flex;
+    align-items: flex-end;
+    min-height: 70px;
+    padding: 1%;
+    text-shadow: 0 0 2px #2b1800; }
+    .vrn .vrn-text .vrnt-num {
+      font-size: 1.6em;
+      line-height: 1;
+      width: 8%;
+      text-align: right;
+      margin: 0 1%;
+      color: #fdfffd;
+      font-weight: bold; }
+    .vrn .vrn-text .vrnt-title {
+      width: 90%;
       display: flex;
       flex-direction: column; }
+      .vrn .vrn-text .vrnt-title .vrnt-views {
+        font-size: 0.6em; }
+      .vrn .vrn-text .vrnt-title h2 {
+        font-size: 1em;
+        color: #fdfffd;
+        text-shadow: 0 0 2px #2b1800; }
+  .vrn.vrn-1 .vrn-text .vrnt-num {
+    font-size: 2.4em;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
 
 /*--------------------------------------------------------------
 ## Talk

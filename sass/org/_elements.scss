@@ -144,13 +144,23 @@
 	.vrn-text{
 		display:flex;
 		align-items: flex-end;
+		min-height:70px;
+		padding: 1%;
+		filter: drop-shadow(1px 1px 1px $cla-d10); 
 		
-		.rnt-num{
-			font-size:3em;
+		.vrnt-num{
+			font-size: 1.6em;
+			line-height: 1;
+			width:8%;
+			text-align:right;
+			
+			margin: 0 1%;
+			color: $clb-g10;
+			font-weight: bold;
 		}
 		
-		.vrn-title{
-			
+		.vrnt-title{
+			width:90%;
 			display:flex;
 			flex-direction: column;
 			
@@ -159,9 +169,29 @@
 			}
 			h2{
 				font-size:1em;
+				color: $clb-g10;
+				text-shadow:0 0 2px $cla-d10;
 			}
 		}
 	}
+	
+	&.vrn-1{
+		.vrn-text{
+			.vrnt-num{
+				font-size: 2.4em;
+				background:radial-gradient(ellipse farthest-corner at right bottom,
+										#FEDB37 0%,#FDB931 8%,#9f7928 30%,#8A6E2F 40%,transparent 80%),
+									radial-gradient(ellipse farthest-corner at left top,
+										#FFFFFF 0%,#FFFFAC 8%,#D1B464 25%,#5d4a1f 62.5%,#5d4a1f 100%
+				);
+				background-clip:text;
+				text-fill-color:transparent;
+				-webkit-background-clip:text;
+				-webkit-text-fill-color:transparent;
+			}
+		}
+	}
+	
 	
 }
 

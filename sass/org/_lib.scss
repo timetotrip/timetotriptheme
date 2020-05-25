@@ -200,8 +200,6 @@ h1{
 	background: 
 			repeating-linear-gradient(var(--ang-0, -45deg), 
 					var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
-			/*repeating-linear-gradient(var(--ang-1, 45deg), 
-					var(--rlist)) var(--pos-1, 0 100%)/ var(--dim),*/ 
 			linear-gradient(var(--ang), var(--nlist));
 			
 	--dim: 100% no-repeat;
@@ -211,6 +209,25 @@ h1{
 	--ang-1: 60deg;
 	--c: rgba(43, 24, 0,0.6);
 	--nlist: rgba(43, 24, 0,0.4), rgba(183, 82, 10, 0.4);
+	
+}
+.ptn-str-brown-slant {
+	--rlist: var(--c) 0 1px, transparent 0 3px;
+	overflow: hidden;
+	position: relative;
+	height: var(--h);
+	background: 
+			repeating-linear-gradient(var(--ang-0, -45deg), 
+					var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
+			linear-gradient(var(--ang), var(--nlist));
+			
+	--dim: 100% no-repeat;
+	--ang: 10deg;
+	--pos-1: 100%;
+	--ang-0: -60deg;
+	--ang-1: 60deg;
+	--c: rgba(43, 24, 0,0.2);
+	--nlist: rgba(183, 82, 10, 0.6), rgba(183, 82, 10, 0);
 	
 }
 /*--------------------------------------------------------------
