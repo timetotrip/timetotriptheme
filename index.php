@@ -29,7 +29,7 @@ get_header();
 			</div>
 			<div class="tpf-newest3">
 			<?php 
-				putTopPageView('drugculture',array(5),1,'date');
+				putTopPageView('tripguide',array(5),1,'date');
 			?>
 			</div>
 		</div>
@@ -89,10 +89,10 @@ get_header();
 				</div>
 				
 				<div class="tpc-3 sdw_card">
-					<?php echo putH1Index('ドラッグ'); ?>
+					<?php echo putH1Index('トリップ'); ?>
 					<div class="tpc-index">
 						<?php 
-							putTopPageView('drugculture',array(5,39),10,'date', true);
+							putTopPageView('tripguide',array(5,39),10,'date', true);
 						?>
 					</div>
 				</div>

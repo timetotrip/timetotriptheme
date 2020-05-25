@@ -174,23 +174,23 @@
 				&:hover{
 				
 					@include mq(tb) {
-						position:static;
-						height:90vw;
+						position:relative;
+						height:auto;
+						
 						.tpv-bg{
 							position:static;
-							height:80%;
+							height:auto;
+							width:100%;
+							object-fit:contain;
 						}
 						.tpv-area{
 							position:static;
-							height:20%;
+							margin-top:-20%;
+							height:auto;
 						}
 					}
 					@include mq(md) {
-						.tpv-bg{
-							height:70%;
-						}
 						.tpv-area{
-							height:30%;
 						}
 					}
 				}
