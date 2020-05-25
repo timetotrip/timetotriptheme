@@ -9,7 +9,7 @@
  ?>
 	<aside id="secondary" class="sidebar">
 		<div class="s-wrapper">
-			<div class="s-rank">
+			<div class="s-rank  sdw_card">
 				<?php echo putH1Index('RANKING'); ?>
 				<?php putPostViewsList(); ?>
 			</div>

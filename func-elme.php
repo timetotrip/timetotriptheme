@@ -99,7 +99,7 @@ $wpq = new WP_Query(array(
 function putH1Index($title){
 	$div = "";
 	
-	$div .= '<div class="h1-title">'
+	$div .= '<div class="h1-title  sdw_card">'
 						.'<div class="h1t-back ptn-str-brown"></div>'
 						.'<div class="h1t-name">'
 							.'<i class="fab fa-gripfire ptn-txgrad-fire"></i>'
@@ -166,9 +166,9 @@ function putPostViewsList() {
 			$query->the_post();
 
 ;
-			echo '<a href="'; the_permalink(); echo '" class="vrn vrn-'. $num . ' ptn-str-brown-slant">';
-				/*if ( has_post_thumbnail() ): the_post_thumbnail( 'post-thumbnail'); endif; */
-				echo '<div class="vrn-text">';
+			echo '<a href="'; the_permalink(); echo '" class="vrn vrn-'. $num . '">';
+				echo '<img src="'. getThumbnailById(get_post_thumbnail_id()). '" class="vrn-bg" loading="lazy" alt="">';
+				echo '<div class="vrn-text  ptn-str-brown-slant">';
 					echo '<p class="vrnt-num">' . $num . '</num>';
 					echo '<div class="vrnt-title">';
 						echo '<p class="vrnt-views">'. getPostViews(get_the_ID()).'</p>';

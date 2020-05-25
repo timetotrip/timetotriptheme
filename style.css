@@ -798,8 +798,8 @@ h1 {
   --pos-1: 100%;
   --ang-0: -60deg;
   --ang-1: 60deg;
-  --c: rgba(43, 24, 0,0.2);
-  --nlist: rgba(183, 82, 10, 0.6), rgba(183, 82, 10, 0); }
+  --c: rgba(183, 82, 10, 0.3);
+  --nlist: rgba(183, 82, 10, 0.6) 50%, rgba(183, 82, 10, 0) 0%; }
 
 /*--------------------------------------------------------------
 ## Fire Text
@@ -956,37 +956,99 @@ h1 {
   text-decoration: none;
   margin: 1.5625vw 0;
   display: block; }
+  .vrn .vrn-bg {
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none; }
   .vrn .vrn-text {
+    pointer-events: none;
     display: flex;
     align-items: flex-end;
     min-height: 70px;
-    padding: 1%;
-    text-shadow: 0 0 2px #2b1800; }
+    padding: 1%; }
     .vrn .vrn-text .vrnt-num {
       font-size: 1.6em;
       line-height: 1;
       width: 8%;
-      text-align: right;
+      text-align: center;
       margin: 0 1%;
       color: #fdfffd;
-      font-weight: bold; }
+      font-weight: bold;
+      filter: drop-shadow(1px 1px 1px #2b1800); }
     .vrn .vrn-text .vrnt-title {
       width: 90%;
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      filter: drop-shadow(1px 1px 1px #2b1800); }
       .vrn .vrn-text .vrnt-title .vrnt-views {
-        font-size: 0.6em; }
+        font-size: 0.6em;
+        background-color: #2b1800;
+        color: #fdfffd;
+        padding: 0 1vw;
+        width: 25%;
+        text-align: center; }
       .vrn .vrn-text .vrnt-title h2 {
         font-size: 1em;
         color: #fdfffd;
         text-shadow: 0 0 2px #2b1800; }
   .vrn.vrn-1 .vrn-text .vrnt-num {
     font-size: 2.4em;
-    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    background: linear-gradient(-38deg, #aa771c 0%, #d0a850 10%, #b38728 40%, #fbf5b7 70%, #aa771c 100%);
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
+  .vrn.vrn-2 .vrn-text .vrnt-num {
+    font-size: 2.4em;
+    background: linear-gradient(-38deg, #dedede, #454545 23%, #dedede 43%, #ffffff 45%, #ffffff 60%, #dedede 72%, #a1a1a1);
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .vrn.vrn-3 .vrn-text .vrnt-num {
+    font-size: 2.4em;
+    background: linear-gradient(-38deg, #ca7345, #a14521 27%, #ca7345 36%, #ffdeca 45%, #ffdeca 53%, #ffdeca 60%, #ca7345 84%, #732100);
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .vrn.vrn-4 .vrn-text .vrnt-num, .vrn.vrn-5 .vrn-text .vrnt-num {
+    background: linear-gradient(-38deg, #000000 10%, #A0A0A0 60%, #000000 90%);
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+
+.vrn {
+  position: relative;
+  height: 100px; }
+  .vrn .vrn-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: sepia(40%) hue-rotate(-16deg) contrast(80%) brightness(80%); }
+  .vrn .vrn-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.vrn:hover {
+  /*animation: slidedown 1s ease 0s 1 normal both	;*/
+  position: relative;
+  height: 200px; }
+  .vrn:hover .vrn-bg {
+    position: static;
+    height: 100%;
+    filter: none; }
+  .vrn:hover .vrn-text {
+    --c: rgba(183, 82, 10, 0.0);
+    position: absolute;
+    bottom: 0;
+    height: 50%; }
 
 /*--------------------------------------------------------------
 ## Talk
@@ -1389,15 +1451,14 @@ h1 {
     margin-right: 5px;
     font-size: 1.6rem; }
 
-.sidebar {
-  background-color: #ffe6e6; }
-  @media screen and (max-width: 2400px) {
-    .sidebar .s-wrapper {
-      position: sticky;
-      top: 0; } }
-  @media screen and (max-width: 580px) {
-    .sidebar .s-wrapper {
-      position: static; } }
+@media screen and (max-width: 2400px) {
+  .sidebar .s-wrapper {
+    position: sticky;
+    top: 0; } }
+
+@media screen and (max-width: 580px) {
+  .sidebar .s-wrapper {
+    position: static; } }
 
 #foot {
   background-color: rgba(43, 24, 0, 0.8);
