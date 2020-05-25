@@ -157,7 +157,7 @@ function putPostViewsList() {
 		'posts_per_page' => 5 // ← 5件取得
 	);
 
-	$div = '';
+	$num = 1;
 
 	// WP_Queryによるループ
 	$query = new WP_Query($args);
@@ -165,16 +165,21 @@ function putPostViewsList() {
 		while ($query->have_posts()) :
 			$query->the_post();
 
-
-			echo '<div>';
-				echo '<a href="<?php the_permalink(); ?>">';
-					if ( has_post_thumbnail() ): the_post_thumbnail( 'post-thumbnail'); endif; 
-				echo '<p>';
-					the_title();
-				echo '</p>';
-				echo getPostViews(get_the_ID());
-				echo '</a>';
-			echo '</div>';
+;
+			echo '<a href="'; the_permalink(); echo '" class="vrn vrn-'. $num . '">';
+				/*if ( has_post_thumbnail() ): the_post_thumbnail( 'post-thumbnail'); endif; */
+				echo '<div class="vrn-text">';
+					echo '<p class="vrnt-num">' . $num . '</num>';
+					echo '<div class="vrn-title">';
+						echo '<p class="vrnt-views">'. getPostViews(get_the_ID()).'</p>';
+						echo '<h2>';
+							the_title();
+						echo '</h2>';
+					echo '</div>';
+				echo '</div>';
+			echo '</a>';
+			
+			$num += 1;
 		endwhile;
 	endif;
 	wp_reset_postdata();

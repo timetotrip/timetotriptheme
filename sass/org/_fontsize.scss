@@ -133,32 +133,50 @@
 }
 
 /*--------------------------------------------------------------
-## Category
+## H1
 --------------------------------------------------------------*/
-.tp-cate{
-	.tp-intro,.tpc-1,.tpc-2,.tpc-3{
-		.tpc-title{
-			@include mq(xl) {
-				height:3.5em;
-				.tpct-name{
-					h1{
-						font-size:2.8em;
-					}
-					i{
-						font-size: 2.8rem;
-					}
-				}
+.h1-title{
+	@include mq(xl) {
+		height:3em;
+		.h1t-name{
+			h1{
+				font-size:2.2em;
 			}
-			@include mq(md) {
-				height:2.5em;
-				.tpct-name{
-					h1{
-						font-size:1.8em;
-					}
-					i{
-						font-size: 1.8rem;
-					}
-				}
+			i{
+				font-size: 2.2rem;
+			}
+		}
+	}
+	@include mq(tb) {
+		height:2.8em;
+		.h1t-name{
+			h1{
+				font-size:1.8em;
+			}
+			i{
+				font-size: 1.8rem;
+			}
+		}
+	}
+	@include mq(md) {
+		height:3em;
+		.h1t-name{
+			h1{
+				font-size:2.2em;
+			}
+			i{
+				font-size: 2.2rem;
+			}
+		}
+	}
+	@include mq(sm) {
+		height:2.5em;
+		.h1t-name{
+			h1{
+				font-size:1.8em;
+			}
+			i{
+				font-size: 1.8rem;
 			}
 		}
 	}

@@ -8,8 +8,12 @@
  */
  ?>
 	<aside id="secondary" class="sidebar">
-		
-		<?php putPostViewsList(); ?>
+		<div class="s-wrapper">
+			<div class="s-rank">
+				<?php echo putH1Index('RANKING'); ?>
+				<?php putPostViewsList(); ?>
+			</div>
+		</div>
 	</aside><!-- #secondary -->
 	
 </div><!--containoer-->

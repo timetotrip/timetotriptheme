@@ -1,3 +1,14 @@
-#sidebar{
-	background-color:blue;
+.sidebar{
+	background-color:#ffe6e6;
+	
+	.s-wrapper{
+		@include mq(xl) {
+			position: sticky;
+			top:0;
+		}
+		@include mq(md) {
+			position: static;
+		}
+	}
+	
 }
