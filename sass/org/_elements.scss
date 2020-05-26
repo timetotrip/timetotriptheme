@@ -123,7 +123,14 @@
 		i{
 			animation: bound 5s ease 0s infinite normal;
 			margin: 0 0.5rem;
+			line-height:1.5;
 		}
+		
+		&.h1t-spb{
+			width:100%;
+			justify-content: space-between;
+		}
+		
 	}
 	@include mq(xl) {
 		height:3.5em;
@@ -285,5 +292,70 @@
 		height:50%;
 	}
 }
+/*--------------------------------------------------------------
+## パンくず
+--------------------------------------------------------------*/
+#breadcrumb{
+	margin-top: 1.5625vw;
+	margin-left:calc( 100% - 90% - 3.125vw  );
+	display:flex;
+	
+	.bc-ele{
+		margin-right:1em;
+		
+		.bce-arrow{
+		
+			height:24px;
+			display: inline-block;
+			position:relative;
+			background-color:$cla-d10;
+			margin: 0 -20px 0 24px;
+			padding: 0 5px;
+			z-index:1;
+			color:$clb-g10;
+			text-decoration:none;
+			
+			&::before,&::after{
+				content:'';
+				position:absolute;
+				width: 0;
+				height: 0;
+				top:0;
+				border: 12px solid transparent;
+				z-index:-1;
+			}
+			&::before{
+				left:-12px;
+				border-color:$cla-d10;
+				border-left: 12px solid transparent;
+			}
+			&::after{
+				right:-24px;
+				border-color:$cla-d10;
+				border-top: 12px solid  transparent;
+				border-bottom: 12px solid  transparent;
+				border-right: 12px solid  transparent;
+			}
+			
+			
+		}
+		&:nth-child(1){
+			.bce-arrow{
+				background-color:#523f29;
+				&::before{
+					border-color:#523f29;
+				}
+				&::after{
+					border-color:#523f29;
+					border-top: 12px solid  transparent;
+					border-bottom: 12px solid  transparent;
+					border-right: 12px solid  transparent;
+				}
+			
+			}
+		}
+	}
+}
+
 
 

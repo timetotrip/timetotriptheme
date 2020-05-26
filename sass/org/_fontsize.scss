@@ -181,3 +181,30 @@
 		}
 	}
 }
+/*--------------------------------------------------------------
+## SinglePage
+--------------------------------------------------------------*/
+#primary.single{
+	.s-firstview{
+		.sf-title{
+			h1{
+				font-family: "Sawarabi Mincho";
+				@include mq(xl) {
+					font-size:3em;
+				}
+				@include mq(tb) {
+					font-size:2.5em;
+				}
+				@include mq(md) {
+					font-size:2em;
+				}
+				@include mq(sm) {
+					font-size:1.8em; 
+				}
+			}
+		}
+	}
+}
+
+
+

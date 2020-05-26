@@ -672,6 +672,9 @@ object {
   padding: 0;
   font-family: "M PLUS Rounded 1c",'Source Sans Pro'; }
 
+img {
+  vertical-align: top; }
+
 /*--------------------------------------------------------------
 ## Rayout
 --------------------------------------------------------------*/
@@ -941,7 +944,11 @@ h1 {
       text-shadow: 2px 2px 4px rgba(43, 24, 0, 0.8); }
     .h1-title .h1t-name i {
       animation: bound 5s ease 0s infinite normal;
-      margin: 0 0.5rem; }
+      margin: 0 0.5rem;
+      line-height: 1.5; }
+    .h1-title .h1t-name.h1t-spb {
+      width: 100%;
+      justify-content: space-between; }
   @media screen and (max-width: 2400px) {
     .h1-title {
       height: 3.5em; } }
@@ -1049,6 +1056,53 @@ h1 {
     position: absolute;
     bottom: 0;
     height: 50%; }
+
+/*--------------------------------------------------------------
+## パンくず
+--------------------------------------------------------------*/
+#breadcrumb {
+  margin-top: 1.5625vw;
+  margin-left: calc( 100% - 90% - 3.125vw);
+  display: flex; }
+  #breadcrumb .bc-ele {
+    margin-right: 1em; }
+    #breadcrumb .bc-ele .bce-arrow {
+      height: 24px;
+      display: inline-block;
+      position: relative;
+      background-color: #2b1800;
+      margin: 0 -20px 0 24px;
+      padding: 0 5px;
+      z-index: 1;
+      color: #fdfffd;
+      text-decoration: none; }
+      #breadcrumb .bc-ele .bce-arrow::before, #breadcrumb .bc-ele .bce-arrow::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 0;
+        border: 12px solid transparent;
+        z-index: -1; }
+      #breadcrumb .bc-ele .bce-arrow::before {
+        left: -12px;
+        border-color: #2b1800;
+        border-left: 12px solid transparent; }
+      #breadcrumb .bc-ele .bce-arrow::after {
+        right: -24px;
+        border-color: #2b1800;
+        border-top: 12px solid  transparent;
+        border-bottom: 12px solid  transparent;
+        border-right: 12px solid  transparent; }
+    #breadcrumb .bc-ele:nth-child(1) .bce-arrow {
+      background-color: #523f29; }
+      #breadcrumb .bc-ele:nth-child(1) .bce-arrow::before {
+        border-color: #523f29; }
+      #breadcrumb .bc-ele:nth-child(1) .bce-arrow::after {
+        border-color: #523f29;
+        border-top: 12px solid  transparent;
+        border-bottom: 12px solid  transparent;
+        border-right: 12px solid  transparent; }
 
 /*--------------------------------------------------------------
 ## Talk
@@ -1161,9 +1215,11 @@ h1 {
   0% {
     transform: scale(0, 0);
     margin-left: -50%; }
-  50% {
-    transform: scale(0.3, 0.3);
-    margin-left: -30%; }
+  /*
+	50% {
+		transform:scale(0.3, 0.3);
+		margin-left:-30%;
+	}*/
   100% {
     transform: scale(1, 1);
     margin-left: 0; } }
@@ -1172,9 +1228,11 @@ h1 {
   0% {
     transform: scale(0, 0);
     margin-right: -50%; }
-  50% {
-    transform: scale(0.3, 0.3);
-    margin-right: -30%; }
+  /*
+	50% {
+		transform:scale(0.3, 0.3);
+		margin-right:-30%;
+	}*/
   100% {
     transform: scale(1, 1);
     margin-right: 0; } }
@@ -1303,6 +1361,24 @@ h1 {
       font-size: 1.8em; }
     .h1-title .h1t-name i {
       font-size: 1.8rem; } }
+
+/*--------------------------------------------------------------
+## SinglePage
+--------------------------------------------------------------*/
+#primary.single .s-firstview .sf-title h1 {
+  font-family: "Sawarabi Mincho"; }
+  @media screen and (max-width: 2400px) {
+    #primary.single .s-firstview .sf-title h1 {
+      font-size: 3em; } }
+  @media screen and (max-width: 800px) {
+    #primary.single .s-firstview .sf-title h1 {
+      font-size: 2.5em; } }
+  @media screen and (max-width: 580px) {
+    #primary.single .s-firstview .sf-title h1 {
+      font-size: 2em; } }
+  @media screen and (max-width: 374px) {
+    #primary.single .s-firstview .sf-title h1 {
+      font-size: 1.8em; } }
 
 /*--------------------------------------------------------------
 ## MainView
@@ -1448,6 +1524,22 @@ h1 {
   .tp-cate .tp-intro .tpi-taco i, .tp-cate .tp-intro .tpi-ika i {
     margin-right: 5px;
     font-size: 1.6rem; }
+
+#primary.single .s-firstview {
+  margin-top: 1.5625vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+  #primary.single .s-firstview .sf-img {
+    height: auto; }
+  #primary.single .s-firstview .sf-title {
+    max-width: 90%;
+    margin: -30px 1.5625vw 0 1.5625vw;
+    padding: 1.5625vw;
+    text-align: center;
+    background-color: rgba(43, 24, 0, 0.6);
+    color: rgba(253, 255, 253, 0.8); }
 
 @media screen and (max-width: 2400px) {
   .sidebar .s-wrapper {

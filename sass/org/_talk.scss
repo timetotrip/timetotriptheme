@@ -162,11 +162,11 @@
 	0% {
 		transform:scale(0, 0);
 		margin-left:-50%;
-	}
+	}/*
 	50% {
 		transform:scale(0.3, 0.3);
 		margin-left:-30%;
-	}
+	}*/
 	100% {
 		transform:scale(1, 1);
 		margin-left:0;
@@ -176,11 +176,11 @@
 	0% {
 		transform:scale(0, 0);
 		margin-right:-50%;
-	}
+	}/*
 	50% {
 		transform:scale(0.3, 0.3);
 		margin-right:-30%;
-	}
+	}*/
 	100% {
 		transform:scale(1, 1);
 		margin-right:0;

@@ -1,2 +1,25 @@
-#subpage{
+#primary.single{
+	.s-firstview{
+		margin-top: 1.5625vw;
+		height:auto;
+		
+		display:flex;
+		flex-direction: column;
+		align-items: flex-end;
+		
+		.sf-img{
+			height:auto;
+		}
+		
+		.sf-title{
+			max-width:90%;
+			margin: -30px 1.5625vw 0 1.5625vw;
+			padding: 1.5625vw;
+			text-align:center;
+			background-color:$cla-d06;
+			color:$clb-g08;
+		}
+		
+		
+	}
 }
