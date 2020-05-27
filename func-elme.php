@@ -265,5 +265,54 @@ function breadcrumb(){
 		echo $str;
 }
 
+/* * * * * * * * * * * * * * * * * *
+ * Content
+ * * * * * * * * * * * * * * * * * */
+function TidyContent( $raw, $putlist ){
+	
+	$h2s = explode('<h2>',$raw);
+	
+	
+	$beforh2=false;
+	$summry = '<div class="summary">';
+	$i=1;
+	foreach($h2s as $sent){
+		if(mb_strpos($sent,'</h2>')){
+			$index = mb_substr($sent, 0, mb_strpos($sent,'</h2>'), 'UTF-8');
+			$summry .= '<span>' . $i . ' . '.$index.'</span>';
+			$i += 1;
+		}
+		else{
+			$beforh2=true;
+		}
+	}
+	$summry .= '</div>';
+	$putlist += array('-1'=>$summry); 
+	
+	$ret = "";
+	$i=1;
+	foreach($h2s as $sent){
+		
+		if ( array_key_exists(strval(-1*$i), $putlist) ) {
+			$ret .= $putlist[strval(-1*$i)];
+		}
+		
+		if( $i > 1 || $beforh2 == false ){
+			$ret .= '<h2 class="'.$i.'">';
+		}
+		$ret .= $sent;
+		
+		/*
+		if ( array_key_exists(strval($i), $putlist) ) {
+			$ret .= $putlist[strval($i)];
+		}
+		*/
+		
+		$i += 1;
+	}
+	
+	return $ret;
+}
+
 
 ?>
