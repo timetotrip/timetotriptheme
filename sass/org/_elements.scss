@@ -121,9 +121,7 @@
 			text-shadow: 2px 2px 4px $cla-d08;
 		}
 		i{
-			animation: bound 5s ease 0s infinite normal;
-			margin: 0 0.5rem;
-			line-height:1.5;
+			line-height: 1.5;
 		}
 		
 		&.h1t-spb{
@@ -357,5 +355,15 @@
 	}
 }
 
+/*--------------------------------------------------------------
+## 目次
+--------------------------------------------------------------*/
+#summary{
+	margin: 0 1.5em;
+	padding:1.5625vw;
+	h3{
+		margin: 1em 0;
+	}
+}
 
 

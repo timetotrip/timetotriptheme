@@ -274,12 +274,19 @@ function TidyContent( $raw, $putlist ){
 	
 	
 	$beforh2=false;
-	$summry = '<div class="summary">';
+	$summry = '<div class="sa-h2">'
+							.'<i class="fab fa-gripfire ptn-txgrad-fire sdw_card"></i>'
+								.'<h2 class="">' .'目次'.'</h2>'
+						.'</div>'
+						.'<div id="summary" class="ptn-hex-white  sdw_card ">';
 	$i=1;
 	foreach($h2s as $sent){
 		if(mb_strpos($sent,'</h2>')){
 			$index = mb_substr($sent, 0, mb_strpos($sent,'</h2>'), 'UTF-8');
-			$summry .= '<span>' . $i . ' . '.$index.'</span>';
+			$summry .= '<a href ="#' . $index .'">'
+									.'<h3>' . $i . ' . '.$index
+									.'</h3>'
+								.'</a>';
 			$i += 1;
 		}
 		else{
@@ -287,7 +294,7 @@ function TidyContent( $raw, $putlist ){
 		}
 	}
 	$summry .= '</div>';
-	$putlist += array('-1'=>$summry); 
+	$putlist += array('-2'=>$summry); 
 	
 	$ret = "";
 	$i=1;
@@ -298,15 +305,18 @@ function TidyContent( $raw, $putlist ){
 		}
 		
 		if( $i > 1 || $beforh2 == false ){
-			$ret .= '<h2 class="'.$i.'">';
+			$ret .= '<div class="sa-h2">'
+								.'<i class="fab fa-gripfire ptn-txgrad-fire sdw_card"></i>'
+								.'<h2 id="'.mb_substr($sent, 0, mb_strpos($sent,'</h2>'), 'UTF-8').'">';
+			$sent = preg_replace('#<\/h2>#', '</h2></div>', $sent);
 		}
 		$ret .= $sent;
 		
-		/*
+		
 		if ( array_key_exists(strval($i), $putlist) ) {
 			$ret .= $putlist[strval($i)];
 		}
-		*/
+		
 		
 		$i += 1;
 	}

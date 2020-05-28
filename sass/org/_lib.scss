@@ -116,12 +116,14 @@ html,body{
 	margin :0 0;
 }
 	
+
 .grd-back{ 
+
 	$list-back-grad: 
 		#F0F0F0 0%,
 		#FFFFFF 70%,
 		#F0F0F0 100%;
-
+	
 	width:100%;
 	height:auto;
 	@include gradient(15deg, $list-back-grad);
@@ -233,6 +235,51 @@ h1{
 	--nlist: rgba(183, 82, 10, 0.6) 50%, rgba(183, 82, 10, 0) 0%;
 	
 }
+.ptn-hex-white {
+	
+	$list-back-grad: 
+		#cdcdcd 0%,
+		#FFFFFF 70%,
+		#F0F0F0 100%;
+
+	@include gradient(15deg, $list-back-grad);
+	
+	&:before, &:after {
+		z-index:-1;
+		--p: 0;
+		--s: calc(1 - 2*var(--p));
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		-webkit-mask: var(--m);
+						mask: var(--m);
+		content: ''
+	}
+	
+	&:after { --p: 1 }
+
+	$s: 2.5em;
+	$c: rgba(253, 255, 253,0.8);
+
+	&:before, &:after {
+		--c0: hsla(0, 0%, 0%, var(--p));
+		--c1: hsla(0, 0%, 0%, calc(1 - var(--p)));
+		background: 
+			linear-gradient(calc(var(--p)*90deg), 
+					$c 1px, transparent 0, 
+					transparent calc(100% - 1px), $c 0) 
+				50% 50%/ #{.14142*$s .14142*$s};
+		--m: 
+			repeating-linear-gradient(45deg, 
+					red 0, red #{$s}, 
+					transparent 0, transparent #{2*$s}), 
+			repeating-linear-gradient(-45deg, 
+					var(--c0) 0, var(--c0) #{$s}, 
+					var(--c1) 0, var(--c1) #{2*$s})
+	}
+
+
+
+}
 /*--------------------------------------------------------------
 ## Fire Text
 --------------------------------------------------------------*/
@@ -243,6 +290,10 @@ h1{
 	text-fill-color:transparent;
 	-webkit-background-clip:text;
 	-webkit-text-fill-color:transparent;
+	font-weight: 400;
+	animation: bound 5s ease 0s infinite normal;
+	margin: 0 0.5rem;
+	line-height:1.5;
 }
 /*--------------------------------------------------------------
 ## BOX

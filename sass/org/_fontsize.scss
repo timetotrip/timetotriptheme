@@ -184,7 +184,7 @@
 /*--------------------------------------------------------------
 ## SinglePage
 --------------------------------------------------------------*/
-#primary.single{
+.single{
 	.s-firstview{
 		.sf-title{
 			h1{
@@ -203,6 +203,50 @@
 				}
 			}
 		}
+	}
+	article{
+		
+		
+		.sa-h2{
+			@include mq(xl) {
+				h2{
+					font-size:2.2em;
+					line-height: 1.1;
+				}
+				i{
+					font-size: 2.2rem;
+				}
+			}
+			@include mq(md) {
+				h2{
+					font-size:1.6em;
+					line-height: 1.1;
+				}
+				i{
+					font-size: 1.8rem;
+				}
+			}
+		}
+		
+		@include mq(xl) {
+			p{
+				font-size:1.2em;
+				line-height:1.8em;
+				letter-spacing:0.1em;
+				margin-bottom:3em;
+				margin-left: 1.3em;
+			}
+		}
+		@include mq(md) {
+			p{
+				font-size:1em;
+				line-height:1.8em;
+				letter-spacing:0.1em;
+				margin-bottom:3em;
+				margin-left: 1.3em;
+			}
+		}
+		
 	}
 }
 

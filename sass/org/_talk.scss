@@ -105,36 +105,21 @@
 				border-radius:38% 45% 44% 35% / 36% 27% 32% 27%;
 			}
 			
-			p{
+			.tkc-p{
 				word-wrap:break-word;
+				margin-left:0;
 			}
 			
 			@include mq(xl) {
-				p{
-					font-size:1.6em;
-					line-height:1.4em;
-					letter-spacing:0.1em;
-					margin-bottom:1em;
-				}
-			}
-			@include mq(lg) {
-				p{
-					font-size:1.4em;
-					line-height:1.4em;
-					letter-spacing:0.1em;
-					margin-bottom:1em;
-				}
-			}
-			@include mq(md) {
-				p{
+				.tkc-p{
 					font-size:1.2em;
 					line-height:1.2em;
 					letter-spacing:0.1em;
 					margin-bottom:1em;
 				}
 			}
-			@include mq(sm) {
-				p{
+			@include mq(md) {
+				.tkc-p{
 					font-size:1em;
 					line-height:1.2em;
 					letter-spacing:0.1em;

@@ -98,7 +98,7 @@
 								$div .= $c;
 								break;
 							default:
-								$div .= '<p>' . $c . '</p>';
+								$div .= '<p class="tkc-p">' . $c . '</p>';
 								break;
 						endswitch;
 					endforeach;
