@@ -2,20 +2,34 @@
 	define( '_F_ELEM', '1.0.0' );
 	
 /* * * * * * * * * * * * * * * * * *
+ * SESSION
+ * * * * * * * * * * * * * * * * * */
+/*
+function init_session_start(){
+  session_start();
+}
+add_action('init', 'init_session_start');
+*/
+/* * * * * * * * * * * * * * * * * *
  * LIB
  * * * * * * * * * * * * * * * * * */
 
 function getThumbnailById($image_id){
 	$image = wp_get_attachment_image_src( $image_id );
 	$image_src = $image[0];
+	/*
+	$size = $_SESSION['windowSize'];
 	
-	//Smartphone用の処理を入れる
-	if( ua_smartphone() ){
+	if($size!=0&&$size<=420){
 		$image_src = substr_replace(
-			$image_src, "-sp", strrpos($image_src,"."),0 );
+			$image_src, "-sm", strrpos($image_src,"."),0 );
+	}
+	else*/if( ua_smartphone() ){
+		$image_src = substr_replace(
+			$image_src, "-sm", strrpos($image_src,"."),0 );
 	}
 	return $image_src;
-	
+
 }
 function getImagePath($filename){
 
