@@ -25,22 +25,28 @@
 	}
 	
 	function putTalkScript(){
-		$spt = "<script>"
-						. "$(window).scroll(function (){"
-							. "$(\".talk-base\").each(function(){"
-								. "var imgPosTop = $(this).offset().top;"
-								. "var imgPosBot = imgPosTop + $(this).height();"
-								. "var scroll = $(window).scrollTop();"
-								. "var windowHeight = $(window).height();"
-								. "if ((scroll > imgPosTop - windowHeight + (windowHeight/10)*2)&&(scroll < imgPosBot - windowHeight + (windowHeight/10)*8)){"
-									. "$(this).addClass(\"tk-appeared\");"
-								. "}"
-								. "else{"
-									. "$(this).removeClass(\"tk-appeared\");"
-								. "}"
-							. "})"
-						. ";});"
-					. "</script>";
+		
+		$spt = '<script>'
+					. 'var timeoutId = 0;'
+					. 'window.addEventListener( "scroll",function (){'
+						. 'if ( timeoutId ) return ;'
+						. 'timeoutId = setTimeout( function () {'
+							. 'timeoutId = 0 ;'
+							. 'document.querySelectorAll(".talk-base").forEach((ts) => {'
+								. 'var imgPosTop = ts.offsetTop;'
+								. 'var imgPosBot = imgPosTop + ts.offsetHeight;'
+								. 'var scroll = this.scrollY;'
+								. 'var windowHeight = this.innerHeight;'
+								. 'if ((scroll > imgPosTop - windowHeight + (windowHeight/10)*2)&&(scroll < imgPosBot - windowHeight + (windowHeight/10)*8)){'
+									. 'ts.classList.add("tk-appeared");'
+								. '}'
+								. 'else{'
+									. 'ts.classList.remove("tk-appeared");'
+								. '}'
+							. '});'
+						. '},250)'
+					. '});'
+					. '</script>';
 		return $spt;
 	}
 	

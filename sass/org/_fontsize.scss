@@ -238,7 +238,19 @@
 				font-size:1em;
 			}
 		}
-		
+		#summary{
+			h3{
+				@include mq(xl) {
+					font-size:1.2em;
+				}
+				@include mq(md) {
+					font-size:1em;
+				}
+				@include mq(sm) {
+					font-size:0.9em;
+				}
+			}
+		}
 	}
 	.nav-links{
 		.nav-previous,.nav-next{

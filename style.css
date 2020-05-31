@@ -1089,9 +1089,19 @@ h1 {
     .single article .sa-h2 i {
       height: 1em;
       margin: 0; }
+  .single article h3 {
+    color: #2b1800;
+    min-height: 1em;
+    letter-spacing: 0.1em;
+    margin-left: 1.3em; }
   .single article p {
     color: #2b1800;
-    min-height: 1em; }
+    min-height: 1em;
+    line-height: 1.8em;
+    letter-spacing: 0.1em;
+    margin-bottom: 2em;
+    margin-left: 1.3em;
+    margin-top: 1em; }
   .single article a {
     color: #ff3700; }
     .single article a:visited {
@@ -1604,21 +1614,23 @@ h1 {
 
 @media screen and (max-width: 2400px) {
   .single article p {
-    font-size: 1.2em;
-    line-height: 1.8em;
-    letter-spacing: 0.1em;
-    margin-bottom: 2em;
-    margin-left: 1.3em;
-    margin-top: 1em; } }
+    font-size: 1.2em; } }
 
 @media screen and (max-width: 580px) {
   .single article p {
-    font-size: 1em;
-    line-height: 1.8em;
-    letter-spacing: 0.1em;
-    margin-bottom: 3em;
-    margin-left: 1.3em;
-    margin-top: 1em; } }
+    font-size: 1em; } }
+
+@media screen and (max-width: 2400px) {
+  .single article #summary h3 {
+    font-size: 1.2em; } }
+
+@media screen and (max-width: 580px) {
+  .single article #summary h3 {
+    font-size: 1em; } }
+
+@media screen and (max-width: 374px) {
+  .single article #summary h3 {
+    font-size: 0.9em; } }
 
 @media screen and (max-width: 2400px) {
   .single .nav-links .nav-previous a .nav-title, .single .nav-links .nav-next a .nav-title {

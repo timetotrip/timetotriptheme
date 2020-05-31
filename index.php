@@ -74,7 +74,7 @@ get_header();
 					<?php echo putH1Index('大麻文化'); ?>
 					<div class="tpc-index">
 						<?php 
-							putTopPageView('cannabisculture',array(5,39),10,'date', true);
+							putTopPageView('cannabisculture',array(),10,'date', true);
 						?>
 					</div>
 				</div>
@@ -83,7 +83,7 @@ get_header();
 					<?php echo putH1Index('旅行記'); ?>
 					<div class="tpc-index">
 						<?php
-							putTopPageView('tripnotes',array(5),10,'date', true);
+							putTopPageView('tripnotes',array(),10,'date', true);
 						?>
 					</div>
 				</div>
@@ -92,7 +92,7 @@ get_header();
 					<?php echo putH1Index('トリップ'); ?>
 					<div class="tpc-index">
 						<?php 
-							putTopPageView('tripguide',array(5,39),10,'date', true);
+							putTopPageView('tripguide',array(),10,'date', true);
 						?>
 					</div>
 				</div>
