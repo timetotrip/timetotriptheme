@@ -80,7 +80,6 @@
 			max-width:90%;
 			
 			background-color:#FFFFFF;
-			border-radius:34% 33% 31% 32% / 21% 22% 23% 20%;
 			padding:5% 3% 5% 7%;
 			
 			position:relative;
@@ -97,13 +96,47 @@
 			}
 			&::before{
 				background-color:#FFFFFF;
-				transform: rotate(6deg);
-				border-radius:45% 49% 40% 38% / 22% 32% 28% 33%;
 			}
-			&::after{
+			&::after{ 
 				background-color:#FFFFFF;
-				transform: rotate(-8deg);
-				border-radius:38% 45% 44% 35% / 36% 27% 32% 27%;
+			}
+			
+			&.tks-s{
+				border-radius: 47% 43% 31% 32% / 43% 43% 41% 43%;
+				&::before{
+					width:90%;
+					left:5%;
+					transform: rotate(15deg);
+					border-radius:45% 49% 40% 38% / 42% 43% 48% 44%;
+				}
+				&::after{ 
+					width:90%;
+					left:5%;
+					transform: rotate(-15deg);
+					border-radius:38% 45% 44% 35% / 46% 47% 42% 45%;
+				}
+			}
+			&.tks-m{
+				border-radius: 34% 33% 31% 32% / 27% 33% 38% 32%;
+				&::before{
+					transform: rotate(8deg);
+					border-radius: 45% 49% 40% 38% / 33% 40% 37% 33%;
+				}
+				&::after{ 
+						transform: rotate(-10deg);
+					border-radius: 38% 45% 44% 35% / 31% 37% 38% 35%;
+				}
+			}
+			&.tks-l{
+				border-radius:34% 33% 31% 32% / 21% 22% 23% 20%;
+				&::before{
+					transform: rotate(6deg);
+					border-radius:45% 49% 40% 38% / 22% 32% 28% 33%;
+				}
+				&::after{ 
+					transform: rotate(-8deg);
+					border-radius:38% 45% 44% 35% / 36% 27% 32% 27%;
+				}
 			}
 			
 			.tkc-p{

@@ -77,8 +77,35 @@
 		$clist = explode("\n",$content);
 		
 		$div = "";
+		$size = "";
+		$s = 0;
 		
-		//$div .= '<div class="talk-area">';
+		foreach($clist as $c):
+			switch(str_replace( '\n', '', $c )):
+				case '':
+				case ' ':
+				case '</br>':
+				case '<br />':
+				case '\n':
+					break;
+				default:
+					$s += floor(mb_strlen ( $c )/10) + 1;
+				break;
+			endswitch;
+		endforeach;
+		
+		switch($s):
+			case $s < 3:
+				$size = " tks-s";
+				break;
+			case $s < 7:
+				$size = " tks-m";
+				break;
+			default:
+				$size = " tks-l";
+				break;
+		endswitch;
+	
 		$div .= '<div class="talk-base '. $direct .'">';
 			$div .= '<div class="tk-charactor">';
 				$div .= '<img src="' 
@@ -88,7 +115,7 @@
 			$div .= '</div>';
 			$div .= '<div class="tk-puff'. $direct	. '">';
 				$div .= '<span class="tk-triangle'. $direct	.'"></span>';
-				$div .= '<div class="tk-content'. $direct	. '">';
+				$div .= '<div class="tk-content'. $direct	. $size . '">';
 					foreach($clist as $c):
 						
 						$c = str_replace( '\n', '', $c );
