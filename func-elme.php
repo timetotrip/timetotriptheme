@@ -308,6 +308,14 @@ function TidyContent( $raw, $putlist ){
 		}
 	}
 	$summry .= '</div>';
+	
+	$summry .= putTalk( array('who'=>'ika','where'=>'r'),
+								'タコちゃんのインスタもフォローしてあげて！</br>'
+								.'<a href="https://www.instagram.com/tacoskyhigh/">'
+									.'<i class="fab fa-instagram"></i>@tacoskyhigh'
+								.'</a>'
+								);
+	
 	$putlist += array('-2'=>$summry); 
 	
 	$ret = "";

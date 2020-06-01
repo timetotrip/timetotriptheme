@@ -61,8 +61,10 @@ get_header();
 					<div class="tpi-ika">
 						<?php 
 							echo putTalk( array('who'=>'ika','where'=>'r'),
-								"タコちゃんのインスタもフォローしてあげて！
-								<a href=\"https://www.instagram.com/tacoskyhigh/\"><i class=\"fab fa-instagram\"></i>@tacoskyhigh</a>"
+								'タコちゃんのインスタもフォローしてあげて！</br>'
+								.'<a href="https://www.instagram.com/tacoskyhigh/">'
+									.'<i class="fab fa-instagram"></i>@tacoskyhigh'
+								.'</a>'
 							);
 						?>
 					</div>
