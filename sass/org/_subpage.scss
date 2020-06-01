@@ -87,14 +87,14 @@
 			margin-left: 1.3em;
 			margin-top: 1em;
 		}
-		
+		 
 		a{
 			color:$cla-l10;
 			&:visited{
 				color:$cla-d10;
 			}
 			&:hover{
-				animation: bound 1s ease 0s infinite normal;
+				/*animation: bound 1s ease 0s infinite normal;*/
 			}
 		}
 	}

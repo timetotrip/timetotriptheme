@@ -1022,8 +1022,7 @@ h1 {
       @media screen and (max-width: 800px) {
         .tp-cate .tp-intro .tpc-index a:hover, .tp-cate .tpc-1 .tpc-index a:hover, .tp-cate .tpc-2 .tpc-index a:hover, .tp-cate .tpc-3 .tpc-index a:hover {
           position: relative;
-          /*height:auto;*/
-          height: 80vw; }
+          height: 100vw; }
           .tp-cate .tp-intro .tpc-index a:hover .tpv-bg, .tp-cate .tpc-1 .tpc-index a:hover .tpv-bg, .tp-cate .tpc-2 .tpc-index a:hover .tpv-bg, .tp-cate .tpc-3 .tpc-index a:hover .tpv-bg {
             position: static;
             height: 100%;
@@ -1032,7 +1031,6 @@ h1 {
           .tp-cate .tp-intro .tpc-index a:hover .tpv-area, .tp-cate .tpc-1 .tpc-index a:hover .tpv-area, .tp-cate .tpc-2 .tpc-index a:hover .tpv-area, .tp-cate .tpc-3 .tpc-index a:hover .tpv-area {
             position: absolute;
             bottom: 0;
-            /*margin-top:-20%;*/
             height: 50%; } }
   .tp-cate .tp-intro .tpi-taco a, .tp-cate .tp-intro .tpi-taco i, .tp-cate .tp-intro .tpi-ika a, .tp-cate .tp-intro .tpi-ika i {
     color: #ff3700;
@@ -1109,7 +1107,7 @@ h1 {
     .single article a:visited {
       color: #2b1800; }
     .single article a:hover {
-      animation: bound 1s ease 0s infinite normal; }
+      /*animation: bound 1s ease 0s infinite normal;*/ }
 
 .single #comments {
   display: none; }
@@ -1304,23 +1302,23 @@ h1 {
       height: 2.5em; } }
 
 /*--------------------------------------------------------------
-## Rank
+## Rank / Suggestion / Futerd
 --------------------------------------------------------------*/
-.vrn {
+.vrn, .sug, .ftd {
   text-decoration: none;
   margin: 1.5625vw 0;
   display: block; }
-  .vrn .vrn-bg {
+  .vrn .vrn-bg, .vrn .sug-bg, .vrn .ftd-bg, .sug .vrn-bg, .sug .sug-bg, .sug .ftd-bg, .ftd .vrn-bg, .ftd .sug-bg, .ftd .ftd-bg {
     object-fit: cover;
     object-position: center;
     pointer-events: none; }
-  .vrn .vrn-text {
+  .vrn .vrn-text, .vrn .sug-text, .vrn .ftd-text, .sug .vrn-text, .sug .sug-text, .sug .ftd-text, .ftd .vrn-text, .ftd .sug-text, .ftd .ftd-text {
     pointer-events: none;
     display: flex;
     align-items: flex-end;
     min-height: 70px;
     padding: 1%; }
-    .vrn .vrn-text .vrnt-num {
+    .vrn .vrn-text .vrnt-num, .vrn .vrn-text sugt-icon, .vrn .vrn-text .ftdt-icon, .vrn .sug-text .vrnt-num, .vrn .sug-text sugt-icon, .vrn .sug-text .ftdt-icon, .vrn .ftd-text .vrnt-num, .vrn .ftd-text sugt-icon, .vrn .ftd-text .ftdt-icon, .sug .vrn-text .vrnt-num, .sug .vrn-text sugt-icon, .sug .vrn-text .ftdt-icon, .sug .sug-text .vrnt-num, .sug .sug-text sugt-icon, .sug .sug-text .ftdt-icon, .sug .ftd-text .vrnt-num, .sug .ftd-text sugt-icon, .sug .ftd-text .ftdt-icon, .ftd .vrn-text .vrnt-num, .ftd .vrn-text sugt-icon, .ftd .vrn-text .ftdt-icon, .ftd .sug-text .vrnt-num, .ftd .sug-text sugt-icon, .ftd .sug-text .ftdt-icon, .ftd .ftd-text .vrnt-num, .ftd .ftd-text sugt-icon, .ftd .ftd-text .ftdt-icon {
       font-size: 1.6em;
       line-height: 1;
       width: 8%;
@@ -1329,80 +1327,100 @@ h1 {
       color: #fdfffd;
       font-weight: bold;
       filter: drop-shadow(1px 1px 1px #2b1800); }
-    .vrn .vrn-text .vrnt-title {
+    .vrn .vrn-text .vrnt-title, .vrn .vrn-text .sugt-title, .vrn .vrn-text .ftdt-title, .vrn .sug-text .vrnt-title, .vrn .sug-text .sugt-title, .vrn .sug-text .ftdt-title, .vrn .ftd-text .vrnt-title, .vrn .ftd-text .sugt-title, .vrn .ftd-text .ftdt-title, .sug .vrn-text .vrnt-title, .sug .vrn-text .sugt-title, .sug .vrn-text .ftdt-title, .sug .sug-text .vrnt-title, .sug .sug-text .sugt-title, .sug .sug-text .ftdt-title, .sug .ftd-text .vrnt-title, .sug .ftd-text .sugt-title, .sug .ftd-text .ftdt-title, .ftd .vrn-text .vrnt-title, .ftd .vrn-text .sugt-title, .ftd .vrn-text .ftdt-title, .ftd .sug-text .vrnt-title, .ftd .sug-text .sugt-title, .ftd .sug-text .ftdt-title, .ftd .ftd-text .vrnt-title, .ftd .ftd-text .sugt-title, .ftd .ftd-text .ftdt-title {
       width: 90%;
       display: flex;
       flex-direction: column;
       filter: drop-shadow(1px 1px 1px #2b1800); }
-      .vrn .vrn-text .vrnt-title .vrnt-views {
+      .vrn .vrn-text .vrnt-title .vrnt-views, .vrn .vrn-text .sugt-title .vrnt-views, .vrn .vrn-text .ftdt-title .vrnt-views, .vrn .sug-text .vrnt-title .vrnt-views, .vrn .sug-text .sugt-title .vrnt-views, .vrn .sug-text .ftdt-title .vrnt-views, .vrn .ftd-text .vrnt-title .vrnt-views, .vrn .ftd-text .sugt-title .vrnt-views, .vrn .ftd-text .ftdt-title .vrnt-views, .sug .vrn-text .vrnt-title .vrnt-views, .sug .vrn-text .sugt-title .vrnt-views, .sug .vrn-text .ftdt-title .vrnt-views, .sug .sug-text .vrnt-title .vrnt-views, .sug .sug-text .sugt-title .vrnt-views, .sug .sug-text .ftdt-title .vrnt-views, .sug .ftd-text .vrnt-title .vrnt-views, .sug .ftd-text .sugt-title .vrnt-views, .sug .ftd-text .ftdt-title .vrnt-views, .ftd .vrn-text .vrnt-title .vrnt-views, .ftd .vrn-text .sugt-title .vrnt-views, .ftd .vrn-text .ftdt-title .vrnt-views, .ftd .sug-text .vrnt-title .vrnt-views, .ftd .sug-text .sugt-title .vrnt-views, .ftd .sug-text .ftdt-title .vrnt-views, .ftd .ftd-text .vrnt-title .vrnt-views, .ftd .ftd-text .sugt-title .vrnt-views, .ftd .ftd-text .ftdt-title .vrnt-views {
         font-size: 0.6em;
         background-color: #2b1800;
         color: #fdfffd;
         padding: 0 1vw;
         width: 25%;
         text-align: center; }
-      .vrn .vrn-text .vrnt-title h2 {
-        font-size: 1em;
+      .vrn .vrn-text .vrnt-title .vrnt-h2, .vrn .vrn-text .vrnt-title .sugt-p, .vrn .vrn-text .vrnt-title .ftdt-p, .vrn .vrn-text .sugt-title .vrnt-h2, .vrn .vrn-text .sugt-title .sugt-p, .vrn .vrn-text .sugt-title .ftdt-p, .vrn .vrn-text .ftdt-title .vrnt-h2, .vrn .vrn-text .ftdt-title .sugt-p, .vrn .vrn-text .ftdt-title .ftdt-p, .vrn .sug-text .vrnt-title .vrnt-h2, .vrn .sug-text .vrnt-title .sugt-p, .vrn .sug-text .vrnt-title .ftdt-p, .vrn .sug-text .sugt-title .vrnt-h2, .vrn .sug-text .sugt-title .sugt-p, .vrn .sug-text .sugt-title .ftdt-p, .vrn .sug-text .ftdt-title .vrnt-h2, .vrn .sug-text .ftdt-title .sugt-p, .vrn .sug-text .ftdt-title .ftdt-p, .vrn .ftd-text .vrnt-title .vrnt-h2, .vrn .ftd-text .vrnt-title .sugt-p, .vrn .ftd-text .vrnt-title .ftdt-p, .vrn .ftd-text .sugt-title .vrnt-h2, .vrn .ftd-text .sugt-title .sugt-p, .vrn .ftd-text .sugt-title .ftdt-p, .vrn .ftd-text .ftdt-title .vrnt-h2, .vrn .ftd-text .ftdt-title .sugt-p, .vrn .ftd-text .ftdt-title .ftdt-p, .sug .vrn-text .vrnt-title .vrnt-h2, .sug .vrn-text .vrnt-title .sugt-p, .sug .vrn-text .vrnt-title .ftdt-p, .sug .vrn-text .sugt-title .vrnt-h2, .sug .vrn-text .sugt-title .sugt-p, .sug .vrn-text .sugt-title .ftdt-p, .sug .vrn-text .ftdt-title .vrnt-h2, .sug .vrn-text .ftdt-title .sugt-p, .sug .vrn-text .ftdt-title .ftdt-p, .sug .sug-text .vrnt-title .vrnt-h2, .sug .sug-text .vrnt-title .sugt-p, .sug .sug-text .vrnt-title .ftdt-p, .sug .sug-text .sugt-title .vrnt-h2, .sug .sug-text .sugt-title .sugt-p, .sug .sug-text .sugt-title .ftdt-p, .sug .sug-text .ftdt-title .vrnt-h2, .sug .sug-text .ftdt-title .sugt-p, .sug .sug-text .ftdt-title .ftdt-p, .sug .ftd-text .vrnt-title .vrnt-h2, .sug .ftd-text .vrnt-title .sugt-p, .sug .ftd-text .vrnt-title .ftdt-p, .sug .ftd-text .sugt-title .vrnt-h2, .sug .ftd-text .sugt-title .sugt-p, .sug .ftd-text .sugt-title .ftdt-p, .sug .ftd-text .ftdt-title .vrnt-h2, .sug .ftd-text .ftdt-title .sugt-p, .sug .ftd-text .ftdt-title .ftdt-p, .ftd .vrn-text .vrnt-title .vrnt-h2, .ftd .vrn-text .vrnt-title .sugt-p, .ftd .vrn-text .vrnt-title .ftdt-p, .ftd .vrn-text .sugt-title .vrnt-h2, .ftd .vrn-text .sugt-title .sugt-p, .ftd .vrn-text .sugt-title .ftdt-p, .ftd .vrn-text .ftdt-title .vrnt-h2, .ftd .vrn-text .ftdt-title .sugt-p, .ftd .vrn-text .ftdt-title .ftdt-p, .ftd .sug-text .vrnt-title .vrnt-h2, .ftd .sug-text .vrnt-title .sugt-p, .ftd .sug-text .vrnt-title .ftdt-p, .ftd .sug-text .sugt-title .vrnt-h2, .ftd .sug-text .sugt-title .sugt-p, .ftd .sug-text .sugt-title .ftdt-p, .ftd .sug-text .ftdt-title .vrnt-h2, .ftd .sug-text .ftdt-title .sugt-p, .ftd .sug-text .ftdt-title .ftdt-p, .ftd .ftd-text .vrnt-title .vrnt-h2, .ftd .ftd-text .vrnt-title .sugt-p, .ftd .ftd-text .vrnt-title .ftdt-p, .ftd .ftd-text .sugt-title .vrnt-h2, .ftd .ftd-text .sugt-title .sugt-p, .ftd .ftd-text .sugt-title .ftdt-p, .ftd .ftd-text .ftdt-title .vrnt-h2, .ftd .ftd-text .ftdt-title .sugt-p, .ftd .ftd-text .ftdt-title .ftdt-p {
         color: #fdfffd;
-        text-shadow: 0 0 2px #2b1800; }
-  .vrn.vrn-1 .vrn-text .vrnt-num {
+        text-shadow: 0 0 2px #2b1800;
+        font-size: 1em;
+        margin: 0; }
+  .vrn .sug-text .sugt-icon, .vrn .sug-text .ftdt-icon, .vrn .ftd-text .sugt-icon, .vrn .ftd-text .ftdt-icon, .sug .sug-text .sugt-icon, .sug .sug-text .ftdt-icon, .sug .ftd-text .sugt-icon, .sug .ftd-text .ftdt-icon, .ftd .sug-text .sugt-icon, .ftd .sug-text .ftdt-icon, .ftd .ftd-text .sugt-icon, .ftd .ftd-text .ftdt-icon {
+    font-size: 1.8rem;
+    margin: 0 0 0 -0.1em; }
+  .vrn .sug-text .sugt-p, .vrn .sug-text .ftdt-p, .vrn .ftd-text .sugt-p, .vrn .ftd-text .ftdt-p, .sug .sug-text .sugt-p, .sug .sug-text .ftdt-p, .sug .ftd-text .sugt-p, .sug .ftd-text .ftdt-p, .ftd .sug-text .sugt-p, .ftd .sug-text .ftdt-p, .ftd .ftd-text .sugt-p, .ftd .ftd-text .ftdt-p {
+    line-height: 1; }
+  .vrn.vrn-1 .vrn-text .vrnt-num, .sug.vrn-1 .vrn-text .vrnt-num, .ftd.vrn-1 .vrn-text .vrnt-num {
     font-size: 2.4em;
     background: linear-gradient(-38deg, #aa771c 0%, #d0a850 10%, #b38728 40%, #fbf5b7 70%, #aa771c 100%);
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
-  .vrn.vrn-2 .vrn-text .vrnt-num {
+  .vrn.vrn-2 .vrn-text .vrnt-num, .sug.vrn-2 .vrn-text .vrnt-num, .ftd.vrn-2 .vrn-text .vrnt-num {
     font-size: 2.4em;
     background: linear-gradient(-38deg, #dedede, #454545 23%, #dedede 43%, #ffffff 45%, #ffffff 60%, #dedede 72%, #a1a1a1);
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
-  .vrn.vrn-3 .vrn-text .vrnt-num {
+  .vrn.vrn-3 .vrn-text .vrnt-num, .sug.vrn-3 .vrn-text .vrnt-num, .ftd.vrn-3 .vrn-text .vrnt-num {
     font-size: 2.4em;
     background: linear-gradient(-38deg, #ca7345, #a14521 27%, #ca7345 36%, #ffdeca 45%, #ffdeca 53%, #ffdeca 60%, #ca7345 84%, #732100);
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
-  .vrn.vrn-4 .vrn-text .vrnt-num, .vrn.vrn-5 .vrn-text .vrnt-num {
+  .vrn.vrn-4 .vrn-text .vrnt-num, .vrn.vrn-5 .vrn-text .vrnt-num, .sug.vrn-4 .vrn-text .vrnt-num, .sug.vrn-5 .vrn-text .vrnt-num, .ftd.vrn-4 .vrn-text .vrnt-num, .ftd.vrn-5 .vrn-text .vrnt-num {
     background: linear-gradient(-38deg, #000000 10%, #A0A0A0 60%, #000000 90%);
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
-.vrn {
+.vrn, .sug, .ftd {
   position: relative;
   height: 100px; }
-  .vrn .vrn-bg {
+  .vrn .vrn-bg, .vrn .sug-bg, .vrn .ftd-bg, .sug .vrn-bg, .sug .sug-bg, .sug .ftd-bg, .ftd .vrn-bg, .ftd .sug-bg, .ftd .ftd-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     filter: sepia(40%) hue-rotate(-16deg) contrast(80%) brightness(80%); }
-  .vrn .vrn-text {
+  .vrn .vrn-text, .vrn .sug-text, .vrn .ftd-text, .sug .vrn-text, .sug .sug-text, .sug .ftd-text, .ftd .vrn-text, .ftd .sug-text, .ftd .ftd-text {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%; }
 
-.vrn:hover {
-  /*animation: slidedown 1s ease 0s 1 normal both	;*/
+.vrn:hover, .sug:hover, .ftd:hover {
   position: relative;
   height: 200px; }
-  .vrn:hover .vrn-bg {
+  .vrn:hover .vrn-bg, .vrn:hover .sug-bg, .vrn:hover .ftd-bg, .sug:hover .vrn-bg, .sug:hover .sug-bg, .sug:hover .ftd-bg, .ftd:hover .vrn-bg, .ftd:hover .sug-bg, .ftd:hover .ftd-bg {
     position: static;
     height: 100%;
     filter: none; }
-  .vrn:hover .vrn-text {
+  .vrn:hover .vrn-text, .vrn:hover .sug-text, .vrn:hover .ftd-text, .sug:hover .vrn-text, .sug:hover .sug-text, .sug:hover .ftd-text, .ftd:hover .vrn-text, .ftd:hover .sug-text, .ftd:hover .ftd-text {
     --c: rgba(183, 82, 10, 0.0);
     position: absolute;
     bottom: 0;
     height: 50%; }
+
+@media screen and (max-width: 2400px) {
+  .sgt-area, .ftd-area {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between; }
+    .sgt-area .sgta-post, .sgt-area .ftda-post, .ftd-area .sgta-post, .ftd-area .ftda-post {
+      width: 48%; } }
+
+@media screen and (max-width: 800px) {
+  .sgt-area, .ftd-area {
+    display: flex;
+    flex-direction: column; }
+    .sgt-area .sgta-post, .sgt-area .ftda-post, .ftd-area .sgta-post, .ftd-area .ftda-post {
+      width: 100%; } }
 
 /*--------------------------------------------------------------
 ## パンくず

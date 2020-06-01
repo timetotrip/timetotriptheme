@@ -13,7 +13,7 @@ get_header();
 			<div class="tpf-carousel">
 				<div class="tpfc-inner">
 				<?php 
-					putTopPageView('futured', array(),1,'rand');
+					putTopPageView('futured', array(),1,'date');
 				?>
 				</div>
 			</div>
@@ -24,7 +24,7 @@ get_header();
 			</div>
 			<div class="tpf-newest2">
 			<?php 
-				putTopPageView("tripnotes",array(),1,'date');
+				putTopPageView("tripnotes",array(5),1,'date');
 			?>
 			</div>
 			<div class="tpf-newest3">

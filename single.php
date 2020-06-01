@@ -33,7 +33,10 @@ get_header();
 				breadcrumb(); 
 				
 				echo "<article>";
-					echo TidyContent( do_shortcode( get_the_content() ), array());
+					echo TidyContent( do_shortcode( get_the_content() ), array(
+						'-3' => putSuggest((get_the_category())[0], get_the_tags() ,get_the_ID()),
+						'-4' => putFutured()
+					));
 				echo "</article>";
 				
 				/* get_template_part( 'template-parts/content', get_post_type() );*/

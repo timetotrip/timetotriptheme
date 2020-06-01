@@ -191,10 +191,10 @@ function putPostViewsList() {
 			echo '<a href="'; the_permalink(); echo '" class="vrn vrn-'. $num . '">';
 				echo '<img src="'. getThumbnailById(get_post_thumbnail_id()). '" class="vrn-bg" loading="lazy" alt="">';
 				echo '<div class="vrn-text  ptn-str-brown-slant">';
-					echo '<p class="vrnt-num">' . $num . '</num>';
+					echo '<p class="vrnt-num">' . $num . '</p>';
 					echo '<div class="vrnt-title">';
 						echo '<p class="vrnt-views">'. getPostViews(get_the_ID()).'</p>';
-						echo '<h2>';
+						echo '<h2 class="vrnt-h2">';
 							the_title();
 						echo '</h2>';
 					echo '</div>';
@@ -345,6 +345,92 @@ function TidyContent( $raw, $putlist ){
 	
 	return $ret;
 }
+/* * * * * * * * * * * * * * * * * *
+ * Suggestion
+ * * * * * * * * * * * * * * * * * */
+function putSuggest( $cat, $tugs, $self ){
+	$div = '<div class="sgt-area">';
+		$div .= searchSuggest($cat->term_id, -1,$tugs, $self );
+		$div .= searchSuggest(-1,$cat->term_id,$tugs, $self );
+	$div .= '</div>';
+	return $div;
+}
 
+function searchSuggest( $incat, $outcat, $tugs, $self ){
+	$div = '<div class="sgta-post">';
+	
+	$thistugs = array_column($tugs, 'name');
+	$maxpoint = 0;
+	$rettitle = "";
+	$retimage = "";
+	$retlink = "";
+	
+	
+	$wpq = new WP_Query(array(
+		'cat' => $incat,
+		'category__not_in' => array( $outcat ),
+		'post__not_in' => array($self),
+		'posts_per_page' => -1
+	));
+	if ( $wpq->have_posts() ) :
+		while ( $wpq->have_posts() ): $wpq->the_post();
+			$sametugs = array_intersect($thistugs,array_column( get_the_tags(), 'name'));
+			
+			if( $maxpoint <= count($sametugs) ):
+				$rettitle = get_the_title();
+				$retimage = getThumbnailById(get_post_thumbnail_id());
+				$retlink = get_the_permalink();
+				$maxpoint = count($sametugs);
+			endif;
+			
+		endwhile;
+	endif;
+	
+	$div .= '<a href="' .$retlink . '" class="sug sdw_card">'
+					. '<img src="'. $retimage . '" class="sug-bg" loading="lazy" alt="">'
+					. '<div class="sug-text  ptn-str-brown-slant">'
+					. '<i class="fab fa-gripfire sugt-icon ptn-txgrad-fire"></i>'
+						. '<div class="sugt-title">'
+							. '<p class="sugt-p">'
+								. $rettitle
+							. '</p>'
+						. '</div>'
+					. '</div>'
+				. '</a>';
+			
+	$div .= '</div>';
+	return $div;
+}
+
+function putFutured(){
+	$div = '<div class="ftd-area">'
+					.'<div class="ftda-post">';
+	$wpq = new WP_Query(array(
+		'cat' => 5,
+		'orderby' => 'rand',
+		'posts_per_page' => 2
+	));
+	if ( $wpq->have_posts() ) :
+		while ( $wpq->have_posts() ): $wpq->the_post();
+		
+	$div .= '<a href="' .get_the_permalink() . '" class="ftd sdw_card">'
+					. '<img src="'. getThumbnailById(get_post_thumbnail_id()) . '" class="ftd-bg" loading="lazy" alt="">'
+					. '<div class="ftd-text  ptn-str-brown-slant">'
+					. '<i class="fab fa-gripfire ftdt-icon ptn-txgrad-fire"></i>'
+						. '<div class="ftdt-title">'
+							. '<p class="ftdt-p">'
+								. get_the_title()
+							. '</p>'
+						. '</div>'
+					. '</div>'
+				. '</a>';
+		
+		endwhile;
+	endif;
+	
+	$div .= '</div>'
+				.'</div>';
+	return $div;
+}
 
 ?>
