@@ -43,7 +43,14 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		width:80%;
+		
+		@include mq(xl) {
+			width:60%;
+		}
+		@include mq(tb) {
+			width:80%;
+		}
+		
 		transform:scale(0, 0);
 		filter: drop-shadow(3px 3px 3px rgba(5, 5, 5, 0.8));
 		
@@ -58,7 +65,7 @@
 			display: block;
 			width: 0;
 			height: 0;
-			border: 2vw solid transparent;
+			border: 5px solid transparent;
 			
 			&.tkdr-lr{
 				border-right: 3vw solid #FFFFFF;

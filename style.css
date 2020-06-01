@@ -1022,16 +1022,18 @@ h1 {
       @media screen and (max-width: 800px) {
         .tp-cate .tp-intro .tpc-index a:hover, .tp-cate .tpc-1 .tpc-index a:hover, .tp-cate .tpc-2 .tpc-index a:hover, .tp-cate .tpc-3 .tpc-index a:hover {
           position: relative;
-          height: auto; }
+          /*height:auto;*/
+          height: 80vw; }
           .tp-cate .tp-intro .tpc-index a:hover .tpv-bg, .tp-cate .tpc-1 .tpc-index a:hover .tpv-bg, .tp-cate .tpc-2 .tpc-index a:hover .tpv-bg, .tp-cate .tpc-3 .tpc-index a:hover .tpv-bg {
             position: static;
-            height: auto;
+            height: 100%;
             width: 100%;
-            object-fit: contain; }
+            object-fit: cover; }
           .tp-cate .tp-intro .tpc-index a:hover .tpv-area, .tp-cate .tpc-1 .tpc-index a:hover .tpv-area, .tp-cate .tpc-2 .tpc-index a:hover .tpv-area, .tp-cate .tpc-3 .tpc-index a:hover .tpv-area {
-            position: static;
-            margin-top: -20%;
-            height: auto; } }
+            position: absolute;
+            bottom: 0;
+            /*margin-top:-20%;*/
+            height: 50%; } }
   .tp-cate .tp-intro .tpi-taco a, .tp-cate .tp-intro .tpi-taco i, .tp-cate .tp-intro .tpi-ika a, .tp-cate .tp-intro .tpi-ika i {
     color: #ff3700;
     font-weight: bold; }
@@ -1211,9 +1213,12 @@ h1 {
   height: 100%;
   position: relative; }
   .tpv .tpv-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+    /*
+		position:absolute;
+		top:0;
+		left:0;
+		*/
+    position: static;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1221,7 +1226,7 @@ h1 {
     pointer-events: none; }
   .tpv .tpv-area {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -1684,9 +1689,14 @@ h1 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 80%;
     transform: scale(0, 0);
     filter: drop-shadow(3px 3px 3px rgba(5, 5, 5, 0.8)); }
+    @media screen and (max-width: 2400px) {
+      .talk-base .tk-puff {
+        width: 60%; } }
+    @media screen and (max-width: 800px) {
+      .talk-base .tk-puff {
+        width: 80%; } }
     .talk-base .tk-puff.tkdr-lr {
       flex-direction: row; }
     .talk-base .tk-puff.tkdr-rl {
@@ -1695,7 +1705,7 @@ h1 {
       display: block;
       width: 0;
       height: 0;
-      border: 2vw solid transparent; }
+      border: 5px solid transparent; }
       .talk-base .tk-puff .tk-triangle.tkdr-lr {
         border-right: 3vw solid #FFFFFF; }
       .talk-base .tk-puff .tk-triangle.tkdr-rl {

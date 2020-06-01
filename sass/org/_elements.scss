@@ -8,9 +8,12 @@
 	position:relative;
 	
 	.tpv-bg{
+		/*
 		position:absolute;
 		top:0;
 		left:0;
+		*/
+		position:static;
 		width:100%;
 		height:100%;
 		
@@ -21,7 +24,7 @@
 	
 	.tpv-area{
 		position:absolute;
-		top:0;
+		bottom:0;
 		left:0;
 		width:100%;
 		height:100%;
@@ -58,8 +61,6 @@
 			padding:0.5vw 1.5625vw ;
 			text-align: right;
 		}
-		
-
 	}
 	&:hover{
 		.tpv-area{
@@ -273,7 +274,6 @@
 	}
 }
 .vrn:hover{
-	/*animation: slidedown 1s ease 0s 1 normal both	;*/
 	
 	position:relative;
 	height:200px;
