@@ -1337,7 +1337,7 @@ h1 {
         background-color: #2b1800;
         color: #fdfffd;
         padding: 0 1vw;
-        width: 25%;
+        width: 40%;
         text-align: center; }
       .vrn .vrn-text .vrnt-title .vrnt-h2, .vrn .vrn-text .vrnt-title .sugt-p, .vrn .vrn-text .vrnt-title .ftdt-p, .vrn .vrn-text .sugt-title .vrnt-h2, .vrn .vrn-text .sugt-title .sugt-p, .vrn .vrn-text .sugt-title .ftdt-p, .vrn .vrn-text .ftdt-title .vrnt-h2, .vrn .vrn-text .ftdt-title .sugt-p, .vrn .vrn-text .ftdt-title .ftdt-p, .vrn .sug-text .vrnt-title .vrnt-h2, .vrn .sug-text .vrnt-title .sugt-p, .vrn .sug-text .vrnt-title .ftdt-p, .vrn .sug-text .sugt-title .vrnt-h2, .vrn .sug-text .sugt-title .sugt-p, .vrn .sug-text .sugt-title .ftdt-p, .vrn .sug-text .ftdt-title .vrnt-h2, .vrn .sug-text .ftdt-title .sugt-p, .vrn .sug-text .ftdt-title .ftdt-p, .vrn .ftd-text .vrnt-title .vrnt-h2, .vrn .ftd-text .vrnt-title .sugt-p, .vrn .ftd-text .vrnt-title .ftdt-p, .vrn .ftd-text .sugt-title .vrnt-h2, .vrn .ftd-text .sugt-title .sugt-p, .vrn .ftd-text .sugt-title .ftdt-p, .vrn .ftd-text .ftdt-title .vrnt-h2, .vrn .ftd-text .ftdt-title .sugt-p, .vrn .ftd-text .ftdt-title .ftdt-p, .sug .vrn-text .vrnt-title .vrnt-h2, .sug .vrn-text .vrnt-title .sugt-p, .sug .vrn-text .vrnt-title .ftdt-p, .sug .vrn-text .sugt-title .vrnt-h2, .sug .vrn-text .sugt-title .sugt-p, .sug .vrn-text .sugt-title .ftdt-p, .sug .vrn-text .ftdt-title .vrnt-h2, .sug .vrn-text .ftdt-title .sugt-p, .sug .vrn-text .ftdt-title .ftdt-p, .sug .sug-text .vrnt-title .vrnt-h2, .sug .sug-text .vrnt-title .sugt-p, .sug .sug-text .vrnt-title .ftdt-p, .sug .sug-text .sugt-title .vrnt-h2, .sug .sug-text .sugt-title .sugt-p, .sug .sug-text .sugt-title .ftdt-p, .sug .sug-text .ftdt-title .vrnt-h2, .sug .sug-text .ftdt-title .sugt-p, .sug .sug-text .ftdt-title .ftdt-p, .sug .ftd-text .vrnt-title .vrnt-h2, .sug .ftd-text .vrnt-title .sugt-p, .sug .ftd-text .vrnt-title .ftdt-p, .sug .ftd-text .sugt-title .vrnt-h2, .sug .ftd-text .sugt-title .sugt-p, .sug .ftd-text .sugt-title .ftdt-p, .sug .ftd-text .ftdt-title .vrnt-h2, .sug .ftd-text .ftdt-title .sugt-p, .sug .ftd-text .ftdt-title .ftdt-p, .ftd .vrn-text .vrnt-title .vrnt-h2, .ftd .vrn-text .vrnt-title .sugt-p, .ftd .vrn-text .vrnt-title .ftdt-p, .ftd .vrn-text .sugt-title .vrnt-h2, .ftd .vrn-text .sugt-title .sugt-p, .ftd .vrn-text .sugt-title .ftdt-p, .ftd .vrn-text .ftdt-title .vrnt-h2, .ftd .vrn-text .ftdt-title .sugt-p, .ftd .vrn-text .ftdt-title .ftdt-p, .ftd .sug-text .vrnt-title .vrnt-h2, .ftd .sug-text .vrnt-title .sugt-p, .ftd .sug-text .vrnt-title .ftdt-p, .ftd .sug-text .sugt-title .vrnt-h2, .ftd .sug-text .sugt-title .sugt-p, .ftd .sug-text .sugt-title .ftdt-p, .ftd .sug-text .ftdt-title .vrnt-h2, .ftd .sug-text .ftdt-title .sugt-p, .ftd .sug-text .ftdt-title .ftdt-p, .ftd .ftd-text .vrnt-title .vrnt-h2, .ftd .ftd-text .vrnt-title .sugt-p, .ftd .ftd-text .vrnt-title .ftdt-p, .ftd .ftd-text .sugt-title .vrnt-h2, .ftd .ftd-text .sugt-title .sugt-p, .ftd .ftd-text .sugt-title .ftdt-p, .ftd .ftd-text .ftdt-title .vrnt-h2, .ftd .ftd-text .ftdt-title .sugt-p, .ftd .ftd-text .ftdt-title .ftdt-p {
         color: #fdfffd;
@@ -1411,7 +1411,7 @@ h1 {
   .sgt-area, .ftd-area {
     display: flex;
     flex-direction: row;
-    align-content: space-between; }
+    justify-content: space-between; }
     .sgt-area .sgta-post, .sgt-area .ftda-post, .ftd-area .sgta-post, .ftd-area .ftda-post {
       width: 48%; } }
 

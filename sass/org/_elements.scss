@@ -185,7 +185,7 @@
 				background-color:$cla-d10;
 				color:$clb-g10;
 				padding:0 1vw;
-				width:25%;
+				width:40%;
 				text-align:center;
 			}
 			.vrnt-h2,.sugt-p,.ftdt-p{
@@ -306,7 +306,7 @@
 	.sgt-area,.ftd-area{
 		display:flex;
 		flex-direction:row;
-		align-content: space-between;
+		justify-content: space-between;
 		.sgta-post,.ftda-post{
 			width:48%;
 		}

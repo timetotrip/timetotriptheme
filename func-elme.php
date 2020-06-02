@@ -357,8 +357,7 @@ function putSuggest( $cat, $tugs, $self ){
 }
 
 function searchSuggest( $incat, $outcat, $tugs, $self ){
-	$div = '<div class="sgta-post">';
-	
+	$div = '';
 	$thistugs = array_column($tugs, 'name');
 	$maxpoint = 0;
 	$rettitle = "";
@@ -385,26 +384,26 @@ function searchSuggest( $incat, $outcat, $tugs, $self ){
 			
 		endwhile;
 	endif;
-	
-	$div .= '<a href="' .$retlink . '" class="sug sdw_card">'
-					. '<img src="'. $retimage . '" class="sug-bg" loading="lazy" alt="">'
-					. '<div class="sug-text  ptn-str-brown-slant">'
-					. '<i class="fab fa-gripfire sugt-icon ptn-txgrad-fire"></i>'
-						. '<div class="sugt-title">'
-							. '<p class="sugt-p">'
-								. $rettitle
-							. '</p>'
+	if ($maxpoint > 0):
+	$div = '<div class="sgta-post">'
+			. '<a href="' .$retlink . '" class="sug sdw_card">'
+						. '<img src="'. $retimage . '" class="sug-bg" loading="lazy" alt="">'
+						. '<div class="sug-text  ptn-str-brown-slant">'
+						. '<i class="fab fa-gripfire sugt-icon ptn-txgrad-fire"></i>'
+							. '<div class="sugt-title">'
+								. '<p class="sugt-p">'
+									. $rettitle
+								. '</p>'
+							. '</div>'
 						. '</div>'
-					. '</div>'
-				. '</a>';
-			
-	$div .= '</div>';
+					. '</a>'
+				. '</div>';
+	endif;
 	return $div;
 }
 
 function putFutured(){
-	$div = '<div class="ftd-area">'
-					.'<div class="ftda-post">';
+	$div = '<div class="ftd-area">';
 	$wpq = new WP_Query(array(
 		'cat' => 5,
 		'orderby' => 'rand',
@@ -413,7 +412,8 @@ function putFutured(){
 	if ( $wpq->have_posts() ) :
 		while ( $wpq->have_posts() ): $wpq->the_post();
 		
-	$div .= '<a href="' .get_the_permalink() . '" class="ftd sdw_card">'
+	$div .= '<div class="ftda-post">'
+					.'<a href="' .get_the_permalink() . '" class="ftd sdw_card">'
 					. '<img src="'. getThumbnailById(get_post_thumbnail_id()) . '" class="ftd-bg" loading="lazy" alt="">'
 					. '<div class="ftd-text  ptn-str-brown-slant">'
 					. '<i class="fab fa-gripfire ftdt-icon ptn-txgrad-fire"></i>'
@@ -423,13 +423,13 @@ function putFutured(){
 							. '</p>'
 						. '</div>'
 					. '</div>'
-				. '</a>';
+				. '</a>'
+				.'</div>';
 		
 		endwhile;
 	endif;
 	
-	$div .= '</div>'
-				.'</div>';
+	$div .= '</div>';
 	return $div;
 }
 
