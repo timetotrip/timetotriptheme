@@ -332,7 +332,12 @@
 	
 	.bc-ele{
 		margin-right:1em;
-		max-width:50%;
+		@include mq(xl) {
+			max-width:50%;
+		}
+		@include mq(tb) {
+			max-width:27%;
+		}
 		.bce-arrow{
 		
 			height:24px;
@@ -340,7 +345,7 @@
 			position:relative;
 			background-color:#887b6b;
 			margin: 0 -20px 0 24px;
-			padding: 0 5px;
+			padding: 0 2px;
 			z-index:1;
 			color:$clb-g10;
 			text-decoration:none;
@@ -351,6 +356,8 @@
 				text-overflow: ellipsis;
 				width: 100%;
 				display: inline-block;
+				font-size:0.8rem;
+				line-height:1;
 			}
 			
 			
