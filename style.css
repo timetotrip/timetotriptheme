@@ -1430,17 +1430,25 @@ h1 {
   margin-left: calc( 100% - 90% - 3.125vw);
   display: flex; }
   #breadcrumb .bc-ele {
-    margin-right: 1em; }
+    margin-right: 1em;
+    max-width: 50%; }
     #breadcrumb .bc-ele .bce-arrow {
       height: 24px;
       display: inline-block;
       position: relative;
-      background-color: #2b1800;
+      background-color: #887b6b;
       margin: 0 -20px 0 24px;
       padding: 0 5px;
       z-index: 1;
       color: #fdfffd;
-      text-decoration: none; }
+      text-decoration: none;
+      width: 100%; }
+      #breadcrumb .bc-ele .bce-arrow span {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+        display: inline-block; }
       #breadcrumb .bc-ele .bce-arrow::before, #breadcrumb .bc-ele .bce-arrow::after {
         content: '';
         position: absolute;
@@ -1451,19 +1459,29 @@ h1 {
         z-index: -1; }
       #breadcrumb .bc-ele .bce-arrow::before {
         left: -12px;
-        border-color: #2b1800;
+        border-color: #887b6b;
         border-left: 12px solid transparent; }
       #breadcrumb .bc-ele .bce-arrow::after {
         right: -24px;
-        border-color: #2b1800;
+        border-color: #887b6b;
         border-top: 12px solid  transparent;
         border-bottom: 12px solid  transparent;
         border-right: 12px solid  transparent; }
     #breadcrumb .bc-ele:nth-child(1) .bce-arrow {
-      background-color: #523f29; }
+      background-color: #2b1800; }
       #breadcrumb .bc-ele:nth-child(1) .bce-arrow::before {
-        border-color: #523f29; }
+        border-color: #2b1800; }
       #breadcrumb .bc-ele:nth-child(1) .bce-arrow::after {
+        border-color: #2b1800;
+        border-top: 12px solid  transparent;
+        border-bottom: 12px solid  transparent;
+        border-right: 12px solid  transparent; }
+    #breadcrumb .bc-ele:nth-child(2) .bce-arrow {
+      background-color: #523f29; }
+      #breadcrumb .bc-ele:nth-child(2) .bce-arrow::before {
+        border-color: #523f29;
+        border-left: 12px solid transparent; }
+      #breadcrumb .bc-ele:nth-child(2) .bce-arrow::after {
         border-color: #523f29;
         border-top: 12px solid  transparent;
         border-bottom: 12px solid  transparent;

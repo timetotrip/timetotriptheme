@@ -274,6 +274,11 @@ function breadcrumb(){
 			else{
 				$str.='<div class="bc-ele">'. wp_title('', false) .'</div>';
 			}
+			$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="bc-ele">'
+									.'<a href="'. get_the_permalink(). '" itemprop="url" class="bce-arrow">'
+										.'<span itemprop="item">'. get_the_title() . '</span>'
+									.'</a>'
+								.'</div>';
 			$str.='</div>';
 		}
 		echo $str;

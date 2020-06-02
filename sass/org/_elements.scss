@@ -332,18 +332,27 @@
 	
 	.bc-ele{
 		margin-right:1em;
-		
+		max-width:50%;
 		.bce-arrow{
 		
 			height:24px;
 			display: inline-block;
 			position:relative;
-			background-color:$cla-d10;
+			background-color:#887b6b;
 			margin: 0 -20px 0 24px;
 			padding: 0 5px;
 			z-index:1;
 			color:$clb-g10;
 			text-decoration:none;
+			width:100%;
+			span{
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				width: 100%;
+				display: inline-block;
+			}
+			
 			
 			&::before,&::after{
 				content:'';
@@ -356,12 +365,12 @@
 			}
 			&::before{
 				left:-12px;
-				border-color:$cla-d10;
+				border-color:#887b6b;
 				border-left: 12px solid transparent;
 			}
 			&::after{
 				right:-24px;
-				border-color:$cla-d10;
+				border-color:#887b6b;
 				border-top: 12px solid  transparent;
 				border-bottom: 12px solid  transparent;
 				border-right: 12px solid  transparent;
@@ -371,9 +380,25 @@
 		}
 		&:nth-child(1){
 			.bce-arrow{
+				background-color:$cla-d10;
+				&::before{
+					border-color:$cla-d10;
+				}
+				&::after{
+					border-color:$cla-d10;
+					border-top: 12px solid  transparent;
+					border-bottom: 12px solid  transparent;
+					border-right: 12px solid  transparent;
+				}
+			
+			}
+		}
+		&:nth-child(2){
+			.bce-arrow{
 				background-color:#523f29;
 				&::before{
 					border-color:#523f29;
+					border-left: 12px solid transparent;
 				}
 				&::after{
 					border-color:#523f29;
