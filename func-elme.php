@@ -163,7 +163,6 @@ function setPostViews($postID) {
 			$count++;
 			update_post_meta($postID, $count_key, $count);
 	}
-	echo $postID . ":" .$count;
 	
 }
 
