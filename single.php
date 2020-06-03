@@ -14,10 +14,11 @@ get_header();
 		<main id="primary" class="site-main single">
 
 			<?php
-		
+			
 			
 			while ( have_posts() ) :
 				the_post();
+				setPostViews(get_the_ID());
 				
 				echo putH1Index("");
 				

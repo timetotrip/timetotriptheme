@@ -163,14 +163,11 @@ function setPostViews($postID) {
 			$count++;
 			update_post_meta($postID, $count_key, $count);
 	}
+	echo $postID . ":" .$count;
 	
 }
 
 function putPostViewsList() {
-	
-	if ( !is_home() && !is_front_page() ) :	
-		setPostViews(get_the_ID());
-	endif;
 	
 	$args = array(
 		'meta_key' => 'post_views_count',
