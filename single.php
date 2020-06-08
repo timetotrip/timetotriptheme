@@ -18,7 +18,8 @@ get_header();
 			
 			while ( have_posts() ) :
 				the_post();
-				setPostViews(get_the_ID());
+				$pid = get_the_ID();
+				setPostViews($pid);
 				
 				echo putH1Index("");
 				
@@ -35,8 +36,10 @@ get_header();
 				
 				echo "<article>";
 					echo TidyContent( do_shortcode( get_the_content() ), array(
-						'-3' => putSuggest((get_the_category())[0], get_the_tags() ,get_the_ID()),
-						'-4' => putFutured()
+						'-3' => putCate((get_the_category())[0], $pid),
+						'-4' => putSuggest((get_the_category())[0], get_the_tags() ,$pid),
+						'-5' => putFutured(),
+						'-6' => putRand($pid)
 					));
 				echo "</article>";
 				

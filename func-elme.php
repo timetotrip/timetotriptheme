@@ -433,5 +433,66 @@ function putFutured(){
 	$div .= '</div>';
 	return $div;
 }
-
+function putCate($cat, $self){
+	$div = '<div class="ftd-area">';
+	$wpq = new WP_Query(array(
+		'cat' => $cat->term_id,
+		'category__not_in' => array( 40 ),
+		'post__not_in' => array($self),
+		'orderby' => 'rand',
+		'posts_per_page' => 2
+	));
+	if ( $wpq->have_posts() ) :
+		while ( $wpq->have_posts() ): $wpq->the_post();
+		
+	$div .= '<div class="ftda-post">'
+					.'<a href="' .get_the_permalink() . '" class="ftd sdw_card">'
+					. '<img src="'. getThumbnailById(get_post_thumbnail_id()) . '" class="ftd-bg" loading="lazy" alt="">'
+					. '<div class="ftd-text  ptn-str-brown-slant">'
+					. '<i class="fab fa-gripfire ftdt-icon ptn-txgrad-fire"></i>'
+						. '<div class="ftdt-title">'
+							. '<p class="ftdt-p">'
+								. get_the_title()
+							. '</p>'
+						. '</div>'
+					. '</div>'
+				. '</a>'
+				.'</div>';
+		
+		endwhile;
+	endif;
+	
+	$div .= '</div>';
+	return $div;
+}
+function putRand($self){
+	$div = '<div class="ftd-area">';
+	$wpq = new WP_Query(array(
+		'category__not_in' => array( 40 ),
+		'post__not_in' => array($self),
+		'orderby' => 'rand',
+		'posts_per_page' => 2,
+	));
+	if ( $wpq->have_posts() ) :
+		while ( $wpq->have_posts() ): $wpq->the_post();
+	$div .= '<div class="ftda-post">'
+					.'<a href="' .get_the_permalink() . '" class="ftd sdw_card">'
+					. '<img src="'. getThumbnailById(get_post_thumbnail_id()) . '" class="ftd-bg" loading="lazy" alt="">'
+					. '<div class="ftd-text  ptn-str-brown-slant">'
+					. '<i class="fab fa-gripfire ftdt-icon ptn-txgrad-fire"></i>'
+						. '<div class="ftdt-title">'
+							. '<p class="ftdt-p">'
+								. get_the_title()
+							. '</p>'
+						. '</div>'
+					. '</div>'
+				. '</a>'
+				.'</div>';
+		
+		endwhile;
+	endif;
+	
+	$div .= '</div>';
+	return $div;
+}
 ?>
