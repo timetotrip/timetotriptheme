@@ -165,7 +165,21 @@ function setPostViews($postID) {
 	}
 	
 }
+// 記事view管理画面表示
+function add_pv_columns( $columns ) {
+  $columns['views'] = 'PV';
+  return $columns;
+}
+function custom_pv_column( $column_name, $post_id ) {
+  if ( $column_name == 'views' ) {
+    $cf_views = get_post_meta( $post_id, 'post_views_count', true );
+    echo ( $cf_views ) ? $cf_views : '－';
+  }
+}
 
+add_filter( 'manage_posts_columns', 'add_pv_columns' );
+add_action( 'manage_posts_custom_column', 'custom_pv_column', 10, 2 );
+// 記事viewランキング 表示
 function putPostViewsList() {
 	
 	$args = array(
