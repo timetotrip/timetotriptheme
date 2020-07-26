@@ -326,7 +326,7 @@ function TidyContent( $raw, $putlist ){
 	
 	$summry .= putTalk( array('who'=>'ika','where'=>'r'),
 								'タコちゃんのインスタもフォローしてあげて！</br>'
-								.'<a href="https://www.instagram.com/tacoskyhigh/" onClick="ga(`send`, `event`, `inlink`, `click`, `insta`);>'
+								.'<a href="https://www.instagram.com/tacoskyhigh/" onClick="ga(`send`, `event`, `inlink`, `click`, `insta`);">'
 									.'<i class="fab fa-instagram"></i>@tacoskyhigh'
 								.'</a>'
 								);
@@ -401,7 +401,7 @@ function searchSuggest( $incat, $outcat, $tugs, $self ){
 	endif;
 	if ($maxpoint > 0):
 	$div = '<div class="sgta-post">'
-			. '<a href="' .$retlink . '" class="sug sdw_card"  onClick="ga(`send`, `event`, `inlink`, `click`, `suggestion`);>'
+			. '<a href="' .$retlink . '" class="sug sdw_card"  onClick="ga(`send`, `event`, `inlink`, `click`, `suggestion`);">'
 						. '<img src="'. $retimage . '" class="sug-bg" loading="lazy" alt="">'
 						. '<div class="sug-text  ptn-str-brown-slant">'
 						. '<i class="fab fa-gripfire sugt-icon ptn-txgrad-fire"></i>'
@@ -428,7 +428,7 @@ function putFutured(){
 		while ( $wpq->have_posts() ): $wpq->the_post();
 		
 	$div .= '<div class="ftda-post">'
-					.'<a href="' .get_the_permalink() . '" class="ftd sdw_card"  onClick="ga(`send`, `event`, `inlink`, `click`, `futured`);>'
+					.'<a href="' .get_the_permalink() . '" class="ftd sdw_card"  onClick="ga(`send`, `event`, `inlink`, `click`, `futured`);">'
 					. '<img src="'. getThumbnailById(get_post_thumbnail_id()) . '" class="ftd-bg" loading="lazy" alt="">'
 					. '<div class="ftd-text  ptn-str-brown-slant">' 
 					. '<i class="fab fa-gripfire ftdt-icon ptn-txgrad-fire"></i>'
@@ -460,7 +460,7 @@ function putCate($cat, $self){
 		while ( $wpq->have_posts() ): $wpq->the_post();
 		
 	$div .= '<div class="ftda-post">'
-					.'<a href="' .get_the_permalink() . '" class="ftd sdw_card"  onClick="ga(`send`, `event`, `inlink`, `click`, `category`);>'
+					.'<a href="' .get_the_permalink() . '" class="ftd sdw_card"  onClick="ga(`send`, `event`, `inlink`, `click`, `category`);">'
 					. '<img src="'. getThumbnailById(get_post_thumbnail_id()) . '" class="ftd-bg" loading="lazy" alt="">'
 					. '<div class="ftd-text  ptn-str-brown-slant">'
 					. '<i class="fab fa-gripfire ftdt-icon ptn-txgrad-fire"></i>'
@@ -490,7 +490,7 @@ function putRand($self){
 	if ( $wpq->have_posts() ) :
 		while ( $wpq->have_posts() ): $wpq->the_post();
 	$div .= '<div class="ftda-post">'
-					.'<a href="' .get_the_permalink() . '" class="ftd sdw_card"  onClick="ga(`send`, `event`, `inlink`, `click`, `rand`);>'
+					.'<a href="' .get_the_permalink() . '" class="ftd sdw_card"  onClick="ga(`send`, `event`, `inlink`, `click`, `rand`);">'
 					. '<img src="'. getThumbnailById(get_post_thumbnail_id()) . '" class="ftd-bg" loading="lazy" alt="">'
 					. '<div class="ftd-text  ptn-str-brown-slant">'
 					. '<i class="fab fa-gripfire ftdt-icon ptn-txgrad-fire"></i>'
