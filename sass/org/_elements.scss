@@ -425,7 +425,10 @@
 #summary{
 	margin: 0 1.5em;
 	padding:1.5625vw;
-	h3{
+	font-size:10em;
+	a,h3{
+		color: black;
+		text-decoration:dotted;
 		margin: 1em 0;
 	}
 }

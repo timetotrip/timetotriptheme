@@ -1,5 +1,5 @@
 /*!
-Theme Name: _t
+Theme Name: _t Live
 
 Description: Hi. I'm T
 Version: 1.0.0
@@ -29,9 +29,9 @@ License URI: LICENSE
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+/*
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-@import "normalize";
 @import "typography/typography";
 @import "elements/elements";
 @import "forms/forms";
@@ -41,8 +41,16 @@ License URI: LICENSE
 @import "site/secondary/widgets";
 @import "site/site";
 @import "media/media";
+*/
+@import "sass/normalize";
 /*--------------------------------------------------------------
 # _t Original
 --------------------------------------------------------------*/
 @import "org/lib";
 @import "org/toppage";
+@import "org/subpage";
+@import "org/sidebar";
+@import "org/footer";
+@import "org/elements";
+@import "org/fontsize";
+@import "org/talk";
