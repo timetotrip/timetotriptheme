@@ -7,40 +7,6 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 */
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-/*
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
-@import "typography/typography";
-@import "elements/elements";
-@import "forms/forms";
-@import "navigation/navigation";
-@import "modules/accessibility";
-@import "modules/alignments";
-@import "site/secondary/widgets";
-@import "site/site";
-@import "media/media";
-*/
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
 	 ========================================================================== */
