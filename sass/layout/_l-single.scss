@@ -1,0 +1,313 @@
+.single{
+	.s-firstview{
+		margin-top: 1.5625vw;
+		height:auto;
+		
+		display:flex;
+		flex-direction: column;
+		align-items: flex-end;
+		
+		.sf-img{
+			height:auto;
+			width:100%;
+		}
+		
+		.sf-title{
+			max-width:90%;
+			margin: -30px 1.5625vw 0 1.5625vw;
+			padding: 1.5625vw;
+			text-align:center;
+			background-color:$cla-d06;
+			color:$clb-g08;
+		}
+		
+		
+	}
+	
+	article{
+		width: 100%;
+		overflow: hidden;
+		
+		.sa-h2{
+			margin: 2em 0;
+			display:flex;
+			align-items:flex-end;
+			position:relative;
+			z-index:1;
+			
+			h2{
+				font-family: "Sawarabi Mincho";
+				text-shadow: 0.3px 0.3px 0.2px $clb-g10, -0.3px -0.3px 0.2px $clb-g10,
+											0.3px -0.3px 0.2px $clb-g10, -0.3px 0.3px 0.2px $clb-g10;
+				font-weight: bold;
+			}
+			
+			&:before{
+				z-index:-1;
+				content:"";
+				position:absolute;
+				bottom:0;
+				right:0;
+				width:95%;
+				height:1.5em;
+				
+				--rlist: var(--c) 0 1px, transparent 0 3px;
+				overflow: hidden;
+				background: 
+						repeating-linear-gradient(var(--ang-0, -45deg), 
+								var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
+						linear-gradient(var(--ang), var(--nlist));
+						
+				--dim: 100% no-repeat;
+				--ang: 2deg;
+				--pos-1: 100%;
+				--ang-0: -60deg;
+				--ang-1: 60deg;
+				--c: rgba(250,250,250,1);
+				--nlist: rgba(183, 82, 10, 1) 50%, rgba(183, 82, 10, 0) 0%;
+			}
+			
+			i{
+				height:1em;
+				margin:0;
+			}
+		}
+		
+		h3{
+			color:$cla-d10;
+			min-height:1em;
+			letter-spacing:0.1em;
+			margin-left: 1.3em;
+		}
+		p{
+			color:$cla-d10;
+			min-height:1em;
+			line-height:1.8em;
+			letter-spacing:0.1em;
+			margin-bottom:2em;
+			margin-left: 1.3em;
+			margin-top: 1em;
+		}
+		 
+		a{
+			color:$cla-l10;
+			&:visited{
+				color:$cla-d10;
+			}
+			&:hover{
+				/*animation: bound 1s ease 0s infinite normal;*/
+			}
+		}
+	}
+	#comments{
+		display:none;
+	}
+	.nav-links{
+		.nav-previous,.nav-next{
+			margin: 1em 0;
+			a{
+				text-decoration:none;
+				display:flex;
+				align-items: center;
+				z-index:1;
+				position:relative;
+				
+				.nav-title{
+					color:$cla-d10;
+					font-family: "Sawarabi Mincho";
+					text-shadow: 0.3px 0.3px 0.2px $clb-g10, -0.3px -0.3px 0.2px $clb-g10,
+												0.3px -0.3px 0.2px $clb-g10, -0.3px 0.3px 0.2px $clb-g10;
+					font-weight: bold;
+				}
+				
+				&:before{
+					z-index:-1;
+					content:"";
+					position:absolute;
+					bottom:0;
+					right:0;
+					width:90%;
+					height:2em;
+					
+					--rlist: var(--c) 0 1px, transparent 0 3px;
+					overflow: hidden;
+					background: 
+							repeating-linear-gradient(var(--ang-0, -45deg), 
+									var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
+							linear-gradient(var(--ang), var(--nlist));
+							
+					--dim: 100% no-repeat;
+					--ang: 4deg;
+					--pos-1: 100%;
+					--ang-0: -60deg;
+					--ang-1: 60deg;
+					--c: rgba(250,250,250,1);
+					--nlist: rgba(183, 82, 10, 1) 50%, rgba(183, 82, 10, 0) 0%;
+				}
+				.nav-subtitle{
+					height:1em;
+				}
+			}
+		}
+		.nav-previous{
+			a{
+				&:before{
+					--ang: -4deg;
+				}
+			}
+		}
+	}
+	
+	.has-background{
+		position: relative;
+		z-index: 1;
+		margin-left: 1.5em;
+		margin-right: 1.5em;
+		padding:1.5625vw;
+		
+		$list-back-grad: 
+			#cdcdcd 0%,
+			#FFFFFF 70%,
+			#F0F0F0 100%;
+
+		background: linear-gradient(15deg, $list-back-grad);
+		
+		&:before, &:after {
+			z-index:-1;
+			--p: 0;
+			--s: calc(1 - 2*var(--p));
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			-webkit-mask: var(--m);
+							mask: var(--m);
+			content: ''
+		}
+		&:after { --p: 1 }
+		$s: 2.5em;
+		$c: rgba(253, 255, 253,0.8);
+		&:before, &:after {
+			--c0: hsla(0, 0%, 0%, var(--p));
+			--c1: hsla(0, 0%, 0%, calc(1 - var(--p)));
+			background: 
+				linear-gradient(calc(var(--p)*90deg), 
+						$c 1px, transparent 0, 
+						transparent calc(100% - 1px), $c 0) 
+					50% 50%/ #{.14142*$s .14142*$s};
+			--m: 
+				repeating-linear-gradient(45deg, 
+						red 0, red #{$s}, 
+						transparent 0, transparent #{2*$s}), 
+				repeating-linear-gradient(-45deg, 
+						var(--c0) 0, var(--c0) #{$s}, 
+						var(--c1) 0, var(--c1) #{2*$s})
+		}
+		
+		filter: drop-shadow(0.390625vw 0.390625vw 0.390625vw rgba(5, 5, 5, 0.9));
+	}
+}
+
+
+/*--------------------------------------------------------------
+## SinglePage
+--------------------------------------------------------------*/
+.single{
+	.s-firstview{
+		.sf-title{
+			h1{
+				font-family: "Sawarabi Mincho";
+				@include mq(xl) {
+					font-size:3em;
+				}
+				@include mq(tb) {
+					font-size:2.5em;
+				}
+				@include mq(md) {
+					font-size:2em;
+				}
+				@include mq(sm) {
+					font-size:1.8em; 
+				}
+			}
+		}
+	}
+	article{
+		
+		
+		.sa-h2{
+			@include mq(xl) {
+				h2{
+					font-size:2.2em;
+					line-height: 1.1;
+				}
+				i{
+					font-size: 2.2rem;
+				}
+			}
+			@include mq(md) {
+				h2{
+					font-size:1.6em;
+					line-height: 1.1;
+				}
+				i{
+					font-size: 1.8rem;
+				}
+			}
+		}
+		
+		@include mq(xl) {
+			p{
+				font-size:1.2em;
+			}
+		}
+		@include mq(md) {
+			p{
+				font-size:1em;
+			}
+		}
+		#summary{
+			h3{
+				@include mq(xl) {
+					font-size:1.2em;
+				}
+				@include mq(md) {
+					font-size:1em;
+				}
+				@include mq(sm) {
+					font-size:0.9em;
+				}
+			}
+		}
+	}
+	.nav-links{
+		.nav-previous,.nav-next{
+			a{
+				
+				@include mq(xl) {
+					.nav-title{
+						font-size:1.4em;
+					}
+					.nav-subtitle{
+						font-size:3em;
+					}
+				}
+				
+				@include mq(md) {
+					.nav-title{
+						font-size:1.2em;
+					}
+					.nav-subtitle{
+						font-size:2.5em;
+					}
+				}
+			}
+		}
+	}
+	.has-background{
+		@include mq(xl) {
+			font-size:0.9em;
+		}
+		@include mq(md) {
+			font-size:0.8em;
+		}
+	}
+}

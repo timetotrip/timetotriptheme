@@ -1,0 +1,13 @@
+.sidebar{
+	
+	.s-wrapper{
+		@include mq(xl) {
+			position: sticky;
+			top:0;
+		}
+		@include mq(md) {
+			position: static;
+		}
+	}
+	
+}

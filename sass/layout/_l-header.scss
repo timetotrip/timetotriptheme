@@ -1,0 +1,109 @@
+.site-header{
+	width:100%;
+	padding:1.5625vw 1.5625vw 0 1.5625vw;
+	
+	.h-area{
+		width:100%;
+		height:25vw;
+		max-height:200px;
+		padding:1.5625vw;
+		
+		
+		background-size:cover;
+		background-position: center bottom;
+		
+		.h-base{
+			background-color:$cla-d06;
+			height:21.875vw;
+			max-height:170px;
+			padding:1.5625vw;
+			
+			display:flex;
+			justify-content: space-between;
+			
+			.h-desc{
+				flex:1;
+			}
+			.h-name{
+				border:solid #F9F9F9 1px;
+				height:18.75vw;
+				width:18.75vw;
+				max-height:140px;
+				max-width:140px;
+				
+				display:flex;
+				align-items: center; 
+				justify-content: center;
+				h1{
+					text-align:center;
+				}
+			}
+			.h-addr{
+				flex:1;
+				position:relative;
+				p{
+					position:absolute;
+					bottom:0;
+					right:0;
+				}
+			}
+			
+			h1,p{
+				font-family: "Sawarabi Mincho";
+				color:#F9F9F9;
+			}
+			
+		}
+	}
+	
+	a,a:hover{
+		text-decoration: none;
+		img{
+			vertical-align: bottom;
+		}
+	}
+}
+
+.site-header{
+	.h-area{
+		.h-base{
+			@include mq(xl) {
+				p{
+					font-size:1.2em;
+					line-height:1.6em;
+					letter-spacing:0.3em;
+				}
+				h1{
+					font-size:1.8em;
+					line-height:1.2em;
+					letter-spacing:0.4em;
+					max-width:120px;
+				}
+			}
+			@include mq(md) {
+				p{
+					font-size:0.8em;
+					line-height:1.4em;
+					letter-spacing:0.2em;
+				}
+				h1{
+					font-size:1.2em;
+					line-height:1.3em;
+					letter-spacing:0.3em;
+				}
+			}
+			@include mq(sm) {
+				p{
+					font-size:0.6em;
+					line-height:1.4em;
+					letter-spacing:0.1em;
+				}
+				h1{
+					font-size:1em;
+					line-height:1.2em;
+					letter-spacing:0.2em;
+				}
+			}
+		}
+	}
+}
