@@ -11,6 +11,7 @@
  
 require_once("func-elme.php");
 require_once("func-talk.php");
+require_once("func-menu.php");
 
  
 /* * * * * * * * * * * * * * * * * *

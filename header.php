@@ -52,3 +52,4 @@
 		</a>
 		
 	</header>
+	<?php echo putHeaderMenu(); ?>
