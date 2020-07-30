@@ -1,0 +1,79 @@
+/*--------------------------------------------------------------
+## Title
+--------------------------------------------------------------*/
+.h1-title{
+    width:100%;
+    position:relative;
+    
+    .h1t-back{
+        width:100%;
+        position:absolute;
+        bottom:0;
+        height:40%;
+    }
+    
+    .h1t-name{
+        position:absolute;
+        top:0;
+        margin: 0 auto;
+        filter: drop-shadow(1px 1px 1px rgba(5, 5, 5, 0.9));
+    
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            text-align:center;
+            color:$clb-g10;
+            text-shadow: 2px 2px 4px $cla-d08;
+        }
+        i{
+            line-height: 1.5;
+        }
+        
+        &.h1t-spb{
+            width:100%;
+            justify-content: space-between;
+        }
+        
+    }
+    @include mq(xl) {
+        height:3.5em;
+    }
+    @include mq(md) {
+        height:2.5em;
+    }
+}
+
+/*--------------------------------------------------------------
+## H1
+--------------------------------------------------------------*/
+.h1-title{
+    @include mq(xl) {
+        height:3em;
+        .h1t-name{
+            h1{font-size:2.2em;}
+            i{font-size: 2.2rem;}
+        }
+    }
+    @include mq(tb) {
+        height:2.8em;
+        .h1t-name{
+            h1{font-size:1.8em;}
+            i{font-size: 1.8rem;}
+        }
+    }
+    @include mq(md) {
+        height:3em;
+        .h1t-name{
+            h1{font-size:2.2em;}
+            i{font-size: 2.2rem;}
+        }
+    }
+    @include mq(sm) {
+        height:2.5em;
+        .h1t-name{
+            h1{font-size:1.8em;}
+            i{font-size: 1.8rem;}
+        }
+    }
+}

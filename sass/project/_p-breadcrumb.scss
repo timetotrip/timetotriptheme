@@ -1,0 +1,97 @@
+
+/*--------------------------------------------------------------
+## パンくず
+--------------------------------------------------------------*/
+#breadcrumb{
+	margin-top: 1.5625vw;
+	margin-left:calc( 100% - 90% - 3.125vw  );
+	display:flex;
+	
+	.bc-ele{
+		margin-right:1em;
+		@include mq(xl) {
+			max-width:50%;
+		}
+		@include mq(tb) {
+			max-width:27%;
+		}
+		.bce-arrow{
+		
+			height:24px;
+			display: inline-block;
+			position:relative;
+			background-color:#887b6b;
+			margin: 0 -20px 0 24px;
+			padding: 0 2px;
+			z-index:1;
+			color:$clb-g10;
+			text-decoration:none;
+			width:100%;
+			span{
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				width: 100%;
+				display: inline-block;
+				font-size:0.8rem;
+				line-height:1;
+			}
+			
+			
+			&::before,&::after{
+				content:'';
+				position:absolute;
+				width: 0;
+				height: 0;
+				top:0;
+				border: 12px solid transparent;
+				z-index:-1;
+			}
+			&::before{
+				left:-12px;
+				border-color:#887b6b;
+				border-left: 12px solid transparent;
+			}
+			&::after{
+				right:-24px;
+				border-color:#887b6b;
+				border-top: 12px solid  transparent;
+				border-bottom: 12px solid  transparent;
+				border-right: 12px solid  transparent;
+			}
+			
+			
+		}
+		&:nth-child(1){
+			.bce-arrow{
+				background-color:$cla-d10;
+				&::before{
+					border-color:$cla-d10;
+				}
+				&::after{
+					border-color:$cla-d10;
+					border-top: 12px solid  transparent;
+					border-bottom: 12px solid  transparent;
+					border-right: 12px solid  transparent;
+				}
+			
+			}
+		}
+		&:nth-child(2){
+			.bce-arrow{
+				background-color:#523f29;
+				&::before{
+					border-color:#523f29;
+					border-left: 12px solid transparent;
+				}
+				&::after{
+					border-color:#523f29;
+					border-top: 12px solid  transparent;
+					border-bottom: 12px solid  transparent;
+					border-right: 12px solid  transparent;
+				}
+			
+			}
+		}
+	}
+}
