@@ -1,0 +1,40 @@
+
+#primary,#secondary{
+	margin :0 1.5625vw;
+}
+
+@include mq(xl) {
+	#container{
+		display:flex;
+	}
+	#primary{
+		width:calc(62% - 1.5625vw);
+	}
+	#secondary{
+		width:calc(38% - 1.5625vw);
+		margin-left:0;
+		flex:1;
+	}
+}
+@include mq(md) {
+	#container{
+		display:flex;
+		flex-direction: column;
+	}
+	#primary,#secondary{
+		width:calc(100% - 3.125vw );
+		margin-left: 1.5625vw;
+	}
+}
+
+#page{
+	max-width:1600px;
+	margin-bottom: -40px;
+	padding-bottom: 40px;
+}
+
+#foot{
+	height:40px;
+	margin :0 0;
+}
+	

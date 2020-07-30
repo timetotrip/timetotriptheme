@@ -170,7 +170,7 @@
 			#FFFFFF 70%,
 			#F0F0F0 100%;
 
-		@include gradient(15deg, $list-back-grad);
+		background: linear-gradient(15deg, $list-back-grad);
 		
 		&:before, &:after {
 			z-index:-1;

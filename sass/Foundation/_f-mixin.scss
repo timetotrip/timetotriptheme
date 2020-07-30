@@ -1,0 +1,16 @@
+/*--------------------------------------------------------------
+## MediaQuery
+--------------------------------------------------------------*/
+$breakpoints: (
+	'sm': 'screen and (max-width: 374px)',
+	'md': 'screen and (max-width: 580px)',
+	'tb': 'screen and (max-width: 800px)',
+	'lg': 'screen and (max-width: 1200px)',
+	'xl': 'screen and (max-width: 2400px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}

@@ -1,0 +1,16 @@
+
+/*--------------------------------------------------------------
+## Fire Text
+--------------------------------------------------------------*/
+.ptn-txgrad-fire{
+	background-color: #ff0000;
+	background-image: linear-gradient(-10deg, #ff0000 0%, #ffed00 65%, #FFFFFF 75%, #ffed00 90%);
+	background-clip:text;
+	text-fill-color:transparent;
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+	font-weight: 400;
+	animation: bound 5s ease 0s infinite normal;
+	margin: 0 0.5rem;
+	line-height:1.5;
+}

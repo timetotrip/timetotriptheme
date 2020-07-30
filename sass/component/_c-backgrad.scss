@@ -1,0 +1,119 @@
+.grd-back{ 
+
+	$list-back-grad: 
+		#F0F0F0 0%,
+		#FFFFFF 70%,
+		#F0F0F0 100%;
+	
+	width:100%;
+	height:auto;
+	background: linear-gradient(15deg, $list-back-grad);
+
+}
+
+/*--------------------------------------------------------------
+## CardPatterns
+--------------------------------------------------------------*/
+.ptn-str-brown {
+	--rlist: var(--c) 0 1px, transparent 0 3px;
+	overflow: hidden;
+	position: relative;
+	height: var(--h);
+	background: 
+			repeating-linear-gradient(var(--ang-0, -45deg), 
+					var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
+			/*repeating-linear-gradient(var(--ang-1, 45deg), 
+					var(--rlist)) var(--pos-1, 0 100%)/ var(--dim),*/ 
+			linear-gradient(var(--ang), var(--nlist));
+			
+	--dim: 100% no-repeat;
+	--ang: 0deg;
+	--pos-1: 100%;
+	--ang-0: -60deg;
+	--ang-1: 60deg;
+	--c: rgba(43, 24, 0,1.0);
+	--nlist: rgba(43, 24, 0,1.0), rgba(183, 82, 10,1.0);
+	
+}
+.ptn-str-brown-trans {
+	--rlist: var(--c) 0 1px, transparent 0 3px;
+	overflow: hidden;
+	position: relative;
+	height: var(--h);
+	background: 
+			repeating-linear-gradient(var(--ang-0, -45deg), 
+					var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
+			linear-gradient(var(--ang), var(--nlist));
+			
+	--dim: 100% no-repeat;
+	--ang: 0deg;
+	--pos-1: 100%;
+	--ang-0: -60deg;
+	--ang-1: 60deg;
+	--c: rgba(43, 24, 0,0.6);
+	--nlist: rgba(43, 24, 0,0.4), rgba(183, 82, 10, 0.4);
+	
+}
+.ptn-str-brown-slant {
+	--rlist: var(--c) 0 1px, transparent 0 3px;
+	overflow: hidden;
+	position: relative;
+	height: var(--h);
+	background: 
+			repeating-linear-gradient(var(--ang-0, -45deg), 
+					var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
+			linear-gradient(var(--ang), var(--nlist));
+			
+	--dim: 100% no-repeat;
+	--ang: 10deg;
+	--pos-1: 100%;
+	--ang-0: -60deg;
+	--ang-1: 60deg;
+	--c: rgba(183, 82, 10, 0.3);
+	--nlist: rgba(183, 82, 10, 0.6) 50%, rgba(183, 82, 10, 0) 0%;
+	
+}
+.ptn-hex-white {
+	
+	$list-back-grad: 
+		#cdcdcd 0%,
+		#FFFFFF 70%,
+		#F0F0F0 100%;
+
+	background: linear-gradient(15deg, $list-back-grad);
+	&:before, &:after {
+		z-index:-1;
+		--p: 0;
+		--s: calc(1 - 2*var(--p));
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		-webkit-mask: var(--m);
+						mask: var(--m);
+		content: ''
+	}
+	
+	&:after { --p: 1 }
+
+	$s: 2.5em;
+	$c: rgba(253, 255, 253,0.8);
+
+	&:before, &:after {
+		--c0: hsla(0, 0%, 0%, var(--p));
+		--c1: hsla(0, 0%, 0%, calc(1 - var(--p)));
+		background: 
+			linear-gradient(calc(var(--p)*90deg), 
+					$c 1px, transparent 0, 
+					transparent calc(100% - 1px), $c 0) 
+				50% 50%/ #{.14142*$s .14142*$s};
+		--m: 
+			repeating-linear-gradient(45deg, 
+					red 0, red #{$s}, 
+					transparent 0, transparent #{2*$s}), 
+			repeating-linear-gradient(-45deg, 
+					var(--c0) 0, var(--c0) #{$s}, 
+					var(--c1) 0, var(--c1) #{2*$s})
+	}
+
+
+
+}
