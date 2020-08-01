@@ -1,0 +1,72 @@
+
+@mixin cloud-base{
+    z-index:auto;
+    &::before,&::after{
+        content:'';
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+}
+
+@mixin randomRadius($r-value:10,$w-base:40%,$h-base:40%){
+    border-top-left-radius: random($w-value)+$r-base random($r-value)+$h-base;
+    border-top-right-radius: random($w-value)+$r-base random($r-value)+$h-base;
+    border-bottom-right-radius: random($w-value)+$r-base random($r-value)+$h-base;
+    border-bottom-left-radius:  random($w-value)+$r-base random($r-value)+$h-base;
+}
+
+@mixin cloud-s{
+
+    @include cloud-base();
+    @include randomRadius(10,35%,35%);
+
+
+    &::before{
+        width:90%;
+        left:5%;
+        transform: rotate(15deg);
+        @include randomRadius(10,35%,35%);
+    }
+    &::after{ 
+        width:90%;
+        left:5%;
+        transform: rotate(-15deg);
+        @include randomRadius(10,35%,35%);
+    }
+}
+
+@mixin cloud-m{
+
+    @include cloud-base();
+
+    @include randomRadius(10,35%,25%);
+    &::before{
+        transform: rotate(8deg);
+        @include randomRadius(10,40%,30%);
+    }
+    &::after{ 
+        transform: rotate(-10deg);
+        @include randomRadius(10,40%,30%);
+    }
+}
+
+@mixin cloud-l{
+
+    @include cloud-base();
+
+    @include randomRadius(10,30%,20%);
+    &::before{
+        transform: rotate(6deg);
+        @include randomRadius(10,40%,20%);
+    }
+    &::after{ 
+        transform: rotate(-8deg);
+        @include randomRadius(10,40%,20%);
+    }
+    
+}
