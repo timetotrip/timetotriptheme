@@ -14,12 +14,40 @@
 }
 
 @mixin randomRadius($r-value:10,$w-base:40%,$h-base:40%){
-    border-top-left-radius: random($w-value)+$r-base random($r-value)+$h-base;
-    border-top-right-radius: random($w-value)+$r-base random($r-value)+$h-base;
-    border-bottom-right-radius: random($w-value)+$r-base random($r-value)+$h-base;
-    border-bottom-left-radius:  random($w-value)+$r-base random($r-value)+$h-base;
+    border-top-left-radius: random($r-value)+$w-base random($r-value)+$h-base;
+    border-top-right-radius: random($r-value)+$w-base random($r-value)+$h-base;
+    border-bottom-right-radius: random($r-value)+$w-base random($r-value)+$h-base;
+    border-bottom-left-radius:  random($r-value)+$w-base random($r-value)+$h-base;
 }
 
+@mixin cloud-xs{
+
+    @include cloud-base();
+    @include randomRadius(10,35%,35%);
+
+
+    &::before{
+        //width:90%;
+        left:-5%;
+        top:5%;
+        width:110%;
+        height: 90%;
+        transform: rotate(random(4)+22deg);
+        @include randomRadius(10,45%,55%);
+        background-color: red;
+    }
+    &::after{ 
+        //width:90%;
+        //left:5%;
+        left:5%;
+        top:-5%;
+        width:90%;
+        height: 110%;
+        transform: rotate(random(4)-26deg);
+        @include randomRadius(10,45%,55%);
+        background-color: green;
+    }
+}
 @mixin cloud-s{
 
     @include cloud-base();
@@ -29,13 +57,13 @@
     &::before{
         width:90%;
         left:5%;
-        transform: rotate(15deg);
+        transform: rotate(random(4)+10deg);
         @include randomRadius(10,35%,35%);
     }
     &::after{ 
         width:90%;
         left:5%;
-        transform: rotate(-15deg);
+        transform: rotate(random(4)-14deg);
         @include randomRadius(10,35%,35%);
     }
 }
@@ -44,13 +72,13 @@
 
     @include cloud-base();
 
-    @include randomRadius(10,35%,25%);
+    @include randomRadius(10,35%,28%);
     &::before{
-        transform: rotate(8deg);
+        transform: rotate(random(4)+6deg);
         @include randomRadius(10,40%,30%);
     }
     &::after{ 
-        transform: rotate(-10deg);
+        transform: rotate(random(4)-14deg);
         @include randomRadius(10,40%,30%);
     }
 }
@@ -61,12 +89,12 @@
 
     @include randomRadius(10,30%,20%);
     &::before{
-        transform: rotate(6deg);
-        @include randomRadius(10,40%,20%);
+        transform: rotate(random(4)+4deg);
+        @include randomRadius(10,40%,25%);
     }
     &::after{ 
-        transform: rotate(-8deg);
-        @include randomRadius(10,40%,20%);
+        transform: rotate(random(4)-10deg);
+        @include randomRadius(10,40%,25%);
     }
     
 }

@@ -2,9 +2,11 @@
 function putHeaderMenu(){
     $ret = '';
     $ret .= '<div id="navimenu">';
-    $ret .=     '<input type="checkbox" id="spmenuon">';
-    $ret .=     '<label for="spmenuon" class="spmenutoggle">';
-    $ret .=     '</label>';
+    $ret .=     '<input type="checkbox" id="navimenu--on">';
+    $ret .=     '<div class="navimenu--area">';
+    $ret .=         '<label for="navimenu--on" class="navimenu--toggle">';
+    $ret .=         '</label>';
+    $ret .=     '</div>';
     $ret .= '</div>';
     return $ret;
 }
