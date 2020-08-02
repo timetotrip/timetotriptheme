@@ -8,15 +8,20 @@
 
 
     #navimenu{
-        
         .navimenu--area{
+            .navimenu--contant{
+                background-color: red;
+                margin: 15% 0;
+            }
             @include tglbutton-menu-base(tglbutton-menu);
         }
         
         #navimenu--on:not(:checked) ~ .navimenu--area{
+            .navimenu--contant{transform: scale(0);}
             @include tglbutton-menu-off(tglbutton-menu);
         }
         #navimenu--on:checked ~ .navimenu--area{
+            .navimenu--contant{transform: scale(100%);}
             @include tglbutton-menu-on(tglbutton-menu,10vw);
         }
     }

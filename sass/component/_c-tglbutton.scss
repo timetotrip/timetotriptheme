@@ -9,8 +9,8 @@ $root2:1.4142;
 
 @mixin tglbutton-menu-off($baseclass){
     .#{$baseclass}{
-        left:15%;
-        top: 15%;
+        right:15%;
+        bottom: 15%;
         width: 70%;
         height: 70%;
 
@@ -50,7 +50,7 @@ $root2:1.4142;
             border-radius: 3px;
         }
         .#{$baseclass}--bar1{
-            transform: translateY($b-size/2) rotate((360*2)+45deg);
+            transform: translateY($b-size/2) rotate((180*2)+45deg);
         }
         .#{$baseclass}--bar2{
             position: absolute;
@@ -63,7 +63,7 @@ $root2:1.4142;
             border: solid 2px #000;
         }
         .#{$baseclass}--bar3{
-            transform: translateY(-$b-size/2) translateY(100%) rotate((-360*2)-45deg);
+            transform: translateY(-$b-size/2) translateY(100%) rotate((-180*3)-45deg);
         }
     }
 }

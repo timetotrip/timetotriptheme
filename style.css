@@ -1377,10 +1377,10 @@ html, body {
 
 .talk-base .tk-puff .tk-content.tks-s {
   z-index: auto;
-  border-top-left-radius: 44% 41%;
-  border-top-right-radius: 36% 43%;
-  border-bottom-right-radius: 40% 43%;
-  border-bottom-left-radius: 41% 45%;
+  border-top-left-radius: 36% 44%;
+  border-top-right-radius: 40% 36%;
+  border-bottom-right-radius: 43% 42%;
+  border-bottom-left-radius: 43% 44%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::before, .talk-base .tk-puff .tk-content.tks-s::after {
@@ -1396,31 +1396,31 @@ html, body {
 .talk-base .tk-puff .tk-content.tks-s::before {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(13deg);
-          transform: rotate(13deg);
-  border-top-left-radius: 38% 45%;
-  border-top-right-radius: 42% 44%;
-  border-bottom-right-radius: 38% 43%;
-  border-bottom-left-radius: 36% 44%;
+  -webkit-transform: rotate(14deg);
+          transform: rotate(14deg);
+  border-top-left-radius: 43% 39%;
+  border-top-right-radius: 45% 37%;
+  border-bottom-right-radius: 40% 38%;
+  border-bottom-left-radius: 40% 36%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::after {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(-12deg);
-          transform: rotate(-12deg);
-  border-top-left-radius: 40% 39%;
-  border-top-right-radius: 45% 45%;
-  border-bottom-right-radius: 45% 41%;
-  border-bottom-left-radius: 41% 39%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  border-top-left-radius: 44% 42%;
+  border-top-right-radius: 43% 42%;
+  border-bottom-right-radius: 37% 40%;
+  border-bottom-left-radius: 43% 42%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m {
   z-index: auto;
-  border-top-left-radius: 41% 30%;
-  border-top-right-radius: 42% 34%;
-  border-bottom-right-radius: 36% 36%;
-  border-bottom-left-radius: 41% 37%;
+  border-top-left-radius: 44% 35%;
+  border-top-right-radius: 40% 30%;
+  border-bottom-right-radius: 41% 38%;
+  border-bottom-left-radius: 44% 36%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before, .talk-base .tk-puff .tk-content.tks-m::after {
@@ -1436,27 +1436,27 @@ html, body {
 .talk-base .tk-puff .tk-content.tks-m::before {
   -webkit-transform: rotate(8deg);
           transform: rotate(8deg);
-  border-top-left-radius: 42% 38%;
-  border-top-right-radius: 45% 33%;
-  border-bottom-right-radius: 45% 34%;
-  border-bottom-left-radius: 48% 39%;
+  border-top-left-radius: 43% 40%;
+  border-top-right-radius: 50% 40%;
+  border-bottom-right-radius: 50% 36%;
+  border-bottom-left-radius: 43% 40%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::after {
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
-  border-top-left-radius: 47% 35%;
-  border-top-right-radius: 50% 34%;
-  border-bottom-right-radius: 44% 38%;
-  border-bottom-left-radius: 46% 36%;
+  border-top-left-radius: 45% 31%;
+  border-top-right-radius: 42% 33%;
+  border-bottom-right-radius: 43% 33%;
+  border-bottom-left-radius: 46% 38%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l {
   z-index: auto;
-  border-top-left-radius: 37% 25%;
-  border-top-right-radius: 38% 27%;
-  border-bottom-right-radius: 38% 26%;
-  border-bottom-left-radius: 37% 22%;
+  border-top-left-radius: 35% 22%;
+  border-top-right-radius: 32% 25%;
+  border-bottom-right-radius: 34% 26%;
+  border-bottom-left-radius: 40% 23%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before, .talk-base .tk-puff .tk-content.tks-l::after {
@@ -1470,26 +1470,27 @@ html, body {
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before {
-  -webkit-transform: rotate(6deg);
-          transform: rotate(6deg);
-  border-top-left-radius: 49% 35%;
-  border-top-right-radius: 41% 35%;
-  border-bottom-right-radius: 48% 29%;
-  border-bottom-left-radius: 49% 26%;
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+  border-top-left-radius: 43% 27%;
+  border-top-right-radius: 47% 32%;
+  border-bottom-right-radius: 42% 29%;
+  border-bottom-left-radius: 43% 28%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::after {
-  -webkit-transform: rotate(-9deg);
-          transform: rotate(-9deg);
-  border-top-left-radius: 48% 31%;
-  border-top-right-radius: 45% 33%;
-  border-bottom-right-radius: 50% 35%;
-  border-bottom-left-radius: 41% 27%;
+  -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
+  border-top-left-radius: 43% 30%;
+  border-top-right-radius: 41% 31%;
+  border-bottom-right-radius: 46% 31%;
+  border-bottom-left-radius: 43% 33%;
 }
 
 .talk-base .tk-puff .tk-content .tkc-p {
   word-wrap: break-word;
   margin-left: 0;
+  margin-right: 0;
 }
 
 @media screen and (max-width: 2400px) {
@@ -1785,10 +1786,10 @@ html, body {
     display: block;
     position: fixed;
     z-index: auto;
-    border-top-left-radius: 43% 45%;
-    border-top-right-radius: 38% 44%;
-    border-bottom-right-radius: 44% 41%;
-    border-bottom-left-radius: 45% 42%;
+    border-top-left-radius: 44% 36%;
+    border-top-right-radius: 40% 40%;
+    border-bottom-right-radius: 42% 39%;
+    border-bottom-left-radius: 40% 44%;
     -webkit-backdrop-filter: blur(3px);
             backdrop-filter: blur(3px);
   }
@@ -1808,10 +1809,10 @@ html, body {
     height: 90%;
     -webkit-transform: rotate(23deg);
             transform: rotate(23deg);
-    border-top-left-radius: 55% 56%;
-    border-top-right-radius: 53% 60%;
-    border-bottom-right-radius: 51% 57%;
-    border-bottom-left-radius: 46% 58%;
+    border-top-left-radius: 47% 60%;
+    border-top-right-radius: 55% 58%;
+    border-bottom-right-radius: 49% 63%;
+    border-bottom-left-radius: 50% 64%;
     background-color: red;
   }
   #navimenu .navimenu--area::after {
@@ -1819,12 +1820,12 @@ html, body {
     top: -5%;
     width: 90%;
     height: 110%;
-    -webkit-transform: rotate(-24deg);
-            transform: rotate(-24deg);
-    border-top-left-radius: 49% 62%;
-    border-top-right-radius: 54% 62%;
-    border-bottom-right-radius: 52% 56%;
-    border-bottom-left-radius: 51% 61%;
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+    border-top-left-radius: 53% 62%;
+    border-top-right-radius: 50% 60%;
+    border-bottom-right-radius: 46% 58%;
+    border-bottom-left-radius: 51% 62%;
     background-color: green;
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area {
@@ -1852,12 +1853,20 @@ html, body {
   #navimenu #navimenu--on:checked ~ .navimenu--area::before, #navimenu #navimenu--on:checked ~ .navimenu--area::after {
     background-color: rgba(253, 255, 253, 0);
   }
+  #navimenu .navimenu--area .navimenu--contant {
+    background-color: red;
+    margin: 15% 0;
+  }
   #navimenu .navimenu--area .tglbutton-menu {
     position: absolute;
   }
+  #navimenu #navimenu--on:not(:checked) ~ .navimenu--area .navimenu--contant {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area .tglbutton-menu {
-    left: 15%;
-    top: 15%;
+    right: 15%;
+    bottom: 15%;
     width: 70%;
     height: 70%;
     display: -webkit-box;
@@ -1879,6 +1888,10 @@ html, body {
     height: 20%;
     background-color: #000;
     border-radius: 3px;
+  }
+  #navimenu #navimenu--on:checked ~ .navimenu--area .navimenu--contant {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
   }
   #navimenu #navimenu--on:checked ~ .navimenu--area .tglbutton-menu {
     right: 5%;
@@ -1906,8 +1919,8 @@ html, body {
     border-radius: 3px;
   }
   #navimenu #navimenu--on:checked ~ .navimenu--area .tglbutton-menu .tglbutton-menu--bar1 {
-    -webkit-transform: translateY(5vw) rotate(765deg);
-            transform: translateY(5vw) rotate(765deg);
+    -webkit-transform: translateY(5vw) rotate(405deg);
+            transform: translateY(5vw) rotate(405deg);
   }
   #navimenu #navimenu--on:checked ~ .navimenu--area .tglbutton-menu .tglbutton-menu--bar2 {
     position: absolute;
@@ -1920,8 +1933,8 @@ html, body {
     border: solid 2px #000;
   }
   #navimenu #navimenu--on:checked ~ .navimenu--area .tglbutton-menu .tglbutton-menu--bar3 {
-    -webkit-transform: translateY(-5vw) translateY(100%) rotate(-765deg);
-            transform: translateY(-5vw) translateY(100%) rotate(-765deg);
+    -webkit-transform: translateY(-5vw) translateY(100%) rotate(-585deg);
+            transform: translateY(-5vw) translateY(100%) rotate(-585deg);
   }
 }
 
