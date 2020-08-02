@@ -1,11 +1,12 @@
-@mixin bordershadow($b-size:1px,$b-color:#000){
+@mixin bordershadow($b-size:1px,$b-color:#000,$s-size:2px,$s-color:#000){
     filter:drop-shadow($b-size $b-size 0px $b-color)
             drop-shadow((-$b-size) $b-size 0px $b-color)
             drop-shadow($b-size (-$b-size) 0px $b-color)
-            drop-shadow((-$b-size) (-$b-size) 0px $b-color);
+            drop-shadow((-$b-size) (-$b-size) 0px $b-color)
+            drop-shadow($s-size $s-size $s-size $s-color);
 }
 
-@mixin cloudpouup($baseid:base){
+@mixin cloudpouup($baseid:base,$c-size:12vw){
 
     
     ##{$baseid}{
@@ -32,9 +33,9 @@
             background-color:$clb-g10;
             bottom: 5%;
             right: 5%;
-            width: 15vw;
-            height: 15vw;
-            @include bordershadow(0.5px,#000);
+            width: $c-size;
+            height: $c-size;
+            @include bordershadow(0.5px,#000,3px,rgba(0,0,0,0.9));
             &::before,&::after{
                 background-color:$clb-g10;
             }
@@ -46,7 +47,7 @@
             width: 100%;
             height: 100%;
             border-radius: 0;
-            @include bordershadow(0px,#0000);
+            filter:none;
             &::before,&::after{
                 background-color:$clb-g00;
             }

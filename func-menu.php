@@ -4,8 +4,10 @@ function putHeaderMenu(){
     $ret .= '<div id="navimenu">';
     $ret .=     '<input type="checkbox" id="navimenu--on">';
     $ret .=     '<div class="navimenu--area">';
-    $ret .=         '<label for="navimenu--on" class="navimenu--toggle">';
-    $ret .=         '●●';
+    $ret .=         '<label for="navimenu--on" class="navimenu--toggle tglbutton-menu">';
+    $ret .=             '<span class="tglbutton-menu--bar1"></span>';
+    $ret .=             '<span class="tglbutton-menu--bar2"></span>';
+    $ret .=             '<span class="tglbutton-menu--bar3"></span>';
     $ret .=         '</label>';
     $ret .=     '</div>';
     $ret .= '</div>';

@@ -1,0 +1,69 @@
+
+$root2:1.4142;
+
+@mixin tglbutton-menu-base($baseclass){
+    .#{$baseclass}{
+        position: absolute;
+    }
+}
+
+@mixin tglbutton-menu-off($baseclass){
+    .#{$baseclass}{
+        left:15%;
+        top: 15%;
+        width: 70%;
+        height: 70%;
+
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .#{$baseclass}--bar1,
+        .#{$baseclass}--bar2,
+        .#{$baseclass}--bar3{
+            display: block;
+            width:100%;
+            height: 20%;
+            background-color: #000;
+            border-radius: 3px;
+        }
+    }
+}
+@mixin tglbutton-menu-on($baseclass,$b-size:10vw){
+    .#{$baseclass}{
+        right:5%;
+        bottom: 5%;
+        width: $b-size;
+        height: $b-size;
+
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .#{$baseclass}--bar1,
+        .#{$baseclass}--bar2,
+        .#{$baseclass}--bar3{
+            display: block;
+            width:100%;
+            height: 20%;
+            background-color: #000;
+            border-radius: 3px;
+        }
+        .#{$baseclass}--bar1{
+            transform: translateY($b-size/2) rotate((360*2)+45deg);
+        }
+        .#{$baseclass}--bar2{
+            position: absolute;
+            width: $b-size;
+            height: $b-size;
+            top:10%;
+            left:0;
+            border-radius: 50%;
+            background-color: transparent;
+            border: solid 2px #000;
+        }
+        .#{$baseclass}--bar3{
+            transform: translateY(-$b-size/2) translateY(100%) rotate((-360*2)-45deg);
+        }
+    }
+}
