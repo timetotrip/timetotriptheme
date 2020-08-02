@@ -5,6 +5,7 @@ function putHeaderMenu(){
     $ret .=     '<input type="checkbox" id="navimenu--on">';
     $ret .=     '<div class="navimenu--area">';
     $ret .=         '<label for="navimenu--on" class="navimenu--toggle">';
+    $ret .=         '●●';
     $ret .=         '</label>';
     $ret .=     '</div>';
     $ret .= '</div>';

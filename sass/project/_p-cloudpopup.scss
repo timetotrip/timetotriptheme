@@ -1,4 +1,11 @@
+@mixin bordershadow($b-size:1px,$b-color:#000){
+    filter:drop-shadow($b-size $b-size 0px $b-color)
+            drop-shadow((-$b-size) $b-size 0px $b-color)
+            drop-shadow($b-size (-$b-size) 0px $b-color)
+            drop-shadow((-$b-size) (-$b-size) 0px $b-color);
+
 @mixin cloudpouup($baseid:base){
+
     
     ##{$baseid}{
         display: block;
@@ -20,7 +27,6 @@
             position: fixed;
             @include cloud-xs();
             backdrop-filter:blur(3px);
-
         }
         ##{$baseid}--on:not(:checked) ~ .#{$baseid}--area{
             background-color:$clb-g10;
@@ -28,6 +34,7 @@
             right: 5%;
             width: 15vw;
             height: 15vw;
+            @include bordershadow(1px,#000);
             &::before,&::after{
                 background-color:$clb-g10;
             }
@@ -39,6 +46,7 @@
             width: 100%;
             height: 100%;
             border-radius: 0;
+            @include bordershadow(0px,#0000);
             &::before,&::after{
                 background-color:$clb-g00;
             }
