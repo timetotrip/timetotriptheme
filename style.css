@@ -1377,10 +1377,10 @@ html, body {
 
 .talk-base .tk-puff .tk-content.tks-s {
   z-index: auto;
-  border-top-left-radius: 38% 43%;
-  border-top-right-radius: 37% 45%;
-  border-bottom-right-radius: 40% 36%;
-  border-bottom-left-radius: 42% 36%;
+  border-top-left-radius: 39% 42%;
+  border-top-right-radius: 42% 37%;
+  border-bottom-right-radius: 41% 39%;
+  border-bottom-left-radius: 40% 42%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::before, .talk-base .tk-puff .tk-content.tks-s::after {
@@ -1396,12 +1396,12 @@ html, body {
 .talk-base .tk-puff .tk-content.tks-s::before {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(14deg);
-          transform: rotate(14deg);
-  border-top-left-radius: 44% 45%;
-  border-top-right-radius: 41% 37%;
-  border-bottom-right-radius: 36% 41%;
-  border-bottom-left-radius: 38% 45%;
+  -webkit-transform: rotate(13deg);
+          transform: rotate(13deg);
+  border-top-left-radius: 37% 45%;
+  border-top-right-radius: 36% 42%;
+  border-bottom-right-radius: 43% 41%;
+  border-bottom-left-radius: 36% 42%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::after {
@@ -1409,18 +1409,18 @@ html, body {
   left: 5%;
   -webkit-transform: rotate(-11deg);
           transform: rotate(-11deg);
-  border-top-left-radius: 40% 38%;
-  border-top-right-radius: 36% 45%;
-  border-bottom-right-radius: 41% 42%;
-  border-bottom-left-radius: 42% 37%;
+  border-top-left-radius: 45% 39%;
+  border-top-right-radius: 36% 36%;
+  border-bottom-right-radius: 39% 41%;
+  border-bottom-left-radius: 39% 43%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m {
   z-index: auto;
-  border-top-left-radius: 40% 36%;
-  border-top-right-radius: 42% 34%;
-  border-bottom-right-radius: 43% 32%;
-  border-bottom-left-radius: 39% 33%;
+  border-top-left-radius: 44% 37%;
+  border-top-right-radius: 37% 38%;
+  border-bottom-right-radius: 41% 29%;
+  border-bottom-left-radius: 36% 34%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before, .talk-base .tk-puff .tk-content.tks-m::after {
@@ -1434,29 +1434,29 @@ html, body {
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before {
-  -webkit-transform: rotate(8deg);
-          transform: rotate(8deg);
-  border-top-left-radius: 42% 32%;
-  border-top-right-radius: 45% 39%;
+  -webkit-transform: rotate(9deg);
+          transform: rotate(9deg);
+  border-top-left-radius: 48% 39%;
+  border-top-right-radius: 41% 36%;
   border-bottom-right-radius: 44% 35%;
-  border-bottom-left-radius: 49% 31%;
+  border-bottom-left-radius: 49% 36%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::after {
   -webkit-transform: rotate(-12deg);
           transform: rotate(-12deg);
-  border-top-left-radius: 47% 39%;
-  border-top-right-radius: 43% 32%;
-  border-bottom-right-radius: 47% 33%;
-  border-bottom-left-radius: 44% 39%;
+  border-top-left-radius: 44% 35%;
+  border-top-right-radius: 47% 35%;
+  border-bottom-right-radius: 42% 32%;
+  border-bottom-left-radius: 47% 34%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l {
   z-index: auto;
-  border-top-left-radius: 34% 23%;
-  border-top-right-radius: 40% 23%;
-  border-bottom-right-radius: 35% 28%;
-  border-bottom-left-radius: 32% 29%;
+  border-top-left-radius: 32% 28%;
+  border-top-right-radius: 37% 23%;
+  border-bottom-right-radius: 39% 27%;
+  border-bottom-left-radius: 32% 28%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before, .talk-base .tk-puff .tk-content.tks-l::after {
@@ -1470,21 +1470,21 @@ html, body {
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before {
-  -webkit-transform: rotate(7deg);
-          transform: rotate(7deg);
-  border-top-left-radius: 47% 32%;
-  border-top-right-radius: 41% 32%;
-  border-bottom-right-radius: 42% 27%;
-  border-bottom-left-radius: 48% 35%;
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+  border-top-left-radius: 42% 27%;
+  border-top-right-radius: 49% 34%;
+  border-bottom-right-radius: 45% 31%;
+  border-bottom-left-radius: 49% 27%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::after {
-  -webkit-transform: rotate(-6deg);
-          transform: rotate(-6deg);
-  border-top-left-radius: 44% 29%;
-  border-top-right-radius: 46% 28%;
-  border-bottom-right-radius: 49% 33%;
-  border-bottom-left-radius: 47% 34%;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  border-top-left-radius: 47% 26%;
+  border-top-right-radius: 42% 28%;
+  border-bottom-right-radius: 42% 27%;
+  border-bottom-left-radius: 48% 26%;
 }
 
 .talk-base .tk-puff .tk-content .tkc-p {
@@ -1777,8 +1777,6 @@ html, body {
     right: 5%;
     bottom: 5%;
     z-index: 2;
-    -webkit-box-shadow: -2px -2px 0px 4px black;
-            box-shadow: -2px -2px 0px 4px black;
   }
   #navimenu #navimenu--on {
     display: none;
@@ -1787,10 +1785,10 @@ html, body {
     display: block;
     position: fixed;
     z-index: auto;
-    border-top-left-radius: 42% 43%;
-    border-top-right-radius: 41% 39%;
-    border-bottom-right-radius: 45% 38%;
-    border-bottom-left-radius: 38% 39%;
+    border-top-left-radius: 38% 37%;
+    border-top-right-radius: 39% 38%;
+    border-bottom-right-radius: 37% 37%;
+    border-bottom-left-radius: 39% 45%;
     -webkit-backdrop-filter: blur(3px);
             backdrop-filter: blur(3px);
   }
@@ -1810,10 +1808,10 @@ html, body {
     height: 90%;
     -webkit-transform: rotate(25deg);
             transform: rotate(25deg);
-    border-top-left-radius: 52% 59%;
-    border-top-right-radius: 48% 65%;
-    border-bottom-right-radius: 50% 62%;
-    border-bottom-left-radius: 51% 65%;
+    border-top-left-radius: 47% 57%;
+    border-top-right-radius: 53% 62%;
+    border-bottom-right-radius: 52% 58%;
+    border-bottom-left-radius: 48% 60%;
     background-color: red;
   }
   #navimenu .navimenu--area::after {
@@ -1823,10 +1821,10 @@ html, body {
     height: 110%;
     -webkit-transform: rotate(-24deg);
             transform: rotate(-24deg);
-    border-top-left-radius: 54% 59%;
-    border-top-right-radius: 54% 58%;
-    border-bottom-right-radius: 47% 63%;
-    border-bottom-left-radius: 49% 59%;
+    border-top-left-radius: 48% 56%;
+    border-top-right-radius: 55% 56%;
+    border-bottom-right-radius: 48% 63%;
+    border-bottom-left-radius: 47% 62%;
     background-color: green;
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area {
@@ -1835,13 +1833,8 @@ html, body {
     right: 5%;
     width: 15vw;
     height: 15vw;
-    -webkit-filter: drop-shadow(1px 1px 0px #000) drop-shadow(-1px 1px 0px #000) drop-shadow(1px -1px 0px #000) drop-shadow(-1px -1px 0px #000);
-            filter: drop-shadow(1px 1px 0px #000) drop-shadow(-1px 1px 0px #000) drop-shadow(1px -1px 0px #000) drop-shadow(-1px -1px 0px #000);
-    /*
-    filter: drop-shadow($b-size $b-size 1 $b-color )
-            drop-shadow($b-size*-1 $b-size 1 $b-color )
-            drop-shadow($b-size $b-size*-1 1 $b-color )
-            drop-shadow($b-size*-1 $b-size*-1 1 $b-color );*/
+    -webkit-filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000);
+            filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000);
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area::before, #navimenu #navimenu--on:not(:checked) ~ .navimenu--area::after {
     background-color: #fdfffd;
@@ -1855,11 +1848,6 @@ html, body {
     border-radius: 0;
     -webkit-filter: drop-shadow(0px 0px 0px #0000) drop-shadow(0px 0px 0px #0000) drop-shadow(0px 0px 0px #0000) drop-shadow(0px 0px 0px #0000);
             filter: drop-shadow(0px 0px 0px #0000) drop-shadow(0px 0px 0px #0000) drop-shadow(0px 0px 0px #0000) drop-shadow(0px 0px 0px #0000);
-    /*
-    filter: drop-shadow($b-size $b-size 1 $b-color )
-            drop-shadow($b-size*-1 $b-size 1 $b-color )
-            drop-shadow($b-size $b-size*-1 1 $b-color )
-            drop-shadow($b-size*-1 $b-size*-1 1 $b-color );*/
   }
   #navimenu #navimenu--on:checked ~ .navimenu--area::before, #navimenu #navimenu--on:checked ~ .navimenu--area::after {
     background-color: rgba(253, 255, 253, 0);

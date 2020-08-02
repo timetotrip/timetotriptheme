@@ -3,6 +3,7 @@
             drop-shadow((-$b-size) $b-size 0px $b-color)
             drop-shadow($b-size (-$b-size) 0px $b-color)
             drop-shadow((-$b-size) (-$b-size) 0px $b-color);
+}
 
 @mixin cloudpouup($baseid:base){
 
@@ -17,7 +18,6 @@
         bottom:5%;
         z-index: 2;
 
-        box-shadow: -2px -2px 0px 4px black;
         
         ##{$baseid}--on{
             display: none;
@@ -34,7 +34,7 @@
             right: 5%;
             width: 15vw;
             height: 15vw;
-            @include bordershadow(1px,#000);
+            @include bordershadow(0.5px,#000);
             &::before,&::after{
                 background-color:$clb-g10;
             }
@@ -54,3 +54,5 @@
     }
     
 }
+
+
