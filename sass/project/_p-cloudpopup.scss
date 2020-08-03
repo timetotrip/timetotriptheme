@@ -27,7 +27,7 @@
             display: block;
             position: fixed;
             @include cloud-xs();
-            backdrop-filter:blur(3px);
+            backdrop-filter:blur(5px);
         }
         ##{$baseid}--on:not(:checked) ~ .#{$baseid}--area{
             background-color:$clb-g10;
@@ -39,6 +39,7 @@
             &::before,&::after{
                 background-color:$clb-g10;
             }
+            animation: yurayura 20s linear 0s infinite normal both;
         }
         ##{$baseid}--on:checked ~ .#{$baseid}--area{
             background-color:$clb-g06;

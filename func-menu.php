@@ -35,17 +35,20 @@ function putMenuCate( $cate, $not_in, $num, $order){
         $ret .='<div class="navicate">';
         $ret    .='<input type="checkbox" name="navicate" class="navicate--on" id="navicate--' . $cate . '">';
         $ret    .='<label class="navicate--toggle" for="navicate--' . $cate . '">';
-        $ret        .= '<div class="navicate--button tglbutton-cate">';
+        $ret        .= '<div class="navicate--button tglbutton-cate ">';
         $ret            .= '<span class="tglbutton-cate--bar1"></span>';
         $ret            .= '<span class="tglbutton-cate--bar2"></span>';
         $ret        .= '</div>';
         $ret        .= '<h3>' . get_category_by_slug( $cate )->name .'</h3>';
         $ret    .='</label>';
 
+        $ret    .='<div class="navicate--border ptn-str-brown">';
+        $ret    .='</div>';
+
         $ret    .='<div class="navicate--list">';
         while ( $wpq->have_posts() ): $wpq->the_post();
             $ret .= '<a class="" href="'. get_permalink().'" >';
-            $ret .=             '<p class="">'. get_the_title().'</p>';
+            $ret .=     '<p class="">'. get_the_title().'</p>';
             $ret .= '</a>';
         endwhile;
         $ret    .='</div>';
