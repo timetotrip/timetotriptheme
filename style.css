@@ -630,19 +630,19 @@ html, body {
 /*--------------------------------------------------------------
 ## Title
 --------------------------------------------------------------*/
-.h1-title {
+.hl-title {
   width: 100%;
   position: relative;
 }
 
-.h1-title .h1t-back {
+.hl-title .hlt-back {
   width: 100%;
   position: absolute;
   bottom: 0;
   height: 40%;
 }
 
-.h1-title .h1t-name {
+.hl-title .hlt-name {
   position: absolute;
   top: 0;
   margin: 0 auto;
@@ -659,17 +659,17 @@ html, body {
           align-items: center;
 }
 
-.h1-title .h1t-name h1 {
+.hl-title .hlt-name h1, .hl-title .hlt-name h2 {
   text-align: center;
   color: #fdfffd;
   text-shadow: 2px 2px 4px rgba(43, 24, 0, 0.8);
 }
 
-.h1-title .h1t-name i {
+.hl-title .hlt-name i {
   line-height: 1.5;
 }
 
-.h1-title .h1t-name.h1t-spb {
+.hl-title .hlt-name.hlt-spb {
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -677,13 +677,13 @@ html, body {
 }
 
 @media screen and (max-width: 2400px) {
-  .h1-title {
+  .hl-title {
     height: 3.5em;
   }
 }
 
 @media screen and (max-width: 580px) {
-  .h1-title {
+  .hl-title {
     height: 2.5em;
   }
 }
@@ -692,49 +692,49 @@ html, body {
 ## H1
 --------------------------------------------------------------*/
 @media screen and (max-width: 2400px) {
-  .h1-title {
+  .hl-title {
     height: 3em;
   }
-  .h1-title .h1t-name h1 {
+  .hl-title .hlt-name h1, .hl-title .hlt-name h2 {
     font-size: 2.2em;
   }
-  .h1-title .h1t-name i {
+  .hl-title .hlt-name i {
     font-size: 2.2rem;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .h1-title {
+  .hl-title {
     height: 2.8em;
   }
-  .h1-title .h1t-name h1 {
+  .hl-title .hlt-name h1, .hl-title .hlt-name h2 {
     font-size: 1.8em;
   }
-  .h1-title .h1t-name i {
+  .hl-title .hlt-name i {
     font-size: 1.8rem;
   }
 }
 
 @media screen and (max-width: 580px) {
-  .h1-title {
+  .hl-title {
     height: 3em;
   }
-  .h1-title .h1t-name h1 {
+  .hl-title .hlt-name h1, .hl-title .hlt-name h2 {
     font-size: 2.2em;
   }
-  .h1-title .h1t-name i {
+  .hl-title .hlt-name i {
     font-size: 2.2rem;
   }
 }
 
 @media screen and (max-width: 374px) {
-  .h1-title {
+  .hl-title {
     height: 2.5em;
   }
-  .h1-title .h1t-name h1 {
+  .hl-title .hlt-name h1, .hl-title .hlt-name h2 {
     font-size: 1.8em;
   }
-  .h1-title .h1t-name i {
+  .hl-title .hlt-name i {
     font-size: 1.8rem;
   }
 }
@@ -802,7 +802,7 @@ html, body {
   text-align: center;
 }
 
-.vrn .vrn-text .vrnt-title .vrnt-h2, .vrn .vrn-text .vrnt-title .sugt-p, .vrn .vrn-text .vrnt-title .ftdt-p, .vrn .vrn-text .sugt-title .vrnt-h2, .vrn .vrn-text .sugt-title .sugt-p, .vrn .vrn-text .sugt-title .ftdt-p, .vrn .vrn-text .ftdt-title .vrnt-h2, .vrn .vrn-text .ftdt-title .sugt-p, .vrn .vrn-text .ftdt-title .ftdt-p, .vrn .sug-text .vrnt-title .vrnt-h2, .vrn .sug-text .vrnt-title .sugt-p, .vrn .sug-text .vrnt-title .ftdt-p, .vrn .sug-text .sugt-title .vrnt-h2, .vrn .sug-text .sugt-title .sugt-p, .vrn .sug-text .sugt-title .ftdt-p, .vrn .sug-text .ftdt-title .vrnt-h2, .vrn .sug-text .ftdt-title .sugt-p, .vrn .sug-text .ftdt-title .ftdt-p, .vrn .ftd-text .vrnt-title .vrnt-h2, .vrn .ftd-text .vrnt-title .sugt-p, .vrn .ftd-text .vrnt-title .ftdt-p, .vrn .ftd-text .sugt-title .vrnt-h2, .vrn .ftd-text .sugt-title .sugt-p, .vrn .ftd-text .sugt-title .ftdt-p, .vrn .ftd-text .ftdt-title .vrnt-h2, .vrn .ftd-text .ftdt-title .sugt-p, .vrn .ftd-text .ftdt-title .ftdt-p, .sug .vrn-text .vrnt-title .vrnt-h2, .sug .vrn-text .vrnt-title .sugt-p, .sug .vrn-text .vrnt-title .ftdt-p, .sug .vrn-text .sugt-title .vrnt-h2, .sug .vrn-text .sugt-title .sugt-p, .sug .vrn-text .sugt-title .ftdt-p, .sug .vrn-text .ftdt-title .vrnt-h2, .sug .vrn-text .ftdt-title .sugt-p, .sug .vrn-text .ftdt-title .ftdt-p, .sug .sug-text .vrnt-title .vrnt-h2, .sug .sug-text .vrnt-title .sugt-p, .sug .sug-text .vrnt-title .ftdt-p, .sug .sug-text .sugt-title .vrnt-h2, .sug .sug-text .sugt-title .sugt-p, .sug .sug-text .sugt-title .ftdt-p, .sug .sug-text .ftdt-title .vrnt-h2, .sug .sug-text .ftdt-title .sugt-p, .sug .sug-text .ftdt-title .ftdt-p, .sug .ftd-text .vrnt-title .vrnt-h2, .sug .ftd-text .vrnt-title .sugt-p, .sug .ftd-text .vrnt-title .ftdt-p, .sug .ftd-text .sugt-title .vrnt-h2, .sug .ftd-text .sugt-title .sugt-p, .sug .ftd-text .sugt-title .ftdt-p, .sug .ftd-text .ftdt-title .vrnt-h2, .sug .ftd-text .ftdt-title .sugt-p, .sug .ftd-text .ftdt-title .ftdt-p, .ftd .vrn-text .vrnt-title .vrnt-h2, .ftd .vrn-text .vrnt-title .sugt-p, .ftd .vrn-text .vrnt-title .ftdt-p, .ftd .vrn-text .sugt-title .vrnt-h2, .ftd .vrn-text .sugt-title .sugt-p, .ftd .vrn-text .sugt-title .ftdt-p, .ftd .vrn-text .ftdt-title .vrnt-h2, .ftd .vrn-text .ftdt-title .sugt-p, .ftd .vrn-text .ftdt-title .ftdt-p, .ftd .sug-text .vrnt-title .vrnt-h2, .ftd .sug-text .vrnt-title .sugt-p, .ftd .sug-text .vrnt-title .ftdt-p, .ftd .sug-text .sugt-title .vrnt-h2, .ftd .sug-text .sugt-title .sugt-p, .ftd .sug-text .sugt-title .ftdt-p, .ftd .sug-text .ftdt-title .vrnt-h2, .ftd .sug-text .ftdt-title .sugt-p, .ftd .sug-text .ftdt-title .ftdt-p, .ftd .ftd-text .vrnt-title .vrnt-h2, .ftd .ftd-text .vrnt-title .sugt-p, .ftd .ftd-text .vrnt-title .ftdt-p, .ftd .ftd-text .sugt-title .vrnt-h2, .ftd .ftd-text .sugt-title .sugt-p, .ftd .ftd-text .sugt-title .ftdt-p, .ftd .ftd-text .ftdt-title .vrnt-h2, .ftd .ftd-text .ftdt-title .sugt-p, .ftd .ftd-text .ftdt-title .ftdt-p {
+.vrn .vrn-text .vrnt-title .vrnt-h2, .vrn .vrn-text .vrnt-title .vrnt-h3, .vrn .vrn-text .vrnt-title .sugt-p, .vrn .vrn-text .vrnt-title .ftdt-p, .vrn .vrn-text .sugt-title .vrnt-h2, .vrn .vrn-text .sugt-title .vrnt-h3, .vrn .vrn-text .sugt-title .sugt-p, .vrn .vrn-text .sugt-title .ftdt-p, .vrn .vrn-text .ftdt-title .vrnt-h2, .vrn .vrn-text .ftdt-title .vrnt-h3, .vrn .vrn-text .ftdt-title .sugt-p, .vrn .vrn-text .ftdt-title .ftdt-p, .vrn .sug-text .vrnt-title .vrnt-h2, .vrn .sug-text .vrnt-title .vrnt-h3, .vrn .sug-text .vrnt-title .sugt-p, .vrn .sug-text .vrnt-title .ftdt-p, .vrn .sug-text .sugt-title .vrnt-h2, .vrn .sug-text .sugt-title .vrnt-h3, .vrn .sug-text .sugt-title .sugt-p, .vrn .sug-text .sugt-title .ftdt-p, .vrn .sug-text .ftdt-title .vrnt-h2, .vrn .sug-text .ftdt-title .vrnt-h3, .vrn .sug-text .ftdt-title .sugt-p, .vrn .sug-text .ftdt-title .ftdt-p, .vrn .ftd-text .vrnt-title .vrnt-h2, .vrn .ftd-text .vrnt-title .vrnt-h3, .vrn .ftd-text .vrnt-title .sugt-p, .vrn .ftd-text .vrnt-title .ftdt-p, .vrn .ftd-text .sugt-title .vrnt-h2, .vrn .ftd-text .sugt-title .vrnt-h3, .vrn .ftd-text .sugt-title .sugt-p, .vrn .ftd-text .sugt-title .ftdt-p, .vrn .ftd-text .ftdt-title .vrnt-h2, .vrn .ftd-text .ftdt-title .vrnt-h3, .vrn .ftd-text .ftdt-title .sugt-p, .vrn .ftd-text .ftdt-title .ftdt-p, .sug .vrn-text .vrnt-title .vrnt-h2, .sug .vrn-text .vrnt-title .vrnt-h3, .sug .vrn-text .vrnt-title .sugt-p, .sug .vrn-text .vrnt-title .ftdt-p, .sug .vrn-text .sugt-title .vrnt-h2, .sug .vrn-text .sugt-title .vrnt-h3, .sug .vrn-text .sugt-title .sugt-p, .sug .vrn-text .sugt-title .ftdt-p, .sug .vrn-text .ftdt-title .vrnt-h2, .sug .vrn-text .ftdt-title .vrnt-h3, .sug .vrn-text .ftdt-title .sugt-p, .sug .vrn-text .ftdt-title .ftdt-p, .sug .sug-text .vrnt-title .vrnt-h2, .sug .sug-text .vrnt-title .vrnt-h3, .sug .sug-text .vrnt-title .sugt-p, .sug .sug-text .vrnt-title .ftdt-p, .sug .sug-text .sugt-title .vrnt-h2, .sug .sug-text .sugt-title .vrnt-h3, .sug .sug-text .sugt-title .sugt-p, .sug .sug-text .sugt-title .ftdt-p, .sug .sug-text .ftdt-title .vrnt-h2, .sug .sug-text .ftdt-title .vrnt-h3, .sug .sug-text .ftdt-title .sugt-p, .sug .sug-text .ftdt-title .ftdt-p, .sug .ftd-text .vrnt-title .vrnt-h2, .sug .ftd-text .vrnt-title .vrnt-h3, .sug .ftd-text .vrnt-title .sugt-p, .sug .ftd-text .vrnt-title .ftdt-p, .sug .ftd-text .sugt-title .vrnt-h2, .sug .ftd-text .sugt-title .vrnt-h3, .sug .ftd-text .sugt-title .sugt-p, .sug .ftd-text .sugt-title .ftdt-p, .sug .ftd-text .ftdt-title .vrnt-h2, .sug .ftd-text .ftdt-title .vrnt-h3, .sug .ftd-text .ftdt-title .sugt-p, .sug .ftd-text .ftdt-title .ftdt-p, .ftd .vrn-text .vrnt-title .vrnt-h2, .ftd .vrn-text .vrnt-title .vrnt-h3, .ftd .vrn-text .vrnt-title .sugt-p, .ftd .vrn-text .vrnt-title .ftdt-p, .ftd .vrn-text .sugt-title .vrnt-h2, .ftd .vrn-text .sugt-title .vrnt-h3, .ftd .vrn-text .sugt-title .sugt-p, .ftd .vrn-text .sugt-title .ftdt-p, .ftd .vrn-text .ftdt-title .vrnt-h2, .ftd .vrn-text .ftdt-title .vrnt-h3, .ftd .vrn-text .ftdt-title .sugt-p, .ftd .vrn-text .ftdt-title .ftdt-p, .ftd .sug-text .vrnt-title .vrnt-h2, .ftd .sug-text .vrnt-title .vrnt-h3, .ftd .sug-text .vrnt-title .sugt-p, .ftd .sug-text .vrnt-title .ftdt-p, .ftd .sug-text .sugt-title .vrnt-h2, .ftd .sug-text .sugt-title .vrnt-h3, .ftd .sug-text .sugt-title .sugt-p, .ftd .sug-text .sugt-title .ftdt-p, .ftd .sug-text .ftdt-title .vrnt-h2, .ftd .sug-text .ftdt-title .vrnt-h3, .ftd .sug-text .ftdt-title .sugt-p, .ftd .sug-text .ftdt-title .ftdt-p, .ftd .ftd-text .vrnt-title .vrnt-h2, .ftd .ftd-text .vrnt-title .vrnt-h3, .ftd .ftd-text .vrnt-title .sugt-p, .ftd .ftd-text .vrnt-title .ftdt-p, .ftd .ftd-text .sugt-title .vrnt-h2, .ftd .ftd-text .sugt-title .vrnt-h3, .ftd .ftd-text .sugt-title .sugt-p, .ftd .ftd-text .sugt-title .ftdt-p, .ftd .ftd-text .ftdt-title .vrnt-h2, .ftd .ftd-text .ftdt-title .vrnt-h3, .ftd .ftd-text .ftdt-title .sugt-p, .ftd .ftd-text .ftdt-title .ftdt-p {
   color: #fdfffd;
   text-shadow: 0 0 2px #2b1800;
   font-size: 1em;
@@ -1377,10 +1377,10 @@ html, body {
 
 .talk-base .tk-puff .tk-content.tks-s {
   z-index: auto;
-  border-top-left-radius: 36% 44%;
-  border-top-right-radius: 40% 36%;
-  border-bottom-right-radius: 43% 42%;
-  border-bottom-left-radius: 43% 44%;
+  border-top-left-radius: 42% 39%;
+  border-top-right-radius: 36% 39%;
+  border-bottom-right-radius: 42% 45%;
+  border-bottom-left-radius: 43% 45%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::before, .talk-base .tk-puff .tk-content.tks-s::after {
@@ -1396,12 +1396,12 @@ html, body {
 .talk-base .tk-puff .tk-content.tks-s::before {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(14deg);
-          transform: rotate(14deg);
-  border-top-left-radius: 43% 39%;
-  border-top-right-radius: 45% 37%;
-  border-bottom-right-radius: 40% 38%;
-  border-bottom-left-radius: 40% 36%;
+  -webkit-transform: rotate(11deg);
+          transform: rotate(11deg);
+  border-top-left-radius: 37% 40%;
+  border-top-right-radius: 41% 43%;
+  border-bottom-right-radius: 39% 38%;
+  border-bottom-left-radius: 40% 43%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::after {
@@ -1409,18 +1409,18 @@ html, body {
   left: 5%;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
-  border-top-left-radius: 44% 42%;
-  border-top-right-radius: 43% 42%;
-  border-bottom-right-radius: 37% 40%;
-  border-bottom-left-radius: 43% 42%;
+  border-top-left-radius: 38% 38%;
+  border-top-right-radius: 41% 38%;
+  border-bottom-right-radius: 43% 41%;
+  border-bottom-left-radius: 44% 39%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m {
   z-index: auto;
-  border-top-left-radius: 44% 35%;
-  border-top-right-radius: 40% 30%;
-  border-bottom-right-radius: 41% 38%;
-  border-bottom-left-radius: 44% 36%;
+  border-top-left-radius: 45% 29%;
+  border-top-right-radius: 36% 34%;
+  border-bottom-right-radius: 41% 34%;
+  border-bottom-left-radius: 40% 35%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before, .talk-base .tk-puff .tk-content.tks-m::after {
@@ -1436,27 +1436,27 @@ html, body {
 .talk-base .tk-puff .tk-content.tks-m::before {
   -webkit-transform: rotate(8deg);
           transform: rotate(8deg);
-  border-top-left-radius: 43% 40%;
-  border-top-right-radius: 50% 40%;
-  border-bottom-right-radius: 50% 36%;
-  border-bottom-left-radius: 43% 40%;
+  border-top-left-radius: 48% 35%;
+  border-top-right-radius: 44% 36%;
+  border-bottom-right-radius: 48% 36%;
+  border-bottom-left-radius: 46% 36%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::after {
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
-  border-top-left-radius: 45% 31%;
-  border-top-right-radius: 42% 33%;
-  border-bottom-right-radius: 43% 33%;
-  border-bottom-left-radius: 46% 38%;
+  -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
+  border-top-left-radius: 48% 36%;
+  border-top-right-radius: 49% 39%;
+  border-bottom-right-radius: 45% 32%;
+  border-bottom-left-radius: 49% 35%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l {
   z-index: auto;
-  border-top-left-radius: 35% 22%;
-  border-top-right-radius: 32% 25%;
-  border-bottom-right-radius: 34% 26%;
-  border-bottom-left-radius: 40% 23%;
+  border-top-left-radius: 33% 25%;
+  border-top-right-radius: 32% 23%;
+  border-bottom-right-radius: 35% 21%;
+  border-bottom-left-radius: 34% 27%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before, .talk-base .tk-puff .tk-content.tks-l::after {
@@ -1472,19 +1472,19 @@ html, body {
 .talk-base .tk-puff .tk-content.tks-l::before {
   -webkit-transform: rotate(8deg);
           transform: rotate(8deg);
-  border-top-left-radius: 43% 27%;
-  border-top-right-radius: 47% 32%;
-  border-bottom-right-radius: 42% 29%;
-  border-bottom-left-radius: 43% 28%;
+  border-top-left-radius: 44% 31%;
+  border-top-right-radius: 49% 26%;
+  border-bottom-right-radius: 48% 31%;
+  border-bottom-left-radius: 43% 30%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::after {
-  -webkit-transform: rotate(-8deg);
-          transform: rotate(-8deg);
-  border-top-left-radius: 43% 30%;
-  border-top-right-radius: 41% 31%;
-  border-bottom-right-radius: 46% 31%;
-  border-bottom-left-radius: 43% 33%;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  border-top-left-radius: 49% 33%;
+  border-top-right-radius: 50% 33%;
+  border-bottom-right-radius: 45% 34%;
+  border-bottom-left-radius: 42% 30%;
 }
 
 .talk-base .tk-puff .tk-content .tkc-p {
@@ -1786,10 +1786,10 @@ html, body {
     display: block;
     position: fixed;
     z-index: auto;
-    border-top-left-radius: 44% 36%;
-    border-top-right-radius: 40% 40%;
-    border-bottom-right-radius: 42% 39%;
-    border-bottom-left-radius: 40% 44%;
+    border-top-left-radius: 44% 44%;
+    border-top-right-radius: 45% 45%;
+    border-bottom-right-radius: 36% 37%;
+    border-bottom-left-radius: 41% 36%;
     -webkit-backdrop-filter: blur(3px);
             backdrop-filter: blur(3px);
   }
@@ -1809,9 +1809,9 @@ html, body {
     height: 90%;
     -webkit-transform: rotate(23deg);
             transform: rotate(23deg);
-    border-top-left-radius: 47% 60%;
-    border-top-right-radius: 55% 58%;
-    border-bottom-right-radius: 49% 63%;
+    border-top-left-radius: 46% 65%;
+    border-top-right-radius: 48% 57%;
+    border-bottom-right-radius: 47% 64%;
     border-bottom-left-radius: 50% 64%;
     background-color: red;
   }
@@ -1820,12 +1820,12 @@ html, body {
     top: -5%;
     width: 90%;
     height: 110%;
-    -webkit-transform: rotate(-25deg);
-            transform: rotate(-25deg);
-    border-top-left-radius: 53% 62%;
-    border-top-right-radius: 50% 60%;
-    border-bottom-right-radius: 46% 58%;
-    border-bottom-left-radius: 51% 62%;
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+    border-top-left-radius: 47% 56%;
+    border-top-right-radius: 52% 58%;
+    border-bottom-right-radius: 47% 57%;
+    border-bottom-left-radius: 46% 57%;
     background-color: green;
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area {
@@ -1935,6 +1935,22 @@ html, body {
   #navimenu #navimenu--on:checked ~ .navimenu--area .tglbutton-menu .tglbutton-menu--bar3 {
     -webkit-transform: translateY(-5vw) translateY(100%) rotate(-585deg);
             transform: translateY(-5vw) translateY(100%) rotate(-585deg);
+  }
+  .navimenu--contant .navicate {
+    margin: 1rem;
+  }
+  .navimenu--contant .navicate .navicate--on {
+    display: none;
+  }
+  .navimenu--contant .navicate .navicate--on:not(:checked) ~ .navicate--list {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    height: 0;
+  }
+  .navimenu--contant .navicate .navicate--on:checked ~ .navicate--list {
+    -webkit-transform: scaleY(100%);
+            transform: scaleY(100%);
+    height: auto;
   }
 }
 

@@ -11,7 +11,7 @@
 		<div class="s-wrapper">
 			<div class="s-rank  sdw_card">
 				<?php 
-					echo putH1Index('RANKING'); 
+					echo putH2Index('RANKING'); 
 					putPostViewsList();
 				 ?>
 			</div>

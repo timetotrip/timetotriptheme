@@ -1,18 +1,18 @@
 /*--------------------------------------------------------------
 ## Title
 --------------------------------------------------------------*/
-.h1-title{
+.hl-title{
     width:100%;
     position:relative;
     
-    .h1t-back{
+    .hlt-back{
         width:100%;
         position:absolute;
         bottom:0;
         height:40%;
     }
     
-    .h1t-name{
+    .hlt-name{
         position:absolute;
         top:0;
         margin: 0 auto;
@@ -21,7 +21,7 @@
         display:flex;
         justify-content: center;
         align-items: center;
-        h1{
+        h1,h2{
             text-align:center;
             color:$clb-g10;
             text-shadow: 2px 2px 4px $cla-d08;
@@ -30,7 +30,7 @@
             line-height: 1.5;
         }
         
-        &.h1t-spb{
+        &.hlt-spb{
             width:100%;
             justify-content: space-between;
         }
@@ -47,32 +47,32 @@
 /*--------------------------------------------------------------
 ## H1
 --------------------------------------------------------------*/
-.h1-title{
+.hl-title{
     @include mq(xl) {
         height:3em;
-        .h1t-name{
-            h1{font-size:2.2em;}
+        .hlt-name{
+            h1,h2{font-size:2.2em;}
             i{font-size: 2.2rem;}
         }
     }
     @include mq(tb) {
         height:2.8em;
-        .h1t-name{
-            h1{font-size:1.8em;}
+        .hlt-name{
+            h1,h2{font-size:1.8em;}
             i{font-size: 1.8rem;}
         }
     }
     @include mq(md) {
         height:3em;
-        .h1t-name{
-            h1{font-size:2.2em;}
+        .hlt-name{
+            h1,h2{font-size:2.2em;}
             i{font-size: 2.2rem;}
         }
     }
     @include mq(sm) {
         height:2.5em;
-        .h1t-name{
-            h1{font-size:1.8em;}
+        .hlt-name{
+            h1,h2{font-size:1.8em;}
             i{font-size: 1.8rem;}
         }
     }

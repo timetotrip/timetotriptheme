@@ -1,0 +1,16 @@
+@mixin accordionSP($baseclass){
+    .#{$baseclass}{
+        margin:1rem;
+        .#{$baseclass}--on{
+            display:none;
+        }
+        .#{$baseclass}--on:not(:checked) ~ .#{$baseclass}--list{
+            transform: scaleY(0);
+            height: 0;
+        }
+        .#{$baseclass}--on:checked ~ .#{$baseclass}--list{
+            transform: scaleY(100%);
+            height: auto;
+        }
+    }
+}
