@@ -9,7 +9,9 @@
         .navimenu--area{
             .navimenu--contant{
                 background-color: red;
-                margin: 15% 0;
+                margin-top: 10%;
+                height: 85%;
+                overflow-y: scroll;
             }
             @include tglbutton-menu-base(tglbutton-menu);
         }
@@ -25,5 +27,11 @@
 
     .navimenu--contant{
         @include accordionSP(navicate);
+        .navicate--on:not(:checked) ~ .navicate--toggle{
+            @include tglbutton-cate-off(tglbutton-cate,5vw);
+        }
+        .navicate--on:checked ~ .navicate--toggle{
+            @include tglbutton-cate-on(tglbutton-cate,5vw);
+        }
     }
 }

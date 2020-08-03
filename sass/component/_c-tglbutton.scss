@@ -4,16 +4,6 @@ $root2:1.4142;
 @mixin tglbutton-menu-base($baseclass){
     .#{$baseclass}{
         position: absolute;
-    }
-}
-
-@mixin tglbutton-menu-off($baseclass){
-    .#{$baseclass}{
-        right:15%;
-        bottom: 15%;
-        width: 70%;
-        height: 70%;
-
         display:flex;
         flex-direction: column;
         justify-content: space-between;
@@ -29,7 +19,19 @@ $root2:1.4142;
         }
     }
 }
+
+@mixin tglbutton-menu-off($baseclass){
+    @include tglbutton-menu-base($baseclass);
+    .#{$baseclass}{
+        right:15%;
+        bottom: 15%;
+        width: 70%;
+        height: 70%;
+
+    }
+}
 @mixin tglbutton-menu-on($baseclass,$b-size:10vw){
+    @include tglbutton-menu-base($baseclass);
     .#{$baseclass}{
         right:5%;
         bottom: 5%;
@@ -40,15 +42,6 @@ $root2:1.4142;
         flex-direction: column;
         justify-content: space-between;
         
-        .#{$baseclass}--bar1,
-        .#{$baseclass}--bar2,
-        .#{$baseclass}--bar3{
-            display: block;
-            width:100%;
-            height: 20%;
-            background-color: #000;
-            border-radius: 3px;
-        }
         .#{$baseclass}--bar1{
             transform: translateY($b-size/2) rotate((180*2)+45deg);
         }
@@ -64,6 +57,63 @@ $root2:1.4142;
         }
         .#{$baseclass}--bar3{
             transform: translateY(-$b-size/2) translateY(100%) rotate((-180*3)-45deg);
+        }
+    }
+}
+
+@mixin tglbutton-cate-base($baseclass,$b-size:10vw){
+    .#{$baseclass}{
+        display:inline-block;
+        width:$b-size;
+        height:$b-size;
+        background-color: yellow;
+        margin-right:$b-size/2;
+
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .#{$baseclass}--bar1,.#{$baseclass}--bar2{
+            display: block;
+            height: 15%;
+            background-color: #000;
+            border-radius: 3px;
+        }
+        .#{$baseclass}--bar1{
+            transform-origin:left top;
+            transform: rotate(45deg);
+
+        }
+        .#{$baseclass}--bar2{
+            transform-origin:left bottom;
+            transform: rotate(-45deg);
+        }
+    }
+}
+@mixin tglbutton-cate-off($baseclass,$b-size:10vw){
+    @include tglbutton-cate-base($baseclass,$b-size);
+    .#{$baseclass}{
+        transform: translateX($b-size/2);
+        .#{$baseclass}--bar1,.#{$baseclass}--bar2{
+            width:70%;
+        }
+        .#{$baseclass}--bar1{
+            transform-origin:left top;
+            transform: rotate(45deg);
+
+        }
+        .#{$baseclass}--bar2{
+            transform-origin:left bottom;
+            transform: rotate(-45deg);
+        }
+    }
+}
+@mixin tglbutton-cate-on($baseclass,$b-size:10vw){
+    @include tglbutton-cate-base($baseclass,$b-size);
+    .#{$baseclass}{
+        transform: none;
+        .#{$baseclass}--bar1,.#{$baseclass}--bar2{
+            width:126.5%;
         }
     }
 }
