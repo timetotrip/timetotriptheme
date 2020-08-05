@@ -39,6 +39,25 @@ function custom_comment_form_remove($arg) {
 class My_Walker_Comment extends Walker_Comment {
     function html5_comment( $comment, $depth, $args ) {
         $tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
+        $ret = "";
+        //$ret .= '<br>';
+        //$ret .= comment_class( $this->has_children ? 'parent' : '', $comment );
+        $ret .= get_comment_author( $comment );
+        //$ret .= esc_html(get_comment_text());
+        if( get_comment_author( $comment) == get_the_author() ){
+            $ret .= putTalk( array('who'=>'taco','where'=>'r'),get_comment_text());
+        }
+        else{
+            $ret .= putTalk( array('who'=>'ika','where'=>'l'),get_comment_text());
+        }
+        // $ret .= '<br>';
+
+        echo $ret;
+    }
+}
+class Demo_Walker_Comment extends Walker_Comment {
+    function html5_comment( $comment, $depth, $args ) {
+        $tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
  
         $commenter = wp_get_current_commenter();
         if ( $commenter['comment_author_email'] ) {
@@ -57,7 +76,8 @@ class My_Walker_Comment extends Walker_Comment {
                     <div class="comment-author">
                         <?php
                         if( get_comment_author( $comment) == get_the_author() ){
-                            echo '記事執筆者 ' . get_comment_author( $comment );
+                            echo '記事執筆者 ' . 
+                            $ret .= $tag;;
                         }else{
                             echo 'コメント投稿者 ' . get_comment_author( $comment );
                         }
