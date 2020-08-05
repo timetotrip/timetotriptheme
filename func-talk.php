@@ -54,11 +54,13 @@
 		$atts = shortcode_atts( array(
 			'who' => 'taco',
 			'where' => 'l',
+			'v-name' => '',
 		), $atts );
 		
 		$characterlist = array(
-			"taco" => new character( "タコ", "tacoicon.png" ),
-			"ika"  => new character( "イカ", "ikaicon.png" )
+			"taco"     => new character( "タコ", "tacoicon.png" ),
+			"ika"      => new character( "イカ", "ikaicon.png" ),
+			"visitor"  => new character( "サカナ", "fishicon.png" )
 		);
 		
 		$direct ='';
@@ -111,7 +113,11 @@
 				$div .= '<img src="' 
 							. getImagePath($characterlist[$atts['who']]->getPict()) 
 							. '" loading="lazy" alt="">';
-				$div .= '<p>' . $characterlist[$atts['who']]->getName() . '</p>';
+				if( $atts['v-name'] == ""):
+					$div .= '<p>' . $characterlist[$atts['who']]->getName() . '</p>';
+				else:
+					$div .= '<p>' . $atts['v-name'] . '</p>';
+				endif;
 			$div .= '</div>';
 			$div .= '<div class="tk-puff'. $direct	. '">';
 				$div .= '<span class="tk-triangle'. $direct	.'"></span>';

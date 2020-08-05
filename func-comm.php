@@ -42,13 +42,13 @@ class My_Walker_Comment extends Walker_Comment {
         $ret = "";
         //$ret .= '<br>';
         //$ret .= comment_class( $this->has_children ? 'parent' : '', $comment );
-        $ret .= get_comment_author( $comment );
+        //$ret .= get_comment_author( $comment );
         //$ret .= esc_html(get_comment_text());
         if( get_comment_author( $comment) == get_the_author() ){
             $ret .= putTalk( array('who'=>'taco','where'=>'r'),get_comment_text());
         }
         else{
-            $ret .= putTalk( array('who'=>'ika','where'=>'l'),get_comment_text());
+            $ret .= putTalk( array('who'=>'visitor','where'=>'l', 'v-name'=>get_comment_author( $comment )),get_comment_text());
         }
         // $ret .= '<br>';
 
