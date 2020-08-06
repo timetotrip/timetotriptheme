@@ -1518,10 +1518,10 @@ a:visited {
 
 .talk-base .tk-puff .tk-content.tks-s {
   z-index: auto;
-  border-top-left-radius: 45% 40%;
-  border-top-right-radius: 42% 44%;
-  border-bottom-right-radius: 43% 40%;
-  border-bottom-left-radius: 36% 44%;
+  border-top-left-radius: 43% 42%;
+  border-top-right-radius: 44% 36%;
+  border-bottom-right-radius: 36% 44%;
+  border-bottom-left-radius: 37% 40%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::before, .talk-base .tk-puff .tk-content.tks-s::after {
@@ -1537,31 +1537,31 @@ a:visited {
 .talk-base .tk-puff .tk-content.tks-s::before {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(14deg);
-          transform: rotate(14deg);
-  border-top-left-radius: 43% 43%;
-  border-top-right-radius: 40% 37%;
-  border-bottom-right-radius: 38% 37%;
-  border-bottom-left-radius: 41% 43%;
+  -webkit-transform: rotate(11deg);
+          transform: rotate(11deg);
+  border-top-left-radius: 36% 37%;
+  border-top-right-radius: 43% 41%;
+  border-bottom-right-radius: 45% 42%;
+  border-bottom-left-radius: 43% 39%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::after {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(-12deg);
-          transform: rotate(-12deg);
-  border-top-left-radius: 44% 42%;
-  border-top-right-radius: 43% 43%;
-  border-bottom-right-radius: 44% 38%;
-  border-bottom-left-radius: 45% 39%;
+  -webkit-transform: rotate(-11deg);
+          transform: rotate(-11deg);
+  border-top-left-radius: 45% 36%;
+  border-top-right-radius: 44% 41%;
+  border-bottom-right-radius: 39% 41%;
+  border-bottom-left-radius: 43% 37%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m {
   z-index: auto;
-  border-top-left-radius: 41% 29%;
-  border-top-right-radius: 43% 32%;
-  border-bottom-right-radius: 41% 36%;
-  border-bottom-left-radius: 37% 37%;
+  border-top-left-radius: 40% 34%;
+  border-top-right-radius: 36% 36%;
+  border-bottom-right-radius: 42% 31%;
+  border-bottom-left-radius: 38% 38%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before, .talk-base .tk-puff .tk-content.tks-m::after {
@@ -1575,29 +1575,29 @@ a:visited {
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before {
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-  border-top-left-radius: 48% 36%;
-  border-top-right-radius: 43% 33%;
-  border-bottom-right-radius: 44% 39%;
-  border-bottom-left-radius: 45% 40%;
+  -webkit-transform: rotate(9deg);
+          transform: rotate(9deg);
+  border-top-left-radius: 46% 32%;
+  border-top-right-radius: 50% 35%;
+  border-bottom-right-radius: 46% 31%;
+  border-bottom-left-radius: 44% 33%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::after {
-  -webkit-transform: rotate(-13deg);
-          transform: rotate(-13deg);
-  border-top-left-radius: 47% 36%;
-  border-top-right-radius: 44% 38%;
-  border-bottom-right-radius: 41% 38%;
-  border-bottom-left-radius: 42% 40%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  border-top-left-radius: 41% 34%;
+  border-top-right-radius: 42% 39%;
+  border-bottom-right-radius: 48% 32%;
+  border-bottom-left-radius: 46% 31%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l {
   z-index: auto;
-  border-top-left-radius: 31% 25%;
-  border-top-right-radius: 31% 21%;
-  border-bottom-right-radius: 40% 23%;
-  border-bottom-left-radius: 38% 30%;
+  border-top-left-radius: 33% 28%;
+  border-top-right-radius: 39% 28%;
+  border-bottom-right-radius: 38% 28%;
+  border-bottom-left-radius: 31% 22%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before, .talk-base .tk-puff .tk-content.tks-l::after {
@@ -1611,21 +1611,21 @@ a:visited {
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before {
-  -webkit-transform: rotate(8deg);
-          transform: rotate(8deg);
-  border-top-left-radius: 43% 34%;
-  border-top-right-radius: 42% 27%;
-  border-bottom-right-radius: 47% 33%;
-  border-bottom-left-radius: 46% 29%;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  border-top-left-radius: 49% 33%;
+  border-top-right-radius: 41% 30%;
+  border-bottom-right-radius: 45% 26%;
+  border-bottom-left-radius: 44% 34%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::after {
-  -webkit-transform: rotate(-9deg);
-          transform: rotate(-9deg);
-  border-top-left-radius: 41% 27%;
-  border-top-right-radius: 42% 32%;
-  border-bottom-right-radius: 47% 27%;
-  border-bottom-left-radius: 42% 31%;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  border-top-left-radius: 45% 34%;
+  border-top-right-radius: 41% 30%;
+  border-bottom-right-radius: 42% 35%;
+  border-bottom-left-radius: 47% 35%;
 }
 
 .talk-base .tk-puff .tk-content .tkc-p {
@@ -1751,6 +1751,10 @@ a:visited {
 .comment-form-author label:before {
   font-size: 14px;
   content: "ニックネーム";
+}
+
+#comment {
+  width: 100%;
 }
 
 #primary, #secondary {
@@ -1946,10 +1950,10 @@ a:visited {
     display: block;
     position: fixed;
     z-index: auto;
-    border-top-left-radius: 41% 36%;
-    border-top-right-radius: 38% 37%;
-    border-bottom-right-radius: 41% 42%;
-    border-bottom-left-radius: 38% 40%;
+    border-top-left-radius: 36% 41%;
+    border-top-right-radius: 39% 39%;
+    border-bottom-right-radius: 45% 40%;
+    border-bottom-left-radius: 40% 44%;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
@@ -1967,12 +1971,12 @@ a:visited {
     top: 5%;
     width: 110%;
     height: 90%;
-    -webkit-transform: rotate(24deg);
-            transform: rotate(24deg);
-    border-top-left-radius: 47% 57%;
-    border-top-right-radius: 47% 57%;
-    border-bottom-right-radius: 54% 59%;
-    border-bottom-left-radius: 51% 60%;
+    -webkit-transform: rotate(23deg);
+            transform: rotate(23deg);
+    border-top-left-radius: 51% 64%;
+    border-top-right-radius: 50% 58%;
+    border-bottom-right-radius: 49% 59%;
+    border-bottom-left-radius: 49% 64%;
     background-color: red;
   }
   #navimenu .navimenu--area::after {
@@ -1980,12 +1984,12 @@ a:visited {
     top: -5%;
     width: 90%;
     height: 110%;
-    -webkit-transform: rotate(-24deg);
-            transform: rotate(-24deg);
-    border-top-left-radius: 55% 62%;
-    border-top-right-radius: 49% 57%;
-    border-bottom-right-radius: 51% 61%;
-    border-bottom-left-radius: 54% 64%;
+    -webkit-transform: rotate(-23deg);
+            transform: rotate(-23deg);
+    border-top-left-radius: 53% 63%;
+    border-top-right-radius: 51% 62%;
+    border-bottom-right-radius: 54% 63%;
+    border-bottom-left-radius: 49% 61%;
     background-color: green;
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area {
@@ -2117,8 +2121,8 @@ a:visited {
             justify-content: space-between;
   }
   #navimenu #navimenu--on:checked ~ .navimenu--area .tglbutton-menu .tglbutton-menu--bar1 {
-    -webkit-transform: translateY(5vw) rotate(405deg);
-            transform: translateY(5vw) rotate(405deg);
+    -webkit-transform: translateY(5vw) rotate(45deg);
+            transform: translateY(5vw) rotate(45deg);
   }
   #navimenu #navimenu--on:checked ~ .navimenu--area .tglbutton-menu .tglbutton-menu--bar2 {
     position: absolute;
@@ -2131,8 +2135,8 @@ a:visited {
     border: solid 3px #2b1800;
   }
   #navimenu #navimenu--on:checked ~ .navimenu--area .tglbutton-menu .tglbutton-menu--bar3 {
-    -webkit-transform: translateY(-5vw) translateY(100%) rotate(-585deg);
-            transform: translateY(-5vw) translateY(100%) rotate(-585deg);
+    -webkit-transform: translateY(-5vw) translateY(100%) rotate(-225deg);
+            transform: translateY(-5vw) translateY(100%) rotate(-225deg);
   }
   .navimenu--contant .hl-title {
     margin: 2rem 0;
