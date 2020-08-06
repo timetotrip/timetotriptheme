@@ -129,6 +129,7 @@ $root2:1.4142;
     //position: relative;
     .#{$baseclass}{
         position: absolute;
+        z-index: 1;
         
         &::before{
             font-size:0.8*$fsize;

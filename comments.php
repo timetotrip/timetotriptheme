@@ -16,48 +16,53 @@
  * return early without loading the comments.
  */
 if ( post_password_required() ) {
-	return;
+    return;
 }
 ?>
 
 <div id="comments-view" class="comments-area">
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		echo putH2Index('コメント');
+    <?php
+    // You can start editing here -- including this comment!
+    if ( have_comments() ) :
+        echo putH2Index('コメント');
 
-		wp_list_comments(array('walker' => new My_Walker_Comment,));
-		
-		the_comments_navigation();
+        wp_list_comments(array('walker' => new My_Walker_Comment,));
+        
+        the_comments_navigation();
 
-	else :
-		//echo "コメントなし";
-	endif; // Check for have_comments().
+    else :
+        //echo "コメントなし";
+    endif; // Check for have_comments().
 
-	
-	?>
+    
+    ?>
 
 </div>
 <?php
-	if ( ! comments_open() ) :
-	else:
-		
-		$ret = '';
-		$ret .= '<div id="comments-post" class="comments-area">';
-		$ret .=     '<input type="checkbox" id="comments-post--on">';
-		$ret .=     '<div class="comments-post--area">';
-		$ret .=         '<div class="comments-post--contant">';
-		echo $ret;
+    if ( ! comments_open() ) :
+    else:
+        
+        $ret = '';
+        $ret .= '<div id="comments-post" class="comments-area">';
+        $ret .=     '<input type="checkbox" id="comments-post--on">';
+        $ret .=     '<div class="comments-post--area">';
+        $ret .=         '<div class="comments-post--contant">';
+        $ret .=              putH2Index('コメント投稿');
+        echo $ret;
 
-		//	comment_form();
+        comment_form();
 
-		$ret = '';
-		$ret .=         '</div>'; 
-		$ret .=         '<label for="comments-post--on" class="comments-post--toggle">';
-		$ret .=             '<i class="tglbutton-come"></i>';
-		$ret .=         '</label>';
-		$ret .=     '</div>';
-		$ret .= '</div>';
-		echo $ret;
-	endif;
+        $ret = '';
+        $ret .=              putTalk( array('who'=>'ika','where'=>'r', 'always' => 'true'),
+                                '気軽に書いてほしいか');
+        $ret .=              putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
+                                'チクらないから安心して');
+        $ret .=         '</div>'; 
+        $ret .=         '<label for="comments-post--on" class="comments-post--toggle">';
+        $ret .=             '<i class="tglbutton-come"></i>';
+        $ret .=         '</label>';
+        $ret .=     '</div>';
+        $ret .= '</div>';
+        echo $ret;
+    endif;
 ?>

@@ -57,13 +57,13 @@
     &::before{
         width:90%;
         left:5%;
-        transform: rotate(random(4)+10deg);
+        transform: rotate(random(5)+5deg);
         @include randomRadius(10,35%,35%);
     }
     &::after{ 
         width:90%;
         left:5%;
-        transform: rotate(random(4)-14deg);
+        transform: rotate(random(5)-10deg);
         @include randomRadius(10,35%,35%);
     }
 }

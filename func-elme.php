@@ -532,4 +532,18 @@ function putRand($self){
     $div .= '</div>';
     return $div;
 }
+
+/**
+ * 
+ * 投稿ナビゲーション
+ * 
+ */
+function archive_navi_template($template){
+    $template = '
+    <nav class="navigation %1$s" role="navigation">
+        <div class="nav-links">%3$s</div>
+    </nav>';
+    return $template;
+}
+add_action( 'navigation_markup_template', 'archive_navi_template' );
 ?>

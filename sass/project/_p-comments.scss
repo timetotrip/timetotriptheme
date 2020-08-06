@@ -1,6 +1,6 @@
 /*表示変更*/
-.comment-form-comment label{font-size:0;}
-.comment-form-comment label:before {font-size: 14px; content: "内容";}
+.comment-form-comment label{display: none;}
+//.comment-form-comment label:before {font-size: 14px; content: "内容";}
 .comment-form-author label{font-size:0;}
 .comment-form-author label:before {font-size: 14px; content: "ニックネーム";}
 .comments-area{margin:1rem 0;}
@@ -9,7 +9,9 @@
 /*投稿エリア*/
 @include mq(xl) {
     #comments-post{
-        display: none;
+        #comments-post--on{
+            display: none;
+        }
     }
 }
 @include mq(tb) {
@@ -19,12 +21,53 @@
             @include tglbutton-come-base(tglbutton-come,12vw);
         }
         #comments-post--on:not(:checked) ~ .comments-post--area{
-            //.navimenu--contant{transform: scale(0);}
+            .comments-post--contant{opacity: 0.00001; transform: scale(0);}
             @include tglbutton-come-off(tglbutton-come,12vw);
         }
         #comments-post--on:checked ~ .comments-post--area{
-            //.navimenu--contant{transform: scale(100%);}
+            .comments-post--contant{opacity: 1; transform: scale(100%);}
             @include tglbutton-come-on(tglbutton-come,12vw);
+        }
+    }
+}
+
+.comments-post--contant{
+    .hl-title{
+        margin: 2rem 0;
+    }
+    .comment-respond{
+        margin: 0 1rem;
+    }
+    .reply-title,.comment-form-comment,.comment-form-author,.form-submit{
+        margin: 0.5rem 0;
+    }
+    #comment{
+        resize:none;
+    }
+    .comment-form-author{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #author{
+            width: 60%;
+        }
+    }
+    .form-submit{
+        text-align: center;
+        #submit{
+            margin:0.5rem 0;
+            padding: 0.3rem 2rem;
+            width: 100%;
+
+            border-radius: 3px;
+            border: none;
+            
+            color: $clb-g10;
+            background-color: #d35a00;
+            font-size: 1.2em;
+            font-weight: bold;
+
+            filter: drop-shadow(1px 1px 0.5px rgba(10, 10, 10, 0.9));
         }
     }
 }

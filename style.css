@@ -1505,10 +1505,10 @@ a:visited {
 
 .talk-base .tk-puff .tk-content.tks-s {
   z-index: auto;
-  border-top-left-radius: 37% 44%;
-  border-top-right-radius: 37% 37%;
-  border-bottom-right-radius: 44% 37%;
-  border-bottom-left-radius: 41% 44%;
+  border-top-left-radius: 38% 40%;
+  border-top-right-radius: 39% 44%;
+  border-bottom-right-radius: 43% 43%;
+  border-bottom-left-radius: 39% 43%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::before, .talk-base .tk-puff .tk-content.tks-s::after {
@@ -1524,31 +1524,31 @@ a:visited {
 .talk-base .tk-puff .tk-content.tks-s::before {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(14deg);
-          transform: rotate(14deg);
-  border-top-left-radius: 44% 41%;
-  border-top-right-radius: 37% 44%;
-  border-bottom-right-radius: 40% 42%;
-  border-bottom-left-radius: 36% 37%;
+  -webkit-transform: rotate(9deg);
+          transform: rotate(9deg);
+  border-top-left-radius: 37% 36%;
+  border-top-right-radius: 40% 39%;
+  border-bottom-right-radius: 43% 39%;
+  border-bottom-left-radius: 45% 41%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::after {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(-11deg);
-          transform: rotate(-11deg);
-  border-top-left-radius: 44% 42%;
-  border-top-right-radius: 42% 44%;
-  border-bottom-right-radius: 43% 44%;
-  border-bottom-left-radius: 36% 40%;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  border-top-left-radius: 42% 41%;
+  border-top-right-radius: 37% 37%;
+  border-bottom-right-radius: 40% 45%;
+  border-bottom-left-radius: 38% 38%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m {
   z-index: auto;
-  border-top-left-radius: 45% 35%;
-  border-top-right-radius: 36% 29%;
-  border-bottom-right-radius: 37% 29%;
-  border-bottom-left-radius: 43% 34%;
+  border-top-left-radius: 36% 38%;
+  border-top-right-radius: 40% 32%;
+  border-bottom-right-radius: 36% 30%;
+  border-bottom-left-radius: 40% 35%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before, .talk-base .tk-puff .tk-content.tks-m::after {
@@ -1562,29 +1562,29 @@ a:visited {
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before {
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-  border-top-left-radius: 43% 38%;
-  border-top-right-radius: 45% 36%;
-  border-bottom-right-radius: 43% 38%;
-  border-bottom-left-radius: 43% 39%;
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+  border-top-left-radius: 43% 32%;
+  border-top-right-radius: 45% 31%;
+  border-bottom-right-radius: 49% 36%;
+  border-bottom-left-radius: 47% 32%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::after {
-  -webkit-transform: rotate(-11deg);
-          transform: rotate(-11deg);
-  border-top-left-radius: 43% 39%;
-  border-top-right-radius: 49% 39%;
-  border-bottom-right-radius: 50% 36%;
-  border-bottom-left-radius: 48% 33%;
+  -webkit-transform: rotate(-13deg);
+          transform: rotate(-13deg);
+  border-top-left-radius: 47% 33%;
+  border-top-right-radius: 50% 31%;
+  border-bottom-right-radius: 46% 40%;
+  border-bottom-left-radius: 49% 36%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l {
   z-index: auto;
-  border-top-left-radius: 35% 23%;
-  border-top-right-radius: 32% 28%;
-  border-bottom-right-radius: 31% 28%;
-  border-bottom-left-radius: 36% 24%;
+  border-top-left-radius: 35% 30%;
+  border-top-right-radius: 32% 22%;
+  border-bottom-right-radius: 36% 29%;
+  border-bottom-left-radius: 33% 28%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before, .talk-base .tk-puff .tk-content.tks-l::after {
@@ -1598,21 +1598,21 @@ a:visited {
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before {
-  -webkit-transform: rotate(6deg);
-          transform: rotate(6deg);
-  border-top-left-radius: 50% 33%;
-  border-top-right-radius: 42% 31%;
-  border-bottom-right-radius: 50% 32%;
-  border-bottom-left-radius: 49% 27%;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+  border-top-left-radius: 50% 31%;
+  border-top-right-radius: 50% 31%;
+  border-bottom-right-radius: 41% 32%;
+  border-bottom-left-radius: 44% 27%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::after {
   -webkit-transform: rotate(-9deg);
           transform: rotate(-9deg);
-  border-top-left-radius: 49% 27%;
-  border-top-right-radius: 44% 29%;
-  border-bottom-right-radius: 47% 32%;
-  border-bottom-left-radius: 46% 27%;
+  border-top-left-radius: 50% 29%;
+  border-top-right-radius: 42% 31%;
+  border-bottom-right-radius: 43% 26%;
+  border-bottom-left-radius: 48% 32%;
 }
 
 .talk-base .tk-puff .tk-content .tkc-p {
@@ -1662,10 +1662,10 @@ a:visited {
     margin-left: -50%;
   }
   /*
-	50% {
-		transform:scale(0.3, 0.3);
-		margin-left:-30%;
-	}*/
+    50% {
+        transform:scale(0.3, 0.3);
+        margin-left:-30%;
+    }*/
   100% {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
@@ -1680,10 +1680,10 @@ a:visited {
     margin-left: -50%;
   }
   /*
-	50% {
-		transform:scale(0.3, 0.3);
-		margin-left:-30%;
-	}*/
+    50% {
+        transform:scale(0.3, 0.3);
+        margin-left:-30%;
+    }*/
   100% {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
@@ -1698,10 +1698,10 @@ a:visited {
     margin-right: -50%;
   }
   /*
-	50% {
-		transform:scale(0.3, 0.3);
-		margin-right:-30%;
-	}*/
+    50% {
+        transform:scale(0.3, 0.3);
+        margin-right:-30%;
+    }*/
   100% {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
@@ -1716,10 +1716,10 @@ a:visited {
     margin-right: -50%;
   }
   /*
-	50% {
-		transform:scale(0.3, 0.3);
-		margin-right:-30%;
-	}*/
+    50% {
+        transform:scale(0.3, 0.3);
+        margin-right:-30%;
+    }*/
   100% {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
@@ -1729,12 +1729,7 @@ a:visited {
 
 /*表示変更*/
 .comment-form-comment label {
-  font-size: 0;
-}
-
-.comment-form-comment label:before {
-  font-size: 14px;
-  content: "内容";
+  display: none;
 }
 
 .comment-form-author label {
@@ -1756,7 +1751,7 @@ a:visited {
 
 /*投稿エリア*/
 @media screen and (max-width: 2400px) {
-  #comments-post {
+  #comments-post #comments-post--on {
     display: none;
   }
 }
@@ -1779,10 +1774,10 @@ a:visited {
     display: block;
     position: fixed;
     z-index: auto;
-    border-top-left-radius: 39% 37%;
-    border-top-right-radius: 43% 45%;
-    border-bottom-right-radius: 42% 38%;
-    border-bottom-left-radius: 43% 44%;
+    border-top-left-radius: 40% 39%;
+    border-top-right-radius: 44% 41%;
+    border-bottom-right-radius: 36% 37%;
+    border-bottom-left-radius: 43% 37%;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
@@ -1800,12 +1795,12 @@ a:visited {
     top: 5%;
     width: 110%;
     height: 90%;
-    -webkit-transform: rotate(23deg);
-            transform: rotate(23deg);
-    border-top-left-radius: 46% 56%;
-    border-top-right-radius: 47% 61%;
-    border-bottom-right-radius: 47% 57%;
-    border-bottom-left-radius: 50% 59%;
+    -webkit-transform: rotate(24deg);
+            transform: rotate(24deg);
+    border-top-left-radius: 50% 57%;
+    border-top-right-radius: 55% 64%;
+    border-bottom-right-radius: 54% 58%;
+    border-bottom-left-radius: 49% 61%;
     background-color: red;
   }
   #comments-post .comments-post--area::after {
@@ -1815,10 +1810,10 @@ a:visited {
     height: 110%;
     -webkit-transform: rotate(-23deg);
             transform: rotate(-23deg);
-    border-top-left-radius: 55% 64%;
-    border-top-right-radius: 48% 56%;
-    border-bottom-right-radius: 47% 64%;
-    border-bottom-left-radius: 51% 59%;
+    border-top-left-radius: 54% 63%;
+    border-top-right-radius: 49% 63%;
+    border-bottom-right-radius: 47% 57%;
+    border-bottom-left-radius: 50% 59%;
     background-color: green;
   }
   #comments-post #comments-post--on:not(:checked) ~ .comments-post--area {
@@ -1829,8 +1824,8 @@ a:visited {
     height: 12vw;
     -webkit-filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
             filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
-    -webkit-animation: yurayura 17s linear 75ms infinite normal both;
-            animation: yurayura 17s linear 75ms infinite normal both;
+    -webkit-animation: yurayura 21s linear 82ms infinite normal both;
+            animation: yurayura 21s linear 82ms infinite normal both;
   }
   #comments-post #comments-post--on:not(:checked) ~ .comments-post--area::before, #comments-post #comments-post--on:not(:checked) ~ .comments-post--area::after {
     background-color: #fdfffd;
@@ -1857,12 +1852,18 @@ a:visited {
   }
   #comments-post .comments-post--area .tglbutton-come {
     position: absolute;
+    z-index: 1;
   }
   #comments-post .comments-post--area .tglbutton-come::before {
     font-size: 9.6vw;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     color: #2b1800;
+  }
+  #comments-post #comments-post--on:not(:checked) ~ .comments-post--area .comments-post--contant {
+    opacity: 0.00001;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   #comments-post #comments-post--on:not(:checked) ~ .comments-post--area .tglbutton-come {
     right: 1.2vw;
@@ -1871,6 +1872,11 @@ a:visited {
   #comments-post #comments-post--on:not(:checked) ~ .comments-post--area .tglbutton-come::before {
     content: "\f086";
   }
+  #comments-post #comments-post--on:checked ~ .comments-post--area .comments-post--contant {
+    opacity: 1;
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
   #comments-post #comments-post--on:checked ~ .comments-post--area .tglbutton-come {
     right: 5%;
     bottom: 5%;
@@ -1878,6 +1884,56 @@ a:visited {
   #comments-post #comments-post--on:checked ~ .comments-post--area .tglbutton-come::before {
     content: "\f4b3";
   }
+}
+
+.comments-post--contant .hl-title {
+  margin: 2rem 0;
+}
+
+.comments-post--contant .comment-respond {
+  margin: 0 1rem;
+}
+
+.comments-post--contant .reply-title, .comments-post--contant .comment-form-comment, .comments-post--contant .comment-form-author, .comments-post--contant .form-submit {
+  margin: 0.5rem 0;
+}
+
+.comments-post--contant #comment {
+  resize: none;
+}
+
+.comments-post--contant .comment-form-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comments-post--contant .comment-form-author #author {
+  width: 60%;
+}
+
+.comments-post--contant .form-submit {
+  text-align: center;
+}
+
+.comments-post--contant .form-submit #submit {
+  margin: 0.5rem 0;
+  padding: 0.3rem 2rem;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  color: #fdfffd;
+  background-color: #d35a00;
+  font-size: 1.2em;
+  font-weight: bold;
+  -webkit-filter: drop-shadow(1px 1px 0.5px rgba(10, 10, 10, 0.9));
+          filter: drop-shadow(1px 1px 0.5px rgba(10, 10, 10, 0.9));
 }
 
 #primary, #secondary {
@@ -2073,10 +2129,10 @@ a:visited {
     display: block;
     position: fixed;
     z-index: auto;
-    border-top-left-radius: 42% 42%;
-    border-top-right-radius: 41% 42%;
-    border-bottom-right-radius: 38% 44%;
-    border-bottom-left-radius: 42% 45%;
+    border-top-left-radius: 36% 37%;
+    border-top-right-radius: 42% 38%;
+    border-bottom-right-radius: 37% 36%;
+    border-bottom-left-radius: 40% 42%;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
@@ -2094,12 +2150,12 @@ a:visited {
     top: 5%;
     width: 110%;
     height: 90%;
-    -webkit-transform: rotate(26deg);
-            transform: rotate(26deg);
-    border-top-left-radius: 52% 62%;
-    border-top-right-radius: 50% 59%;
-    border-bottom-right-radius: 55% 58%;
-    border-bottom-left-radius: 49% 57%;
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+    border-top-left-radius: 52% 56%;
+    border-top-right-radius: 51% 61%;
+    border-bottom-right-radius: 50% 64%;
+    border-bottom-left-radius: 53% 60%;
     background-color: red;
   }
   #navimenu .navimenu--area::after {
@@ -2107,12 +2163,12 @@ a:visited {
     top: -5%;
     width: 90%;
     height: 110%;
-    -webkit-transform: rotate(-24deg);
-            transform: rotate(-24deg);
-    border-top-left-radius: 54% 61%;
-    border-top-right-radius: 51% 56%;
-    border-bottom-right-radius: 48% 61%;
-    border-bottom-left-radius: 54% 62%;
+    -webkit-transform: rotate(-23deg);
+            transform: rotate(-23deg);
+    border-top-left-radius: 48% 65%;
+    border-top-right-radius: 52% 57%;
+    border-bottom-right-radius: 53% 61%;
+    border-bottom-left-radius: 54% 65%;
     background-color: green;
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area {
@@ -2123,8 +2179,8 @@ a:visited {
     height: 12vw;
     -webkit-filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
             filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
-    -webkit-animation: yurayura 18s linear 63ms infinite normal both;
-            animation: yurayura 18s linear 63ms infinite normal both;
+    -webkit-animation: yurayura 25s linear 59ms infinite normal both;
+            animation: yurayura 25s linear 59ms infinite normal both;
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area::before, #navimenu #navimenu--on:not(:checked) ~ .navimenu--area::after {
     background-color: #fdfffd;
