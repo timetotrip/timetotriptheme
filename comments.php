@@ -38,12 +38,29 @@ if ( post_password_required() ) {
 	?>
 
 </div>
-<div id="comments-post" class="comments-area">
-	<?php
-		if ( ! comments_open() ) :
-			echo '<p class="no-comments">' . esc_html_e( 'コメントは募集してませんよ', '_s' ) . '</p>';
-		else:
-			comment_form();
-		endif;
-	?>
-</div>
+<?php
+	if ( ! comments_open() ) :
+	else:
+		
+		$ret = '';
+		$ret .= '<div id="comments-post" class="comments-area">';
+		$ret .=     '<input type="checkbox" id="comments-post--on">';
+		$ret .=     '<div class="comments-post--area">';
+		$ret .=         '<div class="comments-post--contant">';
+		$ret .=         'test';
+		echo $ret;
+
+		//	comment_form();
+
+		$ret = '';
+		$ret .=         '</div>'; 
+		$ret .=         '<label for="comments-post--on" class="comments-post--toggle tglbutton-menu">';
+		$ret .=             '<span class="tglbutton-menu--bar1"></span>';
+		$ret .=             '<span class="tglbutton-menu--bar2"></span>';
+		$ret .=             '<span class="tglbutton-menu--bar3"></span>';
+		$ret .=         '</label>';
+		$ret .=     '</div>';
+		$ret .= '</div>';
+		echo $ret;
+	endif;
+?>

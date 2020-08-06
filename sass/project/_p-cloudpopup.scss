@@ -6,7 +6,7 @@
             drop-shadow($s-size $s-size $s-size $s-color);
 }
 
-@mixin cloudpouup($baseid:base,$c-size:12vw){
+@mixin cloudpouup($baseid:base,$csize:12vw,$xpos:0,$ypos:0){
 
     
     ##{$baseid}{
@@ -31,15 +31,15 @@
         }
         ##{$baseid}--on:not(:checked) ~ .#{$baseid}--area{
             background-color:$clb-g10;
-            bottom: 5%;
-            right: 5%;
-            width: $c-size;
-            height: $c-size;
+            bottom: $ypos;
+            right: $xpos;
+            width: $csize;
+            height: $csize;
             @include bordershadow(0.5px,#000,3px,rgba(0,0,0,0.9));
             &::before,&::after{
                 background-color:$clb-g10;
             }
-            animation: yurayura 20s linear 0s infinite normal both;
+            animation: yurayura random(10)+15s linear random(100)+0ms infinite normal both;
         }
         ##{$baseid}--on:checked ~ .#{$baseid}--area{
             background-color:$clb-g06;

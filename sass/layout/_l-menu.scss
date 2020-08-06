@@ -4,7 +4,7 @@
     }
 }
 @include mq(tb) {
-    @include cloudpouup(navimenu,12vw);
+    @include cloudpouup(navimenu,12vw,5%,5%);
     #navimenu{
         .navimenu--area{
             .navimenu--contant{

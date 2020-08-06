@@ -5,3 +5,13 @@
 .comment-form-author label:before {font-size: 14px; content: "ニックネーム";}
 .comments-area{margin:1rem 0;}
 #comment{width:100%;}
+
+/*投稿エリア*/
+@include mq(xl) {
+    #comments-post{
+        display: none;
+    }
+}
+@include mq(tb) {
+    @include cloudpouup(comments-post,12vw,24%,5%);
+}
