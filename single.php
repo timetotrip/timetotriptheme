@@ -49,7 +49,7 @@ get_header();
                     comments_template();
                 endif;
 
-                echo putH2Index('次はこれがおススメ');
+                echo putH2Index('次におススメ');
                 the_post_navigation(
                     array(
                         'prev_text' => 
