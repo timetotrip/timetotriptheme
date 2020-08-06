@@ -1505,10 +1505,10 @@ a:visited {
 
 .talk-base .tk-puff .tk-content.tks-s {
   z-index: auto;
-  border-top-left-radius: 38% 40%;
-  border-top-right-radius: 39% 44%;
-  border-bottom-right-radius: 43% 43%;
-  border-bottom-left-radius: 39% 43%;
+  border-top-left-radius: 38% 42%;
+  border-top-right-radius: 40% 36%;
+  border-bottom-right-radius: 39% 36%;
+  border-bottom-left-radius: 39% 45%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::before, .talk-base .tk-puff .tk-content.tks-s::after {
@@ -1524,31 +1524,31 @@ a:visited {
 .talk-base .tk-puff .tk-content.tks-s::before {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(9deg);
-          transform: rotate(9deg);
-  border-top-left-radius: 37% 36%;
-  border-top-right-radius: 40% 39%;
-  border-bottom-right-radius: 43% 39%;
-  border-bottom-left-radius: 45% 41%;
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+  border-top-left-radius: 36% 43%;
+  border-top-right-radius: 36% 45%;
+  border-bottom-right-radius: 37% 41%;
+  border-bottom-left-radius: 41% 36%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::after {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(-6deg);
-          transform: rotate(-6deg);
-  border-top-left-radius: 42% 41%;
-  border-top-right-radius: 37% 37%;
-  border-bottom-right-radius: 40% 45%;
-  border-bottom-left-radius: 38% 38%;
+  -webkit-transform: rotate(-9deg);
+          transform: rotate(-9deg);
+  border-top-left-radius: 39% 43%;
+  border-top-right-radius: 43% 44%;
+  border-bottom-right-radius: 40% 43%;
+  border-bottom-left-radius: 41% 38%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m {
   z-index: auto;
-  border-top-left-radius: 36% 38%;
-  border-top-right-radius: 40% 32%;
-  border-bottom-right-radius: 36% 30%;
-  border-bottom-left-radius: 40% 35%;
+  border-top-left-radius: 39% 38%;
+  border-top-right-radius: 43% 34%;
+  border-bottom-right-radius: 43% 38%;
+  border-bottom-left-radius: 36% 30%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before, .talk-base .tk-puff .tk-content.tks-m::after {
@@ -1564,27 +1564,27 @@ a:visited {
 .talk-base .tk-puff .tk-content.tks-m::before {
   -webkit-transform: rotate(8deg);
           transform: rotate(8deg);
-  border-top-left-radius: 43% 32%;
-  border-top-right-radius: 45% 31%;
-  border-bottom-right-radius: 49% 36%;
-  border-bottom-left-radius: 47% 32%;
+  border-top-left-radius: 45% 38%;
+  border-top-right-radius: 47% 32%;
+  border-bottom-right-radius: 42% 31%;
+  border-bottom-left-radius: 43% 36%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::after {
   -webkit-transform: rotate(-13deg);
           transform: rotate(-13deg);
-  border-top-left-radius: 47% 33%;
-  border-top-right-radius: 50% 31%;
-  border-bottom-right-radius: 46% 40%;
-  border-bottom-left-radius: 49% 36%;
+  border-top-left-radius: 48% 40%;
+  border-top-right-radius: 41% 34%;
+  border-bottom-right-radius: 44% 33%;
+  border-bottom-left-radius: 42% 35%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l {
   z-index: auto;
-  border-top-left-radius: 35% 30%;
-  border-top-right-radius: 32% 22%;
-  border-bottom-right-radius: 36% 29%;
-  border-bottom-left-radius: 33% 28%;
+  border-top-left-radius: 40% 30%;
+  border-top-right-radius: 31% 21%;
+  border-bottom-right-radius: 33% 26%;
+  border-bottom-left-radius: 34% 23%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before, .talk-base .tk-puff .tk-content.tks-l::after {
@@ -1600,19 +1600,19 @@ a:visited {
 .talk-base .tk-puff .tk-content.tks-l::before {
   -webkit-transform: rotate(7deg);
           transform: rotate(7deg);
-  border-top-left-radius: 50% 31%;
-  border-top-right-radius: 50% 31%;
-  border-bottom-right-radius: 41% 32%;
-  border-bottom-left-radius: 44% 27%;
+  border-top-left-radius: 45% 27%;
+  border-top-right-radius: 49% 28%;
+  border-bottom-right-radius: 45% 28%;
+  border-bottom-left-radius: 46% 31%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::after {
   -webkit-transform: rotate(-9deg);
           transform: rotate(-9deg);
-  border-top-left-radius: 50% 29%;
-  border-top-right-radius: 42% 31%;
-  border-bottom-right-radius: 43% 26%;
-  border-bottom-left-radius: 48% 32%;
+  border-top-left-radius: 43% 34%;
+  border-top-right-radius: 43% 27%;
+  border-bottom-right-radius: 45% 33%;
+  border-bottom-left-radius: 47% 29%;
 }
 
 .talk-base .tk-puff .tk-content .tkc-p {
@@ -1774,10 +1774,10 @@ a:visited {
     display: block;
     position: fixed;
     z-index: auto;
-    border-top-left-radius: 40% 39%;
-    border-top-right-radius: 44% 41%;
-    border-bottom-right-radius: 36% 37%;
-    border-bottom-left-radius: 43% 37%;
+    border-top-left-radius: 44% 36%;
+    border-top-right-radius: 42% 41%;
+    border-bottom-right-radius: 44% 40%;
+    border-bottom-left-radius: 41% 45%;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
@@ -1795,12 +1795,12 @@ a:visited {
     top: 5%;
     width: 110%;
     height: 90%;
-    -webkit-transform: rotate(24deg);
-            transform: rotate(24deg);
-    border-top-left-radius: 50% 57%;
-    border-top-right-radius: 55% 64%;
-    border-bottom-right-radius: 54% 58%;
-    border-bottom-left-radius: 49% 61%;
+    -webkit-transform: rotate(26deg);
+            transform: rotate(26deg);
+    border-top-left-radius: 53% 61%;
+    border-top-right-radius: 55% 58%;
+    border-bottom-right-radius: 54% 64%;
+    border-bottom-left-radius: 52% 60%;
     background-color: red;
   }
   #comments-post .comments-post--area::after {
@@ -1808,12 +1808,12 @@ a:visited {
     top: -5%;
     width: 90%;
     height: 110%;
-    -webkit-transform: rotate(-23deg);
-            transform: rotate(-23deg);
-    border-top-left-radius: 54% 63%;
-    border-top-right-radius: 49% 63%;
-    border-bottom-right-radius: 47% 57%;
-    border-bottom-left-radius: 50% 59%;
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+    border-top-left-radius: 53% 61%;
+    border-top-right-radius: 54% 58%;
+    border-bottom-right-radius: 49% 63%;
+    border-bottom-left-radius: 52% 61%;
     background-color: green;
   }
   #comments-post #comments-post--on:not(:checked) ~ .comments-post--area {
@@ -1824,8 +1824,8 @@ a:visited {
     height: 12vw;
     -webkit-filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
             filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
-    -webkit-animation: yurayura 21s linear 82ms infinite normal both;
-            animation: yurayura 21s linear 82ms infinite normal both;
+    -webkit-animation: yurayura 24s linear 93ms infinite normal both;
+            animation: yurayura 24s linear 93ms infinite normal both;
   }
   #comments-post #comments-post--on:not(:checked) ~ .comments-post--area::before, #comments-post #comments-post--on:not(:checked) ~ .comments-post--area::after {
     background-color: #fdfffd;
@@ -2129,10 +2129,10 @@ a:visited {
     display: block;
     position: fixed;
     z-index: auto;
-    border-top-left-radius: 36% 37%;
-    border-top-right-radius: 42% 38%;
-    border-bottom-right-radius: 37% 36%;
-    border-bottom-left-radius: 40% 42%;
+    border-top-left-radius: 38% 45%;
+    border-top-right-radius: 43% 44%;
+    border-bottom-right-radius: 38% 45%;
+    border-bottom-left-radius: 41% 38%;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
@@ -2150,12 +2150,12 @@ a:visited {
     top: 5%;
     width: 110%;
     height: 90%;
-    -webkit-transform: rotate(25deg);
-            transform: rotate(25deg);
-    border-top-left-radius: 52% 56%;
-    border-top-right-radius: 51% 61%;
-    border-bottom-right-radius: 50% 64%;
-    border-bottom-left-radius: 53% 60%;
+    -webkit-transform: rotate(24deg);
+            transform: rotate(24deg);
+    border-top-left-radius: 46% 65%;
+    border-top-right-radius: 55% 61%;
+    border-bottom-right-radius: 51% 56%;
+    border-bottom-left-radius: 46% 56%;
     background-color: red;
   }
   #navimenu .navimenu--area::after {
@@ -2163,12 +2163,12 @@ a:visited {
     top: -5%;
     width: 90%;
     height: 110%;
-    -webkit-transform: rotate(-23deg);
-            transform: rotate(-23deg);
-    border-top-left-radius: 48% 65%;
-    border-top-right-radius: 52% 57%;
-    border-bottom-right-radius: 53% 61%;
-    border-bottom-left-radius: 54% 65%;
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+    border-top-left-radius: 52% 59%;
+    border-top-right-radius: 51% 65%;
+    border-bottom-right-radius: 50% 65%;
+    border-bottom-left-radius: 49% 60%;
     background-color: green;
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area {
@@ -2179,8 +2179,8 @@ a:visited {
     height: 12vw;
     -webkit-filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
             filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
-    -webkit-animation: yurayura 25s linear 59ms infinite normal both;
-            animation: yurayura 25s linear 59ms infinite normal both;
+    -webkit-animation: yurayura 21s linear 96ms infinite normal both;
+            animation: yurayura 21s linear 96ms infinite normal both;
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area::before, #navimenu #navimenu--on:not(:checked) ~ .navimenu--area::after {
     background-color: #fdfffd;
@@ -2783,6 +2783,10 @@ a:visited {
   /*animation: bound 1s ease 0s infinite normal;*/
 }
 
+.single article figure iframe {
+  width: 100%;
+}
+
 .single .nav-links .nav-previous, .single .nav-links .nav-next {
   margin: 1em 0;
 }
@@ -2869,13 +2873,13 @@ a:visited {
   --c1: hsla(0, 0%, 0%, calc(1 - var(--p)));
   background: linear-gradient(calc(var(--p)*90deg), rgba(253, 255, 253, 0.8) 1px, transparent 0, transparent calc(100% - 1px), rgba(253, 255, 253, 0.8) 0) 50% 50%/ 0.35355em 0.35355em;
   --m: 
-				repeating-linear-gradient(45deg, 
-						red 0, red 2.5em, 
-						transparent 0, transparent 5em), 
-				repeating-linear-gradient(-45deg, 
-						var(--c0) 0, var(--c0) 2.5em, 
-						var(--c1) 0, var(--c1) 5em)
-		;
+                repeating-linear-gradient(45deg, 
+                        red 0, red 2.5em, 
+                        transparent 0, transparent 5em), 
+                repeating-linear-gradient(-45deg, 
+                        var(--c0) 0, var(--c0) 2.5em, 
+                        var(--c1) 0, var(--c1) 5em)
+        ;
 }
 
 /*--------------------------------------------------------------
