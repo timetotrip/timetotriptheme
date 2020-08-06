@@ -117,3 +117,48 @@ $root2:1.4142;
         }
     }
 }
+
+
+@mixin tglbutton-come-base($baseclass,$fsize){
+    /*
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    */
+
+    //position: relative;
+    .#{$baseclass}{
+        position: absolute;
+        
+        &::before{
+            font-size:0.8*$fsize;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color:$cla-d10;
+        }
+    }
+}
+
+@mixin tglbutton-come-off($baseclass,$fsize){
+    //align-items: center;
+    //justify-content: center;
+
+    .#{$baseclass}{
+        right: 0.1*$fsize;
+        bottom: 0.1*$fsize;
+        &::before{
+            content: "\f086";
+        }
+    }
+}
+@mixin tglbutton-come-on($baseclass,$fsize){
+    
+    .#{$baseclass}{
+        right: 5%;
+        bottom: 5%;
+
+        &::before{
+            content: "\f4b3";
+        }
+    }
+}

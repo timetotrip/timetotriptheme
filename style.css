@@ -1505,10 +1505,10 @@ a:visited {
 
 .talk-base .tk-puff .tk-content.tks-s {
   z-index: auto;
-  border-top-left-radius: 39% 43%;
-  border-top-right-radius: 38% 41%;
-  border-bottom-right-radius: 43% 43%;
-  border-bottom-left-radius: 37% 40%;
+  border-top-left-radius: 37% 44%;
+  border-top-right-radius: 37% 37%;
+  border-bottom-right-radius: 44% 37%;
+  border-bottom-left-radius: 41% 44%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::before, .talk-base .tk-puff .tk-content.tks-s::after {
@@ -1524,12 +1524,12 @@ a:visited {
 .talk-base .tk-puff .tk-content.tks-s::before {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(11deg);
-          transform: rotate(11deg);
-  border-top-left-radius: 37% 39%;
-  border-top-right-radius: 37% 37%;
-  border-bottom-right-radius: 37% 41%;
-  border-bottom-left-radius: 43% 41%;
+  -webkit-transform: rotate(14deg);
+          transform: rotate(14deg);
+  border-top-left-radius: 44% 41%;
+  border-top-right-radius: 37% 44%;
+  border-bottom-right-radius: 40% 42%;
+  border-bottom-left-radius: 36% 37%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::after {
@@ -1537,18 +1537,18 @@ a:visited {
   left: 5%;
   -webkit-transform: rotate(-11deg);
           transform: rotate(-11deg);
-  border-top-left-radius: 45% 43%;
-  border-top-right-radius: 41% 45%;
-  border-bottom-right-radius: 37% 43%;
+  border-top-left-radius: 44% 42%;
+  border-top-right-radius: 42% 44%;
+  border-bottom-right-radius: 43% 44%;
   border-bottom-left-radius: 36% 40%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m {
   z-index: auto;
-  border-top-left-radius: 38% 29%;
-  border-top-right-radius: 40% 29%;
-  border-bottom-right-radius: 38% 30%;
-  border-bottom-left-radius: 40% 38%;
+  border-top-left-radius: 45% 35%;
+  border-top-right-radius: 36% 29%;
+  border-bottom-right-radius: 37% 29%;
+  border-bottom-left-radius: 43% 34%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before, .talk-base .tk-puff .tk-content.tks-m::after {
@@ -1562,29 +1562,29 @@ a:visited {
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before {
-  -webkit-transform: rotate(9deg);
-          transform: rotate(9deg);
-  border-top-left-radius: 42% 34%;
-  border-top-right-radius: 44% 36%;
-  border-bottom-right-radius: 49% 39%;
-  border-bottom-left-radius: 48% 39%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  border-top-left-radius: 43% 38%;
+  border-top-right-radius: 45% 36%;
+  border-bottom-right-radius: 43% 38%;
+  border-bottom-left-radius: 43% 39%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::after {
-  -webkit-transform: rotate(-13deg);
-          transform: rotate(-13deg);
-  border-top-left-radius: 44% 32%;
-  border-top-right-radius: 44% 36%;
-  border-bottom-right-radius: 42% 32%;
-  border-bottom-left-radius: 41% 37%;
+  -webkit-transform: rotate(-11deg);
+          transform: rotate(-11deg);
+  border-top-left-radius: 43% 39%;
+  border-top-right-radius: 49% 39%;
+  border-bottom-right-radius: 50% 36%;
+  border-bottom-left-radius: 48% 33%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l {
   z-index: auto;
-  border-top-left-radius: 40% 22%;
-  border-top-right-radius: 31% 29%;
-  border-bottom-right-radius: 34% 25%;
-  border-bottom-left-radius: 31% 26%;
+  border-top-left-radius: 35% 23%;
+  border-top-right-radius: 32% 28%;
+  border-bottom-right-radius: 31% 28%;
+  border-bottom-left-radius: 36% 24%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before, .talk-base .tk-puff .tk-content.tks-l::after {
@@ -1600,19 +1600,19 @@ a:visited {
 .talk-base .tk-puff .tk-content.tks-l::before {
   -webkit-transform: rotate(6deg);
           transform: rotate(6deg);
-  border-top-left-radius: 45% 30%;
-  border-top-right-radius: 44% 30%;
-  border-bottom-right-radius: 42% 33%;
-  border-bottom-left-radius: 41% 28%;
+  border-top-left-radius: 50% 33%;
+  border-top-right-radius: 42% 31%;
+  border-bottom-right-radius: 50% 32%;
+  border-bottom-left-radius: 49% 27%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::after {
-  -webkit-transform: rotate(-7deg);
-          transform: rotate(-7deg);
-  border-top-left-radius: 41% 28%;
-  border-top-right-radius: 48% 26%;
-  border-bottom-right-radius: 48% 32%;
-  border-bottom-left-radius: 44% 26%;
+  -webkit-transform: rotate(-9deg);
+          transform: rotate(-9deg);
+  border-top-left-radius: 49% 27%;
+  border-top-right-radius: 44% 29%;
+  border-bottom-right-radius: 47% 32%;
+  border-bottom-left-radius: 46% 27%;
 }
 
 .talk-base .tk-puff .tk-content .tkc-p {
@@ -1779,10 +1779,10 @@ a:visited {
     display: block;
     position: fixed;
     z-index: auto;
-    border-top-left-radius: 41% 37%;
-    border-top-right-radius: 43% 39%;
-    border-bottom-right-radius: 37% 43%;
-    border-bottom-left-radius: 40% 40%;
+    border-top-left-radius: 39% 37%;
+    border-top-right-radius: 43% 45%;
+    border-bottom-right-radius: 42% 38%;
+    border-bottom-left-radius: 43% 44%;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
@@ -1802,10 +1802,10 @@ a:visited {
     height: 90%;
     -webkit-transform: rotate(23deg);
             transform: rotate(23deg);
-    border-top-left-radius: 55% 57%;
-    border-top-right-radius: 48% 56%;
-    border-bottom-right-radius: 54% 61%;
-    border-bottom-left-radius: 53% 62%;
+    border-top-left-radius: 46% 56%;
+    border-top-right-radius: 47% 61%;
+    border-bottom-right-radius: 47% 57%;
+    border-bottom-left-radius: 50% 59%;
     background-color: red;
   }
   #comments-post .comments-post--area::after {
@@ -1813,12 +1813,12 @@ a:visited {
     top: -5%;
     width: 90%;
     height: 110%;
-    -webkit-transform: rotate(-22deg);
-            transform: rotate(-22deg);
-    border-top-left-radius: 46% 61%;
-    border-top-right-radius: 52% 56%;
-    border-bottom-right-radius: 54% 58%;
-    border-bottom-left-radius: 48% 61%;
+    -webkit-transform: rotate(-23deg);
+            transform: rotate(-23deg);
+    border-top-left-radius: 55% 64%;
+    border-top-right-radius: 48% 56%;
+    border-bottom-right-radius: 47% 64%;
+    border-bottom-left-radius: 51% 59%;
     background-color: green;
   }
   #comments-post #comments-post--on:not(:checked) ~ .comments-post--area {
@@ -1829,8 +1829,8 @@ a:visited {
     height: 12vw;
     -webkit-filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
             filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
-    -webkit-animation: yurayura 22s linear 24ms infinite normal both;
-            animation: yurayura 22s linear 24ms infinite normal both;
+    -webkit-animation: yurayura 17s linear 75ms infinite normal both;
+            animation: yurayura 17s linear 75ms infinite normal both;
   }
   #comments-post #comments-post--on:not(:checked) ~ .comments-post--area::before, #comments-post #comments-post--on:not(:checked) ~ .comments-post--area::after {
     background-color: #fdfffd;
@@ -1847,6 +1847,36 @@ a:visited {
   }
   #comments-post #comments-post--on:checked ~ .comments-post--area::before, #comments-post #comments-post--on:checked ~ .comments-post--area::after {
     background-color: rgba(253, 255, 253, 0);
+  }
+  #comments-post .comments-post--area {
+    /*
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    */
+  }
+  #comments-post .comments-post--area .tglbutton-come {
+    position: absolute;
+  }
+  #comments-post .comments-post--area .tglbutton-come::before {
+    font-size: 9.6vw;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #2b1800;
+  }
+  #comments-post #comments-post--on:not(:checked) ~ .comments-post--area .tglbutton-come {
+    right: 1.2vw;
+    bottom: 1.2vw;
+  }
+  #comments-post #comments-post--on:not(:checked) ~ .comments-post--area .tglbutton-come::before {
+    content: "\f086";
+  }
+  #comments-post #comments-post--on:checked ~ .comments-post--area .tglbutton-come {
+    right: 5%;
+    bottom: 5%;
+  }
+  #comments-post #comments-post--on:checked ~ .comments-post--area .tglbutton-come::before {
+    content: "\f4b3";
   }
 }
 
@@ -2043,10 +2073,10 @@ a:visited {
     display: block;
     position: fixed;
     z-index: auto;
-    border-top-left-radius: 42% 40%;
-    border-top-right-radius: 43% 45%;
-    border-bottom-right-radius: 42% 37%;
-    border-bottom-left-radius: 38% 43%;
+    border-top-left-radius: 42% 42%;
+    border-top-right-radius: 41% 42%;
+    border-bottom-right-radius: 38% 44%;
+    border-bottom-left-radius: 42% 45%;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
@@ -2064,12 +2094,12 @@ a:visited {
     top: 5%;
     width: 110%;
     height: 90%;
-    -webkit-transform: rotate(24deg);
-            transform: rotate(24deg);
-    border-top-left-radius: 49% 57%;
-    border-top-right-radius: 52% 65%;
-    border-bottom-right-radius: 52% 62%;
-    border-bottom-left-radius: 53% 57%;
+    -webkit-transform: rotate(26deg);
+            transform: rotate(26deg);
+    border-top-left-radius: 52% 62%;
+    border-top-right-radius: 50% 59%;
+    border-bottom-right-radius: 55% 58%;
+    border-bottom-left-radius: 49% 57%;
     background-color: red;
   }
   #navimenu .navimenu--area::after {
@@ -2077,12 +2107,12 @@ a:visited {
     top: -5%;
     width: 90%;
     height: 110%;
-    -webkit-transform: rotate(-22deg);
-            transform: rotate(-22deg);
-    border-top-left-radius: 48% 58%;
-    border-top-right-radius: 52% 65%;
-    border-bottom-right-radius: 46% 62%;
-    border-bottom-left-radius: 46% 63%;
+    -webkit-transform: rotate(-24deg);
+            transform: rotate(-24deg);
+    border-top-left-radius: 54% 61%;
+    border-top-right-radius: 51% 56%;
+    border-bottom-right-radius: 48% 61%;
+    border-bottom-left-radius: 54% 62%;
     background-color: green;
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area {
@@ -2093,8 +2123,8 @@ a:visited {
     height: 12vw;
     -webkit-filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
             filter: drop-shadow(0.5px 0.5px 0px #000) drop-shadow(-0.5px 0.5px 0px #000) drop-shadow(0.5px -0.5px 0px #000) drop-shadow(-0.5px -0.5px 0px #000) drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.9));
-    -webkit-animation: yurayura 17s linear 60ms infinite normal both;
-            animation: yurayura 17s linear 60ms infinite normal both;
+    -webkit-animation: yurayura 18s linear 63ms infinite normal both;
+            animation: yurayura 18s linear 63ms infinite normal both;
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area::before, #navimenu #navimenu--on:not(:checked) ~ .navimenu--area::after {
     background-color: #fdfffd;

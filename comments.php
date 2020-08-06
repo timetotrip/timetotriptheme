@@ -47,17 +47,14 @@ if ( post_password_required() ) {
 		$ret .=     '<input type="checkbox" id="comments-post--on">';
 		$ret .=     '<div class="comments-post--area">';
 		$ret .=         '<div class="comments-post--contant">';
-		$ret .=         'test';
 		echo $ret;
 
 		//	comment_form();
 
 		$ret = '';
 		$ret .=         '</div>'; 
-		$ret .=         '<label for="comments-post--on" class="comments-post--toggle tglbutton-menu">';
-		$ret .=             '<span class="tglbutton-menu--bar1"></span>';
-		$ret .=             '<span class="tglbutton-menu--bar2"></span>';
-		$ret .=             '<span class="tglbutton-menu--bar3"></span>';
+		$ret .=         '<label for="comments-post--on" class="comments-post--toggle">';
+		$ret .=             '<i class="tglbutton-come"></i>';
 		$ret .=         '</label>';
 		$ret .=     '</div>';
 		$ret .= '</div>';

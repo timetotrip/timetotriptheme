@@ -14,4 +14,17 @@
 }
 @include mq(tb) {
     @include cloudpouup(comments-post,12vw,24%,5%);
+    #comments-post{
+        .comments-post--area{
+            @include tglbutton-come-base(tglbutton-come,12vw);
+        }
+        #comments-post--on:not(:checked) ~ .comments-post--area{
+            //.navimenu--contant{transform: scale(0);}
+            @include tglbutton-come-off(tglbutton-come,12vw);
+        }
+        #comments-post--on:checked ~ .comments-post--area{
+            //.navimenu--contant{transform: scale(100%);}
+            @include tglbutton-come-on(tglbutton-come,12vw);
+        }
+    }
 }
