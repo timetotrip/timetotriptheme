@@ -20,38 +20,30 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments-view" class="comments-area">
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
-		?>
-		<h2 class="comments-title">ここコメット</h2><!-- .comments-title -->
+		echo putH2Index('コメント');
 
-		<?php the_comments_navigation(); ?>
-
-		<ol class="comment-list">
-			<?php
-			wp_list_comments(
-				array(
-					'walker' => new My_Walker_Comment,
-				)
-			);
-			?>
-		</ol><!-- .comment-list -->
-
-		<?php
+		wp_list_comments(array('walker' => new My_Walker_Comment,));
+		
 		the_comments_navigation();
 
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments"><?php esc_html_e( 'コメントは募集してませんよ', '_s' ); ?></p>
-			<?php
-		endif;
 	else :
 		//echo "コメントなし";
 	endif; // Check for have_comments().
 
-	comment_form();
+	
 	?>
 
-</div><!-- #comments -->
+</div>
+<div id="comments-post" class="comments-area">
+	<?php
+		if ( ! comments_open() ) :
+			echo '<p class="no-comments">' . esc_html_e( 'コメントは募集してませんよ', '_s' ) . '</p>';
+		else:
+			comment_form();
+		endif;
+	?>
+</div>

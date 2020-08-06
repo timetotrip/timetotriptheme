@@ -1483,21 +1483,8 @@ a:visited {
   height: auto;
   max-width: 90%;
   background-color: #FFFFFF;
-  padding: 5%;
+  padding: 5% 3% 5% 7%;
   position: relative;
-  /*
-			z-index:auto;
-			
-			&::before,&::after{
-				content:'';
-				position:absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				z-index: -1;
-			}
-			*/
 }
 
 .talk-base .tk-puff .tk-content.tkdr-lr {
@@ -1518,10 +1505,10 @@ a:visited {
 
 .talk-base .tk-puff .tk-content.tks-s {
   z-index: auto;
-  border-top-left-radius: 43% 42%;
-  border-top-right-radius: 44% 36%;
-  border-bottom-right-radius: 36% 44%;
-  border-bottom-left-radius: 37% 40%;
+  border-top-left-radius: 39% 39%;
+  border-top-right-radius: 44% 44%;
+  border-bottom-right-radius: 36% 37%;
+  border-bottom-left-radius: 42% 38%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::before, .talk-base .tk-puff .tk-content.tks-s::after {
@@ -1539,29 +1526,29 @@ a:visited {
   left: 5%;
   -webkit-transform: rotate(11deg);
           transform: rotate(11deg);
-  border-top-left-radius: 36% 37%;
-  border-top-right-radius: 43% 41%;
-  border-bottom-right-radius: 45% 42%;
-  border-bottom-left-radius: 43% 39%;
+  border-top-left-radius: 40% 40%;
+  border-top-right-radius: 39% 45%;
+  border-bottom-right-radius: 41% 44%;
+  border-bottom-left-radius: 36% 37%;
 }
 
 .talk-base .tk-puff .tk-content.tks-s::after {
   width: 90%;
   left: 5%;
-  -webkit-transform: rotate(-11deg);
-          transform: rotate(-11deg);
-  border-top-left-radius: 45% 36%;
-  border-top-right-radius: 44% 41%;
-  border-bottom-right-radius: 39% 41%;
-  border-bottom-left-radius: 43% 37%;
+  -webkit-transform: rotate(-13deg);
+          transform: rotate(-13deg);
+  border-top-left-radius: 40% 44%;
+  border-top-right-radius: 44% 40%;
+  border-bottom-right-radius: 38% 45%;
+  border-bottom-left-radius: 42% 36%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m {
   z-index: auto;
-  border-top-left-radius: 40% 34%;
-  border-top-right-radius: 36% 36%;
-  border-bottom-right-radius: 42% 31%;
-  border-bottom-left-radius: 38% 38%;
+  border-top-left-radius: 44% 37%;
+  border-top-right-radius: 39% 34%;
+  border-bottom-right-radius: 42% 32%;
+  border-bottom-left-radius: 38% 34%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before, .talk-base .tk-puff .tk-content.tks-m::after {
@@ -1575,29 +1562,29 @@ a:visited {
 }
 
 .talk-base .tk-puff .tk-content.tks-m::before {
-  -webkit-transform: rotate(9deg);
-          transform: rotate(9deg);
-  border-top-left-radius: 46% 32%;
-  border-top-right-radius: 50% 35%;
-  border-bottom-right-radius: 46% 31%;
-  border-bottom-left-radius: 44% 33%;
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+  border-top-left-radius: 50% 38%;
+  border-top-right-radius: 41% 33%;
+  border-bottom-right-radius: 42% 39%;
+  border-bottom-left-radius: 41% 34%;
 }
 
 .talk-base .tk-puff .tk-content.tks-m::after {
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
-  border-top-left-radius: 41% 34%;
-  border-top-right-radius: 42% 39%;
-  border-bottom-right-radius: 48% 32%;
-  border-bottom-left-radius: 46% 31%;
+  -webkit-transform: rotate(-12deg);
+          transform: rotate(-12deg);
+  border-top-left-radius: 46% 38%;
+  border-top-right-radius: 42% 31%;
+  border-bottom-right-radius: 49% 38%;
+  border-bottom-left-radius: 48% 36%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l {
   z-index: auto;
-  border-top-left-radius: 33% 28%;
-  border-top-right-radius: 39% 28%;
-  border-bottom-right-radius: 38% 28%;
-  border-bottom-left-radius: 31% 22%;
+  border-top-left-radius: 38% 22%;
+  border-top-right-radius: 39% 25%;
+  border-bottom-right-radius: 35% 26%;
+  border-bottom-left-radius: 33% 29%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before, .talk-base .tk-puff .tk-content.tks-l::after {
@@ -1611,44 +1598,50 @@ a:visited {
 }
 
 .talk-base .tk-puff .tk-content.tks-l::before {
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
-  border-top-left-radius: 49% 33%;
-  border-top-right-radius: 41% 30%;
-  border-bottom-right-radius: 45% 26%;
-  border-bottom-left-radius: 44% 34%;
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+  border-top-left-radius: 44% 31%;
+  border-top-right-radius: 49% 33%;
+  border-bottom-right-radius: 41% 26%;
+  border-bottom-left-radius: 41% 35%;
 }
 
 .talk-base .tk-puff .tk-content.tks-l::after {
-  -webkit-transform: rotate(-6deg);
-          transform: rotate(-6deg);
-  border-top-left-radius: 45% 34%;
-  border-top-right-radius: 41% 30%;
-  border-bottom-right-radius: 42% 35%;
-  border-bottom-left-radius: 47% 35%;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  border-top-left-radius: 47% 28%;
+  border-top-right-radius: 42% 35%;
+  border-bottom-right-radius: 50% 34%;
+  border-bottom-left-radius: 50% 27%;
 }
 
 .talk-base .tk-puff .tk-content .tkc-p {
   word-wrap: break-word;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.8em;
+}
+
+.talk-base .tk-puff .tk-content .tkc-p:first-child {
+  margin-top: 0.8em;
 }
 
 @media screen and (max-width: 2400px) {
   .talk-base .tk-puff .tk-content .tkc-p {
     font-size: 1.2em;
-    line-height: 1.5em;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.8em;
   }
 }
 
 @media screen and (max-width: 580px) {
   .talk-base .tk-puff .tk-content .tkc-p {
     font-size: 1em;
-    line-height: 1.5em;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.8em;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .talk-base .tk-puff .tk-content .tkc-p {
+    font-size: 0.9em;
   }
 }
 
@@ -1751,6 +1744,10 @@ a:visited {
 .comment-form-author label:before {
   font-size: 14px;
   content: "ニックネーム";
+}
+
+.comments-area {
+  margin: 1rem 0;
 }
 
 #comment {
@@ -1950,10 +1947,10 @@ a:visited {
     display: block;
     position: fixed;
     z-index: auto;
-    border-top-left-radius: 36% 41%;
-    border-top-right-radius: 39% 39%;
-    border-bottom-right-radius: 45% 40%;
-    border-bottom-left-radius: 40% 44%;
+    border-top-left-radius: 37% 40%;
+    border-top-right-radius: 38% 40%;
+    border-bottom-right-radius: 41% 43%;
+    border-bottom-left-radius: 36% 43%;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
@@ -1973,10 +1970,10 @@ a:visited {
     height: 90%;
     -webkit-transform: rotate(23deg);
             transform: rotate(23deg);
-    border-top-left-radius: 51% 64%;
-    border-top-right-radius: 50% 58%;
-    border-bottom-right-radius: 49% 59%;
-    border-bottom-left-radius: 49% 64%;
+    border-top-left-radius: 50% 58%;
+    border-top-right-radius: 47% 64%;
+    border-bottom-right-radius: 51% 63%;
+    border-bottom-left-radius: 51% 58%;
     background-color: red;
   }
   #navimenu .navimenu--area::after {
@@ -1986,10 +1983,10 @@ a:visited {
     height: 110%;
     -webkit-transform: rotate(-23deg);
             transform: rotate(-23deg);
-    border-top-left-radius: 53% 63%;
-    border-top-right-radius: 51% 62%;
-    border-bottom-right-radius: 54% 63%;
-    border-bottom-left-radius: 49% 61%;
+    border-top-left-radius: 55% 63%;
+    border-top-right-radius: 53% 56%;
+    border-bottom-right-radius: 55% 60%;
+    border-bottom-left-radius: 52% 57%;
     background-color: green;
   }
   #navimenu #navimenu--on:not(:checked) ~ .navimenu--area {

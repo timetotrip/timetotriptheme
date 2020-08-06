@@ -87,21 +87,8 @@
 			max-width:90%;
 			
 			background-color:#FFFFFF;
-			padding:5%;
+			padding:5% 3% 5% 7%;
 			position:relative;
-			/*
-			z-index:auto;
-			
-			&::before,&::after{
-				content:'';
-				position:absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				z-index: -1;
-			}
-			*/
 			&::before{
 				background-color:#FFFFFF;
 			}
@@ -121,26 +108,18 @@
 			
 			.tkc-p{
 				word-wrap:break-word;
-				margin-left:0;
-				margin-right:0;
+				margin:0;
+				line-height:1.6;
+				letter-spacing:0.1em;
+				margin-bottom:0.8em;
+				&:first-child{
+					margin-top:0.8em;
+				}
 			}
 			
-			@include mq(xl) {
-				.tkc-p{
-					font-size:1.2em;
-					line-height:1.5em;
-					letter-spacing:0.1em;
-					margin-bottom:0.8em;
-				}
-			}
-			@include mq(md) {
-				.tkc-p{
-					font-size:1em;
-					line-height:1.5em;
-					letter-spacing:0.1em;
-					margin-bottom:0.8em;
-				}
-			}
+			@include mq(xl) {.tkc-p{font-size:1.2em;}}
+			@include mq(md) {.tkc-p{font-size:1em;}}
+			@include mq(sm) {.tkc-p{font-size:0.9em;}}
 		}
 	}
 	
