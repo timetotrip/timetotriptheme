@@ -1,0 +1,23 @@
+@mixin width-button(){
+    @include mq(xl) {
+        margin:1rem 0;
+        padding: 1rem 2rem;
+        width: 30%;
+        font-size: 1.6rem;
+    
+    }
+
+    @include mq(tb) {
+        margin:0.5rem 0;
+        padding: 1rem 2rem;
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    border-radius: 3px;
+    border: none;
+    
+    font-weight: bold;
+
+    filter: drop-shadow(1px 1px 0.5px rgba(10, 10, 10, 0.9));
+}

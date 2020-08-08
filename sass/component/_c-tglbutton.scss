@@ -119,14 +119,7 @@ $root2:1.4142;
 }
 
 
-@mixin tglbutton-come-base($baseclass,$fsize){
-    /*
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    */
-
-    //position: relative;
+@mixin tglbutton-faws-base($baseclass,$fsize){
     .#{$baseclass}{
         position: absolute;
         z-index: 1;
@@ -141,12 +134,9 @@ $root2:1.4142;
 }
 
 @mixin tglbutton-come-off($baseclass,$fsize){
-    //align-items: center;
-    //justify-content: center;
-
     .#{$baseclass}{
-        right: 0.1*$fsize;
-        bottom: 0.1*$fsize;
+        right: 5%;
+        bottom: 10%;
         &::before{
             content: "\f086";
         }
@@ -160,6 +150,29 @@ $root2:1.4142;
 
         &::before{
             content: "\f4b3";
+        }
+    }
+}
+
+
+
+@mixin tglbutton-share-off($baseclass,$fsize){
+    .#{$baseclass}{
+        right: 15%;
+        bottom: 5%;
+        &::before{
+            content: "\f1e0";
+        }
+    }
+}
+@mixin tglbutton-share-on($baseclass,$fsize){
+    
+    .#{$baseclass}{
+        right: 5%;
+        bottom: 5%;
+
+        &::before{
+            content: "\f057";
         }
     }
 }

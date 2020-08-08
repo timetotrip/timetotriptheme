@@ -1,0 +1,96 @@
+$color-fb:#4267B2;
+$color-tw:#00acee;
+$color-ln:#00c300;
+
+/*投稿エリア*/
+@include mq(xl) {
+    #sns-share{
+        #sns-share--on{
+            display: none;
+        }
+    }
+}
+@include mq(tb) {
+    @include cloudpouup(sns-share,12vw,5%,18%);
+    #sns-share{
+        .sns-share--area{
+            @include tglbutton-faws-base(tglbutton-come,12vw);
+        }
+        #sns-share--on:not(:checked) ~ .sns-share--area{
+            .sns-share--contant{opacity: 0.00001; transform: scale(0);}
+            @include tglbutton-share-off(tglbutton-come,12vw);
+        }
+        #sns-share--on:checked ~ .sns-share--area{
+            .sns-share--contant{opacity: 1; transform: scale(100%);}
+            @include tglbutton-share-on(tglbutton-come,12vw);
+        }
+    }
+}
+
+
+
+.sns-share--contant{
+    .hl-title{
+        margin: 2rem 0;
+    }
+    .sns-button{
+        margin: 0 1rem;
+        display:flex;
+        @include mq(xl) {justify-content: space-between;}
+        @include mq(md) {flex-direction: column;}
+
+        .sns-button--fb,.sns-button--tw,.sns-button--ln{
+            @include width-button();
+            a{
+                text-decoration: none;
+                display: flex;
+                i{
+                    font-size:3rem;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 3px;
+                        left: 3px;
+                        width: 86%;
+                        height: 84%;
+                        border-radius: 5px;
+                        z-index:-1;
+                        background-color:white;
+                    }
+                }
+                span{
+                    font-size:1.8rem;
+                    color: $clb-g10;
+                }
+                
+                @include mq(xl) {
+                    flex-direction: column;
+                    align-items: center;
+                    i{margin:0;}
+                    span{display: inline-block;}
+                }
+                @include mq(md) {
+                    flex-direction: row;
+                    i{margin-right: 1rem;}
+                    span{display: inline-block;}
+                }
+            }
+        }
+        .sns-button--fb{
+            i{color: $color-fb;}
+            background-color: $color-fb;
+        }
+        .sns-button--tw{
+            i{color: $color-tw;}
+            background-color: $color-tw;
+        }
+        .sns-button--ln{
+            i{color: $color-ln;}
+            background-color: $color-ln;
+        }
+    }
+    .sns-button--talk{
+        margin: 0 1rem;
+    }
+}

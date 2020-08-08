@@ -44,6 +44,7 @@ get_header();
                 echo "</article>";
                 wp_reset_query();
 
+                get_template_part( 'sns' ); 
 
                 if ( comments_open() || get_comments_number() ) :
                     comments_template();

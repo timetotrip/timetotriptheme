@@ -52,11 +52,13 @@ if ( post_password_required() ) {
 
         comment_form();
 
-        $ret = '';
-        $ret .=              putTalk( array('who'=>'ika','where'=>'r', 'always' => 'true'),
-                                '気軽に書いてほしいか');
-        $ret .=              putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
-                                'チクらないから安心して');
+        $ret = '';;
+        $ret .=             '<div class="comments-post--talk">';
+        $ret .=                 putTalk( array('who'=>'ika','where'=>'r', 'always' => 'true'),
+                                    '気軽に書いてほしいか');
+        $ret .=                  putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
+                                    'チクらないから安心して');
+        $ret .=             '</div>';
         $ret .=         '</div>'; 
         $ret .=         '<label for="comments-post--on" class="comments-post--toggle">';
         $ret .=             '<i class="tglbutton-come"></i>';
