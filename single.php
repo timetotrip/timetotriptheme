@@ -36,10 +36,10 @@ get_header();
                 
                 echo "<article>";
                     echo TidyContent( do_shortcode( get_the_content() ), array(
-                        '-3' => putCate((get_the_category())[0], $pid),
-                        '-4' => putSuggest((get_the_category())[0], get_the_tags() ,$pid),
-                        '-5' => putFutured(),
-                        '-6' => putRand($pid)
+                        '-3' => putInLinkCate((get_the_category())[0], $pid),
+                        '-4' => putInLinkSugg((get_the_category())[0] ,$pid, get_the_tags()),
+                        '-5' => putInLinkFutr($pid),
+                        '-6' => putInLinkRand($pid)
                     ));
                 echo "</article>";
                 wp_reset_query();
@@ -50,6 +50,8 @@ get_header();
                     comments_template();
                 endif;
 
+                echo putInLinknavigation();
+                /*
                 echo putH2Index('次におススメ');
                 the_post_navigation(
                     array(
@@ -62,6 +64,7 @@ get_header();
                         .' <p class="nav-title">%title</p>',
                     )
                 );
+                */
 
             endwhile; // End of the loop.
             ?>
