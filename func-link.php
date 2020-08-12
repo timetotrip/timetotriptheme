@@ -12,10 +12,14 @@ function putInLink( $id1, $id2, $class, $title ){
     $div .=     '['.$id1.'] ['.$id2.']';
 
     if($id1 != 0){
-        $div .=     '<a href="' . get_the_permalink($id1) .'">' . get_the_title($id1). '</a>';
+        $div .=     '<a href="' . get_the_permalink($id1) 
+        .   '" onclick="ga(\'send\', \'event\', \'inlink\', \'click\', \'L' .$class .'\');">' 
+        .   get_the_title($id1). '</a>';
     }
     if($id2 != 0){
-        $div .=     '<a href="' . get_the_permalink($id2) .'">' . get_the_title($id2). '</a>';
+        $div .=     '<a href="' . get_the_permalink($id2)
+        .   '" onclick="ga(\'send\', \'event\', \'inlink\', \'click\', \'L' .$class .'\');">' 
+        .   get_the_title($id2). '</a>';
     }
     $div .= '</nav>';
     return $div;
