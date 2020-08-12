@@ -1,0 +1,24 @@
+
+$title-size:18px;
+
+.inlink{
+    margin: 1em 0;
+    padding:0.5rem;
+    @include gradborder-fire(2px,$title-size*1.5);
+    
+    .inlink--title{
+        margin:$title-size/2 0.2em;
+        background-color: $clb-bkg;
+        display:inline-block;
+        font-size:$title-size;
+        line-height:$title-size;
+        font-weight: bold;
+    }
+    .inlink--a{
+        display:inline-block;
+        margin:0.3em;
+        line-height: 1.4;
+        letter-spacing:0.1em;
+    }
+}
+

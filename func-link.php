@@ -8,16 +8,15 @@
 function putInLink( $id1, $id2, $class, $title ){
     $div = '';
     $div .= '<nav class="inlink inlink--' . $class . '">';
-    $div .=     '<p>' . $title . '</p>';
-    $div .=     '['.$id1.'] ['.$id2.']';
+    $div .=     '<p class="inlink--title">' . $title . '</p>';
 
     if($id1 != 0){
-        $div .=     '<a href="' . get_the_permalink($id1) 
+        $div .=     '<a class="inlink--a" href="' . get_the_permalink($id1) 
         .   '" onclick="ga(\'send\', \'event\', \'inlink\', \'click\', \'L' .$class .'\');">' 
         .   get_the_title($id1). '</a>';
     }
     if($id2 != 0){
-        $div .=     '<a href="' . get_the_permalink($id2)
+        $div .=     '<a class="inlink--a" href="' . get_the_permalink($id2)
         .   '" onclick="ga(\'send\', \'event\', \'inlink\', \'click\', \'L' .$class .'\');">' 
         .   get_the_title($id2). '</a>';
     }
@@ -47,7 +46,7 @@ function putInLinkCate($cat, $self){
     endif;
     wp_reset_query();
 
-    return putInLink($ids[0],$ids[1],"cate","同じカテゴリーのおススメ記事");
+    return putInLink($ids[0],$ids[1],"cate","同じカテゴリーの記事");
 }
 
 
@@ -65,7 +64,7 @@ function putInLinkSugg($cat, $self, $tugs){
     $ids[] = searchSuggIds(-1,$cat->term_id,$tugs, $self );
     wp_reset_query();
 
-    return putInLink($ids[0],$ids[1],"sugg","似たキーワードのおススメ記事");
+    return putInLink($ids[0],$ids[1],"sugg","似たキーワードの記事");
 }
 
 function searchSuggIds( $incat, $outcat, $tugs, $self ){

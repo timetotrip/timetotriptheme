@@ -1,0 +1,42 @@
+@mixin gradborder-fire($b-size:2px,$m-top:30px){
+    position: relative;
+    z-index: 1;
+    &::before,&::after{
+        content:"";
+        position:absolute;
+        border-radius: 5px;
+    }
+    &::before{
+        z-index: -2;
+        top:$m-top;
+        left:0;
+        right: 0;
+        bottom:0;
+        background: linear-gradient(60deg, #ffed00, #f79533, #f37055, #884713, #ff0000);
+        //background: linear-gradient(60deg, #ffed00, #eb5e00, #632700,#141c6b);
+        background-size: 300% 300%;
+        animation: animatedgradient 3s ease alternate infinite;
+        //border: #EEE dashed 2px;
+    }
+    &::after{
+        z-index: -1;
+        top:$b-size+$m-top;
+        left:$b-size;
+        right: $b-size;
+        bottom:$b-size;
+        background-color: $clb-bkg;
+        //border: $clb-bkg dashed $b-size;
+    }
+}
+@keyframes animatedgradient {
+	0% {
+        background-position: 0% 50%;
+        
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+        background-position: 0% 50%;
+	}
+}

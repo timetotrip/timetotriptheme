@@ -1,5 +1,5 @@
 .grd-back{ 
-
+/*
 	$list-back-grad: 
 		#F0F0F0 0%,
 		#FFFFFF 70%,
@@ -8,7 +8,8 @@
 	width:100%;
 	height:auto;
 	background: linear-gradient(15deg, $list-back-grad);
-
+*/
+	background-color: $clb-bkg;
 }
 
 /*--------------------------------------------------------------
