@@ -1,0 +1,55 @@
+.embe-ytb{
+    .embe-ytb--a{
+        display: block;
+        width: 100%;
+        position: relative;
+        .embe-ytb--title{
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+            z-index:0;
+            padding: 0.8em;
+            font-size: 0.8em;
+            font-weight: bold;
+            color: white;
+            //filter: drop-shadow(1px 1px 0px rgba(5, 5, 5, 0.9));
+
+            &::before{
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left:0;
+                right: 0;
+                height: 100%;
+                background:linear-gradient(0deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6));;
+
+            }
+        }
+        .embe-ytb--icon{
+            position: absolute;
+            font-size: 3em;
+            top: 50%;
+            z-index:0;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            &::after{
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 15%;
+                left: 15%;
+                right: 15%;
+                height: 60%;
+                background-color: white;
+            }
+        }
+        .embe-ytb--img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

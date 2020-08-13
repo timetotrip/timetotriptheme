@@ -1,5 +1,10 @@
 @mixin gradborder-fire($b-size:2px,$m-top:30px){
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     position: relative;
+    
     z-index: 1;
     &::before,&::after{
         content:"";
