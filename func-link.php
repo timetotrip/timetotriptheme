@@ -5,22 +5,21 @@
  * In link format
  * * * * * * * * * * * * * * * * * */
 
-function putInLink( $id1, $id2, $class, $title ){
+function putInLink( $ids, $class, $title ){
     $div = '';
-    $div .= '<nav class="inlink inlink--' . $class . '">';
-    $div .=     '<p class="inlink--title">' . $title . '</p>';
+    if(count($ids)!=0){
+        $div .= '<nav class="inlink inlink--' . $class . '">';
+        $div .=     '<p class="inlink--title">' . $title . '</p>';
 
-    if($id1 != 0){
-        $div .=     '<a class="inlink--a" href="' . get_the_permalink($id1) 
-        .   '" onclick="ga(\'send\', \'event\', \'inlink\', \'click\', \'L' .$class .'\');">' 
-        .   get_the_title($id1). '</a>';
+        foreach($ids as $id){
+            if($id != 0){
+                $div .=     '<a class="inlink--a" href="' . get_the_permalink($id) 
+                .   '" onclick="ga(\'send\', \'event\', \'inlink\', \'click\', \'L' .$class .'\');">' 
+                .   get_the_title($id). '</a>';
+            }
+        }
+        $div .= '</nav>';
     }
-    if($id2 != 0){
-        $div .=     '<a class="inlink--a" href="' . get_the_permalink($id2)
-        .   '" onclick="ga(\'send\', \'event\', \'inlink\', \'click\', \'L' .$class .'\');">' 
-        .   get_the_title($id2). '</a>';
-    }
-    $div .= '</nav>';
     return $div;
 }
 
@@ -46,7 +45,7 @@ function putInLinkCate($cat, $self){
     endif;
     wp_reset_query();
 
-    return putInLink($ids[0],$ids[1],"cate","同じカテゴリーの記事");
+    return putInLink($ids,"cate","同じカテゴリーの記事");
 }
 
 
@@ -64,7 +63,7 @@ function putInLinkSugg($cat, $self, $tugs){
     $ids[] = searchSuggIds(-1,$cat->term_id,$tugs, $self );
     wp_reset_query();
 
-    return putInLink($ids[0],$ids[1],"sugg","似たキーワードの記事");
+    return putInLink($ids,"sugg","似たキーワードの記事");
 }
 
 function searchSuggIds( $incat, $outcat, $tugs, $self ){
@@ -109,7 +108,7 @@ function putInLinkFutr($self){
         endwhile;
     endif;
     wp_reset_query();
-    return putInLink($ids[0],$ids[1],"futr","注目記事");
+    return putInLink($ids,"futr","注目記事");
 }
 
 
@@ -130,7 +129,7 @@ function putInLinkRand($self){
         endwhile;
     endif;
     wp_reset_query();
-    return putInLink($ids[0],$ids[1],"rand","I'm feeling lucky");
+    return putInLink($ids,"rand","I'm feeling lucky");
 }
 
 function putInLinknavigation(){
@@ -148,6 +147,6 @@ function putInLinknavigation(){
     else{
         $ids[] = 0;
     }
-    return putInLink($ids[0],$ids[1],"futr","次はこれを読もう！");
+    return putInLink($ids,"futr","次はこれを読もう！");
 }
 ?>
