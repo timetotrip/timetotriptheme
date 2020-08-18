@@ -285,24 +285,47 @@ function breadcrumb(){
                     }
                 }
             } 
+            elseif(is_singular('strain')){
+                $categories = get_the_terms($post->ID,'strain-cat');
+                if($categories != NULL){
+                    $cat = $categories[0];
+                    if($cat -> parent != 0){
+                        $ancestors = array_reverse(get_ancestors( $cat -> cat_ID, 'category' ));
+                        foreach($ancestors as $ancestor){
+                            $str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="bc-ele">'
+                                            .'<a href="'. get_category_link($ancestor).'" itemprop="url" class="bce-arrow">'
+                                                .'<span itemprop="title">'. get_cat_name($ancestor). '</span>'
+                                            .'</a>'
+                                        .'</div>';
+                        }
+                    }
+                    $str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="bc-ele">'
+                                    .'<a href="'. get_category_link($cat -> term_id). '" itemprop="url" class="bce-arrow">'
+                                        .'<span itemprop="title">'. $cat-> name . '</span>'
+                                    .'</a>'
+                                .'</div>';
+                }
+            }
             elseif(is_single()){
                 $categories = get_the_category($post->ID);
-                $cat = $categories[0];
-                if($cat -> parent != 0){
-                    $ancestors = array_reverse(get_ancestors( $cat -> cat_ID, 'category' ));
-                    foreach($ancestors as $ancestor){
-                        $str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="bc-ele">'
-                                        .'<a href="'. get_category_link($ancestor).'" itemprop="url" class="bce-arrow">'
-                                            .'<span itemprop="title">'. get_cat_name($ancestor). '</span>'
-                                        .'</a>'
-                                    .'</div>';
+                if($categories != NULL){
+                    $cat = $categories[0];
+                    if($cat -> parent != 0){
+                        $ancestors = array_reverse(get_ancestors( $cat -> cat_ID, 'category' ));
+                        foreach($ancestors as $ancestor){
+                            $str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="bc-ele">'
+                                            .'<a href="'. get_category_link($ancestor).'" itemprop="url" class="bce-arrow">'
+                                                .'<span itemprop="title">'. get_cat_name($ancestor). '</span>'
+                                            .'</a>'
+                                        .'</div>';
+                        }
                     }
+                    $str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="bc-ele">'
+                                    .'<a href="'. get_category_link($cat -> term_id). '" itemprop="url" class="bce-arrow">'
+                                        .'<span itemprop="title">'. $cat-> cat_name . '</span>'
+                                    .'</a>'
+                                .'</div>';
                 }
-                $str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="bc-ele">'
-                                .'<a href="'. get_category_link($cat -> term_id). '" itemprop="url" class="bce-arrow">'
-                                    .'<span itemprop="title">'. $cat-> cat_name . '</span>'
-                                .'</a>'
-                            .'</div>';
             }
             else{
                 $str.='<div class="bc-ele">'. wp_title('', false) .'</div>';
@@ -314,7 +337,7 @@ function breadcrumb(){
                                 .'</div>';
             $str.='</div>';
         }
-        echo $str;
+        return $str;
 }
 
 /* * * * * * * * * * * * * * * * * *
@@ -381,6 +404,16 @@ function TidyContent( $raw, $putlist ){
         $i += 1;
     }
     
+    return $ret;
+}
+function putH2IndexS($title,$id){
+    $ret = "";
+    $ret .= '<div class="sa-h2">';
+    $ret .=     '<i class="fab fa-gripfire ptn-txgrad-fire sdw_card"></i>';
+    $ret .=     '<h2 id="'.$id.'">';
+    $ret .=         $title;
+    $ret .=     '</h2>';
+    $ret .= '</div>';
     return $ret;
 }
 /* * * * * * * * * * * * * * * * * *

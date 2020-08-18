@@ -1,4 +1,4 @@
-.single{
+.single,.strain{
 
     
     article{
@@ -6,48 +6,7 @@
         overflow: hidden;
         
         .sa-h2{
-            margin: 2em 0;
-            display:flex;
-            align-items:flex-end;
-            position:relative;
-            z-index:1;
-            
-            h2{
-                font-family: "Sawarabi Mincho";
-                text-shadow: 0.3px 0.3px 0.2px $clb-g10, -0.3px -0.3px 0.2px $clb-g10,
-                                            0.3px -0.3px 0.2px $clb-g10, -0.3px 0.3px 0.2px $clb-g10;
-                font-weight: bold;
-            }
-            
-            &:before{
-                z-index:-1;
-                content:"";
-                position:absolute;
-                bottom:0;
-                right:0;
-                width:95%;
-                height:1.5em;
-                
-                --rlist: var(--c) 0 1px, transparent 0 3px;
-                overflow: hidden;
-                background: 
-                        repeating-linear-gradient(var(--ang-0, -45deg), 
-                                var(--rlist)) var(--pos-0, 0 0)/ var(--dim), 
-                        linear-gradient(var(--ang), var(--nlist));
-                        
-                --dim: 100% no-repeat;
-                --ang: 2deg;
-                --pos-1: 100%;
-                --ang-0: -60deg;
-                --ang-1: 60deg;
-                --c: rgba(250,250,250,1);
-                --nlist: rgba(183, 82, 10, 1) 50%, rgba(183, 82, 10, 0) 0%;
-            }
-            
-            i{
-                height:1em;
-                margin:0;
-            }
+            @include firebrants;
         }
         
         h3{
@@ -193,7 +152,7 @@
 /*--------------------------------------------------------------
 ## SinglePage
 --------------------------------------------------------------*/
-.single{
+.single,.strain{
 
     article{
         

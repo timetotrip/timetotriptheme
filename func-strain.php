@@ -49,26 +49,44 @@
         $name_j =   get_field('name_japanese');
         $name_aka = get_field('aka');
         $huedeg = 0;
+        $desc = "";
 
         if(get_field('item')=='marijuana'){
             $blevel= get_field('blevel');
+            
             $updown = $blevel['updown'];
             if($updown>50){
-                $huedeg = 100 * (($updown - 50)/50) * -1;
+                $huedeg = 120 * (($updown - 50)/50) * -1;
             }
             else if($updown<50){
-                $huedeg = 100 * ((50 - $updown)/50);
+                $huedeg = 120 * ((50 - $updown)/50);
             }
-        };
 
-        $div .= putStrainHeader($name_e,$name_j,$name_aka,$huedeg);
+            //var_dump($blevel);
+            //var_dump($blevel['sih']);
+            if($blevel['sih']!=false){
+                $desc = $blevel['sih']->name . '大麻の銘柄';
+            }
+            else{
+                $desc = '大麻の銘柄';
+            }
+        }
 
+        $div .= putStrainHeader($name_e,$name_j,$desc,$huedeg);
+
+        $div .= breadcrumb();
+        $div .= "<article>";
+        $div .= putH2IndexS("銘柄の基本情報","str-base");
+
+        $div .= "</article>";
         return $div;
     }
-    function putStrainHeader($name_e,$name_j,$name_aka,$huedeg){
+    function putStrainHeader($name_e,$name_j,$desc,$huedeg){
         $div = "";
         $div .= '<div class="s-firstview strhead sdw_card">';
-        $div .=     '<div class="sf-inner strhead--inner" style="--huedeg:'.$huedeg.'deg;">';
+        $div .=     '<div class="sf-inner strhead--inner">';
+        $div .=         '<div class="strhead--bgcol" style="--huedeg:'.$huedeg.'deg;"></div>';
+        $div .=         '<img class="strhead--bgimg" src="'.getImagePath("strain-bg.jpg").'" alt="" loading="lazy" >';
         $div .=         '<div class="sf-title strhead--title sdw_card">';
         $div .=             '<h1 class="sf-h1 strhead--h1">';
         $div .=                 $name_e  ;
@@ -76,9 +94,9 @@
         $div .=             '<p class="strhead--h1">';
         $div .=                 $name_j;
         $div .=             '</p>';
-        if($name_aka!=""){
+        if($desc!=""){
             $div .=         '<p class="strhead--h1">';
-            $div .=             " 別名  ". $name_aka;
+            $div .=             $desc;
             $div .=         '</p>';
         }
         $div .=         '</div>';

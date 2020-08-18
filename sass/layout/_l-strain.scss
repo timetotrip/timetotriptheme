@@ -3,11 +3,23 @@
     .strhead--inner{
         padding-top:60%;
         width : 100% ;
-        background-color: green;
-        filter: hue-rotate(var(--huedeg));
-
         position: relative;
-
+        .strhead--bgimg,.strhead--bgcol{
+            position: absolute;
+            top:0;
+            left:0;
+            right: 0;
+            bottom:0;
+            width: 100%;
+        }
+        .strhead--bgcol{
+            background-color: green;
+            filter: hue-rotate(var(--huedeg));
+        }
+        .strhead--bgimg{
+            opacity: 0.3;
+            filter: grayscale(1) brightness(1.5);
+        }
         .strhead--title{
             position: absolute;
             width: 90%;

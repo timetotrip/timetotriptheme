@@ -32,7 +32,7 @@ get_header();
                                 . '</div>'
                         .'</div>';
                 
-                breadcrumb(); 
+                echo breadcrumb(); 
                 
                 echo "<article>";
                     echo TidyContent( do_shortcode( get_the_content() ), array(
