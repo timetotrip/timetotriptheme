@@ -15,6 +15,8 @@ require_once("func-talk.php");
 require_once("func-menu.php");
 require_once("func-comm.php");
 require_once("func-embe.php");
+
+require_once("func-strain.php");
  
 /* * * * * * * * * * * * * * * * * *
  * Theme Default

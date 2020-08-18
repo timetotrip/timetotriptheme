@@ -1,0 +1,24 @@
+.strhead{
+    margin-bottom:10%;
+    .strhead--inner{
+        padding-top:60%;
+        width : 100% ;
+        background-color: green;
+        filter: hue-rotate(var(--huedeg));
+
+        position: relative;
+
+        .strhead--title{
+            position: absolute;
+            width: 90%;
+            right: 1%;
+            bottom:-10%;
+            text-align: left;
+            .strhead--h1,.strhead--p{
+                margin:0.5rem;
+                letter-spacing: 0.2rem;
+                line-height: 1.3;
+            }
+        }
+    }
+}
