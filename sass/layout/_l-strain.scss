@@ -59,3 +59,27 @@
         margin: 0 0.2rem;
     }
 }
+
+.strupdown{
+    margin: 2rem 0;
+    .strpair{
+        margin:1rem 1.3rem;
+    }
+    .strupdown--l,.strupdown--r{
+        font-weight: bold;
+    }
+    .strupdown--bar{
+        margin: 0 1rem;
+        position: relative;
+        .strupdown--icon{
+            color: green;
+            filter: hue-rotate(var(--huedeg)) drop-shadow(1px 1px 1px black);
+
+            position: absolute;
+            left:var(--left);
+            bottom: 0%;
+            transform: translateX(-50%) translateY(30%);
+            font-size: 1.5em;
+        }
+    }
+}

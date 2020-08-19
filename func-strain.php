@@ -49,45 +49,57 @@
         $name_j =   get_field('name_japanese');
         $name_aka = get_field('aka');
         $origin =   get_field('origin');
-        $huedeg = 0;
-        $desc = "";
+        $sih = NULL;
+        $updown = 50;
 
         if(get_field('item')=='marijuana'){
             $blevel= get_field('blevel');
-            
-            $updown = $blevel['updown'];
-            if($updown>50){
-                $huedeg = 120 * (($updown - 50)/50) * -1;
-            }
-            else if($updown<50){
-                $huedeg = 120 * ((50 - $updown)/50);
-            }
+            $updown =   $blevel['updown'];
+            $sih =      $blevel['sih'];
+            $thc =      $blevel['thc'];
+            $cbd =      $blevel['cbd'];
+            $rare =     $blevel['rare'];
+            $terpenes = $blevel['terpenes'];
 
-            if($blevel['sih']!=false){
-                $desc = $blevel['sih']->name . '大麻の銘柄';
-            }
-            else{
-                $desc = '大麻の銘柄';
-            }
         }
 
-        $div .= putStrainHeader($name_e,$name_j,$desc,$huedeg);
+        $div .= putStrainHeader($name_e,$name_j,$updown,$sih);
 
         $div .= breadcrumb();
 
         $div .= "<article>";
 
-        $div .= putH2IndexS($name_e."とは","str-base");
+        $div .= putH2IndexS($name_e."とは","strbase");
 
         $div .= putStrainBaseInfo($name_j,$name_aka,$origin);
 
-        $div .= putH2IndexS("ブリブリレベル","str-lebel");
+        $div .= putH2IndexS("ブリブリレベル","strlebel");
+
+        $div .= putStrainBLevel($thc,$cbd,$updown,$rare,$terpenes);
 
         $div .= "</article>";
         return $div;
     }
-    function putStrainHeader($name_e,$name_j,$desc,$huedeg){
+    function putStrainHeader($name_e,$name_j,$updown,$sih){
         $div = "";
+        $huedeg = 0;
+        $desc = "";
+
+        if($updown>50){
+            $huedeg = 120 * (($updown - 50)/50) * -1;
+        }
+        else if($updown<50){
+            $huedeg = 120 * ((50 - $updown)/50);
+        }
+
+        if($sih != NULL){
+            $desc = $sih->name . '大麻の銘柄';
+        }
+        else{
+            $desc = '大麻の銘柄';
+        }
+
+
         $div .= '<div class="s-firstview strhead sdw_card">';
         $div .=     '<div class="sf-inner strhead--inner">';
         $div .=         '<div class="strhead--bgcol" style="--huedeg:'.$huedeg.'deg;"></div>';
@@ -114,16 +126,25 @@
         $div .=     '<div class="strbase">';
         $div .=         putH3pairStr("和名",$name_j);
         $div .=         putH3pairStr("別名",$name_aka);
-        if($origin!=NULL){
+        if(!empty($origin)){
             $div .=     putH3pairStr("由来",$origin);
         }
+        $div .=     '</div>';
+        return $div;
+    }
+    function putStrainBLevel($thc,$cbd,$updown,$rare,$terpenes){
+        $div = "";
+        $div .=     '<div class="strlevel">';
+        $div .=         putH3pairStr("THC",$thc . '%');
+        $div .=         putH3pairStr("CBD",$cbd . '%');
+        $div .=         putUpDown($updown);
         $div .=     '</div>';
         return $div;
     }
     function putH3pairStr($left,$right){
         $div = "";
         if(mb_strlen($right)<=12){
-            $div .=     '<div class="strbase--item strpair">';
+            $div .=     '<div class="strpair">';
             $div .=         '<h3 class="strpair--l">'.$left.'</h3>';
             $div .=         '<span class="strpair--bar"></span>';
             $div .=         '<p class="strpair--r">'.$right.'</p>';
@@ -133,7 +154,53 @@
             $div .=     '<h3 class="">'.$left.'</h3>';
             $div .=     '<p class="">'.$right.'</p>';
         }
-
         return $div;
     }
+    function putUpDown($updown){
+        
+        $huedeg = 0;
+        if($updown>50){
+            $huedeg = 120 * (($updown - 50)/50) * -1;
+        }
+        else if($updown<50){
+            $huedeg = 120 * ((50 - $updown)/50);
+        }
+
+        $desc = "";
+        switch ($updown) {
+            case $updown > 80:
+                $desc = "アッパー系サティバ";
+                break;
+            case $updown > 60:
+                $desc = "アッパー系サティバハイブリッド";
+                break;
+            case $updown > 40:
+                $desc = "バランス系ハイブリッド";
+                break;
+            case $updown > 20:
+                $desc = "ダウナー系インディカハイブリッド";
+                break;
+            case $updown > 0:
+                $desc = "ダウナー系インディカ";
+                break;
+            default:
+                $desc = "大麻";
+                break;
+        }
+
+        $div = "";
+        $div .= '<div class="strupdown">';
+        $div .=     '<h3 class="">DOWN or UP</h3>';
+        $div .=     '<div class="strpair">';
+        $div .=         '<p class="strpair--l strupdown--l">↓</p>';
+        $div .=         '<span class="strpair--bar strupdown--bar">';
+        $div .=             '<i class="fas fa-cannabis strupdown--icon" style="--huedeg:'.$huedeg.'deg; --left:'.$updown.'%;"></i>';
+        $div .=         '</span>';
+        $div .=         '<p class="strpair--r strupdown--r">↑</p>';
+        $div .=     '</div>';
+        //$div .=     '<p class="">'.$desc.'</p>';
+        $div .= '</div>';
+        return $div;
+    }
+
 ?>
