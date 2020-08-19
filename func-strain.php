@@ -48,6 +48,7 @@
         $name_e =   get_field('name_english');
         $name_j =   get_field('name_japanese');
         $name_aka = get_field('aka');
+        $origin =   get_field('origin');
         $huedeg = 0;
         $desc = "";
 
@@ -62,8 +63,6 @@
                 $huedeg = 120 * ((50 - $updown)/50);
             }
 
-            //var_dump($blevel);
-            //var_dump($blevel['sih']);
             if($blevel['sih']!=false){
                 $desc = $blevel['sih']->name . '大麻の銘柄';
             }
@@ -75,8 +74,14 @@
         $div .= putStrainHeader($name_e,$name_j,$desc,$huedeg);
 
         $div .= breadcrumb();
+
         $div .= "<article>";
-        $div .= putH2IndexS("銘柄の基本情報","str-base");
+
+        $div .= putH2IndexS($name_e."とは","str-base");
+
+        $div .= putStrainBaseInfo($name_j,$name_aka,$origin);
+
+        $div .= putH2IndexS("ブリブリレベル","str-lebel");
 
         $div .= "</article>";
         return $div;
@@ -102,6 +107,33 @@
         $div .=         '</div>';
         $div .=     '</div>';
         $div .= '</div>';
+        return $div;
+    }
+    function putStrainBaseInfo($name_j,$name_aka,$origin){
+        $div = "";
+        $div .=     '<div class="strbase">';
+        $div .=         putH3pairStr("和名",$name_j);
+        $div .=         putH3pairStr("別名",$name_aka);
+        if($origin!=NULL){
+            $div .=     putH3pairStr("由来",$origin);
+        }
+        $div .=     '</div>';
+        return $div;
+    }
+    function putH3pairStr($left,$right){
+        $div = "";
+        if(mb_strlen($right)<=12){
+            $div .=     '<div class="strbase--item strpair">';
+            $div .=         '<h3 class="strpair--l">'.$left.'</h3>';
+            $div .=         '<span class="strpair--bar"></span>';
+            $div .=         '<p class="strpair--r">'.$right.'</p>';
+            $div .=     '</div>';
+        }
+        else{
+            $div .=     '<h3 class="">'.$left.'</h3>';
+            $div .=     '<p class="">'.$right.'</p>';
+        }
+
         return $div;
     }
 ?>

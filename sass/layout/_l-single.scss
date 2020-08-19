@@ -13,7 +13,18 @@
             color:$cla-d10;
             min-height:1em;
             letter-spacing:0.1em;
-            margin-left: 1.3em;
+            margin-left: 1.3rem;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                top:15%;
+                bottom: 15%;
+                width: 2px;
+                left:-6px;
+                border-radius: 1px;
+                background-color: $cla-b10;
+            }
         }
         p{
             color:$cla-d10;
@@ -21,7 +32,7 @@
             line-height:1.8em;
             letter-spacing:0.1em;
             margin-bottom:2em;
-            margin-left: 1.3em;
+            margin-left: 1.3rem;
             margin-right: 1.3em;
             margin-top: 1em;
         }

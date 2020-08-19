@@ -3,11 +3,14 @@
 ## 目次
 --------------------------------------------------------------*/
 #summary{
-	margin: 0 1.5em;
-	padding:1.5625vw;
-	a,h3{
-		color: black;
-		text-decoration:underline;
-		margin: 1em 0;
-	}
+    margin: 0 1.5em;
+    padding:1.5625vw;
+    a,h3{
+        color: black;
+        text-decoration:underline;
+        margin: 1em 0;
+        &::before{
+            content: none;
+        }
+    }
 }

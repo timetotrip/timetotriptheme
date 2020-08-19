@@ -34,3 +34,28 @@
         }
     }
 }
+.strpair{
+    margin:2rem 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .strpair--r,.strpair--l{
+        display: inline-block;
+        margin:0;
+        line-height: 1.5;
+    }
+    .strpair--l{
+        flex-shrink: 0;
+    }
+    .strpair--r{
+        max-width: 75%;
+    }
+    .strpair--bar{
+        flex-grow:1;
+        background-color: $cla-b10;
+        background:linear-gradient(to right, $cla-b04,#FFFFFF 30%,$cla-b04);
+        height: 1px;
+        margin: 0 0.2rem;
+    }
+}
