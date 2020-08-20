@@ -1,0 +1,31 @@
+.infobox{
+    .infobox--on{
+        display: none;
+    }
+    .infobox--toggle{
+        .infobox--icon{
+            font-size: 0.8em;
+            margin: 0 0.3em;
+            filter: drop-shadow(0.5px 0.5px 0.5px #00000055 );
+
+        }
+    }
+    .infobox--on:not(:checked) ~ .infobox--toggle{
+        @include tglbutton-info-on(infobox--icon);
+    }
+    .infobox--on:checked ~ .infobox--toggle{
+        @include tglbutton-info-off(infobox--icon);
+    }
+
+    .infobox--area{
+        position: absolute;
+        left: 1.3rem;
+        right: 1.3rem;
+        border-radius: 3%;
+    }
+    .infobox--on:not(:checked) ~ .infobox--area{
+        *{
+            transform: scaleY(0);
+        }
+    }
+}

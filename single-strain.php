@@ -5,6 +5,7 @@
     <main id="primary" class="site-main single">
         <?php
             echo putStrainContent(); 
+            echo putInfoScript(); 
         ?>
     </main><!-- #main -->
 <?php

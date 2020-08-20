@@ -135,28 +135,23 @@
     function putStrainBLevel($thc,$cbd,$updown,$rare,$terpenes){
         $div = "";
         $div .=     '<div class="strlevel">';
-        $div .=         putH3pairStr("THC",$thc . '%');
-        $div .=         putH3pairStr("CBD",$cbd . '%');
-        $div .=         putUpDown($updown);
+        $div .=         putH3pairStr("THC",$thc . '%',
+                            putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
+                            'THCが高いほどブリブリが強いぞ'
+                        ));
+        $div .=         putH3pairStr("CBD",$cbd . '%',
+                            putTalk( array('who'=>'ika','where'=>'r', 'always' => 'true'),
+                            'CBDは医療効果の高いカンナビノイドなんだ'
+                        ));
+        $div .=         putUpDown($updown,
+                            putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
+                            '↑UP系はハイが強い  ↓DOWN系はチルが強い'
+                        ));
+        $div .=         putH3pairStr("TP",'<i class="far fa-question-circle"></i><i class="far fa-question-circle"></i>');
         $div .=     '</div>';
         return $div;
     }
-    function putH3pairStr($left,$right){
-        $div = "";
-        if(mb_strlen($right)<=12){
-            $div .=     '<div class="strpair">';
-            $div .=         '<h3 class="strpair--l">'.$left.'</h3>';
-            $div .=         '<span class="strpair--bar"></span>';
-            $div .=         '<p class="strpair--r">'.$right.'</p>';
-            $div .=     '</div>';
-        }
-        else{
-            $div .=     '<h3 class="">'.$left.'</h3>';
-            $div .=     '<p class="">'.$right.'</p>';
-        }
-        return $div;
-    }
-    function putUpDown($updown){
+    function putUpDown($updown,$info=""){
         
         $huedeg = 0;
         if($updown>50){
@@ -166,41 +161,73 @@
             $huedeg = 120 * ((50 - $updown)/50);
         }
 
-        $desc = "";
-        switch ($updown) {
-            case $updown > 80:
-                $desc = "アッパー系サティバ";
-                break;
-            case $updown > 60:
-                $desc = "アッパー系サティバハイブリッド";
-                break;
-            case $updown > 40:
-                $desc = "バランス系ハイブリッド";
-                break;
-            case $updown > 20:
-                $desc = "ダウナー系インディカハイブリッド";
-                break;
-            case $updown > 0:
-                $desc = "ダウナー系インディカ";
-                break;
-            default:
-                $desc = "大麻";
-                break;
-        }
 
         $div = "";
         $div .= '<div class="strupdown">';
-        $div .=     '<h3 class="">DOWN or UP</h3>';
-        $div .=     '<div class="strpair">';
-        $div .=         '<p class="strpair--l strupdown--l">↓</p>';
-        $div .=         '<span class="strpair--bar strupdown--bar">';
+        $div .=     '<div class="no--pairline--title">';
+        $div .=         '<h3 class="">DOWN or UP</h3>';
+        $div .=         putInfo("downorup",$info);;
+        $div .=     '</div>';
+        $div .=     '<div class="pairline">';
+        $div .=         '<p class="pairline--l strupdown--l">↓</p>';
+        $div .=         '<span class="pairline--bar strupdown--bar">';
         $div .=             '<i class="fas fa-cannabis strupdown--icon" style="--huedeg:'.$huedeg.'deg; --left:'.$updown.'%;"></i>';
         $div .=         '</span>';
-        $div .=         '<p class="strpair--r strupdown--r">↑</p>';
+        $div .=         '<p class="pairline--r strupdown--r">↑</p>';
         $div .=     '</div>';
-        //$div .=     '<p class="">'.$desc.'</p>';
         $div .= '</div>';
         return $div;
+    }
+    function isHTML( $str ) { return preg_match( "/\/[a-z]*>/i", $str ) != 0; }
+    function putH3pairStr($left,$right,$info=""){
+        $div = "";
+        if(isHTML($right) || mb_strlen($right)<=12){
+            $div .=     '<div class="pairline">';
+            $div .=         '<div class="pairline--l">';
+            $div .=             '<h3 class="pairline--l--h3">'.$left.'</h3>';
+            $div .=             putInfo($left,$info);
+            $div .=         '</div>';
+            $div .=         '<span class="pairline--bar"></span>';
+            $div .=         '<p class="pairline--r">'.$right.'</p>';
+            $div .=     '</div>';
+        }
+        else{
+            $div .=     '<div class="no--pairline--title">';
+            $div .=         '<h3 class="">'.$left.'</h3>';
+            $div .=         putInfo($left,$info);
+            $div .=     '</div>';
+            $div .=     '<p class="">'.$right.'</p>';
+        }
+        return $div;
+    }
+    function putInfo($id,$info=""){
+        $div = "";
+        if($info!=""){
+            $div .=     '<div class="infobox">';
+            $div .=         '<input type="checkbox" id="infobox--on--'.$id.'" class="infobox--on">';
+            $div .=         '<label class="infobox--toggle" for="infobox--on--'.$id.'" >';
+            $div .=             '<i class="infobox--icon"></i>';
+            $div .=         '</label>';
+            $div .=         '<div class="infobox--area">';
+            $div .=             $info;
+            $div .=         '</div>';
+            $div .=     '</div>';
+        }
+        return $div;
+    }
+    function putInfoScript(){
+        
+        $spt = ""
+        . '<script>'
+        .   'document.querySelectorAll(".infobox--on").forEach((icb) => {'
+        .       'icb.addEventListener("click", (e) => {'
+        .           'if(e.target.checked){'
+        .               'setTimeout( (e) => {e.target.checked=false;} ,3000,e)'
+        .           '}'
+        .       '} );'
+        .    '});'
+        . '</script>';
+        return $spt;
     }
 
 ?>

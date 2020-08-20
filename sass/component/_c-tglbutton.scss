@@ -176,3 +176,29 @@ $root2:1.4142;
         }
     }
 }
+
+@mixin tglbutton-info-base($baseclass){
+    .#{$baseclass}{
+        &::before{
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+    }
+}
+@mixin tglbutton-info-on($baseclass){
+    @include tglbutton-info-base($baseclass);
+    .#{$baseclass}{
+        &::before{
+            content: "\f059";
+        }
+    }
+}
+
+@mixin tglbutton-info-off($baseclass){
+    @include tglbutton-info-base($baseclass);
+    .#{$baseclass}{
+        &::before{
+            content: "\f057";
+        }
+    }
+}

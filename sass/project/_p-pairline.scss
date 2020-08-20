@@ -1,0 +1,35 @@
+
+.pairline{
+    margin:2rem 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .pairline--r,.pairline--l{
+        display: inline-block;
+        margin:0;
+        line-height: 1.5;
+    }
+    .pairline--l{
+        flex-shrink: 0;
+        display: flex;
+        align-items: flex-start;
+        .pairline--l--h3{
+            margin:0;
+        }
+    }
+    .pairline--r{
+        max-width: 75%;
+    }
+    .pairline--bar{
+        flex-grow:1;
+        background-color: $cla-b10;
+        background:linear-gradient(to right, $cla-b04,#FFFFFF 30%,$cla-b04);
+        height: 1px;
+        margin: 0 0.2rem;
+    }
+}
+.no--pairline--title{
+    display: flex;
+    align-items: center;
+}
