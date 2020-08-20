@@ -13,9 +13,10 @@ function putInLink( $ids, $class, $title ){
 
         foreach($ids as $id){
             if($id != 0){
-                $div .=     '<a class="inlink--a" href="' . get_the_permalink($id) 
-                .   '" onclick="ga(\'send\', \'event\', \'inlink\', \'click\', \'L' .$class .'\');">' 
-                .   get_the_title($id). '</a>';
+                $div .=     '<a class="inlink--a" href="' . get_the_permalink($id) .'" '
+                .                                           putGtagLink("in_".$class) . '>' 
+                .               get_the_title($id)
+                .           '</a>';
             }
         }
         $div .= '</nav>';

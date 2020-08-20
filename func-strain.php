@@ -108,11 +108,11 @@
         $div .=             '<h1 class="sf-h1 strhead--h1">';
         $div .=                 $name_e  ;
         $div .=             '</h1>';
-        $div .=             '<p class="strhead--h1">';
+        $div .=             '<p class="strhead--p">';
         $div .=                 $name_j;
         $div .=             '</p>';
         if($desc!=""){
-            $div .=         '<p class="strhead--h1">';
+            $div .=         '<p class="strhead--p">';
             $div .=             $desc;
             $div .=         '</p>';
         }

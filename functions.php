@@ -9,6 +9,7 @@
  * ORG
  * * * * * * * * * * * * * * * * * */
  
+require_once("func-gtag.php");
 require_once("func-elme.php");
 require_once("func-link.php");
 require_once("func-talk.php");
