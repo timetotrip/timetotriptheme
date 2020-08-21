@@ -75,7 +75,9 @@
 
         $div .= putH2IndexS("ブリブリレベル","strlebel");
 
-        $div .= putStrainBLevel($thc,$cbd,$updown,$rare,$terpenes);
+        $div .= putStrainBLevel($thc,$cbd,$updown,$rare);
+
+        $div .= putH2IndexS("ブリステータス","strstate");
 
         $div .= "</article>";
         return $div;
@@ -132,7 +134,7 @@
         $div .=     '</div>';
         return $div;
     }
-    function putStrainBLevel($thc,$cbd,$updown,$rare,$terpenes){
+    function putStrainBLevel($thc,$cbd,$updown,$rare){
         $div = "";
         $div .=     '<div class="strlevel">';
         $div .=         putH3pairStr("THC",$thc . '%',
@@ -147,7 +149,12 @@
                             putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
                             '↑UP系はハイが強い  ↓DOWN系はチルが強い'
                         ));
-        $div .=         putH3pairStr("TP",'<i class="far fa-question-circle"></i><i class="far fa-question-circle"></i>');
+        if(!empty($rare)){
+            $div .=     putH3pairStr("レアカンナビノイド",implode ( " " , $rare)/*,
+            putTalk( array('who'=>'ika','where'=>'r', 'always' => 'true'),
+            'めずらしいぞ'
+        )*/);
+        }
         $div .=     '</div>';
         return $div;
     }
@@ -181,7 +188,7 @@
     function isHTML( $str ) { return preg_match( "/\/[a-z]*>/i", $str ) != 0; }
     function putH3pairStr($left,$right,$info=""){
         $div = "";
-        if(isHTML($right) || mb_strlen($right)<=12){
+        if(mb_strlen($right)<=12 || isHTML($right)){
             $div .=     '<div class="pairline">';
             $div .=         '<div class="pairline--l">';
             $div .=             '<h3 class="pairline--l--h3">'.$left.'</h3>';
@@ -230,5 +237,84 @@
         return $spt;
     }
 
+    define('C_terpenes_name', [
+        'myrcene' => 'ハーブ',
+        'pinene' => 'フォレスト',
+        'caryophyllene' => 'ペッパー',
+        'limonene' => 'シトラス',
+        'terpinolene' => 'フルーティ',
+        'humulene' => 'アース',
+        'ocimene' => 'スイート',
+        'linalool' => 'フラワー'
+    ]);
+    define('C_terpenes_icon', [
+        'myrcene' => '<i class="fas fa-leaf"></i>',
+        'pinene' => '<i class="fas fa-tree"></i>',
+        'caryophyllene' => '<i class="fas fa-mortar-pestle"></i>',
+        'limonene' => '<i class="far fa-lemon"></i>',
+        'terpinolene' => '<i class="fas fa-apple-alt"></i>',
+        'humulene' => '<i class="fas fa-globe-asia"></i>',
+        'ocimene' => '<i class="fas fa-candy-cane"></i>',
+        'linalool' => '<i class="fas fa-spa"></i>'
+    ]);
+
+    define('C_feeling', [
+        'aroused' => '覚醒',
+        'creative' => 'クリエイティブ',
+        'energetic' => '元気',
+        'euphoric' => '陶酔',
+        'focused' => '集中',
+        'happy' => 'ハッピー',
+        'hungry' => 'マンチ',
+        'relaxed' => 'リラックス',
+        'talkative' => 'おしゃべり',
+        'uplifted' => '高揚'
+    ]);
+    
+    define('C_medical', [
+        'stress' => '抗ストレス',
+        'anxiety' => '抗不安',
+        'pain' => '鎮痛',
+        'depression' => '抗うつ',
+        'insomnia' => '安眠',
+        'appetite' => '食欲増進',
+        'fatigue' => '疲労回復'
+    ]);
+    
+    define('C_negative', [
+        'anxious' => '不安',
+        'dizzy' => 'めまい',
+        'dryeyes' => 'ドライアイ',
+        'drymouth' => 'ドライマウス',
+        'giggly' => 'ちくちく',
+        'headache' => '頭痛',
+        'paranoid' => '被害妄想',
+        'sleepy' => '眠くなる',
+        'tingly' => 'ぞくぞくする'
+    ]);
+    
+    define('C_growdifficult', [
+        'hard' => 'プロ級',
+        'normal' => 'ふつう',
+        'easy' => '簡単'
+    ]);
+    
+    define('C_growtall', [
+        'high' => '2m以上',
+        'middle' => '75cm~2m',
+        'low' => '75cm以下'
+    ]);
+    
+    define('C_growyield', [
+        'few' => '100g以下',
+        'some' => '100g-300g',
+        'many' => '300g以上'
+    ]);
+    
+    define('C_growperiod', [
+        'long' => '13週間以上',
+        'normal' => '10-12週間',
+        'short' => '7-9週間'
+    ]);
     
 ?>
