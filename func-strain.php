@@ -187,13 +187,14 @@
         if($terpenes[0]!='unknown'){
             $div .= putH3pairList("テルペン",putTerpenes($terpenes),"<p>ペンペーーン</p>");
         }
-        if($terpenes[0]!='unknown'){
-            
+        if($feeling[0]!='unknown'){
+            $div .= putH3pairList("ブリタイプ",putEffect($feeling,C_feeling),"<p>ペンペーーン</p>");
         }
-        if($terpenes[0]!='unknown'){
-            
+        if($medical[0]!='unknown'){
+            $div .= putH3pairList("医療効果",putEffect($medical,C_medical),"<p>ペンペーーン</p>");
         }
-        if($terpenes[0]!='unknown'){
+        if($negative[0]!='unknown'){
+            $div .= putH3pairList("ネガティブ",putEffect($negative,C_negative),"<p>ペンペーーン</p>");
             
         }
         return $div;
@@ -229,9 +230,20 @@
         for($i = 0; $i < 3; $i++){
             $div .= putStrRank($i+1,
                 '<div class="terp">'
-            .       '<i class="terp--icon rank--'.$i.C_terpenes_icon[$terpenes[$i]].'"></i>'
-            .       '<p class="terp--name rank--'.$i.'">'.C_terpenes_kind[$terpenes[$i]].'</p>'
+            .       '<div class="terp--view">'
+            .           '<i class="terp--icon strrank--'.(string)($i+1).C_terpenes_icon[$terpenes[$i]].'"></i>'
+            .           '<p class="terp--kind strrank--'.(string)($i+1).'">'.C_terpenes_kind[$terpenes[$i]].'</p>'
+            .       '</div>'
             .   '</div>'
+            );
+        }
+        return $div;
+    }
+    function putEffect($effect,$ebase){
+        $div = "";
+        for($i = 0; $i < 3; $i++){
+            $div .= putStrRank($i+1,
+                '<p class="strrank--'.(string)($i+1).'">'.$ebase[$effect[$i]].'</p>'
             );
         }
         return $div;
@@ -239,7 +251,13 @@
     function putStrRank($rank,$value){
 
         $div = "";
-        $div .= $value;
+        //$div .= '<div class="strrank">';
+        $div .=     '<div class="pairline strrank">';
+        $div .=         '<p class="pairline--l strank--ranknum strrank--'.$rank.'">'.$rank.'</p>';
+        $div .=         '<span class="pairline--bar"></span>';
+        $div .=         '<span class="pairline--r">'.$value.'</span>';
+        $div .=     '</div>';
+        //$div .= '</div>';
         return $div;
     }
     function isHTML( $str ) { return preg_match( "/\/[a-z]*>/i", $str ) != 0; }

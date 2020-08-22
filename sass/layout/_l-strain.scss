@@ -60,3 +60,14 @@
         }
     }
 }
+.strrank{
+    margin:0.8rem 1.3rem;
+    width: calc(100% - 2.6rem);
+    i.strrank--1{font-size:2.8em;margin:0 0em;}
+    i.strrank--2{font-size:2.4em;margin:0 0.2em;}
+    i.strrank--3{font-size:2.0em;margin:0 0.4em;}
+    .strank--ranknum{filter:drop-shadow(1px 1px 1px black);}
+    .strank--ranknum.strrank--1{font-size:2em;@include ranknum1();}
+    .strank--ranknum.strrank--2{font-size:1.8em;@include ranknum2();}
+    .strank--ranknum.strrank--3{font-size:1.6em;@include ranknum3();}
+}

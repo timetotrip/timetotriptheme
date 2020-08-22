@@ -72,13 +72,7 @@
 		.vrn-text{
 			.vrnt-num{
 				font-size: 2.4em;
-				background:linear-gradient(-38deg,
-					#aa771c 0%, #d0a850 10%, #b38728 40%,
-					 #fbf5b7 70%, #aa771c 100%);
-				background-clip:text;
-				text-fill-color:transparent;
-				-webkit-background-clip:text;
-				-webkit-text-fill-color:transparent;
+				@include ranknum1();
 			}
 		}
 	}
@@ -86,13 +80,7 @@
 		.vrn-text{
 			.vrnt-num{
 				font-size: 2.4em;
-				background:linear-gradient(-38deg,
-					 #dedede,  #454545 23%, #dedede 43%,
-					 #ffffff 45%, #ffffff 60%, #dedede 72%,  #a1a1a1);
-				background-clip:text;
-				text-fill-color:transparent;
-				-webkit-background-clip:text;
-				-webkit-text-fill-color:transparent;
+				@include ranknum2();
 			}
 		}
 	}
@@ -100,24 +88,14 @@
 		.vrn-text{
 			.vrnt-num{
 				font-size: 2.4em;
-				background:linear-gradient(-38deg,
-					 #ca7345,  #a14521 27%, #ca7345 36%, #ffdeca 45%,
-					 #ffdeca 53%, #ffdeca 60%, #ca7345 84%, #732100);
-				background-clip:text;
-				text-fill-color:transparent;
-				-webkit-background-clip:text;
-				-webkit-text-fill-color:transparent;
+				@include ranknum3();
 			}
 		}
 	}
 	&.vrn-4,&.vrn-5{
 		.vrn-text{
 			.vrnt-num{
-				background:linear-gradient(-38deg, #000000 10%, #A0A0A0 60%, #000000 90%);
-				background-clip:text;
-				text-fill-color:transparent;
-				-webkit-background-clip:text;
-				-webkit-text-fill-color:transparent;
+				@include ranknum4();
 			}
 		}
 	}
