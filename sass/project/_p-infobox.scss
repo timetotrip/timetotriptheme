@@ -25,6 +25,7 @@
         border-radius: 3%;
     }
     .infobox--on:not(:checked) ~ .infobox--area{
+        //transform: scaleY(0);
         *{
             transform: scaleY(0);
         }

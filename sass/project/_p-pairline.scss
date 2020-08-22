@@ -29,7 +29,15 @@
         margin: 0 0.2rem;
     }
 }
-.no--pairline--title{
-    display: flex;
-    align-items: center;
+.pairlist{
+    .pairlist--title{
+        display: flex;
+        align-items: center;
+    }
+    .pairlist--list{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+        //margin: 0 1.3rem;
+    }
 }

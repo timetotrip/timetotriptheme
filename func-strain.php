@@ -51,6 +51,7 @@
         $origin =   get_field('origin');
         $sih = NULL;
         $updown = 50;
+        
 
         if(get_field('item')=='marijuana'){
             $blevel= get_field('blevel');
@@ -59,8 +60,29 @@
             $thc =      $blevel['thc'];
             $cbd =      $blevel['cbd'];
             $rare =     $blevel['rare'];
-            $terpenes = $blevel['terpenes'];
 
+            $terpenes = [];
+            $terpenes[] = $blevel['terpenes'][1];
+            $terpenes[] = $blevel['terpenes'][2];
+            $terpenes[] = $blevel['terpenes'][3];
+
+            
+            $feeling = [];
+            $feeling[] = get_field('effect')['feeling'][1];
+            $feeling[] = get_field('effect')['feeling'][2];
+            $feeling[] = get_field('effect')['feeling'][3];
+
+            $medical = [];
+            $medical[] = get_field('effect')['medical'][1];
+            $medical[] = get_field('effect')['medical'][2];
+            $medical[] = get_field('effect')['medical'][3];
+
+            $negative = [];
+            $negative[] = get_field('effect')['negative'][1];
+            $negative[] = get_field('effect')['negative'][2];
+            $negative[] = get_field('effect')['negative'][3];
+
+            
         }
 
         $div .= putStrainHeader($name_e,$name_j,$updown,$sih);
@@ -78,6 +100,8 @@
         $div .= putStrainBLevel($thc,$cbd,$updown,$rare);
 
         $div .= putH2IndexS("ブリステータス","strstate");
+
+        $div .= putStrainBStatus($terpenes,$feeling,$medical,$negative);
 
         $div .= "</article>";
         return $div;
@@ -139,23 +163,39 @@
         $div .=     '<div class="strlevel">';
         $div .=         putH3pairStr("THC",$thc . '%',
                             putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
-                            'THCが高いほどブリブリが強いぞ'
+                            'ラボ測定の参考値だ、実際は育て方で増減するぞ'
                         ));
         $div .=         putH3pairStr("CBD",$cbd . '%',
                             putTalk( array('who'=>'ika','where'=>'r', 'always' => 'true'),
-                            'CBDは医療効果の高いカンナビノイドなんだ'
+                            'CBDは医療効果の高いカンナビノイドだいか'
                         ));
         $div .=         putUpDown($updown,
                             putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
                             '↑UP系はハイが強い  ↓DOWN系はチルが強い'
                         ));
         if(!empty($rare)){
-            $div .=     putH3pairStr("レアカンナビノイド",implode ( " " , $rare)/*,
-            putTalk( array('who'=>'ika','where'=>'r', 'always' => 'true'),
-            'めずらしいぞ'
-        )*/);
+            $div .=     putH3pairStr("レアカンナビノイド",implode ( " " , $rare),
+                            putTalk( array('who'=>'ika','where'=>'r', 'always' => 'true'),
+                            'THCやCBDとはまた違った効果があるいか'
+            ));
         }
         $div .=     '</div>';
+        return $div;
+    }
+    function putStrainBStatus($terpenes,$feeling,$medical,$negative){
+        $div = "";
+        if($terpenes[0]!='unknown'){
+            $div .= putH3pairList("テルペン",putTerpenes($terpenes),"<p>ペンペーーン</p>");
+        }
+        if($terpenes[0]!='unknown'){
+            
+        }
+        if($terpenes[0]!='unknown'){
+            
+        }
+        if($terpenes[0]!='unknown'){
+            
+        }
         return $div;
     }
     function putUpDown($updown,$info=""){
@@ -168,21 +208,38 @@
             $huedeg = 120 * ((50 - $updown)/50);
         }
 
+        $ud = "";
+        $ud .=     '<div class="pairline strupdown--line">';
+        $ud .=         '<p class="pairline--l strupdown--l">↓</p>';
+        $ud .=         '<span class="pairline--bar strupdown--bar">';
+        $ud .=             '<i class="fas fa-cannabis strupdown--icon" style="--huedeg:'.$huedeg.'deg; --left:'.$updown.'%;"></i>';
+        $ud .=         '</span>';
+        $ud .=         '<p class="pairline--r strupdown--r">↑</p>';
+        $ud .=     '</div>';
 
         $div = "";
         $div .= '<div class="strupdown">';
-        $div .=     '<div class="no--pairline--title">';
-        $div .=         '<h3 class="">DOWN or UP</h3>';
-        $div .=         putInfo("downorup",$info);;
-        $div .=     '</div>';
-        $div .=     '<div class="pairline">';
-        $div .=         '<p class="pairline--l strupdown--l">↓</p>';
-        $div .=         '<span class="pairline--bar strupdown--bar">';
-        $div .=             '<i class="fas fa-cannabis strupdown--icon" style="--huedeg:'.$huedeg.'deg; --left:'.$updown.'%;"></i>';
-        $div .=         '</span>';
-        $div .=         '<p class="pairline--r strupdown--r">↑</p>';
-        $div .=     '</div>';
+        $div .=     putH3pairList("DOWN or UP",$ud,$info);
         $div .= '</div>';
+        return $div;
+    }
+
+    function putTerpenes($terpenes){
+        $div = "";
+        for($i = 0; $i < 3; $i++){
+            $div .= putStrRank($i+1,
+                '<div class="terp">'
+            .       '<i class="terp--icon rank--'.$i.C_terpenes_icon[$terpenes[$i]].'"></i>'
+            .       '<p class="terp--name rank--'.$i.'">'.C_terpenes_kind[$terpenes[$i]].'</p>'
+            .   '</div>'
+            );
+        }
+        return $div;
+    }
+    function putStrRank($rank,$value){
+
+        $div = "";
+        $div .= $value;
         return $div;
     }
     function isHTML( $str ) { return preg_match( "/\/[a-z]*>/i", $str ) != 0; }
@@ -199,12 +256,21 @@
             $div .=     '</div>';
         }
         else{
-            $div .=     '<div class="no--pairline--title">';
-            $div .=         '<h3 class="">'.$left.'</h3>';
-            $div .=         putInfo($left,$info);
-            $div .=     '</div>';
-            $div .=     '<p class="">'.$right.'</p>';
+            $div .=     putH3pairList($left,$info,'<p>'.$right.'</p>');
         }
+        return $div;
+    }
+    function putH3pairList($left,$list,$info=""){
+        $div = "";
+        $div .= '<div class="pairlist">';
+        $div .=     '<div class="pairlist--title">';
+        $div .=         '<h3 class="">'.$left.'</h3>';
+        $div .=         putInfo($left,$info);
+        $div .=     '</div>';
+        $div .=     '<div class="pairlist--list">';
+        $div .=         $list;
+        $div .=     '</div>';
+        $div .= '</div>';
         return $div;
     }
     function putInfo($id,$info=""){
@@ -237,6 +303,16 @@
         return $spt;
     }
 
+    define('C_terpenes_kind', [
+        'myrcene' => 'ハーブ',
+        'pinene' => 'フォレスト',
+        'caryophyllene' => 'ペッパー',
+        'limonene' => 'シトラス',
+        'terpinolene' => 'フルーティ',
+        'humulene' => 'アース',
+        'ocimene' => 'スイート',
+        'linalool' => 'フラワー'
+    ]);
     define('C_terpenes_name', [
         'myrcene' => 'ハーブ',
         'pinene' => 'フォレスト',
@@ -248,14 +324,15 @@
         'linalool' => 'フラワー'
     ]);
     define('C_terpenes_icon', [
-        'myrcene' => '<i class="fas fa-leaf"></i>',
-        'pinene' => '<i class="fas fa-tree"></i>',
-        'caryophyllene' => '<i class="fas fa-mortar-pestle"></i>',
-        'limonene' => '<i class="far fa-lemon"></i>',
-        'terpinolene' => '<i class="fas fa-apple-alt"></i>',
-        'humulene' => '<i class="fas fa-globe-asia"></i>',
-        'ocimene' => '<i class="fas fa-candy-cane"></i>',
-        'linalool' => '<i class="fas fa-spa"></i>'
+        //'myrcene' => '<i class="fas fa-leaf"></i>',
+        'myrcene' => ' fas fa-leaf',
+        'pinene' => ' fas fa-tree',
+        'caryophyllene' => ' fas fa-mortar-pestle',
+        'limonene' => ' far fa-lemon',
+        'terpinolene' => ' fas fa-apple-alt',
+        'humulene' => ' fas fa-globe-asia',
+        'ocimene' => ' fas fa-candy-cane',
+        'linalool' => ' fas fa-spa'
     ]);
 
     define('C_feeling', [
