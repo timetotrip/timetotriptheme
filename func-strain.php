@@ -231,7 +231,7 @@
             $div .= putStrRank($i+1,
                 '<div class="terp">'
             .       '<div class="terp--view">'
-            .           '<i class="terp--icon strrank--'.(string)($i+1).C_terpenes_icon[$terpenes[$i]].'"></i>'
+            .           '<i class="terp--icon strrank--'.(string)($i+1).C_terpenes_icon[$terpenes[$i]].'" style="--cbase:'.C_terpenes_color[$terpenes[$i]].';"></i>'
             .           '<p class="terp--kind strrank--'.(string)($i+1).'">'.C_terpenes_kind[$terpenes[$i]].'</p>'
             .       '</div>'
             .   '</div>'
@@ -243,7 +243,7 @@
         $div = "";
         for($i = 0; $i < 3; $i++){
             $div .= putStrRank($i+1,
-                '<p class="strrank--'.(string)($i+1).'">'.$ebase[$effect[$i]].'</p>'
+                '<p class="strrank--text strrank--'.(string)($i+1).'">'.$ebase[$effect[$i]].'</p>'
             );
         }
         return $div;
@@ -342,7 +342,6 @@
         'linalool' => 'フラワー'
     ]);
     define('C_terpenes_icon', [
-        //'myrcene' => '<i class="fas fa-leaf"></i>',
         'myrcene' => ' fas fa-leaf',
         'pinene' => ' fas fa-tree',
         'caryophyllene' => ' fas fa-mortar-pestle',
@@ -351,6 +350,16 @@
         'humulene' => ' fas fa-globe-asia',
         'ocimene' => ' fas fa-candy-cane',
         'linalool' => ' fas fa-spa'
+    ]);
+    define('C_terpenes_color', [
+        'myrcene' => '#233c98',
+        'pinene' => '#01ae81',
+        'caryophyllene' => '#b6016a',
+        'limonene' => '#f2ea0b',
+        'terpinolene' => '#f46f22',
+        'humulene' => '#96ca4f',
+        'ocimene' => '#ee255c',
+        'linalool' => '#583f99'
     ]);
 
     define('C_feeling', [

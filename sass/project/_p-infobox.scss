@@ -26,6 +26,7 @@
     }
     .infobox--on:not(:checked) ~ .infobox--area{
         //transform: scaleY(0);
+        height: 0;
         *{
             transform: scaleY(0);
         }
