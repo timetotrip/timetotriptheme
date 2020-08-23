@@ -61,6 +61,8 @@
             $cbd =      $blevel['cbd'];
             $rare =     $blevel['rare'];
 
+            $parents =  get_field('parents');
+
             $terpenes = [];
             $terpenes[] = $blevel['terpenes'][1];
             $terpenes[] = $blevel['terpenes'][2];
@@ -91,15 +93,15 @@
 
         $div .= "<article>";
 
-        $div .= putH2IndexS($name_e."とは","strbase");
 
-        $div .= putStrainBaseInfo($name_j,$name_aka,$origin);
+        $div .= putStrainBaseInfo($name_e,$name_j,$name_aka,$origin);
 
-        $div .= putH2IndexS("ブリブリレベル","strlebel");
 
         $div .= putStrainBLevel($thc,$cbd,$updown,$rare);
 
-        $div .= putH2IndexS("ブリステータス","strstate");
+
+        $div .= putStrainBFamily($parents);
+
 
         $div .= putStrainBStatus($terpenes,$feeling,$medical,$negative);
 
@@ -147,8 +149,9 @@
         $div .= '</div>';
         return $div;
     }
-    function putStrainBaseInfo($name_j,$name_aka,$origin){
+    function putStrainBaseInfo($name_e,$name_j,$name_aka,$origin){
         $div = "";
+        $div .= putH2IndexS($name_e."とは","strbase");
         $div .=     '<div class="strbase">';
         $div .=         putH3pairStr("和名",$name_j);
         $div .=         putH3pairStr("別名",$name_aka);
@@ -160,6 +163,7 @@
     }
     function putStrainBLevel($thc,$cbd,$updown,$rare){
         $div = "";
+        $div .= putH2IndexS("ブリブリレベル","strlebel");
         $div .=     '<div class="strlevel">';
         $div .=         putH3pairStr("THC",$thc . '%',
                             putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
@@ -182,19 +186,64 @@
         $div .=     '</div>';
         return $div;
     }
+    function putStrainBFamily($parents){
+        $childlen=[];
+        $thisid= get_the_ID();
+
+        $args = Array(
+                    'post_type' => 'strain',
+                    'posts_per_page' => -1,
+                );
+        $the_query = new WP_Query($args);
+        if($the_query -> have_posts()):
+            while($the_query -> have_posts()): $the_query -> the_post();
+                $tmpparent = get_field('parents');
+                if(!empty($tmpparent)){
+                    for($i = 0; $i < count($tmpparent); $i++){
+                        if ($tmpparent[$i] == $thisid){
+                            $childlen[] = get_the_ID();
+                        }
+                    }
+                }
+            endwhile;
+        endif;
+        wp_reset_postdata();
+
+        $div = "";
+        if( count($parents) != 0 || count($childlen) != 0 ){
+            $div .= putH2IndexS("ファミリー","family");
+            if( count($parents) != 0  ){
+                $div .= '<div class="strfam">';
+                $div .=     putInLink($parents,"parents",'<h3 class="strfam--h3">親銘柄</h3>');
+                $div .= '</div>';
+            }
+            if(  count($childlen) != 0 ){
+                $div .= '<div class="strfam">';
+                $div .=     putInLink($childlen,"parents",'<h3 class="strfam--h3">子銘柄</h3>');
+                $div .= '</div>';
+            }
+        }
+        return $div;
+    }
     function putStrainBStatus($terpenes,$feeling,$medical,$negative){
         $div = "";
+        if($terpenes[0]!='unknown'||$feeling[0]!='unknown'||$medical[0]!='unknown'||$negative[0]!='unknown'){
+            $div .= putH2IndexS("ブリステータス","strstate");
+        }
+
         if($terpenes[0]!='unknown'){
-            $div .= putH3pairList("テルペン",putTerpenes($terpenes),"<p>ペンペーーン</p>");
+            $div .= putH3pairList("テルペン",putTerpenes($terpenes),putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
+            'テルペンの割合で、味や香りだけじゃなく、ブリりかたや医療効果が変わってくるんだ'
+        ));
         }
         if($feeling[0]!='unknown'){
-            $div .= putH3pairList("ブリタイプ",putEffect($feeling,C_feeling),"<p>ペンペーーン</p>");
+            $div .= putH3pairList("ブリタイプ",putEffect($feeling,C_feeling));
         }
         if($medical[0]!='unknown'){
-            $div .= putH3pairList("医療効果",putEffect($medical,C_medical),"<p>ペンペーーン</p>");
+            $div .= putH3pairList("医療効果",putEffect($medical,C_medical));
         }
         if($negative[0]!='unknown'){
-            $div .= putH3pairList("ネガティブ",putEffect($negative,C_negative),"<p>ペンペーーン</p>");
+            $div .= putH3pairList("ネガティブ",putEffect($negative,C_negative));
             
         }
         return $div;
@@ -260,7 +309,6 @@
         //$div .= '</div>';
         return $div;
     }
-    function isHTML( $str ) { return preg_match( "/\/[a-z]*>/i", $str ) != 0; }
     function putH3pairStr($left,$right,$info=""){
         $div = "";
         if(mb_strlen($right)<=12 || isHTML($right)){

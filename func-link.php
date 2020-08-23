@@ -9,7 +9,12 @@ function putInLink( $ids, $class, $title ){
     $div = '';
     if(count($ids)!=0){
         $div .= '<nav class="inlink inlink--' . $class . '">';
-        $div .=     '<p class="inlink--title">' . $title . '</p>';
+        if(isHTML($title)||(0 === strpos($title, '<'))){
+            $div .=     '<span class="inlink--title">' . $title . '</span>';
+        }
+        else{
+            $div .=     '<p class="inlink--title">' . $title . '</p>';
+        }
 
         foreach($ids as $id){
             if($id != 0){

@@ -14,6 +14,9 @@ add_action('init', 'init_session_start');
  * LIB
  * * * * * * * * * * * * * * * * * */
 
+function isHTML( $str ) { return preg_match( "/\/[a-z]*>/i", $str ) != 0; }
+
+
 function getThumbnailById($image_id){
     $image = wp_get_attachment_image_src( $image_id );
     $image_src = $image[0];
