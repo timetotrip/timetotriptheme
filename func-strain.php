@@ -49,6 +49,8 @@
         $name_j =   get_field('name_japanese');
         $name_aka = get_field('aka');
         $origin =   get_field('origin');
+        $award =    get_field('award');
+        $reference =get_field('reference');
         $sih = NULL;
         $updown = 50;
         
@@ -84,7 +86,11 @@
             $negative[] = get_field('effect')['negative'][2];
             $negative[] = get_field('effect')['negative'][3];
 
-            
+            $grow= get_field('grow');
+            $difficult = $grow["difficult"];
+            $highness = $grow["highness"];
+            $yield = $grow["yield"];
+            $period = $grow["period"];
         }
 
         $div .= putStrainHeader($name_e,$name_j,$updown,$sih);
@@ -94,17 +100,15 @@
         $div .= "<article>";
 
 
-        $div .= putStrainBaseInfo($name_e,$name_j,$name_aka,$origin);
-
-
-        $div .= putStrainBLevel($thc,$cbd,$updown,$rare);
-
-
-        $div .= putStrainBFamily($parents);
-
-
-        $div .= putStrainBStatus($terpenes,$feeling,$medical,$negative);
-
+        if(get_field('item')=='marijuana'){
+            $div .= putStrainBaseInfo($name_e,$name_j,$name_aka,$origin,$award);
+            $div .= putStrainBLevel($thc,$cbd,$updown,$rare);
+            $div .= putContent(do_shortcode(get_the_content()));
+            $div .= putStrainBFamily($parents);
+            $div .= putStrainBStatus($terpenes,$feeling,$medical,$negative);
+            $div .= putGrowInfo($difficult,$highness,$yield,$period);
+            $div .= putReference($reference);
+        }
         $div .= "</article>";
         return $div;
     }
@@ -121,11 +125,9 @@
         }
 
         if($sih != NULL){
-            $desc = $sih->name . '大麻の銘柄';
+            $desc .= $sih->name;
         }
-        else{
-            $desc = '大麻の銘柄';
-        }
+        $desc .= '大麻の銘柄';
 
 
         $div .= '<div class="s-firstview strhead sdw_card">';
@@ -149,7 +151,7 @@
         $div .= '</div>';
         return $div;
     }
-    function putStrainBaseInfo($name_e,$name_j,$name_aka,$origin){
+    function putStrainBaseInfo($name_e,$name_j,$name_aka,$origin,$award){
         $div = "";
         $div .= putH2IndexS($name_e."とは","strbase");
         $div .=     '<div class="strbase">';
@@ -158,7 +160,28 @@
         if(!empty($origin)){
             $div .=     putH3pairStr("由来",$origin);
         }
+        if(!empty($award)){
+            $awardlist = "";
+            $a_arrow=explode ( ',' , $award);
+            for($i=0;$i<count($a_arrow);$i++){
+                $awardlist .= '<p class="strbase--award">' .$a_arrow[$i] . '</p>';
+            }
+            if(count($a_arrow)==1){
+                $div .=     putH3pairStr("受賞歴",$awardlist);
+            }
+            else{
+                $div .=     putH3pairList("受賞歴",$awardlist);
+            }
+        }
         $div .=     '</div>';
+        return $div;
+    }
+    function putContent($content){
+        $div = "";
+        if(!empty($content)){
+            $div .= putH2IndexS("ブリブリトーク","content");
+            $div .= $content;
+        }
         return $div;
     }
     function putStrainBLevel($thc,$cbd,$updown,$rare){
@@ -210,18 +233,44 @@
         wp_reset_postdata();
 
         $div = "";
-        if( count($parents) != 0 || count($childlen) != 0 ){
+        if( ((!empty($parents))&&(count($parents) != 0)) || ((!empty($childlen))&&(count($childlen) != 0)) ){
             $div .= putH2IndexS("ファミリー","family");
-            if( count($parents) != 0  ){
-                $div .= '<div class="strfam">';
-                $div .=     putInLink($parents,"parents",'<h3 class="strfam--h3">親銘柄</h3>');
-                $div .= '</div>';
+            $div .= '<div class="strfam">';
+            if( ((!empty($parents))&&(count($parents) > 0))){
+
+                $links = "";
+                for($i = 0; $i < count($parents); $i++){
+                    $links .= '<a class="strfam--link" href="'
+                    . get_the_permalink($parents[$i]) . '" ' . putGtagLink("fm_".$thisid) . '>' 
+                    .   get_the_title($parents[$i])
+                    . '</a>';
+                }
+
+                if(count($parents)==1 && mb_strlen(get_the_title($parents[0]))<=14){
+                    $div .=     putH3pairStr("親銘柄",$links);
+                }
+                else{
+                    $div .=     putH3pairList("親銘柄",$links);
+                }
+
             }
-            if(  count($childlen) != 0 ){
-                $div .= '<div class="strfam">';
-                $div .=     putInLink($childlen,"parents",'<h3 class="strfam--h3">子銘柄</h3>');
-                $div .= '</div>';
+            if( ((!empty($childlen))&&(count($childlen) > 0))){
+                $links = "";
+                for($i = 0; $i < count($childlen); $i++){
+                    $links .= '<a class="strfam--link" href="'
+                    . get_the_permalink($childlen[$i]) . '" ' . putGtagLink("fm_".$thisid) . '>' 
+                    .   get_the_title($childlen[$i])
+                    . '</a>';
+                }
+
+                if(count($childlen)==1 && mb_strlen(get_the_title($childlen[0]))<=12){
+                    $div .=     putH3pairStr("子銘柄",$links);
+                }
+                else{
+                    $div .=     putH3pairList("子銘柄",$links);
+                }
             }
+            $div .= '</div>';
         }
         return $div;
     }
@@ -245,6 +294,40 @@
         if($negative[0]!='unknown'){
             $div .= putH3pairList("ネガティブ",putEffect($negative,C_negative));
             
+        }
+        return $div;
+    }
+    function putGrowInfo($difficult,$highness,$yield,$period){
+        $div = "";
+        if((!empty($difficult))&&($difficult!='unknown')
+          ||(!empty($highness))&&($highness!='unknown')
+          ||(!empty($yield))&&($yield!='unknown')
+          ||(!empty($period))&&($period!='unknown')){
+            $div .= putH2IndexS("グロウインフォ","growinfo");
+        }
+        if((!empty($difficult))&&($difficult!='unknown')){
+            $div .= putH3pairStr("難易度",C_difficult[$difficult]);
+        }
+        if((!empty($highness))&&($highness!='unknown')){
+            $div .= putH3pairStr("高さ",C_highness[$highness]);
+        }
+        if((!empty($yield))&&($yield!='unknown')){
+            $div .= putH3pairStr("収穫量",C_yield[$yield],putTalk( array('who'=>'ika','where'=>'r', 'always' => 'true'),
+                '0.25㎡あたりの平均だいか'
+            ));
+        }
+        if((!empty($period))&&($period!='unknown')){
+            $div .= putH3pairStr("開花周期",C_period[$period]);
+        }
+        return $div;
+    }
+    function putReference($reference){
+        $div = "";
+        //echo 'ref --' . $reference."--";
+        if(!empty($reference)){
+            //echo 'ref';
+            $div .= putH2IndexS("参照元","reference");
+            $div .= putH3pairStr("URL",'<a src="'.$reference.'">'.$reference.'</a>');
         }
         return $div;
     }
@@ -311,7 +394,7 @@
     }
     function putH3pairStr($left,$right,$info=""){
         $div = "";
-        if(mb_strlen($right)<=12 || isHTML($right)){
+        if(mb_strlen($right)<=14 || isHTML($right)){
             $div .=     '<div class="pairline">';
             $div .=         '<div class="pairline--l">';
             $div .=             '<h3 class="pairline--l--h3">'.$left.'</h3>';
@@ -322,7 +405,7 @@
             $div .=     '</div>';
         }
         else{
-            $div .=     putH3pairList($left,$info,'<p>'.$right.'</p>');
+            $div .=     putH3pairList($left,'<p class="fromline">'.$right.'</p>',$info);
         }
         return $div;
     }
@@ -393,7 +476,7 @@
         'myrcene' => ' fas fa-leaf',
         'pinene' => ' fas fa-tree',
         'caryophyllene' => ' fas fa-mortar-pestle',
-        'limonene' => ' far fa-lemon',
+        'limonene' => ' fas fa-lemon',
         'terpinolene' => ' fas fa-apple-alt',
         'humulene' => ' fas fa-globe-asia',
         'ocimene' => ' fas fa-candy-cane',
@@ -445,25 +528,25 @@
         'tingly' => 'ぞくぞくする'
     ]);
     
-    define('C_growdifficult', [
+    define('C_difficult', [
         'hard' => 'プロ級',
         'normal' => 'ふつう',
         'easy' => '簡単'
     ]);
     
-    define('C_growtall', [
+    define('C_highness', [
         'high' => '2m以上',
         'middle' => '75cm~2m',
         'low' => '75cm以下'
     ]);
     
-    define('C_growyield', [
+    define('C_yield', [
         'few' => '100g以下',
         'some' => '100g-300g',
         'many' => '300g以上'
     ]);
     
-    define('C_growperiod', [
+    define('C_period', [
         'long' => '13週間以上',
         'normal' => '10-12週間',
         'short' => '7-9週間'

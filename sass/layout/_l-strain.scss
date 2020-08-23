@@ -34,6 +34,11 @@
         }
     }
 }
+.strbase{
+    .strbase--award{
+        margin: 0.5rem 1.3rem;
+    }
+}
 
 .strupdown{
     margin: 2rem 0;
@@ -76,10 +81,12 @@
     .strrank--text.strrank--3{font-size:1.0em;}
 }
 .strfam{
-    .strfam--h3{
-        margin-left:0.4rem;
+    .strfam--link{
+        font-size:1.5rem;
     }
-    a{
-        font-size:1.4em;
+    .pairlist{
+        .strfam--link{
+            margin: 0.5rem 1.3rem;
+        }
     }
 }
