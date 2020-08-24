@@ -33,6 +33,7 @@
                     'all_items' => '種別一覧',
                     'add_new_item' => '種別を追加'
                 ),
+                'show_in_rest' => true,
                 'public' => true,
                 'show_ui' => true,
                 'show_in_nav_menus' => true,
@@ -49,6 +50,7 @@
         $name_j =   get_field('name_japanese');
         $name_aka = get_field('aka');
         $origin =   get_field('origin');
+        $looks =    get_field('looks');
         $award =    get_field('award');
         $reference =get_field('reference');
         $sih = NULL;
@@ -101,7 +103,7 @@
 
 
         if(get_field('item')=='marijuana'){
-            $div .= putStrainBaseInfo($name_e,$name_j,$name_aka,$origin,$award);
+            $div .= putStrainBaseInfo($name_e,$name_j,$name_aka,$origin,$looks,$award);
             $div .= putStrainBLevel($thc,$cbd,$updown,$rare);
             $div .= putContent(do_shortcode(get_the_content()));
             $div .= putStrainBFamily($parents);
@@ -151,7 +153,7 @@
         $div .= '</div>';
         return $div;
     }
-    function putStrainBaseInfo($name_e,$name_j,$name_aka,$origin,$award){
+    function putStrainBaseInfo($name_e,$name_j,$name_aka,$origin,$looks,$award){
         $div = "";
         $div .= putH2IndexS($name_e."とは","strbase");
         $div .=     '<div class="strbase">';
@@ -159,6 +161,9 @@
         $div .=         putH3pairStr("別名",$name_aka);
         if(!empty($origin)){
             $div .=     putH3pairStr("由来",$origin);
+        }
+        if(!empty($looks)){
+            $div .=     putH3pairStr("外観",$looks);
         }
         if(!empty($award)){
             $awardlist = "";
@@ -188,14 +193,18 @@
         $div = "";
         $div .= putH2IndexS("ブリブリレベル","strlebel");
         $div .=     '<div class="strlevel">';
-        $div .=         putH3pairStr("THC",$thc . '%',
+        if($thc != 0){
+            $div .=     putH3pairStr("THC",$thc . '%',
                             putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
                             'ラボ測定の参考値だ、実際は育て方で増減するぞ'
                         ));
-        $div .=         putH3pairStr("CBD",$cbd . '%',
+        }
+        if($cbd != 0){
+            $div .=     putH3pairStr("CBD",$cbd . '%',
                             putTalk( array('who'=>'ika','where'=>'r', 'always' => 'true'),
                             'CBDは医療効果の高いカンナビノイドだいか'
                         ));
+        }
         $div .=         putUpDown($updown,
                             putTalk( array('who'=>'taco','where'=>'l', 'always' => 'true'),
                             '↑UP系はハイが強い  ↓DOWN系はチルが強い'
