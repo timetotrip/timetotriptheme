@@ -51,6 +51,7 @@
         $name_aka = get_field('aka');
         $origin =   get_field('origin');
         $looks =    get_field('looks');
+        $tastes =   get_field('tastes');
         $award =    get_field('award');
         $reference =get_field('reference');
         $sih = NULL;
@@ -103,7 +104,7 @@
 
 
         if(get_field('item')=='marijuana'){
-            $div .= putStrainBaseInfo($name_e,$name_j,$name_aka,$origin,$looks,$award);
+            $div .= putStrainBaseInfo($name_e,$name_j,$name_aka,$origin,$looks,$tastes,$award);
             $div .= putStrainBLevel($thc,$cbd,$updown,$rare);
             $div .= putContent(do_shortcode(get_the_content()));
             $div .= putStrainBFamily($parents);
@@ -153,7 +154,7 @@
         $div .= '</div>';
         return $div;
     }
-    function putStrainBaseInfo($name_e,$name_j,$name_aka,$origin,$looks,$award){
+    function putStrainBaseInfo($name_e,$name_j,$name_aka,$origin,$looks,$tastes,$award){
         $div = "";
         $div .= putH2IndexS($name_e."とは","strbase");
         $div .=     '<div class="strbase">';
@@ -164,6 +165,9 @@
         }
         if(!empty($looks)){
             $div .=     putH3pairStr("外観",$looks);
+        }
+        if(!empty($tastes)){
+            $div .=     putH3pairStr("外観",$tastes);
         }
         if(!empty($award)){
             $awardlist = "";
@@ -507,14 +511,15 @@
     define('C_feeling', [
         'aroused' => '覚醒',
         'creative' => 'クリエイティブ',
-        'energetic' => '元気',
-        'euphoric' => '陶酔',
+        'energetic' => 'パワフル',
+        'euphoric' => 'うっとり',
+        'sleepy' => 'ストーン',
         'focused' => '集中',
         'happy' => 'ハッピー',
         'hungry' => 'マンチ',
         'relaxed' => 'リラックス',
         'talkative' => 'おしゃべり',
-        'uplifted' => '高揚'
+        'uplifted' => 'アゲアゲ'
     ]);
     
     define('C_medical', [
