@@ -90,3 +90,10 @@
         }
     }
 }
+.strref{
+    .strref--url{
+        margin: 0 1.3rem;
+        width: calc(100% - 2.6rem);
+        word-wrap: break-word;
+    }
+}

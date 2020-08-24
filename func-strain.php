@@ -326,8 +326,10 @@
         //echo 'ref --' . $reference."--";
         if(!empty($reference)){
             //echo 'ref';
-            $div .= putH2IndexS("参照元","reference");
-            $div .= putH3pairList("URL",'<a href="'.$reference.'">'.$reference.'</a>');
+            $div .= putH2IndexS("引用元","reference");
+            $div .= '<div class="strref">';
+            $div .=     putH3pairList("URL",'<a class="strref--url" href="'.$reference.'">'.$reference.'</a>');
+            $div .= '</div>';
         }
         return $div;
     }
