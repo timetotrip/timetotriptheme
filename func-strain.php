@@ -512,6 +512,8 @@
         'stress' => '抗ストレス',
         'anxiety' => '抗不安',
         'pain' => '鎮痛',
+        'eyepressure' => '眼圧',
+        'nausea' => '吐き気',
         'depression' => '抗うつ',
         'insomnia' => '安眠',
         'appetite' => '食欲増進',
