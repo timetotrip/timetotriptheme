@@ -167,7 +167,7 @@
             $div .=     putH3pairStr("外観",$looks);
         }
         if(!empty($tastes)){
-            $div .=     putH3pairStr("外観",$tastes);
+            $div .=     putH3pairStr("アロマ",$tastes);
         }
         if(!empty($award)){
             $awardlist = "";
@@ -389,9 +389,11 @@
     function putEffect($effect,$ebase){
         $div = "";
         for($i = 0; $i < 3; $i++){
-            $div .= putStrRank($i+1,
-                '<p class="strrank--text strrank--'.(string)($i+1).'">'.$ebase[$effect[$i]].'</p>'
-            );
+            if($effect[$i]!='unknown'){
+                $div .= putStrRank($i+1,
+                    '<p class="strrank--text strrank--'.(string)($i+1).'">'.$ebase[$effect[$i]].'</p>'
+                );
+            }
         }
         return $div;
     }
@@ -468,6 +470,7 @@
     }
 
     define('C_terpenes_kind', [
+        'unknown' => '不明',
         'myrcene' => 'ハーブ',
         'pinene' => 'フォレスト',
         'caryophyllene' => 'ペッパー',
@@ -478,6 +481,7 @@
         'linalool' => 'フラワー'
     ]);
     define('C_terpenes_name', [
+        'unknown' => '不明',
         'myrcene' => 'ハーブ',
         'pinene' => 'フォレスト',
         'caryophyllene' => 'ペッパー',
@@ -488,6 +492,7 @@
         'linalool' => 'フラワー'
     ]);
     define('C_terpenes_icon', [
+        'unknown' => '',
         'myrcene' => ' fas fa-leaf',
         'pinene' => ' fas fa-tree',
         'caryophyllene' => ' fas fa-mortar-pestle',
@@ -498,6 +503,7 @@
         'linalool' => ' fas fa-spa'
     ]);
     define('C_terpenes_color', [
+        'unknown' => '#000000',
         'myrcene' => '#233c98',
         'pinene' => '#01ae81',
         'caryophyllene' => '#b6016a',
@@ -509,6 +515,7 @@
     ]);
 
     define('C_feeling', [
+        'unknown' => '不明',
         'aroused' => '覚醒',
         'creative' => 'クリエイティブ',
         'energetic' => 'パワフル',
@@ -523,6 +530,7 @@
     ]);
     
     define('C_medical', [
+        'unknown' => '不明',
         'stress' => '抗ストレス',
         'anxiety' => '抗不安',
         'pain' => '鎮痛',
@@ -535,6 +543,7 @@
     ]);
     
     define('C_negative', [
+        'unknown' => '不明',
         'anxious' => '不安',
         'dizzy' => 'めまい',
         'dryeyes' => 'ドライアイ',
@@ -547,24 +556,28 @@
     ]);
     
     define('C_difficult', [
+        'unknown' => '不明',
         'hard' => 'プロ級',
         'normal' => 'ふつう',
         'easy' => '簡単'
     ]);
     
     define('C_highness', [
+        'unknown' => '不明',
         'high' => '2m以上',
         'middle' => '75cm~2m',
         'low' => '75cm以下'
     ]);
     
     define('C_yield', [
+        'unknown' => '不明',
         'few' => '100g以下',
         'some' => '100g-300g',
         'many' => '300g以上'
     ]);
     
     define('C_period', [
+        'unknown' => '不明',
         'long' => '13週間以上',
         'normal' => '10-12週間',
         'short' => '7-9週間'
