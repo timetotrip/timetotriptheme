@@ -256,7 +256,7 @@
                     . '</a>';
                 }
 
-                if(count($parents)==1 && mb_strlen(get_the_title($parents[0]))<=14){
+                if(count($parents)==1 && mb_strlen(get_the_title($parents[0]))<=12){
                     $div .=     putH3pairStr("親銘柄",$links);
                 }
                 else{
@@ -408,7 +408,7 @@
     }
     function putH3pairStr($left,$right,$info=""){
         $div = "";
-        if(mb_strlen($right)<=14 || isHTML($right)){
+        if(mb_strlen($right)<=12 || isHTML($right)){
             $div .=     '<div class="pairline">';
             $div .=         '<div class="pairline--l">';
             $div .=             '<h3 class="pairline--l--h3">'.$left.'</h3>';
