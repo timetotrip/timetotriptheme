@@ -175,12 +175,9 @@
             for($i=0;$i<count($a_arrow);$i++){
                 $awardlist .= '<p class="strbase--award">' .$a_arrow[$i] . '</p>';
             }
-            if(count($a_arrow)==1){
-                $div .=     putH3pairStr("受賞歴",$awardlist);
-            }
-            else{
-                $div .=     putH3pairList("受賞歴",$awardlist);
-            }
+            
+            $div .=     putH3pairList("受賞歴",$awardlist);
+            
         }
         $div .=     '</div>';
         return $div;
