@@ -4,7 +4,7 @@
             margin:1rem;
         }
         @else{
-            margin:0.5rem 0;
+            margin:1rem 0;
         }
         .#{$baseclass}--on{
             display:none;
@@ -12,7 +12,7 @@
         .#{$baseclass}--toggle{
             display:flex;
             align-items: center;
-            h3{
+            h3,h4{
                 color:$cla-d10;
                 font-weight: bold;
                 background-color: #FFF1;
@@ -36,7 +36,7 @@
             }
         }
         .#{$baseclass}--on:not(:checked) ~ .#{$baseclass}--list{
-            p,a,h3,div{
+            p,a,h3,h4,div{
                 line-height: 0.000000000001;
                 opacity: 0;
                 margin: 0;
@@ -44,7 +44,7 @@
             }
         }
         .#{$baseclass}--on:checked ~ .#{$baseclass}--list{
-            h3{
+            h3,h4{
                 line-height: 1.1;
             }
         }

@@ -105,7 +105,7 @@ function putMenuStrainCate($cate){
     $ret            .= '<span class="tglbutton-cate--bar1"></span>';
     $ret            .= '<span class="tglbutton-cate--bar2"></span>';
     $ret        .= '</div>';
-    $ret        .= '<h3>' . get_term_by('slug',$cate,'strain-cat')->name .'</h3>';
+    $ret        .= '<h4>' . get_term_by('slug',$cate,'strain-cat')->name .'</h4>';
     $ret    .='</label>';
 
     $ret    .='<div class="strcate--border ptn-str-brown">';
