@@ -30,12 +30,25 @@
             margin: 2rem 0;
         }
         @include accordionSP(navicate);
-        
+
         .navicate--on:not(:checked) ~ .navicate--toggle{
             @include tglbutton-cate-off(tglbutton-cate,5vw);
         }
         .navicate--on:checked ~ .navicate--toggle{
             @include tglbutton-cate-on(tglbutton-cate,5vw);
         }
+
+
+    }
+}
+
+.navicate--strain{
+
+    @include accordionSP(strcate,false);
+    .strcate--on:not(:checked) ~ .strcate--toggle{
+        @include tglbutton-cate-off(tglbutton-cate,5vw);
+    }
+    .strcate--on:checked ~ .strcate--toggle{
+        @include tglbutton-cate-on(tglbutton-cate,5vw);
     }
 }

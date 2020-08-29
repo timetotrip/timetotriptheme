@@ -1,6 +1,11 @@
-@mixin accordionSP($baseclass){
+@mixin accordionSP($baseclass,$parent:true){
     .#{$baseclass}{
-        margin:1rem;
+        @if $parent {
+            margin:1rem;
+        }
+        @else{
+            margin:0.5rem 0;
+        }
         .#{$baseclass}--on{
             display:none;
         }
@@ -19,18 +24,19 @@
             height: 3px;
         }
         .#{$baseclass}--list{
-            padding: 0 1.5rem;//
+            padding-left:1.5rem;//
             a{
                 display: block;
                 p{
                     letter-spacing:0.05rem;
                     background-color: #FFF1;
-                    //backdrop-filter:blur(0.5px);
+                    line-height: 1.4;
+                    margin: 0.8rem 0;
                 }
             }
         }
         .#{$baseclass}--on:not(:checked) ~ .#{$baseclass}--list{
-            p,a{
+            p,a,h3,div{
                 line-height: 0.000000000001;
                 opacity: 0;
                 margin: 0;
@@ -38,11 +44,8 @@
             }
         }
         .#{$baseclass}--on:checked ~ .#{$baseclass}--list{
-            p,a{
-                line-height: 1.4;
-                opacity: 1;
-                margin: 0.8rem 0;
-                transform: scaleY(100%);
+            h3{
+                line-height: 1.1;
             }
         }
     }

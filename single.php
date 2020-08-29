@@ -51,20 +51,6 @@ get_header();
                 endif;
 
                 echo putInLinknavigation();
-                /*
-                echo putH2Index('次におススメ');
-                the_post_navigation(
-                    array(
-                        'prev_text' => 
-                            '<i class="fas fa-angle-double-left nav-subtitle ptn-txgrad-fire sdw_card"></i>'
-                            .'<p class="nav-title">%title</p>'
-                        ,
-                        'next_text' => 
-                        '<i class="fas fa-angle-double-right nav-subtitle ptn-txgrad-fire sdw_card"></i>'
-                        .' <p class="nav-title">%title</p>',
-                    )
-                );
-                */
 
             endwhile; // End of the loop.
             ?>
