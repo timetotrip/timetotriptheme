@@ -78,6 +78,7 @@ function putMenuStrain(){
     $ret        .=putMenuStrainCate("sativa");
     $ret        .=putMenuStrainCate("indica");
     $ret        .=putMenuStrainCate("hybrid");
+    $ret        .=putMenuStrainCate("cbd");
     $ret    .='</div>';
     $ret .='</div>';
     return $ret;
