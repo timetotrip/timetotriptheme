@@ -6,6 +6,11 @@
         <?php
             echo putStrainContent(); 
             echo putInfoScript(); 
+            get_template_part( 'sns' ); 
+
+            if ( comments_open() || get_comments_number() ) :
+                comments_template();
+            endif;
         ?>
     </main><!-- #main -->
 <?php

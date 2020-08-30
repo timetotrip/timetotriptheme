@@ -159,7 +159,9 @@
         $div .= putH2IndexS($name_e."とは","strbase");
         $div .=     '<div class="strbase">';
         $div .=         putH3pairStr("和名",$name_j);
-        $div .=         putH3pairStr("別名",$name_aka);
+        if(!empty($name_aka)){
+            $div .=     putH3pairStr("別名",$name_aka);
+        }
         if(!empty($origin)){
             $div .=     putH3pairStr("由来",$origin);
         }
